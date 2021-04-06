@@ -27,7 +27,7 @@ const userSchema = new Schema({
 });
 
 const actionSchema = new Schema({
-  spell: [
+  spell: 
     {
       id: { type: Number },
       name: { type: String },
@@ -36,22 +36,19 @@ const actionSchema = new Schema({
       description: { type: String },
       subClass: { type: String },
     },
-  ],
-  ability: [
+  ability: 
     {
       id: { type: Number },
       class: { type: String },
       name: { type: String },
       description: { type: String },
     },
-  ],
-  feat: [
+  feat:
     {
       id: { type: Number },
       name: { type: String },
       description: { type: String },
     },
-  ],
 });
 
 const Actions = mongoose.model("Actions", actionSchema);
