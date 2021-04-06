@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  user: [
+  user:
     {
       id: { type: Number },
       username: { type: String },
       password: { type: String },
-      characters: [
+      characters: 
         {
           name: { type: String },
           level: { type: Number },
@@ -23,9 +23,7 @@ const userSchema = new Schema({
               description: {},
             }],
         },
-      ],
     },
-  ],
 });
 
 const actionSchema = new Schema({
