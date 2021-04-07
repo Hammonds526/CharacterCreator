@@ -60,7 +60,8 @@ const fighter = [
       },
     ],
 
-    // *---- Should be a dropdown choice option after class is chosen ----*
+    // *---- Should be a dropdown choice option after class is chosen. ----*
+    // Champion  has option for 2 at level 10 
     fighterStyle: [
       {
         name: "Archery",
