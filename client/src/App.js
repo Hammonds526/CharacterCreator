@@ -1,11 +1,30 @@
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 
 function App() {
+  const [myCharacters, setMyCharacters] = useState([
+    {
+      Name: "John",
+      Level: 12,
+      CharClass: "Wizard",
+    },
+    {
+      Name: "Sally",
+      Level: 1,
+      CharClass: "Ranger",
+    },
+    {
+      Name: "Alexander",
+      Level: 10,
+      CharClass: "Rogue",
+    },
+  ]);
+
   return (
-    <div>
+    <div className="container-fluid">
       <div className="row">
         <h3 className="ml-3">Character Creator</h3>
       </div>
@@ -17,7 +36,7 @@ function App() {
           <Tavern />
         </div>
         <div className="col-2">
-          <MyCharacters />
+          <MyCharacters myCharacters={myCharacters} />
         </div>
       </div>
     </div>
