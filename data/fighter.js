@@ -1,5 +1,5 @@
-/*
-Cheat Sheet
+/* Starts on page 64/293 or 70 of Players Handbook
+*Cheat Sheet
 fighter
   description
   classFeatures
@@ -21,8 +21,6 @@ fighter
       description
       abilites
 */
-
-
 
 const fighter = [
   {
@@ -220,23 +218,28 @@ const fighter = [
           },
           {
             name: "Distracting Strike",
-            desc: "When you hit a creature with a weapon attack, you can expend one superiority die to distract the creature, giving your allies an opening. You add the superiority die to the attack’s damage roll. The next attack roll against the target by an attacker other than you has advantage if the attack is made before the start of your next turn.",
+            desc:
+              "When you hit a creature with a weapon attack, you can expend one superiority die to distract the creature, giving your allies an opening. You add the superiority die to the attack’s damage roll. The next attack roll against the target by an attacker other than you has advantage if the attack is made before the start of your next turn.",
           },
           {
             name: "Evasive Footwork",
-            desc: "When you move, you can expend one superiority die, rolling the die and adding the number rolled to your AC until you stop moving.",
+            desc:
+              "When you move, you can expend one superiority die, rolling the die and adding the number rolled to your AC until you stop moving.",
           },
           {
             name: "Feinting Attack",
-            desc: "You can expend one superiority die and use a bonus action on your turn to feint, choosing one creature within 5 feet of you as your target. You have advantage on your next attack roll against that creature. If that attack hits, add the superiority die to the attack’s damage roll.",
+            desc:
+              "You can expend one superiority die and use a bonus action on your turn to feint, choosing one creature within 5 feet of you as your target. You have advantage on your next attack roll against that creature. If that attack hits, add the superiority die to the attack’s damage roll.",
           },
           {
             name: "Goading Attack",
-            desc: "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to goad the target into attacking you. You add the superiority die to the attack’s damage roll, and the target must make a W isdom saving throw. On a failed save, the target has disadvantage on all attack rolls against targets other than you until the end of your next turn.",
+            desc:
+              "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to goad the target into attacking you. You add the superiority die to the attack’s damage roll, and the target must make a W isdom saving throw. On a failed save, the target has disadvantage on all attack rolls against targets other than you until the end of your next turn.",
           },
           {
             name: "Lunging Attack",
-            desc: "When you make a melee weapon attack on your turn, you can expend one superiority die to increase your reach for that attack by 5 feet. If you hit, you add the superiority die to the attack’s damage roll.",
+            desc:
+              "When you make a melee weapon attack on your turn, you can expend one superiority die to increase your reach for that attack by 5 feet. If you hit, you add the superiority die to the attack’s damage roll.",
           },
           {
             name: "Disarming Attack",
@@ -245,40 +248,49 @@ const fighter = [
           },
           {
             name: "Maneuvering Attack",
-            desc: "W hen you hit a creature with a weapon attack, you can expend one superiority die to maneuver one of your com rades into a more advantageous position. You add the superiority die to the attack’s damage roll, and you choose a friendly creature who can see or hear you. That creature can use its reaction to move up to half its speed without provoking opportunity attacks from the target of your attack.",
+            desc:
+              "W hen you hit a creature with a weapon attack, you can expend one superiority die to maneuver one of your com rades into a more advantageous position. You add the superiority die to the attack’s damage roll, and you choose a friendly creature who can see or hear you. That creature can use its reaction to move up to half its speed without provoking opportunity attacks from the target of your attack.",
           },
           {
             name: "Menacing Attack",
-            desc: "W hen you hit a creature with a weapon attack, you can expend one superiority die to attempt to frighten the target. You add the superiority die to the attack’s damage roll, and the target must make a Wisdom saving throw. On a failed save, it is frightened of you until the end of your next turn.",
+            desc:
+              "W hen you hit a creature with a weapon attack, you can expend one superiority die to attempt to frighten the target. You add the superiority die to the attack’s damage roll, and the target must make a Wisdom saving throw. On a failed save, it is frightened of you until the end of your next turn.",
           },
           {
             name: "Parry",
-            desc: "When another creature dam ages you with a melee attack, you can use your reaction and expend one superiority die to reduce the damage by the number you roll on your superiority die + your Dexterity modifier.",
+            desc:
+              "When another creature dam ages you with a melee attack, you can use your reaction and expend one superiority die to reduce the damage by the number you roll on your superiority die + your Dexterity modifier.",
           },
           {
             name: "Precision Attack",
-            desc: "When you make a weapon attack roll against a creature, you can expend one superiority die to add it to the roll. You can use this maneuver before or after making the attack roll, but before any effects of the attack are applied.",
+            desc:
+              "When you make a weapon attack roll against a creature, you can expend one superiority die to add it to the roll. You can use this maneuver before or after making the attack roll, but before any effects of the attack are applied.",
           },
           {
             name: "Pushing Attack",
-            desc: "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to drive the target back. You add the superiority die to the attack's dam age roll, and if the target is Large or smaller, it must make a Strength saving throw. On a failed save, you push the target up to 15 feet away from you",
+            desc:
+              "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to drive the target back. You add the superiority die to the attack's dam age roll, and if the target is Large or smaller, it must make a Strength saving throw. On a failed save, you push the target up to 15 feet away from you",
           },
           {
             name: "Rally",
-            desc: "On your turn, you can use a bonus action andexpend one superiority die to bolster the resolve of one of your com panions. W hen you do so, choose a friendly creature w ho can see or hear you. That creature gains temporary hit points equal to the superiority die roll + your Charisma modifier.",
+            desc:
+              "On your turn, you can use a bonus action andexpend one superiority die to bolster the resolve of one of your com panions. W hen you do so, choose a friendly creature w ho can see or hear you. That creature gains temporary hit points equal to the superiority die roll + your Charisma modifier.",
           },
           {
             name: "Riposte",
-            desc: "When a creature m isses you with a melee attack, you can use your reaction and expend one superiority die to make a melee weapon attack against the creature. If you hit, you add the superiority die to the attack's damage roll.",
+            desc:
+              "When a creature m isses you with a melee attack, you can use your reaction and expend one superiority die to make a melee weapon attack against the creature. If you hit, you add the superiority die to the attack's damage roll.",
           },
           {
             name: "Sweeping Attack",
-            desc: "When you hit a creature with a melee weapon attack, you can expend one superiority die to attempt to dam age another creature with the same attack. C hoose another creature within 5 feet of the original target and within your reach. If the original attack roll w ould hit the second creature, it takes damage equal to the number you roll on your superiority die. The damage is of the same type dealt by the original attack.",
+            desc:
+              "When you hit a creature with a melee weapon attack, you can expend one superiority die to attempt to dam age another creature with the same attack. C hoose another creature within 5 feet of the original target and within your reach. If the original attack roll w ould hit the second creature, it takes damage equal to the number you roll on your superiority die. The damage is of the same type dealt by the original attack.",
           },
           {
             name: "Trip Attack",
-            desc:  "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to knock the target down. You add the superiority die to the attack’s damage roll, and if the target is Large or smaller, it must make a Strength saving throw. On a failed save, you knock the target prone.",
-          }
+            desc:
+              "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to knock the target down. You add the superiority die to the attack’s damage roll, and if the target is Large or smaller, it must make a Strength saving throw. On a failed save, you knock the target prone.",
+          },
         ],
       },
 
