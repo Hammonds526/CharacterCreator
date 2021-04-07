@@ -8,7 +8,6 @@ function MyCharacters(props) {
       <div className="col">
         <h4>Saved Characters</h4>
         <CharacterListItem {...props} />
-        <div></div>
       </div>
     </div>
   );
