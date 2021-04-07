@@ -36,7 +36,7 @@ const fighter = [
       },
       {
         name: "Hit Dice",
-        desc: "1d 10 per fighter level.",
+        desc: "1d10 per fighter level.",
       },
     ],
 
