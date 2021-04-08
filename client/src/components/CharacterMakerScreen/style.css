@@ -20,6 +20,25 @@
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
-/* .character-maker-screen ::before {
-  filter: blur(2px);
-} */
+.character-avatar__container {
+  height: 200px;
+  width: 200px;
+  background-color: lightgray;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 41%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

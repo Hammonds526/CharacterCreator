@@ -6,7 +6,7 @@ function MyCharacters(props) {
   return (
     <div className="row">
       <div className="col">
-        <h4>Saved Characters</h4>
+        <h4>My Characters</h4>
         <CharacterListItem {...props} />
       </div>
     </div>
