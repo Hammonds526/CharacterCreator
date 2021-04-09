@@ -26,36 +26,7 @@ const userSchema = new Schema({
     },
 });
 
-const actionSchema = new Schema({
-  spell: 
-    {
-      id: { type: Number },
-      name: { type: String },
-      level: { type: Number },
-      type: { type: String },
-      description: { type: String },
-      subClass: { type: String },
-    },
-  ability: 
-    {
-      id: { type: Number },
-      class: { type: String },
-      name: { type: String },
-      description: { type: String },
-    },
-  feat:
-    {
-      id: { type: Number },
-      name: { type: String },
-      description: { type: String },
-    },
-});
-
-const Actions = mongoose.model("Actions", actionSchema);
 
 const Users = mongoose.model("Users", userSchema);
 
-module.exports = {
-  Actions: Actions,
-  Users: Users,
-};
+module.exports = Users
