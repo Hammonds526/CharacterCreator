@@ -138,22 +138,22 @@ const ranger = [
       {
         name: "Hunter",
         description:
-          "As you walk the Hunter’s path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons. As you walk the Hunter’s path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
+          "As you walk the Hunter’s path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
         abilities: [
           {
             name: "Hunter's Prey",
             level: 3,
-            desc: "You gain one of the follow ing features.",
+            desc: "You gain one of the following features.",
             choices: [
               {
                 name: "Colossus Slayer",
                 desc:
-                  "Your tenacity can w ear down the m ost potent foes. W hen you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it’s below its hit point maximum. You can deal this extra damage only once per turn.",
+                  "Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it’s below its hit point maximum. You can deal this extra damage only once per turn.",
               },
               {
                 name: "Giant Killer",
                 desc:
-                  "When a Large or larger creature within 5 feet of you hits or m isses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.",
+                  "When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.",
               },
               {
                 name: "Horde Breaker",
