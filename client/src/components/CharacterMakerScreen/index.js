@@ -11,7 +11,7 @@ function CharacterMakerScreen(props) {
     <div className="modal-content-box">
       <div className="character-maker-screen bg-transparent">
         <div className="row">
-          <div className="col-9">
+          <div className="col-12 col-lg-9">
             <div className="row">
               <div className="col">
                 <CharacterProgressBar />

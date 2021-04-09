@@ -1,0 +1,6 @@
+.wood-beam__horizontal {
+  background-image: url("../../images/wood_beam.png");
+  /* background-size: "64px"; */
+  height: 20px;
+  width: 100%;
+}
