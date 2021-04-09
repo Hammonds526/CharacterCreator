@@ -5,9 +5,11 @@ import CharInfoBox from "../CharInfoBox";
 import AvatarContainer from "../AvatarContainer";
 
 function CharacterMakerScreen(props) {
+  const Races = ["Elf", "Gnome", "Troll"];
+
   return (
     <div className="modal-content-box">
-      <div className="character-maker-screen">
+      <div className="character-maker-screen bg-transparent">
         <div className="row">
           <div className="col-9">
             <div className="row">
@@ -15,9 +17,9 @@ function CharacterMakerScreen(props) {
                 <CharacterProgressBar />
               </div>
             </div>
-            <div className="row mt-2">
+            <div className="row">
               <div className="col">
-                <CharInfoBox />
+                <CharInfoBox Races={Races} />
               </div>
             </div>
           </div>
