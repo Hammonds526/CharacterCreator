@@ -1,11 +1,13 @@
 import React from "react";
-// import "./style.css";
+import "./style.css";
 import ImgTabStart from "../../images/selection_tab_start.png";
 
 function SelectionTabStart(props) {
   return (
-    <div>
-      <p className="text-weight-bold">{props.charProperty}</p>
+    <div className="position-relative">
+      <p className="font-weight-bold position-absolute selection-tab-text">
+        {props.charProperty}
+      </p>
       <img
         src={ImgTabStart}
         style={{ width: "150px", height: "auto" }}
