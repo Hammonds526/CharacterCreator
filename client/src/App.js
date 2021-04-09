@@ -29,7 +29,7 @@ function App() {
     <Router>
       <div className="container-fluid">
         <Switch>
-          <Route>
+          <Route path="/character-creator">
             <CharacterMakerScreen />
           </Route>
         </Switch>

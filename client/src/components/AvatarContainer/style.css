@@ -1,0 +1,6 @@
+.avatar__container {
+  background-color: lightgrey;
+  height: 200px;
+  width: 200px;
+  position: relative;
+}
