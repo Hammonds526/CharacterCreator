@@ -1,4 +1,18 @@
-.selection-tab-text {
-  left: 22px;
-  top: 10px;
+.button-text {
+  color: #2c2646;
+  text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
+  font-size: 8pt;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-image-background {
+  background-image: url("../../images/btn.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 96px 30px;
+  height: 30px;
+  width: 96px;
 }
