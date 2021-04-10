@@ -2,21 +2,35 @@ import React from "react";
 import "./style.css";
 import Button from "../Button";
 import Corner from "../Corner";
-import WoodBeam from "../WoodBeam";
+import WoodBeamX from "../WoodBeamX";
+import WoodBeamY from "../WoodBeamY";
 
 function CharInfoBox(props) {
   return (
     <div class="char-info-box__container p-5 mt-5 text-white">
-      <WoodBeam beamStyle={{ top: "-8px" }} />
+      <WoodBeamX beamStyle={{ top: "-48px" }} />
+
+      <WoodBeamY beamStyle={{ right: "0px", top: "48px" }} />
+      <WoodBeamY beamStyle={{ left: "0px", top: "48px" }} />
 
       <Corner
         cornerStyle={{
-          width: "77px",
+          width: "80px",
           height: "auto",
-          left: "-43px",
-          top: "-37px",
+          left: "-48px",
+          top: "-48px",
         }}
       />
+      <Corner
+        cornerStyle={{
+          width: "80px",
+          height: "auto",
+          right: "-48px",
+          top: "-48px",
+          transform: "rotate(90deg)",
+        }}
+      />
+
       <h6 className="text-white ml-5 mt-3">Choose a Race</h6>
 
       <p>
@@ -51,6 +65,25 @@ function CharInfoBox(props) {
         at consectetur leo mollis dictum. Pellentesque euismod sit amet odio ac
         sagittis. Duis ut vestibulum felis, nec consectetur dolor.
       </p>
+      <WoodBeamX beamStyle={{ bottom: "-96px" }} />
+      <Corner
+        cornerStyle={{
+          width: "80px",
+          height: "auto",
+          right: "-48px",
+          bottom: "-96px",
+          transform: "rotate(180deg)",
+        }}
+      />
+      <Corner
+        cornerStyle={{
+          width: "80px",
+          height: "auto",
+          left: "-48px",
+          bottom: "-96px",
+          transform: "rotate(270deg)",
+        }}
+      />
     </div>
   );
 }

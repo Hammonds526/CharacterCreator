@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import Image from "../../images/wood_beam.png";
 
 function WoodBeam(props) {
   return (
@@ -8,14 +7,7 @@ function WoodBeam(props) {
       <div
         className="position-absolute wood-beam__horizontal"
         style={props.beamStyle}
-      >
-        {/* <img
-        className="position-absolute"
-        src={Image}
-        // style={props.beamStyle}
-        alt="Selection tab start"
-      ></img> */}
-      </div>
+      ></div>
     </div>
   );
 }
