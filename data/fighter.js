@@ -1,7 +1,7 @@
 /* Starts on page 64/293 or 70 of Players Handbook
 *Cheat Sheet
 fighter
-  description
+  desc
   classFeatures
   pros
   fighterStyle
@@ -9,23 +9,23 @@ fighter
   subClass
     -Champion
       name
-      description
+      desc
       abilites
     -Battle Master
       name
-      description
+      desc
       abilites
       maneuvers
     -Eldritch Knight
       name
-      description
+      desc
       abilites
 */
 
 const fighter = [
   {
-    description:
-      "Fighters learn the basics of all com bat styles. Every fighter can swing an axe, fence with a rapier, wield a longsword or a greatsword, use a bow, and even trap foes in a net with some degree of skill. Likewise, a fighter is adept with shields and every form of armor. Beyond that basic degree of familiarity, each fighter specializes in a certain style of combat. Some concentrate on archery, some on fighting with two weapons at once, and some on augmenting their martial skills with magic. This combination of broad general ability and extensive specialization m akes fighters superior combatants on battlefields and in dungeons alike.",
+    desc:
+      "Fighters learn the basics of all combat styles. Every fighter can swing an axe, fence with a rapier, wield a longsword or a greatsword, use a bow, and even trap foes in a net with some degree of skill. Likewise, a fighter is adept with shields and every form of armor. Beyond that basic degree of familiarity, each fighter specializes in a certain style of combat. Some concentrate on archery, some on fighting with two weapons at once, and some on augmenting their martial skills with magic. This combination of broad general ability and extensive specialization makes fighters superior combatants on battlefields and in dungeons alike.",
 
     // -- Dont know if this will be used but it's here --
     classFeatures: [
@@ -85,7 +85,7 @@ const fighter = [
       {
         name: "Protection",
         desc:
-          "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to im pose disadvantage on the attack roll. You must be wielding a shield.",
+          "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.",
       },
       {
         name: "Two-Weapon Fighting",
@@ -130,7 +130,7 @@ const fighter = [
     subClass: [
       {
         name: "Champion",
-        description:
+        desc:
           "The archetypal Champion focuses on the development of raw physical pow er honed to deadly perfection.Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
         abilities: [
           {
@@ -170,7 +170,7 @@ const fighter = [
       //   --- Start of Class 2 ---
       {
         name: "Battle Master",
-        description:
+        desc:
           "Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, com bat is an academic field, sometimes including subjects beyond battle such as weaponsm ithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge.",
         abilities: [
           {
@@ -202,7 +202,7 @@ const fighter = [
             name: "Survivor",
             level: 18,
             desc:
-              "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no m ore than half of your hit points left. You don’t gain this benefit if you have 0 hit points.",
+              "At 18th level, you attain the pinnacle of resilience in battle. At the start of each of your turns, you regain hit points equal to 5 + your Constitution modifier if you have no more than half of your hit points left. You don’t gain this benefit if you have 0 hit points.",
           },
         ],
         // ---- Start of Maneuvers ----
@@ -210,7 +210,7 @@ const fighter = [
           {
             name: "Commander's Strike",
             desc:
-              "When you take the Attack action on your turn, you can forgo one of your attacks and use a bonus action to direct one of your com panions to strike. W hen you do so, choose a friendly creature who can see or hear you and expend one superiority die. That creature can immediately use its reaction to make one weapon attack, adding the superiority die to the attack’s damage roll.",
+              "When you take the Attack action on your turn, you can forgo one of your attacks and use a bonus action to direct one of your com panions to strike. When you do so, choose a friendly creature who can see or hear you and expend one superiority die. That creature can immediately use its reaction to make one weapon attack, adding the superiority die to the attack’s damage roll.",
           },
           {
             name: "Disarming Attack",
@@ -235,7 +235,7 @@ const fighter = [
           {
             name: "Goading Attack",
             desc:
-              "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to goad the target into attacking you. You add the superiority die to the attack’s damage roll, and the target must make a W isdom saving throw. On a failed save, the target has disadvantage on all attack rolls against targets other than you until the end of your next turn.",
+              "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to goad the target into attacking you. You add the superiority die to the attack’s damage roll, and the target must make a Wisdom saving throw. On a failed save, the target has disadvantage on all attack rolls against targets other than you until the end of your next turn.",
           },
           {
             name: "Lunging Attack",
@@ -275,7 +275,7 @@ const fighter = [
           {
             name: "Rally",
             desc:
-              "On your turn, you can use a bonus action andexpend one superiority die to bolster the resolve of one of your com panions. W hen you do so, choose a friendly creature w ho can see or hear you. That creature gains temporary hit points equal to the superiority die roll + your Charisma modifier.",
+              "On your turn, you can use a bonus action andexpend one superiority die to bolster the resolve of one of your com panions. When you do so, choose a friendly creature who can see or hear you. That creature gains temporary hit points equal to the superiority die roll + your Charisma modifier.",
           },
           {
             name: "Riposte",
@@ -285,7 +285,7 @@ const fighter = [
           {
             name: "Sweeping Attack",
             desc:
-              "When you hit a creature with a melee weapon attack, you can expend one superiority die to attempt to dam age another creature with the same attack. C hoose another creature within 5 feet of the original target and within your reach. If the original attack roll w ould hit the second creature, it takes damage equal to the number you roll on your superiority die. The damage is of the same type dealt by the original attack.",
+              "When you hit a creature with a melee weapon attack, you can expend one superiority die to attempt to damage another creature with the same attack. Choose another creature within 5 feet of the original target and within your reach. If the original attack roll would hit the second creature, it takes damage equal to the number you roll on your superiority die. The damage is of the same type dealt by the original attack.",
           },
           {
             name: "Trip Attack",
@@ -299,7 +299,7 @@ const fighter = [
       // *---- Class should include spell choices. See page 69/293 of Players Handbook ----*
       {
         name: "Eldritch Knight",
-        description:
+        desc:
           "The archetypal Eldritch Knight com bines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their studyon two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter’s reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook",
         abilities: [
           {
@@ -313,7 +313,7 @@ const fighter = [
             name: "Weapon Bond",
             level: 3,
             desc:
-              "You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual. Once you have bonded a w eapon to yourself, you can’t be disarm ed of that w eapon unless you are incapacitated. If it is on the sam e plane of existence, you can sum m on that weapon as a bonus action on your turn, causing it to teleport instantly to your hand. You can have up to two bonded w eapons, but can summon only one at a time with your bonus action. If you attempt to bond with a third weapon, you must break the bond with one of the other two",
+              "You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual. Once you have bonded a w eapon to yourself, you can’t be disarm ed of that weapon unless you are incapacitated. If it is on the same plane of existence, you can sum m on that weapon as a bonus action on your turn, causing it to teleport instantly to your hand. You can have up to two bonded w eapons, but can summon only one at a time with your bonus action. If you attempt to bond with a third weapon, you must break the bond with one of the other two",
           },
           {
             name: "War Magic",
@@ -325,7 +325,7 @@ const fighter = [
             name: "Eldritch Strike",
             level: 10,
             desc:
-              "When you hit a creature with a w eapon attack, that creature has disadvantage on the next saving throw it m akes against a spell you cast before the end of your next turn.",
+              "When you hit a creature with a weapon attack, that creature has disadvantage on the next saving throw it makes against a spell you cast before the end of your next turn.",
           },
           {
             name: "Arcane Charge",

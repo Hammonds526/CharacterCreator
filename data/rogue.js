@@ -1,28 +1,28 @@
 /* Starts on page 88/293 or 94 of Players Handbook
 *Cheat Sheet
 rogue
-  description
+  desc
   classFeatures
   pros
   abilities
   subClass
     -Thief
       name
-      description
+      desc
       abilites
     -Assassin
       name
-      description
+      desc
       abilites
     -Arcane Trickster
       name
-      description
+      desc
       abilites 
 */
 
 const rogue = [
   {
-    description:
+    desc:
       "Rogues devote as much effort to mastering the use of a variety of skills as they do to perfecting their combat abilities, giving them a broad expertise that few other characters can match. Many rogues focus on stealth and deception, while others refine the skills that help them in a dungeon environment, such as climbing, finding and disarming traps, and opening locks. When it com es to combat, rogues prioritize cunning over brute strength. A rogue would rather make one precise strike, placing it exactly where the attack will hurt the target most, than wear an opponent down with a barrage of attacks. Rogues have an almost supernatural knack for avoiding danger, and a few learn magical tricks to supplement their other abilities.",
 
     classFeatures: [
@@ -121,7 +121,7 @@ const rogue = [
     subClass: [
       {
         name: "Thief",
-        description:
+        desc:
           " Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn’t employ",
         abilities: [
           {
@@ -159,7 +159,7 @@ const rogue = [
       // ----- Start of subclass 2 -----
       {
         name: "Assassin",
-        description: "",
+        desc: "",
         abilities: [
           {
             name: "Bonus Proficiencies",
@@ -197,7 +197,7 @@ const rogue = [
         // ----- Start of subclass 3 -----
         // *----- This class has spells ----*
         name: "Arcane Trickster",
-        description:
+        desc:
           "Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers.",
         abilities: [
           {
