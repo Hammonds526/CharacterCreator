@@ -1,4 +1,6 @@
 .char-info-box__container {
-  background-color: lightgrey;
-  height: 600px;
+  /* background-color: lightgrey; */
+  background-image: url("../../images/stone_tile.png");
+  background-size: "64px";
+  height: 100%;
 }
