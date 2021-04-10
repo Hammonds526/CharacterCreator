@@ -10,8 +10,8 @@ function CharInfoBox(props) {
     <div class="char-info-box__container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
 
-      <WoodBeamY beamStyle={{ right: "0px", top: "9px" }} />
-      <WoodBeamY beamStyle={{ left: "0px", top: "9px" }} />
+      <WoodBeamY beamStyle={{ right: "15px", top: "9px" }} />
+      <WoodBeamY beamStyle={{ left: "15px", top: "9px" }} />
 
       <Corner
         cornerStyle={{
