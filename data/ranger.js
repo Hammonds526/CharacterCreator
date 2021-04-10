@@ -1,18 +1,18 @@
 /* Starts on page 83/293 or 89 of Players Handbook
 *Cheat Sheet
 ranger
-  description
+  desc
   classFeatures
   pros
   abilities
   subClass
     -Hunter
       name
-      description
+      desc
       abilites
     -Beast Master
       name
-      description
+      desc
       abilites
       
     
@@ -20,8 +20,8 @@ ranger
 
 const ranger = [
   {
-    description:
-      "Warriors of the wilderness, rangers specialize in hunting the m onsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the w ilds and hiding themselves in brush and rubble. Rangers focus their com bat training on techniques that are particularly useful against their specific favored foes. Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness nature’s  power, much as a druid does. Their spells, like their combat abilities, em phasize speed, stealth, and the hunt. A ranger’s talents and abilities are honed with deadly focus on the grim task of protecting the borderlands.",
+    desc:
+      "Warriors of the wilderness, rangers specialize in hunting the m onsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their com bat training on techniques that are particularly useful against their specific favored foes. Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness nature’s  power, much as a druid does. Their spells, like their combat abilities, emphasize speed, stealth, and the hunt. A ranger’s talents and abilities are honed with deadly focus on the grim task of protecting the borderlands.",
 
     classFeatures: [
       {
@@ -57,7 +57,7 @@ const ranger = [
         name: "Favored Enemy",
         level: 1,
         desc:
-          "Choose a type o f favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies. You have advantage on W isdom (Survival) checks to track your favored enem ies, as well as on Intelligence checks to recall information about them. You also learn one language of your choice that is spoken by your favored enemies, if they speak one at all. You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.",
+          "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies. You have advantage on Wisdom (Survival) checks to track your favored enem ies, as well as on Intelligence checks to recall information about them. You also learn one language of your choice that is spoken by your favored enemies, if they speak one at all. You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.",
       },
       // *----- This will require a selector and slight modification -----*
       {
@@ -107,7 +107,7 @@ const ranger = [
         name: "Land's Stride",
         level: 8,
         desc:
-          "Moving through non-magical difficult terrain costs you no extramovement. You can also pass through non-magical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a sim ilar hazard. In addition, you have advantage on saving throws against plants that are magically created or manipulated to im pede movement, such those created by the entangle spell.",
+          "Moving through non-magical difficult terrain costs you no extramovement. You can also pass through non-magical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard. In addition, you have advantage on saving throws against plants that are magically created or manipulated to im pede movement, such those created by the entangle spell.",
       },
       {
         name: "Hide in Plain Sight",
@@ -131,13 +131,13 @@ const ranger = [
         name: "Foe Slayer",
         level: 20,
         desc:
-          "Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one o f your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.",
+          "Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.",
       },
     ],
     subClass: [
       {
         name: "Hunter",
-        description:
+        desc:
           "As you walk the Hunter’s path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.",
         abilities: [
           {
@@ -192,7 +192,7 @@ const ranger = [
               {
                 name: "Volley",
                 desc:
-                  "You can use your action to make a ranged attack against any num ber of creatures within 10 feet of a point you can see within your w eapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.",
+                  "You can use your action to make a ranged attack against any num ber of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.",
               },
               {
                 name: "Whirlwind Attack",
@@ -229,20 +229,20 @@ const ranger = [
       // ----- Start of Class 2 -----
       {
         name: "Beast Master",
-        description:
+        desc:
           "The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means com m itting yourself to this ideal, working in partnership with an animal as its com panion and friend.",
         abilities: [
           {
             name: "Ranger's Companion",
             level: 3,
             desc:
-              "Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or 4x your ranger level, whichever is higher. The beast obeys your com m ands as best as it can. -It takes its turn on your initiative, though it doesn’t take an action unless you com m and it to. On your turn, you can verbally com m and the beast w here to m ove (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, Dodge, or Help action. Once you have the Extra Attack feature, you can make one w eapon attack yourself when you command the beast to take the Attack action. While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace. If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as  before or a different one.",
+              "Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or 4x your ranger level, whichever is higher. The beast obeys your commands as best as it can. -It takes its turn on your initiative, though it doesn’t take an action unless you com m and it to. On your turn, you can verbally command the beast w here to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, Dodge, or Help action. Once you have the Extra Attack feature, you can make one w eapon attack yourself when you command the beast to take the Attack action. While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace. If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as  before or a different one.",
           },
           {
             name: "Exceptional Training",
             level: 7,
             desc:
-              "On any of your turns when your beast com panion doesn’t attack, you can use a bonus action to com m and the beast to take the Dash, Disengage, Dodge, or Help action on its turn. ",
+              "On any of your turns when your beast com panion doesn’t attack, you can use a bonus action to command the beast to take the Dash, Disengage, Dodge, or Help action on its turn. ",
           },
           {
             name: "Bestial Fury",
