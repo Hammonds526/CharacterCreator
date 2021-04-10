@@ -7,11 +7,11 @@ import WoodBeamY from "../WoodBeamY";
 
 function CharInfoBox(props) {
   return (
-    <div class="char-info-box__container p-5 mt-5 text-white">
+    <div class="char-info-box__container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
 
-      <WoodBeamY beamStyle={{ right: "0px", top: "48px" }} />
-      <WoodBeamY beamStyle={{ left: "0px", top: "48px" }} />
+      <WoodBeamY beamStyle={{ right: "0px", top: "9px" }} />
+      <WoodBeamY beamStyle={{ left: "0px", top: "9px" }} />
 
       <Corner
         cornerStyle={{
@@ -65,13 +65,13 @@ function CharInfoBox(props) {
         at consectetur leo mollis dictum. Pellentesque euismod sit amet odio ac
         sagittis. Duis ut vestibulum felis, nec consectetur dolor.
       </p>
-      <WoodBeamX beamStyle={{ bottom: "-96px" }} />
+      <WoodBeamX beamStyle={{ bottom: "-57px" }} />
       <Corner
         cornerStyle={{
           width: "80px",
           height: "auto",
           right: "-48px",
-          bottom: "-96px",
+          bottom: "-57px",
           transform: "rotate(180deg)",
         }}
       />
@@ -80,7 +80,7 @@ function CharInfoBox(props) {
           width: "80px",
           height: "auto",
           left: "-48px",
-          bottom: "-96px",
+          bottom: "-57px",
           transform: "rotate(270deg)",
         }}
       />
