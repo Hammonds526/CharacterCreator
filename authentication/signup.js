@@ -8,6 +8,14 @@ $(document).ready(() => {
     const confirmPassword = $("input#password-input check");
     const signUpButton = $("#sign-up-button");
 
+    //password requirements code below;not sure if its going to work, but here it goes
+    const myInput = document.getElementById("psw");
+    const letter = document.getElementById("letter");
+    const capital = document.getElementById("capital");
+    const number = document.getElementById("number");
+    const length = document.getElementById("length");
+    const specialCharacter = document.getElementById("specialCharacter");
+
     const signUp = event => {
         event.preventDefault();
         const userData = {
@@ -19,6 +27,68 @@ $(document).ready(() => {
 
         if (!userData.username || !userData.password || !userData.email) {
             return alert("Enter a valid email, username, and password!...please.");
+        }
+
+        //password requirements; show message box
+        myInput.onfocus = function() {
+            document.getElementById("message").style.display = "block";
+        }
+
+        //password requirements; clicking outside the pw field it hides the message box
+        myInput.onblur = function() {
+            document.getElementById("message").style.display = "none";
+        }
+
+        //when pw begins being typed; lower case
+        myInput.onkeyup = function () {
+const lowerCaseLetters = /[a-z]/g;
+if (myInput.nodeValue.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+} else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+        }
+
+        //uppercase
+        const upperCaseLetters = /[A-Z]/g;
+        if (myInput.Value.match(upperCaseLetters)) {
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+        } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+        }
+
+        //numbers
+        const numbers = /[0-9]/g;
+        if(myInput.Value.match(numbers)) {
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+        } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+        }
+
+        //special characters
+        const specialCharacter = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "?", "/", "."];
+        if(myInput.value.match(specialCharacter)) {
+            specialCharacter.classList.remove("invalid");
+            specialCharacter.classList.add("valid");
+
+        } else {
+            specialCharacter.classList.remove("invalid");
+            specialCharacter.classList.add("valid");
+        }
+
+        //length
+        if(myInput.Value.length >=8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+        } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
         }
 
         // console.log(userData.passwordInput);
