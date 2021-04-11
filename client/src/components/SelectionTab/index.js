@@ -6,7 +6,6 @@ import ImageRight from "../../images/selectiontab_right.png";
 import NavArrow from "../NavArrow";
 
 function SelectionTab(props) {
-  console.log("props tab", props);
   return (
     <div
       className="position-relative"

@@ -5,11 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
-// Data
-import Fighter from "./data/fighter";
-import Ranger from "./data/ranger";
-import Rogue from "./data/rogue";
-import Wizard from "./data/wizard";
+import character from "./data/character";
 
 function App() {
   const [myCharacters, setMyCharacters] = useState([
@@ -35,9 +31,7 @@ function App() {
       <div className="container-fluid">
         <Switch>
           <Route path="/character-creator">
-            <CharacterMakerScreen
-              charClasses={{ Fighter, Ranger, Rogue, Wizard }}
-            />
+            <CharacterMakerScreen character={{ ...character }} />
           </Route>
         </Switch>
 

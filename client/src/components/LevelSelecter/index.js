@@ -3,7 +3,6 @@ import "./style.css";
 import NavArrow from "../NavArrow";
 
 function LevelSelecter(props) {
-  console.log("props ", props);
   return (
     <div className="">
       {/* <NavArrow

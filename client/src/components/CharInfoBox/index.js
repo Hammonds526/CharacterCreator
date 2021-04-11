@@ -6,35 +6,19 @@ import LevelSelector from "../LevelSelecter";
 import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link,
+//   useParams,
+//   useRouteMatch,
+// } from "react-router-dom";
 
 function CharInfoBox(props) {
-  const CharacterInfo = {
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae
-neque id risus condimentum congue. Nam vitae condimentum libero, sed
-pulvinar odio. Sed odio diam, rutrum vitae nibh ac, pellentesque commodo
-enim. Cras nisl metus, iaculis eu urna eu, imperdiet porttitor nulla.
-Mauris eleifend erat sed dolor eleifend tincidunt. Integer vitae magna
-augue. Vestibulum diam nunc, eleifend eget nulla quis, mollis congue
-libero. Donec ligula ipsum, ornare quis metus sit amet, bibendum blandit
-leo. Quisque eu magna et mauris malesuada fringilla. Etiam sed faucibus
-mauris. Praesent rhoncus risus at leo congue, in auctor quam molestie.
-Cras eget magna magna. Donec blandit bibendum risus, non consectetur
+  // let { path, url } = useRouteMatch();
 
-`,
-    race: [
-      // "Dragonborn",
-      "Dwarf",
-      // "Gnome",
-      "Elf",
-      "Half-Elf",
-      "Halfling",
-      "Half-Orc",
-      "Human",
-
-      // "Tiefling",
-    ],
-  };
-
+  console.log("character ", props);
   return (
     <div className="char-info-box__container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
@@ -62,14 +46,17 @@ Cras eget magna magna. Donec blandit bibendum risus, non consectetur
 
       <h6 className="text-white ml-5 mt-3">Choose a Race</h6>
       <div className="row">
-        {CharacterInfo.race.map((item) => (
-          <div className="col p-0 d-flex justify-content-center" key={item}>
-            <Button text={item} />
+        {props.character.race.map((item) => (
+          <div
+            className="col p-0 d-flex justify-content-center"
+            key={item.name}
+          >
+            <Button text={item.name} />
           </div>
         ))}
       </div>
 
-      {CharacterInfo.description}
+      {props.character.race[0].description}
       <div className="d-flex justify-content-between">
         <LevelSelector text={"4"} />
         <SelectButton utton text={"Select"} />

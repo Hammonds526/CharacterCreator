@@ -6,8 +6,6 @@ import AvatarContainer from "../AvatarContainer";
 import AbilityFeatSpell from "../AbilityFeatSpell";
 
 function CharacterMakerScreen(props) {
-  const Races = ["Elf", "Gnome", "Troll"];
-
   return (
     <div className="modal-content-box">
       <div className="character-maker-screen mx-auto bg-transparent container mt-5">
@@ -16,7 +14,7 @@ function CharacterMakerScreen(props) {
             <CharacterProgressBar />
             <div className="row">
               <div className="col">
-                <CharInfoBox Races={Races} {...props} />
+                <CharInfoBox {...props} />
               </div>
             </div>
           </div>
