@@ -30,7 +30,7 @@ function CharInfoBox(props) {
           transform: "rotate(90deg)",
         }}
       />
-
+{/* shit that goes inside goes here. */}
       <h6 className="text-white ml-5 mt-3">Choose a Race</h6>
 
       <p>
@@ -65,6 +65,7 @@ function CharInfoBox(props) {
         at consectetur leo mollis dictum. Pellentesque euismod sit amet odio ac
         sagittis. Duis ut vestibulum felis, nec consectetur dolor.
       </p>
+      {/* End */}
       <WoodBeamX beamStyle={{ bottom: "-57px" }} />
       <Corner
         cornerStyle={{
