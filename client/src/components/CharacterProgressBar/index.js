@@ -1,11 +1,27 @@
 import React from "react";
 import "./style.css";
-import SelectionTabStart from "../SelectionTabStart";
+import SelectionTab from "../SelectionTab";
+
+const tabTitles = ["Race/Level", "Class", "Subclass", "Spells", "Feats"];
 
 function CharacterProgressBar(props) {
   return (
-    <div class="character-progress-bar__container">
-      <SelectionTabStart charProperty={"Race / Level"} />
+    <div className="character-progress-bar__container">
+      <div className="d-flex justify-content-center flex-wrap">
+        {tabTitles.map((title, i) => {
+          return (
+            <div key={title}>
+              <SelectionTab
+                charProperty={title}
+                tabStyle={{
+                  zIndex: `-${i}`,
+                  // left: `-${i * 25}px`,
+                }}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -11,19 +11,20 @@ function CharacterMakerScreen(props) {
   return (
     <div className="modal-content-box">
       <div className="character-maker-screen mx-auto bg-transparent container mt-5">
-        <div class="row text-white">
-          <div class="col-12 col-lg-9 p-0">
+        <div className="row text-white">
+          <div className="col-12 col-lg-9 p-0">
             <CharacterProgressBar />
             <div className="row">
               <div className="col">
-                <CharInfoBox Races={Races} />
+                <CharInfoBox Races={Races} {...props} />
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-3 mb-2 p-0 px-lg-2">
+          <div className="col-12 col-lg-3 mb-2 p-0 px-lg-2">
             <AvatarContainer />
 
-            <AbilityFeatSpell />
+            {/* Removed from MVP: */}
+            {/* <AbilityFeatSpell /> */}
           </div>
           <div className="col-12 col-lg-9 p-0"></div>
         </div>
