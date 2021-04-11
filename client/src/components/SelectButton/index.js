@@ -4,7 +4,6 @@ import Button from "../Button";
 import NavArrow from "../NavArrow";
 
 function SelectButton(props) {
-  console.log("props ", props);
   return (
     <div className="position-relative">
       <NavArrow

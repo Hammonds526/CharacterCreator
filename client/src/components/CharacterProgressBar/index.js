@@ -1,24 +1,41 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch,
+} from "react-router-dom";
 import "./style.css";
 import SelectionTab from "../SelectionTab";
 
-const tabTitles = ["Race/Level", "Class", "Subclass", "Spells", "Feats"];
+const tabTitles = [
+  { title: "Race/Level", tabUrl: "race" },
+  { title: "Class", tabUrl: "class" },
+  { title: "Subclass", tabUrl: "subclass" },
+  { title: "Spells", tabUrl: "spells" },
+  { title: "Feats", tabUrl: "feats" },
+];
 
 function CharacterProgressBar(props) {
+  let { path, url } = useRouteMatch();
+
   return (
     <div className="character-progress-bar__container">
       <div className="d-flex justify-content-center flex-wrap">
-        {tabTitles.map((title, i) => {
+        {tabTitles.map(({ title, tabUrl }, i) => {
           return (
-            <div key={title}>
-              <SelectionTab
-                charProperty={title}
-                tabStyle={{
-                  zIndex: `-${i}`,
-                  // left: `-${i * 25}px`,
-                }}
-              />
-            </div>
+            <Link key={title} to={`${url}/${tabUrl}`}>
+              <div>
+                <SelectionTab
+                  charProperty={title}
+                  tabStyle={{
+                    zIndex: `-${i}`,
+                  }}
+                />
+              </div>
+            </Link>
           );
         })}
       </div>
