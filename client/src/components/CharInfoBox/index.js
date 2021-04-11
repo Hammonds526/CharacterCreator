@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 import Button from "../Button";
+import SelectButton from "../SelectButton";
+import LevelSelector from "../LevelSelecter";
 import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
@@ -34,7 +36,7 @@ Cras eget magna magna. Donec blandit bibendum risus, non consectetur
   };
 
   return (
-    <div class="char-info-box__container p-5 mt-2 text-white">
+    <div className="char-info-box__container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
 
       <WoodBeamY beamStyle={{ right: "15px", top: "9px" }} />
@@ -61,13 +63,17 @@ Cras eget magna magna. Donec blandit bibendum risus, non consectetur
       <h6 className="text-white ml-5 mt-3">Choose a Race</h6>
       <div className="row">
         {CharacterInfo.race.map((item) => (
-          <div className="col p-0 d-flex justify-content-center">
+          <div className="col p-0 d-flex justify-content-center" key={item}>
             <Button text={item} />
           </div>
         ))}
       </div>
 
       {CharacterInfo.description}
+      <div className="d-flex justify-content-between">
+        <LevelSelector text={"4"} />
+        <SelectButton utton text={"Select"} />
+      </div>
 
       {/* Nothing below here */}
       <WoodBeamX beamStyle={{ bottom: "-57px" }} />
