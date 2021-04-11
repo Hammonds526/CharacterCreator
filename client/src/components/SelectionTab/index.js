@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./style.css";
 import ImageLeft from "../../images/selectiontab_left.png";
 import ImageCenter from "../../images/selectiontab_center.png";
