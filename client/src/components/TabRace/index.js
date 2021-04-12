@@ -23,21 +23,28 @@ function TabRace(props) {
 
   return (
     <div>
-      <h6 className="text-white ml-5 mt-3">Choose a Race</h6>
-      <div className="row">
-        {props.character.race.map((item) => (
+      <h5 className="text-white ml-3">Choose a Race</h5>
+      <div className="row mb-2">
+        {props.character.race.map((item, i) => (
           <div
             className="col p-0 d-flex justify-content-center"
             key={item.name}
           >
-            <Button text={item.name} />
+            <div
+              onClick={() => {
+                console.log("You clicked me");
+                setRaceDescription(props.character.race[i].description);
+              }}
+            >
+              <Button text={item.name} />
+            </div>
           </div>
         ))}
       </div>
 
-      {raceDescription}
+      <p className="mb-2">{raceDescription}</p>
       <div className="d-flex justify-content-between">
-        <LevelSelector text={"4"} />
+        <LevelSelector />
         <Link to={"/character-creator/class"}>
           <SelectButton utton text={"Select"} />
         </Link>

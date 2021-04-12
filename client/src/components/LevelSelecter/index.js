@@ -17,7 +17,9 @@ function LevelSelecter(props) {
       <input
         className="   form-control-lg"
         type="number"
-        placeholder="Choose level"
+        min="1"
+        max="5"
+        placeholder="1"
       />
 
       {/* <NavArrow
