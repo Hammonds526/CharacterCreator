@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams,
+  useRouteMatch,
+} from "react-router-dom";
 import "./style.css";
 import SelectButton from "../SelectButton";
 import LevelSelector from "../LevelSelecter";
@@ -22,7 +30,9 @@ function TabClass(props) {
       {props.character.race[0].description}
       <div className="d-flex justify-content-between">
         <LevelSelector text={"4"} />
-        <SelectButton utton text={"Select"} />
+        <Link to={"/character-creator/subclass"}>
+          <SelectButton utton text={"Select"} />
+        </Link>
       </div>
     </div>
   );
