@@ -20,7 +20,29 @@ const userSchema = new Schema({
               name: {},
               level: {},
               type: {},
-              description: {},
+              description: {
+                desc: {},
+                higherLevel: {},
+                school: {},
+                range: {type: Number},
+                areaOfEffect: {
+                  type: {},
+                  size: {}
+                },
+                dc: {
+                  type: {},
+                  onSuccess: {}
+                },
+                castingTime: {type: Number},
+                duration: {type: Number},
+                concentration: {type: Boolean},
+                ritual: {type: Boolean}
+
+              },
+              damage: {
+                type: {},
+                damageAtSlotLevel: {}
+              }
             }],
         },
     },
