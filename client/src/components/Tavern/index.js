@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-import TavernImage from "./temporaryTavern.jpg";
+import TavernImage from "./temporaryTavern.png";
 
 function Tavern() {
   return (
