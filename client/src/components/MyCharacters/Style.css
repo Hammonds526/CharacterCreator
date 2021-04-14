@@ -8,5 +8,8 @@ h4 {
 }
 
 #container {
+    font-family: alagard;
+    font-weight: lighter;
+    font-size: 18px;
     background-image: url("../../images/stone_tile.png");
 }

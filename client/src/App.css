@@ -1,10 +1,12 @@
 body, html {
+  font-family: alagard;
+  font-size: 15px;
   text-align: center;
   background-color: #2a2c30;
   color: blanchedalmond;
   height: auto;
 }
 .title {
-  font-weight: bolder;
+  font-weight: normal;
   text-align: center;
 }

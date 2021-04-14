@@ -15,13 +15,15 @@
 }
 .vortex {
   z-index: -1;
+  opacity: 0.6;
+  background-color: rgb(20, 235, 0);
   position: relative;
-  border-radius: 100%;
+  border-radius: 50%;
   height: 200px;
   width: 200px;
   background-image: url("../../images/vortex.png");
   object-fit: scale-down;
-  animation: Spinny 7s linear infinite;
+  animation: Spinny 6.5s linear infinite;
 }
 .avatar {
   z-index: 2;
@@ -33,9 +35,11 @@
 @keyframes Spinny {
   from {
     transform:rotate(0deg);
+    opacity: 0.55;
   }
   to {
     transform:rotate(360deg);
+    opacity: 0.6;
   }
 }
 
