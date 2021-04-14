@@ -23,7 +23,7 @@ function TabRace(props) {
 
   return (
     <div>
-      <h5 className="text-white ml-3">Choose a Race</h5>
+      <h4 className="text-white ml-3">Choose a Race</h4>
       <div className="row mb-2">
         {props.character.race.map((item, i) => (
           <div

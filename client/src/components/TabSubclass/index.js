@@ -15,7 +15,7 @@ import Button from "../Button";
 function subclass(props) {
   return (
     <div>
-      <h6 className="text-white ml-5 mt-3">Choose a Subclass</h6>
+      <h4 className="text-white ml-3">Choose a Subclass</h4>
       <div className="row">
         {props.character.race.map((item) => (
           <div
