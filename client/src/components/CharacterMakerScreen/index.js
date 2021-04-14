@@ -27,11 +27,11 @@ function CharacterMakerScreen(props) {
     <div className="modal-content-box">
       <div className="character-maker-screen mx-auto bg-transparent container mt-5">
         <div className="row text-white">
-          <div className="col-12 col-lg-3 order-lg-2 mb-2 p-0 px-lg-2 d-flex justify-content-center">
+          <div id="stonebg" className="col-10 col-lg-3 order-lg-2 mb-2 p-0 px-lg-2 d-flex justify-content-center">
+            {/* Swirly avatar portrait, be careful with this. */}
             <AvatarContainer />
-
-            {/* Removed from MVP: */}
-            {/* <AbilityFeatSpell /> */}
+            
+            {/* Left side bar below */}
           </div>
           <div className="col-12 col-lg-9 order-lg-1 p-0">
             <CharacterProgressBar />
@@ -39,6 +39,7 @@ function CharacterMakerScreen(props) {
               <Route path={`${path}/:tabId`}>
                 <div className="col">
                   <CharInfoBox {...props} />
+                  {/* REMOVED FROM MVP, HERE FOR SAFE KEEPING > <AbilityFeatSpell /> */}
                 </div>
               </Route>
             </div>

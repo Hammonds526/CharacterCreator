@@ -34,6 +34,7 @@
   animation: Avatarfloat 2s ease infinite;
 }
 
+/* Animations */
 @keyframes Spinny {
   from {
     transform:rotate(0deg);

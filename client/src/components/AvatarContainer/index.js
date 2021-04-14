@@ -9,19 +9,20 @@ function AvatarContainer(props) {
   return (
     <div>
       <div className="avatar__container text-center">
-        <div className="vortex"></div>
-      <img
-          className="frame"
-          src={Frame}
-          alt="Character Avatar"
-        ></img>
         <div>
+          <div className="vortex"></div>
+          <img
+            className="frame"
+            src={Frame}
+            alt="Character Avatar"
+          ></img>
           <img
             className="avatar"
             src={Avatar}
             alt="Character Avatar"
           ></img>
         </div>
+        <div id="stonebg"></div>
 
       </div>
     </div>
