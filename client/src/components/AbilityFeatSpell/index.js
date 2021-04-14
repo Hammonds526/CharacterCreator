@@ -9,7 +9,7 @@ function AbilityFeatSpell(props) {
   return (
     <div className="col p-0 char-info-box__container">
       <div
-        class="char-info-box__container p-5 mt-2 text-whites"
+        className="char-info-box__container p-4 mt-2 text-whites"
         style={{ height: "100%" }}
       >
         <WoodBeamX beamStyle={{ top: "-24px" }} />
