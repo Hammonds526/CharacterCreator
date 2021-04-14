@@ -16,7 +16,6 @@
 .vortex {
   z-index: -1;
   opacity: 0.6;
-  background-color: rgb(20, 235, 0);
   position: relative;
   border-radius: 50%;
   height: 200px;
@@ -24,6 +23,9 @@
   background-image: url("../../images/vortex.png");
   object-fit: scale-down;
   animation: Spinny 6.5s linear infinite;
+
+  /* This is here in case the bg image doesn't load in time */
+  background-color: rgb(10, 6, 9);
 }
 .avatar {
   z-index: 2;
