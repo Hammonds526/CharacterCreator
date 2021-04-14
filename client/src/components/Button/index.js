@@ -1,18 +1,18 @@
 import React from "react";
 import "./style.css";
-import ImgTabStart from "../../images/selection_tab_start.png";
+import Image from "../../images/btn.png";
 
 function Button(props) {
   return (
-    <div className="position-relative">
-      <p className="font-weight-bold position-absolute selection-tab-text">
+    <div className="position-relative button-image-background">
+      <p className="font-weight-bold position-absolute button-text">
         {props.text}
       </p>
-      <img
-        src={ImgTabStart}
-        style={{ width: "150px", height: "auto" }}
+      {/* <img
+        src={Image}
+        style={{ width: "85px", height: "auto" }}
         alt="Selection tab start"
-      ></img>
+      ></img> */}
     </div>
   );
 }
