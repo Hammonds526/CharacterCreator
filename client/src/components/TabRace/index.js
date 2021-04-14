@@ -42,7 +42,7 @@ function TabRace(props) {
         ))}
       </div>
 
-      <p className="mb-2">{raceDescription}</p>
+      <p id="Racebox" className="mb-2">{raceDescription}</p>
       <div className="d-flex justify-content-between">
         <LevelSelector />
         <Link to={"/character-creator/class"}>

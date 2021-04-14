@@ -1,14 +1,23 @@
 .list-group-item {
-    background-color: transparent;
+    background-image: url("../../images/cardthing.png");
+    height: 156px;
+    width: 250px;
+    margin: auto;
+    border-radius: 2%;
+    background-color: wheat;
     color: burlywood;
     font-weight: normal;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
 #level {
+    text-align: center;
+
 justify-self: center;
     background-color: wheat;
     border: burlywood 2px solid;
-    width: 75px;
+    width: auto;
     height: auto;
     border-radius: 24px;
     font-family: Romulus;
