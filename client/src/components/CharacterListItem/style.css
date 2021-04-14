@@ -1,0 +1,11 @@
+.list-group-item {
+    background-color: transparent;
+    color: burlywood;
+    font-weight: bold;
+}
+
+#level {
+    color: brown;
+    font-size: medium;
+    font-weight: bolder;
+}

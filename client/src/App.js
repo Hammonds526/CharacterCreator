@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
@@ -29,14 +29,15 @@ function App() {
   return (
     <Router>
       <div className="container-fluid">
+      <div className="col">
         <Switch>
           <Route path="/character-creator">
             <CharacterMakerScreen character={{ ...character }} />
           </Route>
         </Switch>
 
-        <div className="row">
-          <h3 className="ml-3">Character Creator</h3>
+
+          <h3 id="title" className="ml-3">Character Creator</h3>
         </div>
         <div className="row">
           <div className="col-10">

@@ -1,9 +1,5 @@
 import React from "react";
-import "./style.css";
 
-import Corner from "../Corner";
-import WoodBeamX from "../WoodBeamX";
-import WoodBeamY from "../WoodBeamY";
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,6 +13,15 @@ import ClassPage from "../TabClass";
 import SubclassPage from "../TabSubclass";
 import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
+
+// CSS
+import "./style.css";
+
+// Pixel border stuff
+import Corner from "../Corner";
+import WoodBeamX from "../WoodBeamX";
+import WoodBeamY from "../WoodBeamY";
+
 
 function CharInfoBox(props) {
   let { path, url } = useRouteMatch();
