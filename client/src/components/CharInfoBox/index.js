@@ -13,6 +13,7 @@ import ClassPage from "../TabClass";
 import SubclassPage from "../TabSubclass";
 import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
+import NameLevelPage from "../TabNameLevel";
 
 // CSS
 import "./style.css";
@@ -26,13 +27,13 @@ import WoodBeamY from "../WoodBeamY";
 function CharInfoBox(props) {
   let { path, url } = useRouteMatch();
 
-  console.log("path ", path);
+  // console.log("path ", path);
 
-  console.log("url ", url);
+  // console.log("url ", url);
 
   let { tabId } = useParams();
 
-  console.log("tabId ", tabId);
+  // console.log("tabId ", tabId);
   return (
     <div className="char-info-box__container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
@@ -58,6 +59,9 @@ function CharInfoBox(props) {
         }}
       />
       <Switch>
+        <Route exact path={"/character-creator/name"}>
+          <NameLevelPage {...props} />
+        </Route>
         <Route exact path={"/character-creator/race"}>
           <RacePage {...props} />
         </Route>

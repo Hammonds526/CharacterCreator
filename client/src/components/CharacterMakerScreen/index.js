@@ -15,6 +15,17 @@ import AbilityFeatSpell from "../AbilityFeatSpell";
 
 function CharacterMakerScreen(props) {
   let { path, url } = useRouteMatch();
+  const [newCharacter, setNewCharacter] = useState({
+    name: "",
+    race: "",
+    level: null,
+    class: null,
+    subclass: null,
+    abilities: [],
+    spells: [],
+    feats: [],
+    userId: null,
+  });
 
   // console.log("path ", path);
   // console.log("url ", url);
@@ -22,6 +33,8 @@ function CharacterMakerScreen(props) {
   // let { tab } = useParams();
 
   // console.log("tab ", tab);
+
+  console.log("newCharacter", newCharacter);
 
   return (
     <div className="modal-content-box">
@@ -38,8 +51,7 @@ function CharacterMakerScreen(props) {
             <div className="row">
               <Route path={`${path}/:tabId`}>
                 <div className="col">
-                  <CharInfoBox {...props} />
-                  {/* REMOVED FROM MVP, HERE FOR SAFE KEEPING > <AbilityFeatSpell /> */}
+                  <CharInfoBox {...props} setNewCharacter={setNewCharacter} />
                 </div>
               </Route>
             </div>

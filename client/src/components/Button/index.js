@@ -8,11 +8,6 @@ function Button(props) {
       <p className="font-weight-bold position-absolute button-text">
         {props.text}
       </p>
-      {/* <img
-        src={Image}
-        style={{ width: "85px", height: "auto" }}
-        alt="Selection tab start"
-      ></img> */}
     </div>
   );
 }
