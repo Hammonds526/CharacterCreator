@@ -61,7 +61,7 @@ const fighter = [
     ],
 
     // *---- Should be a dropdown choice option after class is chosen. ----*
-    // Champion  has option for 2 at level 10 
+    // Champion  has option for 2 at level 10
     fighterStyle: [
       {
         name: "Archery",
@@ -171,7 +171,7 @@ const fighter = [
       {
         name: "Battle Master",
         desc:
-          "Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, com bat is an academic field, sometimes including subjects beyond battle such as weaponsm ithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge.",
+          "Those who emulate the archetypal Battle Master employ martial techniques passed down through generations. To a Battle Master, combat is an academic field, sometimes including subjects beyond battle such as weaponsmithing and calligraphy. Not every fighter absorbs the lessons of history, theory, and artistry that are reflected in the Battle Master archetype, but those who do are well-rounded fighters of great skill and knowledge.",
         abilities: [
           {
             // *----- This might need a selector option ----*

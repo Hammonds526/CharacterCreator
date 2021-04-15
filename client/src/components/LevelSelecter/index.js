@@ -15,10 +15,10 @@ function LevelSelecter(props) {
         }}
       /> */}
       <input
-        className="   form-control-lg"
+        className=" ml-3  form-control"
         type="number"
         min="1"
-        max="5"
+        max="20"
         placeholder="1"
       />
 
