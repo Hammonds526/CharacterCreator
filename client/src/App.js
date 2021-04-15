@@ -31,7 +31,7 @@ function App() {
       <div className="container-fluid">
         <Switch>
           <Route path="/character-creator">
-            <CharacterMakerScreen character={{ ...character }} />
+            <CharacterMakerScreen character={{ ...character }} my />
           </Route>
         </Switch>
 
