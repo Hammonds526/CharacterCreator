@@ -11,7 +11,8 @@ import "./style.css";
 import SelectionTab from "../SelectionTab";
 
 const tabTitles = [
-  { title: "Race/Level", tabUrl: "race" },
+  { title: "Name/Lvl", tabUrl: "name" },
+  { title: "Race", tabUrl: "race" },
   { title: "Class", tabUrl: "class" },
   { title: "Subclass", tabUrl: "subclass" },
   { title: "Spells", tabUrl: "spells" },

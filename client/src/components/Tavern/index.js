@@ -6,7 +6,7 @@ import TavernImage from "./temporaryTavern.jpg";
 function Tavern() {
   return (
     <div>
-      <Link to="/character-creator/race">
+      <Link to="/character-creator/name">
         <img
           className="desktop-tavern__image-main"
           src={TavernImage}
