@@ -29,27 +29,27 @@ function App() {
   return (
     <Router>
       <div className="container-fluid">
-        <div className="col">
-          <Switch>
-            <Route path="/character-creator">
-              <CharacterMakerScreen character={{ ...character }} my />
-            </Route>
-          </Switch>
-    
-            <br />
-            {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
+      <div className="col">
+        <Switch>
+          <Route path="/character-creator">
+            <CharacterMakerScreen character={{ ...character }} my />
+          </Route>
+        </Switch>
+
+<br />
+          {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="row">
+            </div>
+            <Tavern />
           </div>
-          <div className="row">
-            <div className="col">
-              <div className="row">
-              </div>
-              <Tavern />
-            </div>
-            <div className="col">
-              <MyCharacters myCharacters={myCharacters} />
-            </div>
+          <div className="col">
+            <MyCharacters myCharacters={myCharacters} />
           </div>
         </div>
+      </div>
     </Router>
   );
 }
