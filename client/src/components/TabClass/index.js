@@ -15,7 +15,7 @@ import Button from "../Button";
 function TabClass(props) {
   return (
     <div>
-      <h6 className="text-white ml-5 mt-3">Choose a Class</h6>
+      <h4 className="text-white ml-3">Choose a Class</h4>
       <div className="row">
         {props.character.race.map((item) => (
           <div
