@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   font-family: alagard;
   font-size: 15px;
   text-align: center;
@@ -9,6 +10,10 @@ body, html {
 .title {
   font-weight: normal;
   text-align: center;
+}
+
+.text-bisque {
+  color: bisque;
 }
 
 h4 {

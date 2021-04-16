@@ -32,14 +32,14 @@ function SelectionTab(props) {
         src={ImageLeft}
         alt="Selection tab"
         className="position-absolute"
-        style={{ left: "-22px" }}
+        style={{ left: "-9px" }}
       ></img>
       <img src={ImageCenter} alt="Selection tab"></img>
       <img
         src={ImageRight}
         alt="Selection tab"
         className="position-absolute"
-        style={{ right: "-3px" }}
+        style={{ right: "-13px" }}
       ></img>
     </div>
   );
