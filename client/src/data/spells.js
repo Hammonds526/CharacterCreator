@@ -806,7 +806,7 @@ const spells = [
         size: 40
       },
       dc: {
-        type: wis,
+        type: "wis",
         onSuccess: "none"
       },
       castingTime: "1 action",
@@ -1469,7 +1469,7 @@ const spells = [
       school: "Conjuration",
       range: "10 feet",
       areaOfEffect: {
-        type: sphere,
+        type: "sphere",
         size: 10
       },
       dc: {
@@ -1545,7 +1545,7 @@ const spells = [
         size: 15
       },
       dc: {
-        type: con,
+        type: "con",
         onSuccess: "half"
       },
       castingTime: "1 action",
@@ -1606,7 +1606,7 @@ const spells = [
       school: "Evocation",
       range: "self",
       areaOfEffect: {
-        type: sphere,
+        type: "sphere",
         size: 10
       },
       dc: {
@@ -2064,7 +2064,7 @@ const spells = [
         size: 60
       },
       dc: {
-        type: dex,
+        type: "dex",
         onSuccess: "half"
       },
       castingTime: "1 action",
@@ -2209,7 +2209,7 @@ const spells = [
         size: 30
       },
       dc: {
-        type: wis,
+        type: "wis",
         onSuccess: "none"
       },
       castingTime: "1 action",
@@ -2369,4 +2369,7 @@ const spells = [
       attackType: null
     }
   }
-],
+]
+
+export default spells
+
