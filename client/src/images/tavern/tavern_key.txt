@@ -1,0 +1,14 @@
+
+I did it in this order:
+1 Bard
+2 Ranger
+3 Cleric
+4 Druid
+5 Fighter
+6 Monk
+7 Paladin
+8 BARBARIAN
+9 Rogue
+10 Sorcerer
+11 Warlock
+12 Wizard
