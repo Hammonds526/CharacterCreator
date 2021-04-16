@@ -4,7 +4,6 @@ import "./style.css";
 import ImageLeft from "../../images/selectiontab_left.png";
 import ImageCenter from "../../images/selectiontab_center.png";
 import ImageRight from "../../images/selectiontab_right.png";
-import NavArrow from "../NavArrow";
 
 function SelectionTab(props) {
   return (

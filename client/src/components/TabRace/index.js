@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style.css";
 import SelectButton from "../SelectButton";
-import LevelSelector from "../LevelSelecter";
 import Button from "../Button";
 
 function TabRace(props) {
-  let { path, url } = useRouteMatch();
   const [raceDescription, setRaceDescription] = useState("");
 
-  // Get the dwarf description and put it in state
+  // On Page Load, Get the dwarf description and put it in state
   useEffect(() => {
+    console.log("newCharacter", props.newCharacter);
     setRaceDescription(props.character.race[0].description);
-  }, []);
+    // Also on page load, get the name of the race and put it in the newCharacter State. This will change if the user selects a different race before they continue.
+    props.setNewCharacter({
+      ...props.newCharacter,
+      race: props.character.race[0].name.toLowerCase(),
+    });
+  }, [props]);
 
   return (
     <div>
@@ -32,7 +29,11 @@ function TabRace(props) {
           >
             <div
               onClick={() => {
-                setRaceDescription(props.character.race[i].description);
+                setRaceDescription(item.description);
+                props.setNewCharacter({
+                  ...props.newCharacter,
+                  race: item.name.toLowerCase(),
+                });
               }}
             >
               <Button text={item.name} />

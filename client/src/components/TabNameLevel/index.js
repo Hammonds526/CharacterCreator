@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import SelectButton from "../SelectButton";
 import LevelSelector from "../LevelSelecter";
-import Button from "../Button";
 
 function TabNameLevel(props) {
-  let { path, url } = useRouteMatch();
-
   const handleInputChange = (event) => {
     const { value, name } = event.target;
     props.setNewCharacter({

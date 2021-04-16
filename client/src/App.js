@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -29,15 +29,16 @@ function App() {
   return (
     <Router>
       <div className="container-fluid">
-      <div className="col">
-        <Switch>
-          <Route path="/character-creator">
-            <CharacterMakerScreen character={{ ...character }} my />
-          </Route>
-        </Switch>
+        <div className="col">
+          <Switch>
+            <Route path="/character-creator">
+              <CharacterMakerScreen character={{ ...character }} my />
+            </Route>
+          </Switch>
 
-
-          <h3 id="title" className="ml-3">Character Creator</h3>
+          <h3 id="title" className="ml-3">
+            Character Creator
+          </h3>
         </div>
         <div className="row">
           <div className="col-10">

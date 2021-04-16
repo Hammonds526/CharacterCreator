@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import NavArrow from "../NavArrow";
+// import NavArrow from "../NavArrow";
 
 function LevelSelecter(props) {
   return (
