@@ -8,11 +8,10 @@ import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
-
 function Tavern() {
   return (
     <div>
-      <WoodBeamX beamStyle={{ top: "-15px", }} />
+      <WoodBeamX beamStyle={{ top: "-15px" }} />
 
       <WoodBeamY beamStyle={{ left: "-3px", top: "13px" }} />
       <WoodBeamY beamStyle={{ right: "-3px", top: "13px" }} />
@@ -36,7 +35,7 @@ function Tavern() {
       />
       {/*  - Nothing goes above this line. - */}
 
-      <Link to="/character-creator/race">
+      <Link to="/character-creator/name">
         <img
           className="desktop-tavern__image-main"
           src={TavernImage}
