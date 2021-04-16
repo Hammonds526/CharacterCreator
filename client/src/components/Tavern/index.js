@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-import TavernImage from "./temporaryTavern.png";
+import TavernImage from "../../images/tavern/tavernx2.png";
 
 // Pixel border stuff
 import Corner from "../Corner";
@@ -35,7 +35,7 @@ function Tavern() {
         }}
       />
       {/*  - Nothing goes above this line. - */}
-
+<div className="">
       <Link to="/character-creator/race">
         <img
           className="desktop-tavern__image-main"
@@ -43,7 +43,7 @@ function Tavern() {
           alt="A tavern filled with 12 interesting looking characters representing the 12 classes in the game DND"
         ></img>
       </Link>
-
+</div>
       {/* - Nothing goes below this line - */}
       <WoodBeamX beamStyle={{ bottom: "-17px" }} />
       <Corner
