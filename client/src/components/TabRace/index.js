@@ -44,7 +44,7 @@ function TabRace(props) {
       <p className="tab_descriptions text-bisque mb-2">{raceDescription}</p>
       <div className="d-flex justify-content-end">
         <Link to={"/character-creator/class"}>
-          <SelectButton utton text={"Select"} />
+          <SelectButton text={"Select"} />
         </Link>
       </div>
     </div>
