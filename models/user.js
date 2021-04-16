@@ -7,7 +7,7 @@ const userSchema = new Schema({
       id: { type: Number },
       username: { type: String },
       password: { type: String },
-      characters: 
+      characters:[ 
         {
           name: { type: String },
           level: { type: Number },
@@ -16,35 +16,36 @@ const userSchema = new Schema({
           subClass: { type: String },
           abilities: [{}],
           feats: [{ type: Schema.Types.ObjectId, ref: "Actions"}],
-          // spells: [{
-          //     name: {},
-          //     level: {},
-          //     type: {},
-          //     description: {
-          //       desc: {},
-          //       higherLevel: {},
-          //       school: {},
-          //       range: {type: Number},
-          //       areaOfEffect: {
-          //         type: {},
-          //         size: {}
-          //       },
-          //       dc: {
-          //         type: {},
-          //         onSuccess: {}
-          //       },
-          //       castingTime: {type: Number},
-          //       duration: {type: Number},
-          //       concentration: {type: Boolean},
-          //       ritual: {type: Boolean}
+          spells: [{
+              name: {type: String},
+              level: {type: Number},
+              type: {type: String},
+              description: {
+                desc: {type: String},
+                higherLevel: {type: String},
+                school: {type: String},
+                range: {type: Number},
+                areaOfEffect: {
+                  type: {type: String},
+                  size: {type: Number}
+                },
+                dc: {
+                  type: {type: String},
+                  onSuccess: {type: String}
+                },
+                castingTime: {type: Number},
+                duration: {type: Number},
+                concentration: {type: Boolean},
+                ritual: {type: Boolean}
 
-          //     },
-          //     damage: {
-          //       type: {},
-          //       damageAtSlotLevel: {}
-          //     }
-          //   }],
+              },
+              damage: {
+                type: {type: String},
+                damageAtSlotLevel: {type: String}
+              }
+            }],
         },
+      ],
     },
 });
 

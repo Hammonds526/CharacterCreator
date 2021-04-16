@@ -23,34 +23,34 @@ const userSeed = [
           subClass: null,
           abilities: [{}],
           feats: [{}],
-          // spells: [{
-          //     name: null,
-          //     level: null,
-          //     type: null,
-          //     description: {
-          //       desc: null,
-          //       higherLevel: null,
-          //       school: null,
-          //       range: null,
-          //       areaOfEffect: {
-          //         type: null,
-          //         size: null
-          //       },
-          //       dc: {
-          //         type: null,
-          //         onSuccess: null
-          //       },
-          //       castingTime: null,
-          //       duration: null,
-          //       concentration: null,
-          //       ritual: null
+          spells: [{
+              name: null,
+              level: null,
+              type: null,
+              description: {
+                desc: null,
+                higherLevel: null,
+                school: null,
+                range: null,
+                areaOfEffect: {
+                  type: null,
+                  size: null
+                },
+                dc: {
+                  type: null,
+                  onSuccess: null
+                },
+                castingTime: null,
+                duration: null,
+                concentration: null,
+                ritual: null
 
-          //     },
-          //     damage: {
-          //       type: null,
-          //       damageAtSlotLevel: null
-          //     }
-          //   }],
+              },
+              damage: {
+                type: null,
+                damageAtSlotLevel: null
+              }
+            }],
         },
     },
   },
@@ -68,34 +68,34 @@ const userSeed = [
         subClass: null,
         abilities: [{}],
         feats: [{}],
-        // spells: [{
-        //     name: null,
-        //     level: null,
-        //     type: null,
-        //     description: {
-        //       desc: null,
-        //       higherLevel: null,
-        //       school: null,
-        //       range: null,
-        //       areaOfEffect: {
-        //         type: null,
-        //         size: null
-        //       },
-        //       dc: {
-        //         type: null,
-        //         onSuccess: null
-        //       },
-        //       castingTime: null,
-        //       duration: null,
-        //       concentration: null,
-        //       ritual: null
+        spells: [{
+            name: null,
+            level: null,
+            type: null,
+            description: {
+              desc: null,
+              higherLevel: null,
+              school: null,
+              range: null,
+              areaOfEffect: {
+                type: null,
+                size: null
+              },
+              dc: {
+                type: null,
+                onSuccess: null
+              },
+              castingTime: null,
+              duration: null,
+              concentration: null,
+              ritual: null
 
-        //     },
-        //     damage: {
-        //       type: null,
-        //       damageAtSlotLevel: null
-        //     }
-        //   }],
+            },
+            damage: {
+              type: null,
+              damageAtSlotLevel: null
+            }
+          }],
       },
     },
   },
@@ -113,34 +113,34 @@ const userSeed = [
         subClass: null,
         abilities: [{}],
         feats: [{}],
-        // spells: [{
-        //     name: null,
-        //     level: null,
-        //     type: null,
-        //     description: {
-        //       desc: null,
-        //       higherLevel: null,
-        //       school: null,
-        //       range: null,
-        //       areaOfEffect: {
-        //         type: null,
-        //         size: null
-        //       },
-        //       dc: {
-        //         type: null,
-        //         onSuccess: null
-        //       },
-        //       castingTime: null,
-        //       duration: null,
-        //       concentration: null,
-        //       ritual: null
+        spells: [{
+            name: null,
+            level: null,
+            type: null,
+            description: {
+              desc: null,
+              higherLevel: null,
+              school: null,
+              range: null,
+              areaOfEffect: {
+                type: null,
+                size: null
+              },
+              dc: {
+                type: null,
+                onSuccess: null
+              },
+              castingTime: null,
+              duration: null,
+              concentration: null,
+              ritual: null
 
-        //     },
-        //     damage: {
-        //       type: null,
-        //       damageAtSlotLevel: null
-        //     }
-        //   }],
+            },
+            damage: {
+              type: null,
+              damageAtSlotLevel: null
+            }
+          }],
       },
     },
   },
