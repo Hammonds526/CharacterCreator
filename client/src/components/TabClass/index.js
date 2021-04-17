@@ -5,15 +5,18 @@ import SelectButton from "../SelectButton";
 import Button from "../Button";
 
 function TabClass(props) {
-  console.log("Character ", props.character);
-
   const [classDescription, setClassDescription] = useState("");
 
-  // Get the dwarf description and put it in state
+  // Get the description of the first class and put it in state
   useEffect(() => {
     setClassDescription(props.character.class[0].desc);
-  }, [props.character.class]);
-
+    // Also on page load, get the first class and put it in the newCharacter State. This will change as the user selects other classes.
+    // props.setNewCharacter({
+    //   ...props.newCharacter,
+    //   class: props.character.class[0].name.toLowerCase(),
+    // });
+  }, []);
+  console.log("newCharacter", props.newCharacter);
   return (
     <div>
       <h4 className="text-bisque ml-3">Choose a Class</h4>
@@ -26,6 +29,10 @@ function TabClass(props) {
             <div
               onClick={() => {
                 setClassDescription(item.desc);
+                props.setNewCharacter({
+                  ...props.newCharacter,
+                  class: item.name.toLowerCase(),
+                });
               }}
             >
               <Button text={item.name} />

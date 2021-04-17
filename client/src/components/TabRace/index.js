@@ -9,13 +9,12 @@ function TabRace(props) {
 
   // On Page Load, Get the dwarf description and put it in state
   useEffect(() => {
-    console.log("newCharacter", props.newCharacter);
     setRaceDescription(props.character.race[0].description);
     // Also on page load, get the name of the race and put it in the newCharacter State. This will change if the user selects a different race before they continue.
-    props.setNewCharacter({
-      ...props.newCharacter,
-      race: props.character.race[0].name.toLowerCase(),
-    });
+    // props.setNewCharacter({
+    //   ...props.newCharacter,
+    //   race: props.character.race[0].name.toLowerCase(),
+    // });
   }, []);
 
   return (

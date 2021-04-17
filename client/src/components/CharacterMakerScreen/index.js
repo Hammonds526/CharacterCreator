@@ -10,9 +10,9 @@ function CharacterMakerScreen(props) {
   let { path } = useRouteMatch();
   const [newCharacter, setNewCharacter] = useState({
     name: "",
-    race: "",
     level: 1,
-    class: null,
+    race: "dwarf",
+    class: "fighter",
     subclass: null,
     abilities: [],
     spells: [],
@@ -26,8 +26,6 @@ function CharacterMakerScreen(props) {
   // let { tab } = useParams();
 
   // console.log("tab ", tab);
-
-  console.log("newCharacter", newCharacter);
 
   return (
     <div className="modal-content-box">
