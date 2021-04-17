@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -8,7 +8,7 @@ import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
 
 function App() {
-  const [myCharacters, setMyCharacters] = useState([
+  const [myCharacters] = useState([
     {
       Name: "John",
       Level: 12,
@@ -32,24 +32,22 @@ function App() {
         <div className="col">
           <Switch>
             <Route path="/character-creator">
-              <CharacterMakerScreen character={{ ...character }} my />
+              <CharacterMakerScreen character={{ ...character }} />
             </Route>
           </Switch>
-    
-            <br />
-            {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
+
+          {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
+        </div>
+        <div className="row mt-4">
+          <div className="col">
+            <div className="row"></div>
+            <Tavern />
           </div>
-          <div className="row">
-            <div className="col">
-              <div className="row">
-              </div>
-              <Tavern />
-            </div>
-            <div className="col">
-              <MyCharacters myCharacters={myCharacters} />
-            </div>
+          <div className="col">
+            <MyCharacters myCharacters={myCharacters} />
           </div>
         </div>
+      </div>
     </Router>
   );
 }

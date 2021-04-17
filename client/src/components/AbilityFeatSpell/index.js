@@ -1,12 +1,10 @@
 import React from "react";
 import "./style.css";
-import Button from "../Button";
 
 // Pixel border stuff
 import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
-
 
 function AbilityFeatSpell(props) {
   return (

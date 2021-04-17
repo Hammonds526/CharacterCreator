@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import Button from "../Button";
 import NavArrow from "../NavArrow";
 
 function SelectButton(props) {

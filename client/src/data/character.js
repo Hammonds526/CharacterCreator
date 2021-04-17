@@ -7,12 +7,7 @@ import race from "./race";
 
 const character = {
   race,
-  class: {
-    fighter,
-    ranger,
-    rogue,
-    wizard,
-  },
+  class: [fighter, ranger, rogue, wizard],
 };
 
 export default character;

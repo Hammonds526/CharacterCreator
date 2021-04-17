@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import RacePage from "../TabRace";
 import ClassPage from "../TabClass";
 import SubclassPage from "../TabSubclass";
@@ -23,17 +16,9 @@ import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
-
 function CharInfoBox(props) {
-  let { path, url } = useRouteMatch();
+  console.log("characterfrom infobox ", props.character);
 
-  // console.log("path ", path);
-
-  // console.log("url ", url);
-
-  let { tabId } = useParams();
-
-  // console.log("tabId ", tabId);
   return (
     <div className="char-info-box__container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />

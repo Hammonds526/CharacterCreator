@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 import "./style.css";
 import SelectionTab from "../SelectionTab";
 
@@ -20,7 +13,7 @@ const tabTitles = [
 ];
 
 function CharacterProgressBar(props) {
-  let { path, url } = useRouteMatch();
+  let { url } = useRouteMatch();
 
   return (
     <div className="character-progress-bar__container">
