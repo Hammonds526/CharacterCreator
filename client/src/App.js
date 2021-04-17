@@ -12,7 +12,11 @@ import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
 
+
 function App() {
+  // Temp Character storage
+
+
   const [myCharacters] = useState([
     {
       Name: "John",
@@ -25,23 +29,45 @@ function App() {
       CharClass: "Ranger",
     },
     {
+      Name: "Chuck Norris",
+      Level: 25,
+      CharClass: "Fighter",
+    },
+    {
       Name: "Alexander",
       Level: 10,
       CharClass: "Rogue",
     },
   ]);
 
+  // This is here for a potential icon change based on the class.
+  /*
+ if (CharClass = "Rogue") {
+let classimage = "../../images/icons/rogue.png"
+} if (CharClass = "Wizard") {
+let classimage = "../../images/icons/wizard.png"
+}if (CharClass = "Fighter") {
+let classimage = "../../images/icons/fighter.png"
+}if (CharClass = "Ranger") {
+let classimage = "../../images/icons/ranger.png"
+}
+*/
+
   return (
     <Router>
       <div className="container-fluid">
         <div className="col">
           <Switch>
+            {/* The Character Generator info box. */}
             <Route path="/character-creator">
               <CharacterMakerScreen character={{ ...character }} my />
             </Route>
-          </Switch>
 
-          <br />
+            {/* <Route path="/character-sheet">
+              <CharacterSheet />
+            </Route> */}
+
+          </Switch>
           {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
         </div>
         <div className="row">
