@@ -16,7 +16,7 @@ function TabClass(props) {
     //   class: props.character.class[0].name.toLowerCase(),
     // });
   }, []);
-  console.log("newCharacter", props.newCharacter);
+
   return (
     <div>
       <h4 className="text-bisque ml-3">Choose a Class</h4>

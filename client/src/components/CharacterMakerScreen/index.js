@@ -13,7 +13,7 @@ function CharacterMakerScreen(props) {
     level: 1,
     race: "dwarf",
     class: "fighter",
-    subclass: null,
+    subclass: "champion",
     abilities: [],
     spells: [],
     feats: [],

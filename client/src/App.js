@@ -8,7 +8,7 @@ import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
 
 function App() {
-  const [myCharacters, setMyCharacters] = useState([
+  const [myCharacters] = useState([
     {
       Name: "John",
       Level: 12,
