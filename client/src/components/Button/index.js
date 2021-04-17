@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-import Image from "../../images/btn.png";
 
 function Button(props) {
   return (

@@ -1,29 +1,25 @@
 import React, { useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style.css";
 import SelectButton from "../SelectButton";
-import LevelSelector from "../LevelSelecter";
 import Button from "../Button";
 
 function TabRace(props) {
-  let { path, url } = useRouteMatch();
   const [raceDescription, setRaceDescription] = useState("");
 
-  // Get the dwarf description and put it in state
+  // On Page Load, Get the dwarf description and put it in state
   useEffect(() => {
     setRaceDescription(props.character.race[0].description);
+    // Also on page load, get the name of the race and put it in the newCharacter State. This will change if the user selects a different race before they continue.
+    // props.setNewCharacter({
+    //   ...props.newCharacter,
+    //   race: props.character.race[0].name.toLowerCase(),
+    // });
   }, []);
 
   return (
     <div>
-      <h4 className="text-white ml-3">Choose a Race</h4>
+      <h4 className=" ml-3 text-bisque">Choose a Race</h4>
       <div className="row mb-2">
         {props.character.race.map((item, i) => (
           <div
@@ -32,8 +28,11 @@ function TabRace(props) {
           >
             <div
               onClick={() => {
-                console.log("You clicked me");
-                setRaceDescription(props.character.race[i].description);
+                setRaceDescription(item.description);
+                props.setNewCharacter({
+                  ...props.newCharacter,
+                  race: item.name.toLowerCase(),
+                });
               }}
             >
               <Button text={item.name} />
@@ -42,11 +41,10 @@ function TabRace(props) {
         ))}
       </div>
 
-      <p id="Racebox" className="mb-2">{raceDescription}</p>
-      <div className="d-flex justify-content-between">
-        <LevelSelector />
+      <p className="tab_descriptions text-bisque mb-2">{raceDescription}</p>
+      <div className="d-flex justify-content-end">
         <Link to={"/character-creator/class"}>
-          <SelectButton utton text={"Select"} />
+          <SelectButton text={"Select"} />
         </Link>
       </div>
     </div>

@@ -1,3 +1,11 @@
+.charbox {
+    position: relative;
+    z-index: 9;
+    margin-right: 15px;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
 .list-group-item {
     background-image: url("../../images/cardthing.png");
     height: 156px;
