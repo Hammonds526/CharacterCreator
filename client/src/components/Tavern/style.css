@@ -1,5 +1,5 @@
 .desktop-tavern__image-main {
-  width: auto;
+  width: 100%;
   height: auto;
-  object-fit:scale-down;
+  object-fit:fill;
 }

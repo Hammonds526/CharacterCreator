@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 import "./style.css";
-// import SelectionTab from "../SelectionTab";
+import SelectionTab from "../SelectionTab";
 
 // This adds a start cap to the list.
-import SelectionTabStart from "../SelectionTabStart";
+
 
 const tabTitles = [
   { title: "Name/Lvl", tabUrl: "name" },

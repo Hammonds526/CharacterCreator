@@ -1,7 +1,12 @@
+
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// CSS Styling
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+
+// Components
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
@@ -29,24 +34,27 @@ function App() {
   return (
     <Router>
       <div className="container-fluid">
-      <div className="col">
-        <Switch>
-          <Route path="/character-creator">
-            <CharacterMakerScreen character={{ ...character }} my />
-          </Route>
-        </Switch>
+        <div className="col">
+          <Switch>
+            <Route path="/character-creator">
+              <CharacterMakerScreen character={{ ...character }} my />
+            </Route>
+          </Switch>
 
-<br />
+          <br />
           {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
         </div>
         <div className="row">
-          <div className="col">
-            <div className="row">
+          <div className="col-12 col-lg-9 mt-4">
+            <div>
+              <Tavern />
             </div>
-            <Tavern />
           </div>
-          <div className="col">
-            <MyCharacters myCharacters={myCharacters} />
+
+          <div className="col-12 col-lg-3 mt-4">
+            <div>
+              <MyCharacters myCharacters={myCharacters} />
+            </div>
           </div>
         </div>
       </div>
