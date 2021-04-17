@@ -2,7 +2,7 @@ import React from "react";
 
 import "./style.css";
 
-import ImageCenter from "../../images/selectiontab.png";
+import ImageStart from "../../images/selectiontab_capped.png";
 
 
 function SelectionTab(props) {
@@ -27,9 +27,9 @@ function SelectionTab(props) {
       <p className="font-weight-bold position-absolute selection-tab-text">
         {props.charProperty}
       </p>
-      <img src={ImageCenter} alt="Selection tab"></img>
+      <img src={ImageStart} alt="Selection tab"></img>
     </div>
   );
 }
 
-export default SelectionTab;
+export default SelectionTabStart;
