@@ -927,7 +927,7 @@ const spells = [
     name: "Blight",
     level: 4,
     type: "damage",
-    tag: ("Druid","Sorcerer","Warlock", "Wizard"),
+    tag: ("Druid","Sorcerer","Warlock", "wizard"),
     description: {
       desc: [
         "Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a constitution saving throw. The target takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one. The spell has no effect on undead or constructs.",
@@ -961,7 +961,7 @@ const spells = [
     name: "Blindness/Deafness",
     level: 2,
     type: "debuff",
-    tag: ("Druid","Sorcerer","Cleric", "Wizard"),
+    tag: ("Druid","Sorcerer","Cleric", "wizard"),
     description: {
       desc: [
         "You can blind or deafen a foe. Choose one creature that you can see within range to make a constitution saving throw. If it fails, the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a constitution saving throw. On a success, the spell ends."
@@ -993,7 +993,7 @@ const spells = [
     name: "Blink",
     level: 3,
     type: "utility",
-    tag: ("Bard","Sorcerer","Wizard"),
+    tag: ("Bard","Sorcerer","wizard"),
     description: {
       desc: [
         "Roll a d20 at the end of each of your turns for the duration of the spell. On a roll of 11 or higher, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell fails and the casting is wasted if you were already on that plane). At the start of your next turn, and when the spell ends if you are on the Ethereal Plane, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near). You can dismiss this spell as an action.",
@@ -1024,7 +1024,7 @@ const spells = [
     name: "Blur",
     level: 2,
     type: "buff",
-    tag: ("Bard","Druid","Sorcerer","Wizard"),
+    tag: ("Bard","Druid","Sorcerer","wizard"),
     description: {
       desc: [
         "Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
@@ -1084,7 +1084,7 @@ const spells = [
     name: "Burning Hands",
     level: 1,
     type: "damage",
-    tag: ("Sorcerer", "Wizard"),
+    tag: ("Sorcerer", "wizard"),
     description: {
       desc: [
         "As you hold your hands with thumbs touching and fingers spread, a thin sheet of flames shoots forth from your outstretched fingertips. Each creature in a 15-foot cone must make a dexterity saving throw. A creature takes 3d6 fire damage on a failed save, or half as much damage on a successful one.",
@@ -1182,7 +1182,7 @@ const spells = [
     name: "Chain Lightning",
     level: 6,
     type: "utility",
-    tag: ("Sorcerer","Wizard"),
+    tag: ("Sorcerer","wizard"),
     description: {
       desc: [
         "You create a bolt of lightning that arcs toward a target of your choice that you can see within range. Three bolts then leap from that target to as many as three other targets, each of which must be within 30 feet of the first target. A target can be a creature or an object and can be targeted by only one of the bolts.",
@@ -1247,7 +1247,7 @@ const spells = [
     name: "Chill Touch",
     level: 0,
     type: "damage",
-    tag: ("Bard","Sorcerer","Warlock","Wizard"),
+    tag: ("Bard","Sorcerer","Warlock","wizard"),
     description: {
       desc: [
         "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can't regain hit points until the start of your next turn. Until then, the hand clings to the target.",
@@ -1279,7 +1279,7 @@ const spells = [
     name: "Circle of Death",
     level: 6,
     type: "damage",
-    tag: ("Sorcerer","Warlock","Wizard"),
+    tag: ("Sorcerer","Warlock","wizard"),
     description: {
       desc: [
         "A sphere of negative energy ripples out in a 60-foot radius sphere from a point within range. Each creature in that area must make a constitution saving throw. A target takes 8d6 necrotic damage on a failed save, or half as much damage on a successful one."
@@ -1311,7 +1311,7 @@ const spells = [
     name: "Clairvoyance",
     level: 3,
     type: "utility",
-    tag: ("Bard","Cleric","Sorcerer", "Wizard"),
+    tag: ("Bard","Cleric","Sorcerer", "wizard"),
     description: {
       desc: [
         "You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The sensor remains in place for the duration, and it can't be attacked or otherwise interacted with.",
@@ -1343,7 +1343,7 @@ const spells = [
     name: "Clone",
     level: 8,
     type: "utility",
-    tag: ("Bard","Cleric","Sorcerer", "Wizard"),
+    tag: ("Bard","Cleric","Sorcerer", "wizard"),
     description: {
       desc: [
         "This spell grows an inert duplicate of a living creature as a safeguard against death. This clone forms inside a sealed vessel and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed.",
@@ -1374,7 +1374,7 @@ const spells = [
     name: "Cloudkill",
     level: 5,
     type: "utility",
-    tag: ("Druid","Sorcerer", "Wizard"),
+    tag: ("Druid","Sorcerer", "wizard"),
     description: {
       desc: [
         "You create a 20-foot-radius sphere of poisonous, yellow-green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.",
@@ -1408,7 +1408,7 @@ const spells = [
     name: "Color Spray",
     level: 1,
     type: "debuff",
-    tag: ("Sorcerer", "Wizard"),
+    tag: ("Sorcerer", "wizard"),
     description: {
       desc: [
         "A dazzling array of flashing, colored light springs from your hand. Roll 6d10; the total is how many hit points of creatures this spell can effect. Creatures in a 15-foot cone originating from you are affected in ascending order of their current hit points (ignoring unconscious creatures and creatures that can't see).",
@@ -1553,7 +1553,7 @@ const spells = [
     name: "Comprehend Languages",
     level: 1,
     type: "utility",
-    tag: ("Bard", "Sorcerer", "Warlock", "Wizard"),
+    tag: ("Bard", "Sorcerer", "Warlock", "wizard"),
     description: {
       desc: [
         "For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.",
@@ -1615,7 +1615,7 @@ const spells = [
     name: "Cone of Cold",
     level: 5,
     type: "damage",
-    tag: ("Druid","Sorcerer", "Wizard"),
+    tag: ("Druid","Sorcerer", "wizard"),
     description: {
       desc: [
         "A blast of cold air erupts from your hands. Each creature in a 60-foot cone must make a constitution saving throw. A creature takes 8d8 cold damage on a failed save, or half as much damage on a successful one.",
@@ -1648,7 +1648,7 @@ const spells = [
     name: "Confusion",
     level: 4,
     type: "debuff",
-    tag: ("Bard","Druid","Sorcerer", "Wizard"),
+    tag: ("Bard","Druid","Sorcerer", "wizard"),
     description: {
       desc: [
         "This spell assails and distorts the minds of creatures, generating illusions and causing uncontrolled actions. Each creature in a sphere of 10-foot-radius centered on a point chosen in the range of the spell must make a wisdom saving throw otherwise it will be affected by the spell.",

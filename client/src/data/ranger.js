@@ -153,7 +153,7 @@ const ranger = [
               {
                 name: "Giant Killer",
                 desc:
-                  "When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.",
+                  "When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.",  
               },
               {
                 name: "Horde Breaker",
@@ -192,7 +192,7 @@ const ranger = [
               {
                 name: "Volley",
                 desc:
-                  "You can use your action to make a ranged attack against any num ber of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.",
+                  "You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.",
               },
               {
                 name: "Whirlwind Attack",
@@ -230,19 +230,19 @@ const ranger = [
       {
         name: "Beast Master",
         desc:
-          "The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means com m itting yourself to this ideal, working in partnership with an animal as its com panion and friend.",
+          "The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.",
         abilities: [
           {
             name: "Ranger's Companion",
             level: 3,
             desc:
-              "Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or 4x your ranger level, whichever is higher. The beast obeys your commands as best as it can. -It takes its turn on your initiative, though it doesn’t take an action unless you com m and it to. On your turn, you can verbally command the beast w here to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, Dodge, or Help action. Once you have the Extra Attack feature, you can make one w eapon attack yourself when you command the beast to take the Attack action. While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace. If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as  before or a different one.",
+              "Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or 4x your ranger level, whichever is higher. The beast obeys your commands as best as it can. -It takes its turn on your initiative, though it doesn’t take an action unless you command it to. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, Dodge, or Help action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the Attack action. While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace. If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as before or a different one.",
           },
           {
             name: "Exceptional Training",
             level: 7,
             desc:
-              "On any of your turns when your beast com panion doesn’t attack, you can use a bonus action to command the beast to take the Dash, Disengage, Dodge, or Help action on its turn. ",
+              "On any of your turns when your beast companion doesn’t attack, you can use a bonus action to command the beast to take the Dash, Disengage, Dodge, or Help action on its turn. ",
           },
           {
             name: "Bestial Fury",
@@ -254,7 +254,7 @@ const ranger = [
             name: "Share Spells",
             level: 15,
             desc:
-              "When you cast a spell targeting yourself, you can also affect your beast com panion with the spell if the beast is within 30 feet of you.",
+              "When you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you.",
           },
         ],
       },
