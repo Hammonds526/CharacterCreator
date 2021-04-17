@@ -11,7 +11,7 @@ function CharacterMakerScreen(props) {
   const [newCharacter, setNewCharacter] = useState({
     name: "",
     race: "",
-    level: null,
+    level: 1,
     class: null,
     subclass: null,
     abilities: [],

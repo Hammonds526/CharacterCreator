@@ -36,10 +36,9 @@ function App() {
             </Route>
           </Switch>
 
-          <br />
           {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
         </div>
-        <div className="row">
+        <div className="row mt-4">
           <div className="col">
             <div className="row"></div>
             <Tavern />

@@ -8,6 +8,7 @@ function TabNameLevel(props) {
   const handleInputChange = (event) => {
     const { value, name } = event.target;
     props.setNewCharacter({
+      ...props.newCharacter,
       [name]: value,
     });
   };
