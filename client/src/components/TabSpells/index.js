@@ -5,13 +5,7 @@ import SelectButton from "../SelectButton";
 import LevelSelector from "../LevelSelecter";
 import Button from "../Button";
 
-function TabSpells({
-  classIndex,
-  subClassIndex,
-  newCharacter,
-  setNewCharacter,
-  character,
-}) {
+function TabSpells({ spellList, character }) {
   const [spellDescription, setSpellDescription] = useState("");
 
   // On tab load, get the name of the subclass, grab it's first associated spell, and put it in the newCharacter State.
@@ -31,7 +25,7 @@ function TabSpells({
     <div>
       <h4 className=" ml-3 text-bisque">Choose your Spells</h4>
       <div className="row mb-2">
-        {character.race.map((item) => (
+        {spellList.map((item) => (
           <div
             className="col p-0 d-flex justify-content-center"
             key={item.name}
