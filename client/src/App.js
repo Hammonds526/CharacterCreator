@@ -32,38 +32,23 @@ function App() {
         <div className="col">
           <Switch>
             <Route path="/character-creator">
-              <CharacterMakerScreen character={{ ...character }} my />
+              <CharacterMakerScreen character={{ ...character }} />
             </Route>
           </Switch>
-<<<<<<< HEAD
 
-          <h3 id="title" className="ml-3">
-            Character Creator
-          </h3>
+          <br />
+          {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
         </div>
         <div className="row">
-          <div className="col-10">
-            <div className="row">
-              <div className="col"></div>
-            </div>
+          <div className="col">
+            <div className="row"></div>
             <Tavern />
-=======
-    
-            <br />
-            {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
->>>>>>> 9264d0dd4c0c64c7eaf54149dcc2f19565b3b012
           </div>
-          <div className="row">
-            <div className="col">
-              <div className="row">
-              </div>
-              <Tavern />
-            </div>
-            <div className="col">
-              <MyCharacters myCharacters={myCharacters} />
-            </div>
+          <div className="col">
+            <MyCharacters myCharacters={myCharacters} />
           </div>
         </div>
+      </div>
     </Router>
   );
 }
