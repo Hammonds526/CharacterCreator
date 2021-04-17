@@ -16,7 +16,7 @@ function TabRace(props) {
       ...props.newCharacter,
       race: props.character.race[0].name.toLowerCase(),
     });
-  }, [props]);
+  }, []);
 
   return (
     <div>
