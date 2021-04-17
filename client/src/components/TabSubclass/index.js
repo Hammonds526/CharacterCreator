@@ -1,35 +1,60 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import SelectButton from "../SelectButton";
-import LevelSelector from "../LevelSelecter";
 import Button from "../Button";
 
-function subclass(props) {
+function TabSubclass({
+  classIndex,
+  subClassIndex,
+  newCharacter,
+  setNewCharacter,
+  character,
+}) {
+  const [subclassDescription, setSubclassDescription] = useState("");
+
+  // On tab Load, Get the description of the first subClass and put it in state
+
+  useEffect(() => {
+    setSubclassDescription(
+      character.class[classIndex].subClass[subClassIndex()].desc
+    );
+
+    // Also on page load, get the name of the class, grab it's first subclass, and put it in the newCharacter State.
+    setNewCharacter({
+      ...newCharacter,
+      subclass: character.class[classIndex].subClass[0].name.toLowerCase(),
+    });
+  }, []);
+
+  console.log("subClassIndex ", subClassIndex());
+  console.log("classIndex ", classIndex);
+  console.log("character from subclass ", character);
+  // console.log("props.character.class[classIndex]", character.class[classIndex]);
+  // console.log("newCharacter", newCharacter);
   return (
     <div>
-      <h6 className="text-white ml-5 mt-3">Choose a Subclass</h6>
-      <div className="row">
-        {props.character.race.map((item) => (
+      <h4 className="ml-3 text-bisque">Choose a Subclass</h4>
+      <div className="row mb-2">
+        {character.class[classIndex].subClass.map((item) => (
           <div
             className="col p-0 d-flex justify-content-center"
             key={item.name}
+            onClick={() => {
+              setSubclassDescription(item.desc);
+              setNewCharacter({
+                ...newCharacter,
+                subclass: item.name.toLowerCase(),
+              });
+            }}
           >
             <Button text={item.name} />
           </div>
         ))}
       </div>
 
-      {props.character.race[0].description}
-      <div className="d-flex justify-content-between">
-        <LevelSelector text={"4"} />
+      <p className="tab_descriptions text-bisque mb-2">{subclassDescription}</p>
+      <div className="d-flex justify-content-end">
         <Link to={"/character-creator/spells"}>
           <SelectButton utton text={"Select"} />
         </Link>
@@ -38,4 +63,4 @@ function subclass(props) {
   );
 }
 
-export default subclass;
+export default TabSubclass;

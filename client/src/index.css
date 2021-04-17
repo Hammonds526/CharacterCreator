@@ -1,3 +1,15 @@
+/* FONTSSSS */
+@font-face {
+  font-family: 'Romulus';
+  src: local('Romulus'), url('./fonts/romulus.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'alagard';
+  src: local('alagard'), url('./fonts/alagard.ttf') format('truetype');
+}
+
+/* Not fonts */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

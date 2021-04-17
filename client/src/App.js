@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
 
 function App() {
-  const [myCharacters, setMyCharacters] = useState([
+  const [myCharacters] = useState([
     {
       Name: "John",
       Level: 12,
@@ -29,23 +29,21 @@ function App() {
   return (
     <Router>
       <div className="container-fluid">
-        <Switch>
-          <Route path="/character-creator">
-            <CharacterMakerScreen character={{ ...character }} />
-          </Route>
-        </Switch>
+        <div className="col">
+          <Switch>
+            <Route path="/character-creator">
+              <CharacterMakerScreen character={{ ...character }} />
+            </Route>
+          </Switch>
 
-        <div className="row">
-          <h3 className="ml-3">Character Creator</h3>
+          {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
         </div>
-        <div className="row">
-          <div className="col-10">
-            <div className="row">
-              <div className="col"></div>
-            </div>
+        <div className="row mt-4">
+          <div className="col">
+            <div className="row"></div>
             <Tavern />
           </div>
-          <div className="col-2">
+          <div className="col">
             <MyCharacters myCharacters={myCharacters} />
           </div>
         </div>

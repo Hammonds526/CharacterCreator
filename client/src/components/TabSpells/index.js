@@ -1,23 +1,37 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import SelectButton from "../SelectButton";
 import LevelSelector from "../LevelSelecter";
 import Button from "../Button";
 
-function TabSpells(props) {
+function TabSpells({
+  classIndex,
+  subClassIndex,
+  newCharacter,
+  setNewCharacter,
+  character,
+}) {
+  const [spellDescription, setSpellDescription] = useState("");
+
+  // On tab load, get the name of the subclass, grab it's first associated spell, and put it in the newCharacter State.
+  useEffect(() => {
+    setSpellDescription(
+      character.class[classIndex].subClass[subClassIndex].desc
+    );
+
+    setNewCharacter({
+      ...newCharacter,
+      subclass: character.class[classIndex].subClass[
+        subClassIndex
+      ].name.toLowerCase(),
+    });
+  }, []);
   return (
     <div>
-      <h6 className="text-white ml-5 mt-3">Choose your Spells</h6>
-      <div className="row">
-        {props.character.race.map((item) => (
+      <h4 className=" ml-3 text-bisque">Choose your Spells</h4>
+      <div className="row mb-2">
+        {character.race.map((item) => (
           <div
             className="col p-0 d-flex justify-content-center"
             key={item.name}
@@ -27,7 +41,7 @@ function TabSpells(props) {
         ))}
       </div>
 
-      {props.character.race[0].description}
+      <p className="tab_descriptions text-bisque mb-2">{spellDescription}</p>
       <div className="d-flex justify-content-between">
         <LevelSelector text={"4"} />
         <Link to={"/character-creator/feats"}>
