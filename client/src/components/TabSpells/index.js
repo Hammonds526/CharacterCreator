@@ -42,8 +42,7 @@ function TabSpells({
       </div>
 
       <p className="tab_descriptions text-bisque mb-2">{spellDescription}</p>
-      <div className="d-flex justify-content-between">
-        <LevelSelector text={"4"} />
+      <div className="d-flex justify-content-end">
         <Link to={"/character-creator/feats"}>
           <SelectButton utton text={"Select"} />
         </Link>

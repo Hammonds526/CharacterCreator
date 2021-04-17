@@ -36,17 +36,23 @@ function CharacterMakerScreen(props) {
   };
 
   const getSpellList = () => {
-    let filteredSpells = props.character.spells;
-    console.log("filteredSpells ", filteredSpells);
+    console.log("props.character.spells ", props.character.spells);
+
+    let filteredSpells = props.character.spells.filter(
+      (spell) =>
+        spell.level <= newCharacter.level && spell.tag === newCharacter.class
+    );
     return filteredSpells;
   };
 
   console.log("filteredSpells ", getSpellList());
 
-  console.log("class index main ", classIndex);
-  console.log("subClass index main ", getSubClassIndex);
+  // console.log("class index main ", classIndex);
+  // console.log("subClass index main ", getSubClassIndex());
 
-  console.log("character from main ", props.character);
+  // console.log("character from main ", props.character);
+
+  console.log("newCharacter ", newCharacter);
 
   return (
     <div className="modal-content-box">
