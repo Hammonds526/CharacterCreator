@@ -31,7 +31,7 @@
 .avatar {
   z-index: 2;
   height: 136px;
-  margin-top: -186%;
+  margin-top: -118%;
   animation: Avatarfloat 2s ease infinite;
 }
 
@@ -49,12 +49,12 @@
 
 @keyframes Avatarfloat {
 	0% {  
-    margin-top: -186%;
+    margin-top: -110%;
 	}
   50% {
-    margin-top: -163%;
+    margin-top: -130%;
 	}
 	100% {
-    margin-top: -186%;
+    margin-top: -110%;
 	}
 }
