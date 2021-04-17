@@ -20,12 +20,19 @@ function CharacterMakerScreen(props) {
     userId: null,
   });
 
-  // console.log("path ", path);
-  // console.log("url ", url);
+  let classIndex = props.character.class.findIndex(
+    (element) => element.name.toLowerCase() === newCharacter.class
+  );
 
-  // let { tab } = useParams();
+  let subClassIndex =
+    props.character.class[classIndex].subClass.findIndex(
+      (element) => element.name.toLowerCase() === newCharacter.subclass
+    ) || 0;
 
-  // console.log("tab ", tab);
+  console.log("class index main ", classIndex);
+  console.log("subClass index main ", subClassIndex);
+
+  console.log("character from main ", props.character);
 
   return (
     <div className="modal-content-box">
@@ -49,6 +56,8 @@ function CharacterMakerScreen(props) {
                     {...props}
                     setNewCharacter={setNewCharacter}
                     newCharacter={newCharacter}
+                    classIndex={classIndex}
+                    subClassIndex={subClassIndex}
                   />
                 </div>
               </Route>
