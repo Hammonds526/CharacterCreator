@@ -35,6 +35,14 @@ function CharacterMakerScreen(props) {
     }
   };
 
+  const getSpellList = () => {
+    let filteredSpells = props.character.spells;
+    console.log("filteredSpells ", filteredSpells);
+    return filteredSpells;
+  };
+
+  console.log("filteredSpells ", getSpellList());
+
   console.log("class index main ", classIndex);
   console.log("subClass index main ", getSubClassIndex);
 

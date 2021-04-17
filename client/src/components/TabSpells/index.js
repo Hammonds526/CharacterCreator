@@ -15,18 +15,18 @@ function TabSpells({
   const [spellDescription, setSpellDescription] = useState("");
 
   // On tab load, get the name of the subclass, grab it's first associated spell, and put it in the newCharacter State.
-  useEffect(() => {
-    setSpellDescription(
-      character.class[classIndex].subClass[subClassIndex].desc
-    );
+  // useEffect(() => {
+  //   setSpellDescription(
+  //     character.class[classIndex].subClass[subClassIndex()].desc
+  //   );
 
-    setNewCharacter({
-      ...newCharacter,
-      subclass: character.class[classIndex].subClass[
-        subClassIndex
-      ].name.toLowerCase(),
-    });
-  }, []);
+  //   setNewCharacter({
+  //     ...newCharacter,
+  //     subclass: character.class[classIndex].subClass[
+  //       subClassIndex
+  //     ].name.toLowerCase(),
+  //   });
+  // }, []);
   return (
     <div>
       <h4 className=" ml-3 text-bisque">Choose your Spells</h4>
