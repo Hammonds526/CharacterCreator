@@ -35,6 +35,7 @@ function App() {
               <CharacterMakerScreen character={{ ...character }} my />
             </Route>
           </Switch>
+<<<<<<< HEAD
 
           <h3 id="title" className="ml-3">
             Character Creator
@@ -46,12 +47,23 @@ function App() {
               <div className="col"></div>
             </div>
             <Tavern />
+=======
+    
+            <br />
+            {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
+>>>>>>> 9264d0dd4c0c64c7eaf54149dcc2f19565b3b012
           </div>
-          <div className="col-2">
-            <MyCharacters myCharacters={myCharacters} />
+          <div className="row">
+            <div className="col">
+              <div className="row">
+              </div>
+              <Tavern />
+            </div>
+            <div className="col">
+              <MyCharacters myCharacters={myCharacters} />
+            </div>
           </div>
         </div>
-      </div>
     </Router>
   );
 }
