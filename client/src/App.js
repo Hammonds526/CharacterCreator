@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -8,7 +8,7 @@ import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
 
 function App() {
-  const [myCharacters, setMyCharacters] = useState([
+  const [myCharacters] = useState([
     {
       Name: "John",
       Level: 12,

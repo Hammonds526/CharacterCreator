@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import NavArrow from "../NavArrow";
+// import NavArrow from "../NavArrow";
 
 function LevelSelecter(props) {
   return (
@@ -17,9 +17,11 @@ function LevelSelecter(props) {
       <input
         className=" ml-3  form-control"
         type="number"
+        name="level"
         min="1"
         max="20"
         placeholder="1"
+        onChange={props.handleInputChange}
       />
 
       {/* <NavArrow
