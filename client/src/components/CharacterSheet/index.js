@@ -9,10 +9,12 @@ import { Route, useRouteMatch } from "react-router-dom";
 
 // Character Sheet Function.
 function CharacterSheet(props) {
+    
     let { path } = useRouteMatch();
 
     const [savedCharacter, setNewSheet] = useState({
         // This Array will be what we shall be using to properly display information into our sheet.
+        
         name: "",
         level: 1,
         race: "dwarf",
@@ -22,6 +24,7 @@ function CharacterSheet(props) {
         spells: [],
         feats: [],
         userId: null,
+    
     });
 
     let classIndex = props.character.class.findIndex(
