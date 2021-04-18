@@ -14,7 +14,7 @@ const userSeed = [
       id: 1,
       username: "curtisH",
       password: "qwertyuiop",
-      characters: 
+      characters: [
         {
           name: "klepto",
           level: 1,
@@ -23,127 +23,11 @@ const userSeed = [
           subClass: null,
           abilities: [{}],
           feats: [{}],
-          spells: [{
-              name: null,
-              level: null,
-              type: null,
-              description: {
-                desc: null,
-                higherLevel: null,
-                school: null,
-                range: null,
-                areaOfEffect: {
-                  type: null,
-                  size: null
-                },
-                dc: {
-                  type: null,
-                  onSuccess: null
-                },
-                castingTime: null,
-                duration: null,
-                concentration: null,
-                ritual: null
-
-              },
-              damage: {
-                type: null,
-                damageAtSlotLevel: null
-              }
-            }],
-        },
-    },
-  },
-  {
-    user: {
-    id: 2,
-    username: "garth",
-    password: "qwertyuiop",
-    characters: 
-      {
-        name: "rectum",
-        level: 1,
-        race: "elf",
-        class: "rogue",
-        subClass: null,
-        abilities: [{}],
-        feats: [{}],
-        spells: [{
-            name: null,
-            level: null,
-            type: null,
-            description: {
-              desc: null,
-              higherLevel: null,
-              school: null,
-              range: null,
-              areaOfEffect: {
-                type: null,
-                size: null
-              },
-              dc: {
-                type: null,
-                onSuccess: null
-              },
-              castingTime: null,
-              duration: null,
-              concentration: null,
-              ritual: null
-
-            },
-            damage: {
-              type: null,
-              damageAtSlotLevel: null
-            }
-          }],
+          spells: [],
+        }]
       },
-    },
-  },
-  {
-    user: {
-    id: 3,
-    username: "c.t.",
-    password: "qwertyuiop",
-    characters: 
-      {
-        name: "setum",
-        level: 1,
-        race: "elf",
-        class: "rogue",
-        subClass: null,
-        abilities: [{}],
-        feats: [{}],
-        spells: [{
-            name: null,
-            level: null,
-            type: null,
-            description: {
-              desc: null,
-              higherLevel: null,
-              school: null,
-              range: null,
-              areaOfEffect: {
-                type: null,
-                size: null
-              },
-              dc: {
-                type: null,
-                onSuccess: null
-              },
-              castingTime: null,
-              duration: null,
-              concentration: null,
-              ritual: null
-
-            },
-            damage: {
-              type: null,
-              damageAtSlotLevel: null
-            }
-          }],
-      },
-    },
-  },
+      _id: "temp123"
+    }
 ];
 
 db.User
