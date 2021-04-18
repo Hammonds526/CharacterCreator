@@ -1,4 +1,4 @@
-
+// 
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -8,7 +8,7 @@ import "./App.css";
 
 // Components
 import Tavern from "./components/Tavern";
-import MyCharacters from "./components/MyCharacters";
+import CharacterList from "./components/CharacterList";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
 
@@ -54,7 +54,7 @@ let classimage = "../../images/icons/ranger.png"
 
           <div className="col-12 col-lg-3 mt-4">
             <div>
-              <MyCharacters />
+              <CharacterList />
             </div>
           </div>
         </div>

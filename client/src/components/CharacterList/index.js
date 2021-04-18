@@ -1,7 +1,9 @@
 // Core dependancies
 import React from "react";
-import "./style.css";
-function MyCharacters(props) {
+import "./Style.css";
+
+// Character List
+function CharacterList(props) {
 
     const [myCharacters] = useState([
         {
@@ -27,4 +29,4 @@ function MyCharacters(props) {
     ]);
 }
 
-export default MyCharacters;
+export default CharacterList
