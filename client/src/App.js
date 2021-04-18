@@ -14,31 +14,6 @@ import character from "./data/character";
 
 
 function App() {
-  // Temp Character storage
-
-
-  const [myCharacters] = useState([
-    {
-      Name: "John",
-      Level: 12,
-      CharClass: "Wizard",
-    },
-    {
-      Name: "Sally",
-      Level: 1,
-      CharClass: "Ranger",
-    },
-    {
-      Name: "Chuck Norris",
-      Level: 25,
-      CharClass: "Fighter",
-    },
-    {
-      Name: "Alexander",
-      Level: 10,
-      CharClass: "Rogue",
-    },
-  ]);
 
   // This is here for a potential icon change based on the class.
   /*
@@ -79,7 +54,7 @@ let classimage = "../../images/icons/ranger.png"
 
           <div className="col-12 col-lg-3 mt-4">
             <div>
-              <MyCharacters myCharacters={myCharacters} />
+              <MyCharacters />
             </div>
           </div>
         </div>

@@ -9,9 +9,8 @@ import { Route, useRouteMatch } from "react-router-dom";
 
 // Character Sheet Function.
 function CharacterSheet(props) {
-    
-    let { path } = useRouteMatch();
 
+    let { path } = useRouteMatch();
     const [savedCharacter, setNewSheet] = useState({
         // This Array will be what we shall be using to properly display information into our sheet.
         
