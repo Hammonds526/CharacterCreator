@@ -10,9 +10,9 @@ function CharacterMakerScreen(props) {
   let { path } = useRouteMatch();
   const [newCharacter, setNewCharacter] = useState({
     name: "",
-    level: 1,
+    level: 4,
     race: "dwarf",
-    class: "fighter",
+    class: "wizard",
     subclass: "champion",
     abilities: [],
     spells: [],
@@ -36,8 +36,6 @@ function CharacterMakerScreen(props) {
   };
 
   const getSpellList = () => {
-    console.log("props.character.spells ", props.character.spells);
-
     let filteredSpells = props.character.spells.filter(
       (spell) =>
         spell.level <= newCharacter.level && spell.tag === newCharacter.class
@@ -45,14 +43,13 @@ function CharacterMakerScreen(props) {
     return filteredSpells;
   };
 
+  console.log("newCharacter ", newCharacter);
   console.log("filteredSpells ", getSpellList());
 
   // console.log("class index main ", classIndex);
   // console.log("subClass index main ", getSubClassIndex());
 
   // console.log("character from main ", props.character);
-
-  console.log("newCharacter ", newCharacter);
 
   return (
     <div className="modal-content-box">
@@ -78,6 +75,7 @@ function CharacterMakerScreen(props) {
                     newCharacter={newCharacter}
                     classIndex={classIndex}
                     subClassIndex={getSubClassIndex}
+                    spellList={getSpellList}
                   />
                 </div>
               </Route>

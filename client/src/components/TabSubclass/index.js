@@ -27,9 +27,9 @@ function TabSubclass({
     });
   }, []);
 
-  console.log("subClassIndex ", subClassIndex());
-  console.log("classIndex ", classIndex);
-  console.log("character from subclass ", character);
+  // console.log("subClassIndex ", subClassIndex());
+  // console.log("classIndex ", classIndex);
+  // console.log("character from subclass ", character);
   // console.log("props.character.class[classIndex]", character.class[classIndex]);
   // console.log("newCharacter", newCharacter);
   return (
