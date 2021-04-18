@@ -4575,4 +4575,6 @@ const spells = [
       attackType: null
     }
   }
-]
+];
+
+export default spells;
