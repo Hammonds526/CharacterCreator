@@ -4,10 +4,12 @@ import ranger from "./ranger";
 import rogue from "./rogue";
 import wizard from "./wizard";
 import race from "./race";
+import spells from "./spells";
 
 const character = {
   race,
   class: [fighter, ranger, rogue, wizard],
+  spells,
 };
 
 export default character;
