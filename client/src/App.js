@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -6,25 +6,19 @@ import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
+import API from "./utils/API";
 
 function App() {
-  const [myCharacters] = useState([
-    {
-      Name: "John",
-      Level: 12,
-      CharClass: "Wizard",
-    },
-    {
-      Name: "Sally",
-      Level: 1,
-      CharClass: "Ranger",
-    },
-    {
-      Name: "Alexander",
-      Level: 10,
-      CharClass: "Rogue",
-    },
-  ]);
+  const [myCharacters, setmyCharacters] = useState([]);
+
+  useEffect(()=>{
+    API.getUser("6078fa52093e11225c2d4b85")
+      .then(res => {
+        // console.log(res.data.user.characters);
+        setmyCharacters(res.data.user.characters);
+        // console.log(myCharacters);
+    });
+  },[]);
 
   return (
     <Router>
@@ -44,7 +38,7 @@ function App() {
             <Tavern />
           </div>
           <div className="col">
-            <MyCharacters myCharacters={myCharacters} />
+            <MyCharacters myCharacters={myCharacters}/>
           </div>
         </div>
       </div>
