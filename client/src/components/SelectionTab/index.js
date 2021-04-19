@@ -4,7 +4,6 @@ import "./style.css";
 import ImageLeft from "../../images/selectiontab_left.png";
 import ImageCenter from "../../images/selectiontab_center.png";
 import ImageRight from "../../images/selectiontab_right.png";
-import NavArrow from "../NavArrow";
 
 function SelectionTab(props) {
   return (
@@ -32,14 +31,14 @@ function SelectionTab(props) {
         src={ImageLeft}
         alt="Selection tab"
         className="position-absolute"
-        style={{ left: "-22px" }}
+        style={{ left: "-9px" }}
       ></img>
       <img src={ImageCenter} alt="Selection tab"></img>
       <img
         src={ImageRight}
         alt="Selection tab"
         className="position-absolute"
-        style={{ right: "-3px" }}
+        style={{ right: "-13px" }}
       ></img>
     </div>
   );

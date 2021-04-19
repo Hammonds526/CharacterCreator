@@ -4,13 +4,9 @@ import React from "react";
 import "./style.css";
 
 // Pixel border stuff
- import Corner from "../Corner";
- import WoodBeamX from "../WoodBeamX";
- import WoodBeamY from "../WoodBeamY";
-
-
-
-// import WoodBeamX from "../WoodBeamX";
+import Corner from "../Corner";
+import WoodBeamX from "../WoodBeamX";
+import WoodBeamY from "../WoodBeamY";
 
 // The main function
 function CharacterListItem(props) {
@@ -39,12 +35,17 @@ function CharacterListItem(props) {
         }}
       />
       {props.myCharacters.map((item) => (
-        <div className="list-group-item" key={item.Name}>
+        <div id="charbox" className="list-group-item" key={item.Name}>
           <p>{item.Name}</p>
           <p>{item.CharClass}</p>
           <p id="level">{item.Level}</p>
           <hr className="my-4" />
+          <br />
         </div>
+
+
+
+
       ))}
 
       {/* Nothing below here */}
