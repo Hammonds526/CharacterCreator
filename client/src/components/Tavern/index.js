@@ -8,33 +8,48 @@ import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
+//Character Images
+import CharacterImage from "../CharacterImage";
+
+const CharacterData = [
+  {
+    name: "Wizard",
+
+    styles: { height: "32.5%", bottom: "19.6%", left: "43.5%", opacity: "0" },
+  },
+];
+
 function Tavern() {
   return (
-    <div>
-      <WoodBeamX beamStyle={{ top: "-15px" }} />
+    <div className="tavern-background">
+      <WoodBeamX beamStyle={{ top: "0px" }} />
 
-      <WoodBeamY beamStyle={{ left: "-3px", top: "13px" }} />
-      <WoodBeamY beamStyle={{ right: "-3px", top: "13px" }} />
+      <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
+      <WoodBeamY beamStyle={{ right: "0px", top: "0px" }} />
 
       <Corner
         cornerStyle={{
           width: "40px",
           height: "auto",
-          left: "-18px",
-          top: "-15px",
+          left: "-16px",
+          top: "0px",
         }}
       />
       <Corner
         cornerStyle={{
           width: "40px",
           height: "auto",
-          right: "-18px",
-          top: "-15px",
+          right: "-16px",
+          top: "0px",
           transform: "rotate(90deg)",
         }}
       />
       {/*  - Nothing goes above this line. - */}
-      <div className="">
+      <div className="position-relative">
+        {CharacterData.map((character, i) => (
+          <CharacterImage character={character} key={i} />
+        ))}
+
         <Link to="/character-creator/name">
           <img
             className="desktop-tavern__image-main"
@@ -44,13 +59,13 @@ function Tavern() {
         </Link>
       </div>
       {/* - Nothing goes below this line - */}
-      <WoodBeamX beamStyle={{ bottom: "-17px" }} />
+      <WoodBeamX beamStyle={{ bottom: "0px" }} />
       <Corner
         cornerStyle={{
           width: "40px",
           height: "auto",
-          right: "-18px",
-          bottom: "-17px",
+          right: "-16px",
+          bottom: "-1px",
           transform: "rotate(180deg)",
         }}
       />
@@ -58,8 +73,8 @@ function Tavern() {
         cornerStyle={{
           width: "40px",
           height: "auto",
-          left: "-18px",
-          bottom: "-17px",
+          left: "-16px",
+          bottom: "-1px",
           transform: "rotate(270deg)",
         }}
       />

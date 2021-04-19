@@ -34,11 +34,11 @@ function App() {
           {/* <h3 id="title" className="ml-3">Character Creator</h3> */}
         </div>
         <div className="row mt-4">
-          <div className="col">
+          <div className="col-12 col-lg-9 ">
             <div className="row"></div>
             <Tavern />
           </div>
-          <div className="col">
+          <div className="col-12 col-lg-3 p-0">
             <MyCharacters myCharacters={myCharacters} />
           </div>
         </div>
