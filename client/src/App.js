@@ -1,5 +1,4 @@
-// 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // CSS Styling
@@ -11,6 +10,7 @@ import Tavern from "./components/Tavern";
 import CharacterList from "./components/CharacterList";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
+import API from "./utils/API";
 
 
 function App() {
@@ -27,6 +27,16 @@ let classimage = "../../images/icons/fighter.png"
 let classimage = "../../images/icons/ranger.png"
 }
 */
+  const [myCharacters, setmyCharacters] = useState([]);
+
+  useEffect(()=>{
+    API.getUser("6078fa52093e11225c2d4b85")
+      .then(res => {
+        // console.log(res.data.user.characters);
+        setmyCharacters(res.data.user.characters);
+        // console.log(myCharacters);
+    });
+  },[]);
 
   return (
     <Router>
