@@ -5,20 +5,24 @@ import CheckBox from "../CheckBox";
 function ScrollListItem({
   item,
   i,
-  activeList,
+  itemType,
   newCharacter,
   setActive,
   ...props
 }) {
-  console.log("activeList ", activeList());
-  console.log("item ", item);
   const [isChecked, setIsChecked] = useState(false);
   const checkBoxName = item.name;
 
   useEffect(() => {
     // Check if spell is in character state. If so, pass isChecked to the checkbox.
-    setIsChecked(activeList(item));
-  }, [newCharacter]);
+    if (itemType === "spell") {
+      setIsChecked(newCharacter.spells.includes(item.name));
+    } else {
+      setIsChecked(newCharacter.feats.includes(item.name));
+    }
+  });
+
+  console.log("item ", item);
 
   return (
     <div key={i} className="d-flex justify-content-between">

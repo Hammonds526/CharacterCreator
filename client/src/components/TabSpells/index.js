@@ -17,12 +17,6 @@ function TabSpells({
     },
   });
 
-  //Get the list of spells that the user has selelcted and pass it down to show checkboxes
-  const activeList = (item) => {
-    console.log("item from inside spell ActiveList ", item);
-    newCharacter.spells.includes(item.name);
-  };
-
   //When the tab loads, make the page display the first spell in the list of filtered spells.
   useEffect(() => {
     setActiveSpell(
@@ -69,7 +63,7 @@ function TabSpells({
             setNewCharacter={setNewCharacter}
             {...props}
             scrollListStyle={{ maxHeight: "400px" }}
-            activeList={activeList}
+            itemType={"spell"}
           />
         </div>
         <div className="col-8">

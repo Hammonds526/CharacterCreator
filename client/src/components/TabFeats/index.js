@@ -77,7 +77,7 @@ console.log("newCharacter from tabFeats ", newCharacter);
           newCharacter={newCharacter}
           setNewCharacter={setNewCharacter}
           {...props}
-
+          itemType={"feat"}
           scrollListStyle={{ maxHeight: "400px" }}
         />
       </div>

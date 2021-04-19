@@ -3,14 +3,12 @@ import React from "react";
 // CSS
 import "./style.css";
 
-<<<<<<< Updated upstream
 // Pixel border stuff
 import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
-=======
+
 // import WoodBeamX from "../WoodBeamX";
->>>>>>> Stashed changes
 
 // The main function
 function CharacterListItem(props) {

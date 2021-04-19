@@ -1952,7 +1952,8 @@ const spells = [
     description: {
       desc:
         "You call forth an elemental servant. Choose an area of air, earth, fire, or water that fills a 10-foot cube within range. An elemental of challenge rating 5 or lower appropriate to the area you chose appears in an unoccupied space within 10 feet of it. For example, a fire elemental emerges from a bonfire, and an earth elemental rises up from the ground. The elemental disappears when it drops to 0 hit points or when the spell ends.<br /><br />The elemental is friendly to you and your companions for the duration. Roll initiative for the elemental, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands to the elemental, it defends itself from hostile creatures but otherwise takes no actions.<br /><br />If your concentration is broken, the elemental doesn't disappear. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it.<br /><br />The DM has the elemental's statistics.",
-      higherLevel: "When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.",
+      higherLevel:
+        "When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th.",
       school: "Conjuration",
       range: "90 feet",
       areaOfEffect: {
@@ -1979,8 +1980,10 @@ const spells = [
     type: "utility",
     tag: ("druid", "warlock"),
     description: {
-      desc: "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends.<br /><br />The fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions.<br /><br />If your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can't be dismissed by you, and it disappears 1 hour after you summoned it.<br /><br />The DM has the fey creature's statistics.",
-      higherLevel: "When you cast this spell using a spell slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th.",
+      desc:
+        "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends.<br /><br />The fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions.<br /><br />If your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can't be dismissed by you, and it disappears 1 hour after you summoned it.<br /><br />The DM has the fey creature's statistics.",
+      higherLevel:
+        "When you cast this spell using a spell slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th.",
       school: "Conjuration",
       range: "90 feet",
       areaOfEffect: {
@@ -2007,8 +2010,10 @@ const spells = [
     type: "utility",
     tag: ("wizard", "druid"),
     description: {
-      desc: "You summon elementals that appear in unoccupied spaces that you can see within range. You choose one the following options for what appears:<br />- One elemental of challenge rating 2 or lower<br />- Two elementals of challenge rating 1 or lower<br />- Four elementals of challenge rating 1/2 or lower<br />- Eight elementals of challenge rating 1/4 or lower.<br /><br />An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.<br /><br />The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.<br /><br />The DM has the creatures' statistics.",
-      higherLevel: "When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot.",
+      desc:
+        "You summon elementals that appear in unoccupied spaces that you can see within range. You choose one the following options for what appears:<br />- One elemental of challenge rating 2 or lower<br />- Two elementals of challenge rating 1 or lower<br />- Four elementals of challenge rating 1/2 or lower<br />- Eight elementals of challenge rating 1/4 or lower.<br /><br />An elemental summoned by this spell disappears when it drops to 0 hit points or when the spell ends.<br /><br />The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which has its own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.<br /><br />The DM has the creatures' statistics.",
+      higherLevel:
+        "When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot.",
       school: "Conjuration",
       range: "90 feet",
       areaOfEffect: {
@@ -2065,7 +2070,8 @@ const spells = [
     type: "utility",
     tag: ("warlock", "wizard"),
     description: {
-      desc: 'You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind.<br /><br />When you cast this spell, make a DC 15 intelligence saving throw.<br /><br />On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you cant take actions, cant understand what other creatures say, cant read, and speak only in gibberish.<br /><br />A greater restoration spell cast on you ends this effect.<br /><br />On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends.<br /><br />The DM answers each question with one word, such as "yes," "no," "maybe," "never," "irrelevant," or "unclear" (if the entity doesnt know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer.',
+      desc:
+        'You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind.<br /><br />When you cast this spell, make a DC 15 intelligence saving throw.<br /><br />On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you cant take actions, cant understand what other creatures say, cant read, and speak only in gibberish.<br /><br />A greater restoration spell cast on you ends this effect.<br /><br />On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends.<br /><br />The DM answers each question with one word, such as "yes," "no," "maybe," "never," "irrelevant," or "unclear" (if the entity doesnt know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer.',
       higherLevel: null,
       school: "divination",
       range: "Self",
@@ -2094,7 +2100,8 @@ const spells = [
     type: "damage",
     tag: ("cleric", "druid"),
     description: {
-      desc: "Your touch inflicts disease. Make a melee spell attack against a creature within your reach. On a hit, you afflict the creature with a disease of your choice from any of the ones described below.<br /><br />At the end of each of the target's turns, it must make a constitution saving throw. After failing three of these saving throws, the disease's effects last for the duration, and the creature stops making these saves. After succeeding on three of these saving throws, the creature recovers from the disease, and the spell ends.<br /><br />Since this spell induces a natural disease in its target, any effect that removes a disease or otherwise ameliorates a disease's effects apply to it.<br /><br />-Blinding Sickness.<br />Pain grips the creature's mind, and its eyes turn milky white. The creature has disadvantage on wisdom checks and wisdom saving throws and is blinded.<br /><br />-Filth Fever.<br />A raging fever sweeps through the creature's body. The creature has disadvantage on strength checks, strength saving throws, and attack rolls that use Strength.<br /><br />-Flesh Rot.<br />The creature's flesh decays. The creature has disadvantage on Charisma checks and vulnerability to all damage.<br /><br />-Mindfire.<br />The creature's mind becomes feverish. The creature has disadvantage on intelligence checks and intelligence saving throws, and the creature behaves as if under the effects of the confusion spell during combat.<br /><br />-Seizure.<br />The creature is overcome with shaking. The creature has disadvantage on dexterity checks, dexterity saving throws, and attack rolls that use Dexterity.<br /><br />-Slimy Doom.<br />The creature begins to bleed uncontrollably. The creature has disadvantage on constitution checks and constitution saving throws. In addition, whenever the creature takes damage, it is stunned until the end of its next turn.",
+      desc:
+        "Your touch inflicts disease. Make a melee spell attack against a creature within your reach. On a hit, you afflict the creature with a disease of your choice from any of the ones described below.<br /><br />At the end of each of the target's turns, it must make a constitution saving throw. After failing three of these saving throws, the disease's effects last for the duration, and the creature stops making these saves. After succeeding on three of these saving throws, the creature recovers from the disease, and the spell ends.<br /><br />Since this spell induces a natural disease in its target, any effect that removes a disease or otherwise ameliorates a disease's effects apply to it.<br /><br />-Blinding Sickness.<br />Pain grips the creature's mind, and its eyes turn milky white. The creature has disadvantage on wisdom checks and wisdom saving throws and is blinded.<br /><br />-Filth Fever.<br />A raging fever sweeps through the creature's body. The creature has disadvantage on strength checks, strength saving throws, and attack rolls that use Strength.<br /><br />-Flesh Rot.<br />The creature's flesh decays. The creature has disadvantage on Charisma checks and vulnerability to all damage.<br /><br />-Mindfire.<br />The creature's mind becomes feverish. The creature has disadvantage on intelligence checks and intelligence saving throws, and the creature behaves as if under the effects of the confusion spell during combat.<br /><br />-Seizure.<br />The creature is overcome with shaking. The creature has disadvantage on dexterity checks, dexterity saving throws, and attack rolls that use Dexterity.<br /><br />-Slimy Doom.<br />The creature begins to bleed uncontrollably. The creature has disadvantage on constitution checks and constitution saving throws. In addition, whenever the creature takes damage, it is stunned until the end of its next turn.",
       higherLevel: null,
       school: "Necromancy",
       range: "touch",
@@ -2123,7 +2130,8 @@ const spells = [
     type: "utility",
     tag: "cwizard",
     description: {
-      desc: "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell--called the contingent spell--as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid.<br /><br />The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to. and then contingency ends.<br /><br />The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
+      desc:
+        "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell--called the contingent spell--as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid.<br /><br />The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to. and then contingency ends.<br /><br />The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
       higherLevel: null,
       school: "Evocation",
       range: "Self",
@@ -2146,13 +2154,12 @@ const spells = [
     },
   },
   {
-<<<<<<< Updated upstream
     name: "Continual Flame",
     level: 2,
     type: "utility",
     tag: ("cleric", "wizard"),
     description: {
-      desc: 
+      desc:
         "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched.",
       higherLevel: null,
       school: "Evocation",
@@ -2181,7 +2188,7 @@ const spells = [
     type: "damage",
     tag: ("cleric", "druid", "wizard"),
     description: {
-      desc: 
+      desc:
         "Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one.<br /><br />-Flood.<br />You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land.<br />Instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing.<br />The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts.<br /><br />-Part Water.<br />You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored.<br /><br />-Redirect Flow.<br />You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain conditions. The water continues to move in the direction you chose until the spell ends or you choose a different effect.<br /><br />-Whirlpool.<br />This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.<br />When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a strength saving throw. On a failed save, the creature takes 2d8 bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.<br />The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage; this damage occurs each round it remains in the vortex.",
       higherLevel: null,
       school: "Transmutation",
@@ -2205,14 +2212,12 @@ const spells = [
     },
   },
   {
-=======
->>>>>>> Stashed changes
     name: "Control Weather",
     level: 8,
     type: "utility",
     tag: ("cleric", "wizard", "druid"),
     description: {
-      desc: 
+      desc:
         "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.<br /><br />When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.<br /><br />When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.",
       higherLevel: null,
       school: "Transmutation",
@@ -2241,7 +2246,7 @@ const spells = [
     type: "utility",
     tag: ("sorcerer", "wizard", "warlock"),
     description: {
-      desc: 
+      desc:
         "You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.",
       higherLevel:
         "When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.",
@@ -2271,7 +2276,7 @@ const spells = [
     type: "utility",
     tag: ("cleric", "druid"),
     description: {
-      desc: 
+      desc:
         "You either create or destroy water.<br /><br />-Create Water.<br />You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range.<br /><br />-Destroy Water.<br />You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.",
       higherLevel:
         "When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.",
@@ -2301,7 +2306,7 @@ const spells = [
     type: "utility",
     tag: "cleric",
     description: {
-      desc: 
+      desc:
         "You summon a celestial of challenge rating 4 or lower, which appears in an unoccupied space that you can see within range. The celestial disappears when it drops to 0 hit points or when the spell ends.<br /><br />The celestial is friendly to you and your companions for the duration. Roll initiative for the celestial, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the celestial, it defends itself from hostile creatures but otherwise takes no actions.<br /><br />The DM has the celestial's statistics.",
       higherLevel:
         "When you cast this spell using a 9th-level spell slot, you summon a celestial of challenge rating 5 or lower.",
@@ -2361,7 +2366,7 @@ const spells = [
     type: "utility",
     tag: ("druid", "warlock"),
     description: {
-      desc: 
+      desc:
         "You summon a fey creature of challenge rating 6 or lower, or a fey spirit that takes the form of a beast of challenge rating 6 or lower. It appears in an unoccupied space that you can see within range. The fey creature disappears when it drops to 0 hit points or when the spell ends.<br /><br />The fey creature is friendly to you and your companions for the duration. Roll initiative for the creature, which has its own turns. It obeys any verbal commands that you issue to it (no action required by you), as long as they don't violate its alignment. If you don't issue any commands to the fey creature, it defends itself from hostile creatures but otherwise takes no actions.<br /><br />If your concentration is broken, the fey creature doesn't disappear. Instead, you lose control of the fey creature, it becomes hostile toward you and your companions, and it might attack. An uncontrolled fey creature can't be dismissed by you, and it disappears 1 hour after you summoned it.<br /><br />The DM has the fey creature's statistics.",
       higherLevel:
         "When you cast this spell using a spell slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th.",
@@ -2421,7 +2426,7 @@ const spells = [
     type: "utility",
     tag: ("cleric", "ranger"),
     description: {
-      desc: 
+      desc:
         "You summon fey creatures that appear in unoccupied spaces that you can see within range. Choose one of the following options for what appears:<br />- One fey creature of challenge rating 2 or lower<br />- Two fey creatures of challenge rating 1 or lower<br />- Four fey creatures of challenge rating 1/2 or lower<br />- Eight fey creatures of challenge rating 1/4 or lower<br /><br />A summoned creature disappears when it drops to 0 hit points or when the spell ends.<br /><br />The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which have their own turns. They obey any verbal commands that you issue to them (no action required by you). If you don't issue any commands to them, they defend themselves from hostile creatures, but otherwise take no actions.<br /><br />The DM has the creatures' statistics.",
       higherLevel:
         "When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot.",
@@ -2451,8 +2456,8 @@ const spells = [
     type: "utility",
     tag: ("warlock", "wizard"),
     description: {
-      desc: 
-        "You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind. When you cast this spell, make a DC 15 intelligence saving throw. On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you can't take actions, can't understand what other creatures say, can't read, and speak only in gibberish. A greater restoration spell cast on you ends this effect.<br /><br />On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The DM answers each question with one word, such as \"yes,\" \"no,\" \"maybe,\" \"never,\" \"irrelevant,\" or \"unclear\" (if the entity doesn't know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer.",
+      desc:
+        'You mentally contact a demigod, the spirit of a long-dead sage, or some other mysterious entity from another plane. Contacting this extraplanar intelligence can strain or even break your mind. When you cast this spell, make a DC 15 intelligence saving throw. On a failure, you take 6d6 psychic damage and are insane until you finish a long rest. While insane, you can\'t take actions, can\'t understand what other creatures say, can\'t read, and speak only in gibberish. A greater restoration spell cast on you ends this effect.<br /><br />On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The DM answers each question with one word, such as "yes," "no," "maybe," "never," "irrelevant," or "unclear" (if the entity doesn\'t know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer.',
       higherLevel: null,
       school: "divination",
       range: "Self",
@@ -2481,7 +2486,7 @@ const spells = [
     type: "damage",
     tag: ("cleric", "druid"),
     description: {
-      desc: 
+      desc:
         "Your touch inflicts disease. Make a melee spell attack against a creature within your reach. On a hit, you afflict the creature with a disease of your choice from any of the ones described below.<br /><br />At the end of each of the target's turns, it must make a constitution saving throw. After failing three of these saving throws, the disease's effects last for the duration, and the creature stops making these saves. After succeeding on three of these saving throws, the creature recovers from the disease, and the spell ends.<br /><br />Since this spell induces a natural disease in its target, any effect that removes a disease or otherwise ameliorates a disease's effects apply to it.<br /><br />-Blinding Sickness.<br />Pain grips the creature's mind, and its eyes turn milky white. The creature has disadvantage on wisdom checks and wisdom saving throws and is blinded.<br /><br />-Filth Fever.<br />A raging fever sweeps through the creature's body. The creature has disadvantage on strength checks, strength saving throws, and attack rolls that use Strength.<br /><br />-Flesh Rot.<br />The creature's flesh decays. The creature has disadvantage on Charisma checks and vulnerability to all damage.<br /><br />-Mindfire.<br />The creature's mind becomes feverish. The creature has disadvantage on intelligence checks and intelligence saving throws, and the creature behaves as if under the effects of the confusion spell during combat.<br /><br />-Seizure.<br />The creature is overcome with shaking. The creature has disadvantage on dexterity checks, dexterity saving throws, and attack rolls that use Dexterity.<br /><br />-Slimy Doom.<br />The creature begins to bleed uncontrollably. The creature has disadvantage on constitution checks and constitution saving throws. In addition, whenever the creature takes damage, it is stunned until the end of its next turn.",
       higherLevel: null,
       school: "Necromancy",
@@ -2511,7 +2516,7 @@ const spells = [
     type: "utility",
     tag: "cwizard",
     description: {
-      desc: 
+      desc:
         "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell--called the contingent spell--as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid.<br /><br />The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to. and then contingency ends.<br /><br />The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
       higherLevel: null,
       school: "Evocation",
@@ -2540,7 +2545,7 @@ const spells = [
     type: "utility",
     tag: ("cleric", "wizard"),
     description: {
-      desc: 
+      desc:
         "A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched.",
       higherLevel: null,
       school: "Evocation",
@@ -2569,7 +2574,7 @@ const spells = [
     type: "damage",
     tag: ("cleric", "druid", "wizard"),
     description: {
-      desc: 
+      desc:
         "Until the spell ends, you control any freestanding water inside an area you choose that is a cube up to 100 feet on a side. You can choose from any of the following effects when you cast this spell. As an action on your turn, you can repeat the same effect or choose a different one.<br /><br />-Flood.<br />You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land.<br />Instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing.<br />The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts.<br /><br />-Part Water.<br />You cause water in the area to move apart and create a trench. The trench extends across the spell's area, and the separated water forms a wall to either side. The trench remains until the spell ends or you choose a different effect. The water then slowly fills in the trench over the course of the next round until the normal water level is restored.<br /><br />-Redirect Flow.<br />You cause flowing water in the area to move in a direction you choose, even if the water has to flow over obstacles, up walls, or in other unlikely directions. The water in the area moves as you direct it, but once it moves beyond the spell's area, it resumes its flow based on the terrain conditions. The water continues to move in the direction you chose until the spell ends or you choose a different effect.<br /><br />-Whirlpool.<br />This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.<br />When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a strength saving throw. On a failed save, the creature takes 2d8 bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.<br />The first time each turn that an object enters the vortex, the object takes 2d8 bludgeoning damage; this damage occurs each round it remains in the vortex.",
       higherLevel: null,
       school: "Transmutation",
@@ -2598,7 +2603,7 @@ const spells = [
     type: "utility",
     tag: ("cleric", "wizard", "druid"),
     description: {
-      desc: 
+      desc:
         "You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.<br /><br />When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.<br /><br />When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.",
       higherLevel: null,
       school: "Transmutation",
@@ -2627,7 +2632,7 @@ const spells = [
     type: "utility",
     tag: ("sorcerer", "wizard", "warlock"),
     description: {
-      desc: 
+      desc:
         "You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.",
       higherLevel:
         "When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.",
@@ -2657,7 +2662,7 @@ const spells = [
     type: "utility",
     tag: ("cleric", "druid"),
     description: {
-      desc: 
+      desc:
         "You either create or destroy water.<br /><br />Create Water.<br />You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range.<br /><br />Destroy Water.<br />You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.",
       higherLevel:
         "When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.",
@@ -2717,7 +2722,7 @@ const spells = [
     type: "healing",
     tag: ("cleric", "bard"),
     description: {
-      desc: 
+      desc:
         "You touch a dead creature that has been dead for no more than a century, that didn't die of old age, and that isn't undead. If its soul is free and willing, the target returns to life with all its hit points.<br /><br />This spell neutralizes any poisons and cures normal diseases afflicting the creature when it died. It doesn't, however, remove magical diseases, curses, and the like; if such effects aren't removed prior to casting the spell, they afflict the target on its return to life.<br /><br />This spell closes all mortal wounds and restores any missing body parts.<br /><br />Coming back from the dead is an ordeal. The target takes a -4 penalty to all attack rolls, saving throws, and ability checks. Every time the target finishes a long rest, the penalty is reduced by 1 until it disappears.<br /><br />Casting this spell to restore life to a creature that has been dead for one year or longer taxes you greatly. Until you finish a long rest, you can't cast spells again, and you have disadvantage on all attack rolls, ability checks, and saving throws.",
       higherLevel: null,
       school: "Necromancy",
