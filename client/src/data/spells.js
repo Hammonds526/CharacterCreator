@@ -2146,6 +2146,7 @@ const spells = [
     },
   },
   {
+<<<<<<< Updated upstream
     name: "Continual Flame",
     level: 2,
     type: "utility",
@@ -2204,6 +2205,8 @@ const spells = [
     },
   },
   {
+=======
+>>>>>>> Stashed changes
     name: "Control Weather",
     level: 8,
     type: "utility",

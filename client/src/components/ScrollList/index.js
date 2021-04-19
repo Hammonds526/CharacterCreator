@@ -3,12 +3,12 @@ import "./style.css";
 
 import ScrollListItem from "../ScrollListItem";
 
-function ScrollList({ spellList, scrollListStyle, ...props }) {
+function ScrollList({ list, scrollListStyle, ...props }) {
   return (
     <div className="scroll-list" style={scrollListStyle}>
-      {spellList()[0]
-        ? spellList().map((spell, i) => (
-            <ScrollListItem spell={spell} {...props} i={i} key={i} />
+      {list()[0]
+        ? list().map((item, i) => (
+            <ScrollListItem item={item} {...props} i={i} key={i} />
           ))
         : null}
     </div>

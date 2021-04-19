@@ -3,72 +3,32 @@ import React from "react";
 // CSS
 import "./style.css";
 
+<<<<<<< Updated upstream
 // Pixel border stuff
 import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
+=======
+// import WoodBeamX from "../WoodBeamX";
+>>>>>>> Stashed changes
 
 // The main function
 function CharacterListItem(props) {
+  console.log("props saved charcters ", props);
   return (
-    <div>
-      <WoodBeamX beamStyle={{ top: "-47px", }} />
-
-      <WoodBeamY beamStyle={{ left: "-3px", top: "13px" }} />
-      <WoodBeamY beamStyle={{ right: "-3px", top: "13px" }} />
-
-      <Corner
-        cornerStyle={{
-          width: "40px",
-          height: "auto",
-          left: "-18px",
-          top: "-47px",
-        }}
-      />
-      <Corner
-        cornerStyle={{
-          width: "40px",
-          height: "auto",
-          right: "-18px",
-          top: "-47px",
-          transform: "rotate(90deg)",
-        }}
-      />
+    <div className="character-list">
       {props.myCharacters.map((item) => (
         <div id="charbox" className="list-group-item" key={item.name}>
           <p>{item.name}</p>
           {/* <p>{item.race}</p> */}
-          <p>{item.race} {item.class}</p>
+          <p>
+            {item.race} {item.class}
+          </p>
           <p id="level">{item.level}</p>
           <hr className="my-4" />
           <br />
         </div>
-
-
-
-
       ))}
-
-      {/* Nothing below here */}
-      <WoodBeamX beamStyle={{ bottom: "-17px" }} />
-      <Corner
-        cornerStyle={{
-          width: "40px",
-          height: "auto",
-          right: "-18px",
-          bottom: "-17px",
-          transform: "rotate(180deg)",
-        }}
-      />
-      <Corner
-        cornerStyle={{
-          width: "40px",
-          height: "auto",
-          left: "-18px",
-          bottom: "-17px",
-          transform: "rotate(270deg)",
-        }}
-      />
     </div>
   );
 }
