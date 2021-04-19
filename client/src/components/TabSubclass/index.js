@@ -27,9 +27,9 @@ function TabSubclass({
     });
   }, []);
 
-  console.log("subClassIndex ", subClassIndex());
-  console.log("classIndex ", classIndex);
-  console.log("character from subclass ", character);
+  // console.log("subClassIndex ", subClassIndex());
+  // console.log("classIndex ", classIndex);
+  // console.log("character from subclass ", character);
   // console.log("props.character.class[classIndex]", character.class[classIndex]);
   // console.log("newCharacter", newCharacter);
   return (
@@ -56,7 +56,7 @@ function TabSubclass({
       <p className="tab_descriptions text-bisque mb-2">{subclassDescription}</p>
       <div className="d-flex justify-content-end">
         <Link to={"/character-creator/spells"}>
-          <SelectButton utton text={"Select"} />
+          <SelectButton text={"Select"} />
         </Link>
       </div>
     </div>

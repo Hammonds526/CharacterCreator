@@ -17,8 +17,6 @@ import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
 function CharInfoBox(props) {
-  console.log("characterfrom infobox ", props.character);
-
   return (
     <div className="char-info-box__container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />

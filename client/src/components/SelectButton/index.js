@@ -4,7 +4,7 @@ import NavArrow from "../NavArrow";
 
 function SelectButton(props) {
   return (
-    <div className="position-relative">
+    <div className="position-relative" onClick={props.selectButtonOnClick}>
       <NavArrow
         arrowStyle={{
           width: "18px",
@@ -16,11 +16,6 @@ function SelectButton(props) {
       />
       <div className="position-relative button-image-background">
         <p className="font-weight-bold select-button__text">{props.text}</p>
-        {/* <img
-        src={Image}
-        style={{ width: "85px", height: "auto" }}
-        alt="Selection tab start"
-      ></img> */}
       </div>
     </div>
   );
