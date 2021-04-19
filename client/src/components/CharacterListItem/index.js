@@ -8,10 +8,6 @@ import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
-
-
-// import WoodBeamX from "../WoodBeamX";
-
 // The main function
 function CharacterListItem(props) {
   return (
