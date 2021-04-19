@@ -1,32 +1,19 @@
-// Core dependancies
 import React from "react";
+// import "./style.css";
+import CharacterListItem from "../CharacterListItem";
+
+// CSS
 import "./Style.css";
 
-// Character List
-function CharacterList(props) {
-
-    const [myCharacters] = useState([
-        {
-            Name: "John",
-            Level: 12,
-            CharClass: "Wizard",
-        },
-        {
-            Name: "Sally",
-            Level: 1,
-            CharClass: "Ranger",
-        },
-        {
-            Name: "Chuck Norris",
-            Level: 25,
-            CharClass: "Fighter",
-        },
-        {
-            Name: "Alexander",
-            Level: 10,
-            CharClass: "Rogue",
-        },
-    ]);
+function MyCharacters(props) {
+  return (
+    <div id="container" className="row">
+      <div className="col">
+        <h4>My Characters</h4>
+        <CharacterListItem {...props} />
+      </div>
+    </div>
+  );
 }
 
-export default CharacterList
+export default MyCharacters;

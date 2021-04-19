@@ -11,6 +11,7 @@ import CharacterList from "./components/CharacterList";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
 import API from "./utils/API";
+require("dotenv").config();
 
 
 function App() {
@@ -29,14 +30,14 @@ let classimage = "../../images/icons/ranger.png"
 */
   const [myCharacters, setmyCharacters] = useState([]);
 
-  useEffect(()=>{
-    API.getUser("6078fa52093e11225c2d4b85")
-      .then(res => {
-        // console.log(res.data.user.characters);
-        setmyCharacters(res.data.user.characters);
-        // console.log(myCharacters);
+  useEffect(() => {
+    // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
+    API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
+      // console.log(res.data.user.characters);
+      setmyCharacters(res.data.user.characters);
+      // console.log(myCharacters);
     });
-  },[]);
+  }, []);
 
   return (
     <Router>
@@ -61,11 +62,8 @@ let classimage = "../../images/icons/ranger.png"
               <Tavern />
             </div>
           </div>
-
-          <div className="col-12 col-lg-3 mt-4">
-            <div>
-              <CharacterList />
-            </div>
+          <div className="col">
+            {/* <CharacterList myCharacters={myCharacters} /> */}
           </div>
         </div>
       </div>
