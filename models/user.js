@@ -15,7 +15,7 @@ const userSchema = new Schema({
           class: { type: String },
           subClass: { type: String },
           abilities: [{}],
-          feats: [{ type: Schema.Types.ObjectId, ref: "Actions"}],
+          feats: [{ type: String}],
           spells: [{type: String}],
         },
       ],
