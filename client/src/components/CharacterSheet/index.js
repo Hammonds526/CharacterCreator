@@ -39,9 +39,9 @@ let savedCharacter =
     let { path } = useRouteMatch();
     const [savedCharacter, printCharacter] = useState({
 
-        name: "Cheese",
+        name: "Grimbo",
         level: 1,
-        race: "dwarf",
+        race: "half-orc",
         class: "fighter",
         subclass: "champion",
         abilities: [],
