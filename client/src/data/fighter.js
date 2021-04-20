@@ -131,13 +131,13 @@ const fighter = {
     {
       name: "Champion",
       desc:
-        "The archetypal Champion focuses on the development of raw physical pow er honed to deadly perfection.Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
+        "The archetypal Champion focuses on the development of raw physical power honed to deadly perfection.Those who model themselves on this archetype combine rigorous training with physical excellence to deal devastating blows.",
       abilities: [
         {
           name: "Improved Critical",
           level: 3,
           desc:
-            "Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20. Beginning when you ch oose this archetype at 3rd level, your w eapon attacks score a critical hit on a roll of 19 or 20.",
+            "Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20. Beginning when you ch oose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20.",
         },
         {
           name: "Remarkable Athlete",
@@ -209,7 +209,7 @@ const fighter = {
         {
           name: "Commander's Strike",
           desc:
-            "When you take the Attack action on your turn, you can forgo one of your attacks and use a bonus action to direct one of your com panions to strike. When you do so, choose a friendly creature who can see or hear you and expend one superiority die. That creature can immediately use its reaction to make one weapon attack, adding the superiority die to the attack’s damage roll.",
+            "When you take the Attack action on your turn, you can forgo one of your attacks and use a bonus action to direct one of your companions to strike. When you do so, choose a friendly creature who can see or hear you and expend one superiority die. That creature can immediately use its reaction to make one weapon attack, adding the superiority die to the attack’s damage roll.",
         },
         {
           name: "Disarming Attack",
@@ -249,17 +249,17 @@ const fighter = {
         {
           name: "Maneuvering Attack",
           desc:
-            "W hen you hit a creature with a weapon attack, you can expend one superiority die to maneuver one of your com rades into a more advantageous position. You add the superiority die to the attack’s damage roll, and you choose a friendly creature who can see or hear you. That creature can use its reaction to move up to half its speed without provoking opportunity attacks from the target of your attack.",
+            "When you hit a creature with a weapon attack, you can expend one superiority die to maneuver one of your comrades into a more advantageous position. You add the superiority die to the attack’s damage roll, and you choose a friendly creature who can see or hear you. That creature can use its reaction to move up to half its speed without provoking opportunity attacks from the target of your attack.",
         },
         {
           name: "Menacing Attack",
           desc:
-            "W hen you hit a creature with a weapon attack, you can expend one superiority die to attempt to frighten the target. You add the superiority die to the attack’s damage roll, and the target must make a Wisdom saving throw. On a failed save, it is frightened of you until the end of your next turn.",
+            "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to frighten the target. You add the superiority die to the attack’s damage roll, and the target must make a Wisdom saving throw. On a failed save, it is frightened of you until the end of your next turn.",
         },
         {
           name: "Parry",
           desc:
-            "When another creature dam ages you with a melee attack, you can use your reaction and expend one superiority die to reduce the damage by the number you roll on your superiority die + your Dexterity modifier.",
+            "When another creature damages you with a melee attack, you can use your reaction and expend one superiority die to reduce the damage by the number you roll on your superiority die + your Dexterity modifier.",
         },
         {
           name: "Precision Attack",
@@ -269,17 +269,17 @@ const fighter = {
         {
           name: "Pushing Attack",
           desc:
-            "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to drive the target back. You add the superiority die to the attack's dam age roll, and if the target is Large or smaller, it must make a Strength saving throw. On a failed save, you push the target up to 15 feet away from you",
+            "When you hit a creature with a weapon attack, you can expend one superiority die to attempt to drive the target back. You add the superiority die to the attack's damage roll, and if the target is Large or smaller, it must make a Strength saving throw. On a failed save, you push the target up to 15 feet away from you",
         },
         {
           name: "Rally",
           desc:
-            "On your turn, you can use a bonus action andexpend one superiority die to bolster the resolve of one of your com panions. When you do so, choose a friendly creature who can see or hear you. That creature gains temporary hit points equal to the superiority die roll + your Charisma modifier.",
+            "On your turn, you can use a bonus action andexpend one superiority die to bolster the resolve of one of your companions. When you do so, choose a friendly creature who can see or hear you. That creature gains temporary hit points equal to the superiority die roll + your Charisma modifier.",
         },
         {
           name: "Riposte",
           desc:
-            "When a creature m isses you with a melee attack, you can use your reaction and expend one superiority die to make a melee weapon attack against the creature. If you hit, you add the superiority die to the attack's damage roll.",
+            "When a creature misses you with a melee attack, you can use your reaction and expend one superiority die to make a melee weapon attack against the creature. If you hit, you add the superiority die to the attack's damage roll.",
         },
         {
           name: "Sweeping Attack",
@@ -299,7 +299,7 @@ const fighter = {
     {
       name: "Eldritch Knight",
       desc:
-        "The archetypal Eldritch Knight com bines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their studyon two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter’s reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook",
+        "The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their studyon two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter’s reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook",
       abilities: [
         {
           //   ---- Will need spell choice functionality. See page 69/293 of player handbook ----
@@ -312,7 +312,7 @@ const fighter = {
           name: "Weapon Bond",
           level: 3,
           desc:
-            "You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual. Once you have bonded a w eapon to yourself, you can’t be disarm ed of that weapon unless you are incapacitated. If it is on the same plane of existence, you can sum m on that weapon as a bonus action on your turn, causing it to teleport instantly to your hand. You can have up to two bonded w eapons, but can summon only one at a time with your bonus action. If you attempt to bond with a third weapon, you must break the bond with one of the other two",
+            "You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual. Once you have bonded a weapon to yourself, you can’t be disarmed of that weapon unless you are incapacitated. If it is on the same plane of existence, you can summon that weapon as a bonus action on your turn, causing it to teleport instantly to your hand. You can have up to two bonded weapons, but can summon only one at a time with your bonus action. If you attempt to bond with a third weapon, you must break the bond with one of the other two",
         },
         {
           name: "War Magic",

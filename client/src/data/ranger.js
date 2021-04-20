@@ -21,7 +21,7 @@ ranger
 const ranger = {
   name: "Ranger",
   desc:
-    "Warriors of the wilderness, rangers specialize in hunting the m onsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their com bat training on techniques that are particularly useful against their specific favored foes. Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness nature’s  power, much as a druid does. Their spells, like their combat abilities, emphasize speed, stealth, and the hunt. A ranger’s talents and abilities are honed with deadly focus on the grim task of protecting the borderlands.",
+    "Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons. They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly useful against their specific favored foes. Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness nature’s  power, much as a druid does. Their spells, like their combat abilities, emphasize speed, stealth, and the hunt. A ranger’s talents and abilities are honed with deadly focus on the grim task of protecting the borderlands.",
 
   classFeatures: [
     {
@@ -57,14 +57,14 @@ const ranger = {
       name: "Favored Enemy",
       level: 1,
       desc:
-        "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies. You have advantage on Wisdom (Survival) checks to track your favored enem ies, as well as on Intelligence checks to recall information about them. You also learn one language of your choice that is spoken by your favored enemies, if they speak one at all. You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.",
+        "Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies. You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them. You also learn one language of your choice that is spoken by your favored enemies, if they speak one at all. You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.",
     },
     // *----- This will require a selector and slight modification -----*
     {
       name: "Natural Explorer",
       level: 1,
       desc:
-        "Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. W hen you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in. While traveling for an hour or more in your favored terrain, you gain the following benefits: Difficult terrain doesn’t slow your group’s travel. Your group can’t become lost except by magical means. Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger. If you are traveling alone, you can move stealthily at a normal pace. When you forage, you find tw ice as much food as you normally would.W hile tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area. You choose additional favored terrain types at 6th and 10th level.",
+        "Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in. While traveling for an hour or more in your favored terrain, you gain the following benefits: Difficult terrain doesn’t slow your group’s travel. Your group can’t become lost except by magical means. Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger. If you are traveling alone, you can move stealthily at a normal pace. When you forage, you find twice as much food as you normally would.While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area. You choose additional favored terrain types at 6th and 10th level.",
     },
     {
       name: "Fighter Style",
@@ -107,13 +107,13 @@ const ranger = {
       name: "Land's Stride",
       level: 8,
       desc:
-        "Moving through non-magical difficult terrain costs you no extramovement. You can also pass through non-magical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard. In addition, you have advantage on saving throws against plants that are magically created or manipulated to im pede movement, such those created by the entangle spell.",
+        "Moving through non-magical difficult terrain costs you no extramovement. You can also pass through non-magical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard. In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell.",
     },
     {
       name: "Hide in Plain Sight",
       level: 10,
       desc:
-        "You can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage. Once you are cam ouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must cam ouflage yourself again to gain this benefit.",
+        "You can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage. Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit.",
     },
     {
       name: "Vanish",
@@ -192,7 +192,7 @@ const ranger = {
             {
               name: "Volley",
               desc:
-                "You can use your action to make a ranged attack against any num ber of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.",
+                "You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.",
             },
             {
               name: "Whirlwind Attack",
@@ -209,12 +209,12 @@ const ranger = {
             {
               name: "Evasion",
               desc:
-                "You can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or a lightning bolt spell. W hen you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.",
+                "You can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or a lightning bolt spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.",
             },
             {
               name: "Stand Against the Tide",
               desc:
-                "When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the sam e attack against another creature (other than itself) of your choice.",
+                "When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice.",
             },
             {
               name: "Uncanny Dodge",
@@ -230,19 +230,19 @@ const ranger = {
     {
       name: "Beast Master",
       desc:
-        "The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means com m itting yourself to this ideal, working in partnership with an animal as its com panion and friend.",
+        "The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.",
       abilities: [
         {
           name: "Ranger's Companion",
           level: 3,
           desc:
-            "Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or 4x your ranger level, whichever is higher. The beast obeys your commands as best as it can. -It takes its turn on your initiative, though it doesn’t take an action unless you com m and it to. On your turn, you can verbally command the beast w here to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, Dodge, or Help action. Once you have the Extra Attack feature, you can make one w eapon attack yourself when you command the beast to take the Attack action. While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace. If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as  before or a different one.",
+            "Choose a beast that is no larger than Medium and that has a challenge rating of 1/4 or lower (appendix D presents statistics for the hawk, mastiff, and panther as examples). Add your proficiency bonus to the beast’s AC, attack rolls, and damage rolls, as well as to any saving throws and skills it is proficient in. Its hit point maximum equals its normal maximum or 4x your ranger level, whichever is higher. The beast obeys your commands as best as it can. -It takes its turn on your initiative, though it doesn’t take an action unless you command it to. On your turn, you can verbally command the beast where to move (no action required by you). You can use your action to verbally command it to take the Attack, Dash, Disengage, Dodge, or Help action. Once you have the Extra Attack feature, you can make one weapon attack yourself when you command the beast to take the Attack action. While traveling through your favored terrain with only the beast, you can move stealthily at a normal pace. If the beast dies, you can obtain another one by spending 8 hours magically bonding with another beast that isn’t hostile to you, either the same type of beast as  before or a different one.",
         },
         {
           name: "Exceptional Training",
           level: 7,
           desc:
-            "On any of your turns when your beast com panion doesn’t attack, you can use a bonus action to command the beast to take the Dash, Disengage, Dodge, or Help action on its turn. ",
+            "On any of your turns when your beast companion doesn’t attack, you can use a bonus action to command the beast to take the Dash, Disengage, Dodge, or Help action on its turn. ",
         },
         {
           name: "Bestial Fury",
@@ -254,7 +254,7 @@ const ranger = {
           name: "Share Spells",
           level: 15,
           desc:
-            "When you cast a spell targeting yourself, you can also affect your beast com panion with the spell if the beast is within 30 feet of you.",
+            "When you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you.",
         },
       ],
     },
