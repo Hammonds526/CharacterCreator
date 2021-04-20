@@ -22,7 +22,7 @@ const userSeed = [
           class: "rogue",
           subClass: null,
           abilities: [{}],
-          feats: [{}],
+          feats: [],
           spells: [],
         }]
       },

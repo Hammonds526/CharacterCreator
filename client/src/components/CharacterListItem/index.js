@@ -4,9 +4,9 @@ import React from "react";
 import "./style.css";
 
 // Pixel border stuff
-import Corner from "../Corner";
-import WoodBeamX from "../WoodBeamX";
-import WoodBeamY from "../WoodBeamY";
+// import Corner from "../Corner";
+// import WoodBeamX from "../WoodBeamX";
+// import WoodBeamY from "../WoodBeamY";
 
 // import WoodBeamX from "../WoodBeamX";
 
