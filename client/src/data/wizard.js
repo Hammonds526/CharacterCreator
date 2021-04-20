@@ -54,7 +54,7 @@ const wizard = {
       name: "Ritual Casting",
       level: 1,
       desc:
-        "You can cast a wizard spell as a ritual if that spell has the ritual tag and you havve the spell in your spellbook. You don't need to havvve the spell prepared.",
+        "You can cast a wizard spell as a ritual if that spell has the ritual tag and you havve the spell in your spellbook. You don't need to have the spell prepared.",
     },
     {
       name: "Learning Spells of 1st Level and Higher",
@@ -91,13 +91,13 @@ const wizard = {
           name: "Arcane Ward",
           level: 2,
           desc:
-            "You can weave magic around yourself for protection. When you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell’s magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hit points equal to twice your wizard level + your Intelligence modifier. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hit points, you take any remaining damage. While the ward has 0 hit points, it can’t absorb damage, but its m agic remains. Whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hit points equal to twice the level of the spell. Once you create the ward, you can't create it again until you finish a long rest.",
+            "You can weave magic around yourself for protection. When you cast an abjuration spell of 1st level or higher, you can simultaneously use a strand of the spell’s magic to create a magical ward on yourself that lasts until you finish a long rest. The ward has hit points equal to twice your wizard level + your Intelligence modifier. Whenever you take damage, the ward takes the damage instead. If this damage reduces the ward to 0 hit points, you take any remaining damage. While the ward has 0 hit points, it can’t absorb damage, but its magic remains. Whenever you cast an abjuration spell of 1st level or higher, the ward regains a number of hit points equal to twice the level of the spell. Once you create the ward, you can't create it again until you finish a long rest.",
         },
         {
           name: "Projected Ward",
           level: 6,
           desc:
-            "When a creature that you can see within 30 feet of you takes damage, you can use your reaction to cause your Arcane W ard to absorb that  damage. If this damage reduces the w ard to 0 hit points, the warded creature takes any remaining damage.",
+            "When a creature that you can see within 30 feet of you takes damage, you can use your reaction to cause your Arcane Ward to absorb that  damage. If this damage reduces the ward to 0 hit points, the warded creature takes any remaining damage.",
         },
         {
           name: "Improved Abjuration",
@@ -116,7 +116,7 @@ const wizard = {
     {
       name: "School of Conjuration",
       desc:
-        "As a conjurer, you favor spells that produce objects and creatures out o f thin air. You can conjure billowing clouds of killing fog or sum m on creatures from elsewhere to fight on your behalf. As your mastery grows, you learn spells of transportation and can teleport yourself across vast distances, even to other planes of existence, in an instant.",
+        "As a conjurer, you favor spells that produce objects and creatures out of thin air. You can conjure billowing clouds of killing fog or summon creatures from elsewhere to fight on your behalf. As your mastery grows, you learn spells of transportation and can teleport yourself across vast distances, even to other planes of existence, in an instant.",
       abilities: [
         {
           name: "Conjuraton Savant",
@@ -165,7 +165,7 @@ const wizard = {
           name: "Potent",
           level: 2,
           desc:
-            "When you finish a long rest, roll two d20s and record the num bers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn. Each finish a long rest, you lose any unused foretelling rolls.",
+            "When you finish a long rest, roll two d20s and record the numbers rolled. You can replace any attack roll, saving throw, or ability check made by you or a creature that you can see with one of these foretelling rolls. You must choose to do so before the roll, and you can replace a roll in this way only once per turn. Each finish a long rest, you lose any unused foretelling rolls.",
         },
         {
           name: "Expert Divination",
@@ -177,20 +177,20 @@ const wizard = {
           name: "The Third Eye",
           level: 10,
           desc:
-            "Choose one of the following benefits, which lasts untilyou are incapacitated or you take a short or long rest. You can’t use the feature again until you finish a rest. -Darkvision: You gain darkvision out to a range of 60 feet. -Ethereal Sight: You can see into the Ethereal Plane within 60 feet of you. -Greater Comprehension: You can read any language. -See Invisibility: You can see invisible creatures and objects within 10 feet of you that are within line of site.",
+            "Choose one of the following benefits, which lasts until you are incapacitated or you take a short or long rest. You can’t use the feature again until you finish a rest. -Darkvision: You gain darkvision out to a range of 60 feet. -Ethereal Sight: You can see into the Ethereal Plane within 60 feet of you. -Greater Comprehension: You can read any language. -See Invisibility: You can see invisible creatures and objects within 10 feet of you that are within line of site.",
         },
         {
           name: "Greater Portent",
           level: 14,
           desc:
-            "The visions in your dreams intensify and paint a m ore accurate picture in your mind of what is to come. You roll three d20s for your Portent feature, rather than two.",
+            "The visions in your dreams intensify and paint a more accurate picture in your mind of what is to come. You roll three d20s for your Portent feature, rather than two.",
         },
       ],
     },
     {
       name: "School of Enchantment",
       desc:
-        "As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. S om e enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall som ewhere in between.",
+        "As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall som ewhere in between.",
       abilities: [
         {
           name: "Enchantment Savant",
@@ -208,7 +208,7 @@ const wizard = {
           name: "Instinctive Charm",
           level: 6,
           desc:
-            "When a creature you can see within 30 feet of you m akes an attack roll against you, you can use your reaction to divert the attack, provided that another creature is within the attack’s range. The attacker must make a Wisdom saving throw against your w izard spell save DC. On a failed save, the attacker must target the creature that is closest to it, not including you or itself. If multiple creatures are closest, the attacker chooses which one to target. On a successful save, you can’t use this feature on the attacker again until you finish a long rest. You must choose to use this feature before knowing whether the attack hits or m isses. Creatures that can’t be charmed are immune to this effect. On a successful save, you can’t use this feature on the attacker again until you finish a long rest. You must choose to use this feature before knowing whether the attack hits or misses. Creatures that can’t be charm ed are im mune to this effect.",
+            "When a creature you can see within 30 feet of you m akes an attack roll against you, you can use your reaction to divert the attack, provided that another creature is within the attack’s range. The attacker must make a Wisdom saving throw against your wizard spell save DC. On a failed save, the attacker must target the creature that is closest to it, not including you or itself. If multiple creatures are closest, the attacker chooses which one to target. On a successful save, you can’t use this feature on the attacker again until you finish a long rest. You must choose to use this feature before knowing whether the attack hits or misses. Creatures that can’t be charmed are immune to this effect. On a successful save, you can’t use this feature on the attacker again until you finish a long rest. You must choose to use this feature before knowing whether the attack hits or misses. Creatures that can’t be charm ed are immune to this effect.",
         },
         {
           name: "Split Enchantment",
@@ -220,7 +220,7 @@ const wizard = {
           name: "Alter Memories",
           level: 14,
           desc:
-            "You gain the ability to make a creature unaware of your magical influence on it. When you cast an enchantment spell to charm one or m ore creatures, you can alter one creature’s understanding so that it remains unaware of being charmed. Additionally, once before the spell expires, you can use your action to try to make the chosen creature forget some of the time it spent charm ed. The creature must succeed on an Intelligence saving throw against your wizard spell save DC or lose a number of hours of its memories equal to 1 + your Charisma modifier (minimum 1). You can make the creature forget less time, and the amount of time can’t exceed the duration of your enchantment spell.",
+            "You gain the ability to make a creature unaware of your magical influence on it. When you cast an enchantment spell to charm one or more creatures, you can alter one creature’s understanding so that it remains unaware of being charmed. Additionally, once before the spell expires, you can use your action to try to make the chosen creature forget some of the time it spent charmed. The creature must succeed on an Intelligence saving throw against your wizard spell save DC or lose a number of hours of its memories equal to 1 + your Charisma modifier (minimum 1). You can make the creature forget less time, and the amount of time can’t exceed the duration of your enchantment spell.",
         },
       ],
     },
@@ -258,7 +258,7 @@ const wizard = {
           name: "Overchannel",
           level: 14,
           desc:
-            "You can increase the power of your simpler spells. When you cast a wizard spell of 5th level or lower that deals damage, you can deal maximum damage with that spell. The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take 2d 12 necrotic dam age for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by 1d12. This damage ignores resistance and immunity",
+            "You can increase the power of your simpler spells. When you cast a wizard spell of 5th level or lower that deals damage, you can deal maximum damage with that spell. The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take 2d 12 necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by 1d12. This damage ignores resistance and immunity",
         },
       ],
     },
@@ -295,7 +295,7 @@ const wizard = {
           name: "Illusory Reality",
           level: 14,
           desc:
-            "You have learned the secret of weaving shadow magic into your illusions to give them a sem ireality. When you cast an illusion spell of 1st level or higher, you can choose one inanimate, nonm agical object that is part of the illusion and make that object real. You can do this on your turn as a bonus action while the spell is ongoing. The object remains real for 1 minute. For example, you can create an illusion of a bridge over a chasm and then make it real long enough for your allies to cross. The object can’t deal damage or otherwise directly harm anyone.",
+            "You have learned the secret of weaving shadow magic into your illusions to give them a semi-reality. When you cast an illusion spell of 1st level or higher, you can choose one inanimate, nonm agical object that is part of the illusion and make that object real. You can do this on your turn as a bonus action while the spell is ongoing. The object remains real for 1 minute. For example, you can create an illusion of a bridge over a chasm and then make it real long enough for your allies to cross. The object can’t deal damage or otherwise directly harm anyone.",
         },
       ],
     },
@@ -332,7 +332,7 @@ const wizard = {
           name: "Command Undead",
           level: 14,
           desc:
-            "You can use magic to bring undead under your control, even those created by other wizards. As an action, you can choose one undead that you can see within 60 feet of you. That creature must make a Charisma saving throw against your wizard spell save DC. If it succeeds, you can’t use this feature on it again. If it fails, it becom es friendly to you and obeys your commands until you use this feature again. Intelligent undead are harder to control in this way. If the target has an Intelligence of 8 or higher, it has advantage on the saving throw. If it fails the saving throw and has an Intelligence of 12 or higher, it can repeat the saving throw at the end of every hour until it succeeds and breaks free.",
+            "You can use magic to bring undead under your control, even those created by other wizards. As an action, you can choose one undead that you can see within 60 feet of you. That creature must make a Charisma saving throw against your wizard spell save DC. If it succeeds, you can’t use this feature on it again. If it fails, it becomes friendly to you and obeys your commands until you use this feature again. Intelligent undead are harder to control in this way. If the target has an Intelligence of 8 or higher, it has advantage on the saving throw. If it fails the saving throw and has an Intelligence of 12 or higher, it can repeat the saving throw at the end of every hour until it succeeds and breaks free.",
         },
       ],
     },
@@ -357,7 +357,7 @@ const wizard = {
           name: "Transmuter's Stone",
           level: 6,
           desc:
-            "You can spend 8 hours creating a transmuter’s stone that stores transmutation magic. You can benefit from the stone yourself or give it to another creature. A creature gains a benefit of your choice as long as the stone is in the creature’s possession. When you create the stone, choose the benefit from the following options: -Darkvision out to a of 60ft. -An increase to speed of 10 feet while the creature is unencumbered. -Proficiency in Constitution saving throws. -Resistance to acid, cold, fire, lightning, or thunder damage (your choice whenever you choose this benefit). *Each time you cast a transmutation spell of 1st level or higher, you can change the effect of your stone if the stone is on your person. If you create a new transmuter’s stone, the previous one ceases to function.",
+            "You can spend 8 hours creating a transmuter’s stone that stores transmutation magic. You can benefit from the stone yourself or give it to another creature. A creature gains a benefit of your choice as long as the stone is in the creature’s possession. When you create the stone, choose the benefit from the following options: -Darkvision out to a of 60ft. -An increase to speed of 10 feet while the creature is unencumbered. -Proficiency in Constitution saving throws. -Resistance to acid, cold, fire, lightning, or thunder damage (your choice whenever you choose this benefit).<br />*Each time you cast a transmutation spell of 1st level or higher, you can change the effect of your stone if the stone is on your person. If you create a new transmuter’s stone, the previous one ceases to function.",
         },
         {
           name: "Shapechanger",
