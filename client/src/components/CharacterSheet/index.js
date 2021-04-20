@@ -34,7 +34,7 @@ GetCharacters = () => {
 }
 
 function CharacterSheet(props) {
-let savedCharacter = 
+// let savedCharacter = 
 
     let { path } = useRouteMatch();
     const [savedCharacter, printCharacter] = useState({

@@ -14,16 +14,19 @@ function LevelSelecter(props) {
           zIndex: "1",
         }}
       /> */}
-      <input
-      id="numberbox"
-        className=" ml-3  form-control"
-        type="number"
-        name="level"
-        min="1"
-        max="20"
-        placeholder="1"
-        onChange={props.handleInputChange}
-      />
+      <center>
+
+        <input
+          id="numberbox"
+          className=" ml-3  form-control"
+          type="number"
+          name="level"
+          min="1"
+          max="20"
+          placeholder="1"
+          onChange={props.handleInputChange}
+        />
+      </center>
 
       {/* <NavArrow
         arrowStyle={{

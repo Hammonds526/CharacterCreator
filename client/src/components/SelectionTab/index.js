@@ -27,7 +27,7 @@ function SelectionTab(props) {
       <p className="font-weight-bold position-absolute selection-tab-text">
         {props.charProperty}
       </p>
-      <img src={ImageCenter} alt="Selection tab"></img>
+      <img id="selection" src={ImageCenter} alt="Selection tab"></img>
     </div>
   );
 }

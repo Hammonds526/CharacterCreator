@@ -2,7 +2,7 @@ body,
 html {
   /* background-image: url("../../images/stone_tile2.png"); */
   font-family: alagard;
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
   background-color: #2a2c30;
   color: blanchedalmond;
@@ -19,18 +19,4 @@ html {
 
 h4 {
   margin-bottom: 25px;
-}
-
-/* Placeholder text */
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: black;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: black;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: black;
 }
