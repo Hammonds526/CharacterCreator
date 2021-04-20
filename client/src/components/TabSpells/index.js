@@ -4,7 +4,12 @@ import "./style.css";
 import SelectButton from "../SelectButton";
 import ScrollList from "../ScrollList";
 
-function TabSpells({ spellList, newCharacter, setNewCharacter, ...props }) {
+function TabSpells({
+  getFilteredSpells,
+  newCharacter,
+  setNewCharacter,
+  ...props
+}) {
   const [activeSpell, setActiveSpell] = useState({
     name: "No spells available",
     description: {
@@ -15,8 +20,8 @@ function TabSpells({ spellList, newCharacter, setNewCharacter, ...props }) {
   //When the tab loads, make the page display the first spell in the list of filtered spells.
   useEffect(() => {
     setActiveSpell(
-      spellList().length > 0
-        ? spellList()[0]
+      getFilteredSpells().length > 0
+        ? getFilteredSpells()[0]
         : {
             name: "No spells available",
             description: {
@@ -43,7 +48,7 @@ function TabSpells({ spellList, newCharacter, setNewCharacter, ...props }) {
     }
   };
 
-  // console.log("Active spell ", activeSpell);
+  console.log("spell list ", getFilteredSpells());
 
   return (
     <div>
@@ -51,13 +56,14 @@ function TabSpells({ spellList, newCharacter, setNewCharacter, ...props }) {
       <div className="row mb-2">
         <div className="col-4">
           <ScrollList
-            spellList={spellList}
-            setActiveSpell={setActiveSpell}
+            list={getFilteredSpells}
+            setActive={setActiveSpell}
             checkboxOnClick={checkboxOnClick}
             newCharacter={newCharacter}
             setNewCharacter={setNewCharacter}
             {...props}
             scrollListStyle={{ maxHeight: "400px" }}
+            itemType={"spell"}
           />
         </div>
         <div className="col-8">

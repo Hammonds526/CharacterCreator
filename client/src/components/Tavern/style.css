@@ -1,5 +1,13 @@
 .desktop-tavern__image-main {
   width: 100%;
   height: auto;
-  object-fit:fill;
+  object-fit: scale-down;
+  opacity: 0;
+}
+.tavern-background {
+  background-image: url("../../images/tavern/All-In-One.png");
+  background-size: contain;
+  /* height: 400px; */
+  background-position: center;
+  background-repeat: no-repeat;
 }
