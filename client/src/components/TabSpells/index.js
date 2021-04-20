@@ -2,48 +2,81 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import SelectButton from "../SelectButton";
-import LevelSelector from "../LevelSelecter";
-import Button from "../Button";
+import ScrollList from "../ScrollList";
 
 function TabSpells({
-  classIndex,
-  subClassIndex,
+  getFilteredSpells,
   newCharacter,
   setNewCharacter,
-  character,
+  ...props
 }) {
-  const [spellDescription, setSpellDescription] = useState("");
+  const [activeSpell, setActiveSpell] = useState({
+    name: "No spells available",
+    description: {
+      desc: "No spells available for this class/level combo.",
+    },
+  });
 
-  // On tab load, get the name of the subclass, grab it's first associated spell, and put it in the newCharacter State.
+  //When the tab loads, make the page display the first spell in the list of filtered spells.
   useEffect(() => {
-    setSpellDescription(
-      character.class[classIndex].subClass[subClassIndex].desc
+    setActiveSpell(
+      getFilteredSpells().length > 0
+        ? getFilteredSpells()[0]
+        : {
+            name: "No spells available",
+            description: {
+              desc: "No spells available for this class/level combo.",
+            },
+          }
     );
-
-    setNewCharacter({
-      ...newCharacter,
-      subclass: character.class[classIndex].subClass[
-        subClassIndex
-      ].name.toLowerCase(),
-    });
   }, []);
+
+  // When a checkbox is clicked, if the corresponing spell is not in myCharacter, add it. If it is, remove it.
+  const checkboxOnClick = (event) => {
+    const localNewCharacter = { ...newCharacter };
+    if (newCharacter.spells.includes(event.target.name)) {
+      const localCharacterSpells = localNewCharacter.spells.filter((item) => {
+        if (item !== event.target.name) {
+          return true;
+        }
+      });
+      localNewCharacter.spells = localCharacterSpells;
+      setNewCharacter(localNewCharacter);
+    } else {
+      localNewCharacter.spells.push(event.target.name);
+      setNewCharacter(localNewCharacter);
+    }
+  };
+
+  console.log("spell list ", getFilteredSpells());
+
   return (
     <div>
-      <h4 className=" ml-3 text-bisque">Choose your Spells</h4>
+      <h2 className=" ml-3 text-bisque">Choose your Spells</h2>
       <div className="row mb-2">
-        {character.race.map((item) => (
-          <div
-            className="col p-0 d-flex justify-content-center"
-            key={item.name}
-          >
-            <Button text={item.name} />
-          </div>
-        ))}
+        <div className="col-4">
+          <ScrollList
+            list={getFilteredSpells}
+            setActive={setActiveSpell}
+            checkboxOnClick={checkboxOnClick}
+            newCharacter={newCharacter}
+            setNewCharacter={setNewCharacter}
+            {...props}
+            scrollListStyle={{ maxHeight: "400px" }}
+            itemType={"spell"}
+          />
+        </div>
+        <div className="col-8">
+          <h3 className="text-bisque mt-3 text-align-left">
+            {activeSpell.name}
+          </h3>
+          <p className="tab_descriptions text-bisque mt-3">
+            {activeSpell.description.desc}
+          </p>
+        </div>
       </div>
 
-      <p className="tab_descriptions text-bisque mb-2">{spellDescription}</p>
-      <div className="d-flex justify-content-between">
-        <LevelSelector text={"4"} />
+      <div className="d-flex justify-content-end">
         <Link to={"/character-creator/feats"}>
           <SelectButton utton text={"Select"} />
         </Link>

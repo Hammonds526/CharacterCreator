@@ -10,9 +10,9 @@ function CharacterMakerScreen(props) {
   let { path } = useRouteMatch();
   const [newCharacter, setNewCharacter] = useState({
     name: "",
-    level: 1,
+    level: 4,
     race: "dwarf",
-    class: "fighter",
+    class: "wizard",
     subclass: "champion",
     abilities: [],
     spells: [],
@@ -35,10 +35,27 @@ function CharacterMakerScreen(props) {
     }
   };
 
-  console.log("class index main ", classIndex);
-  console.log("subClass index main ", getSubClassIndex);
+  //Returns a filtered list of spells based on class and level
+  const getFilteredSpells = () => {
+    let filteredSpells = props.character.spells.filter(
+      (spell) =>
+        spell.level <= newCharacter.level && spell.tag === newCharacter.class
+    );
+    return filteredSpells;
+  };
 
-  console.log("character from main ", props.character);
+  // TODO make this actually filter feats, isntead of just returning all. Need to check with Garth on this.
+  const getFilteredFeats = () => {
+    return props.character.feats;
+  };
+
+  console.log("newCharacter ", newCharacter);
+  console.log("filteredSpells ", getFilteredSpells());
+
+  // console.log("class index main ", classIndex);
+  // console.log("subClass index main ", getSubClassIndex());
+
+  // console.log("character from main ", props.character);
 
   return (
     <div className="modal-content-box">
@@ -64,6 +81,8 @@ function CharacterMakerScreen(props) {
                     newCharacter={newCharacter}
                     classIndex={classIndex}
                     subClassIndex={getSubClassIndex}
+                    getFilteredSpells={getFilteredSpells}
+                    getFilteredFeats={getFilteredFeats}
                   />
                 </div>
               </Route>

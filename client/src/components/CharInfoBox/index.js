@@ -17,14 +17,12 @@ import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
 function CharInfoBox(props) {
-  console.log("characterfrom infobox ", props.character);
-
   return (
     <div className="char-info-box__container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
 
-      <WoodBeamY beamStyle={{ right: "15px", top: "9px" }} />
-      <WoodBeamY beamStyle={{ left: "15px", top: "9px" }} />
+      <WoodBeamY beamStyle={{ right: "13px", top: "9px" }} />
+      <WoodBeamY beamStyle={{ left: "13px", top: "9px" }} />
 
       <Corner
         cornerStyle={{
