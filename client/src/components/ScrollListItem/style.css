@@ -1,0 +1,8 @@
+#list{
+padding-left: 5px;
+}
+
+#list:hover {
+background-color: #cf4d4d75;
+transition: ease-in-out 0.45s;
+}
