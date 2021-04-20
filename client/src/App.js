@@ -62,7 +62,7 @@ let classimage = "../../images/icons/ranger.png"
             <Tavern />
           </div>
           <div className="col-12 col-lg-3 p-0">
-            <MyCharacters myCharacters={myCharacters} />
+            {/* <MyCharacters myCharacters={myCharacters} /> */}
           </div>
         </div>
       </div>

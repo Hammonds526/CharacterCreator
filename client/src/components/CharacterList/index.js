@@ -42,6 +42,7 @@ function CharacterList(props) {
 
       {/* Nothing below here */}
       <WoodBeamX beamStyle={{ bottom: "-17px" }} />
+      
       <Corner
         cornerStyle={{
           width: "40px",
@@ -51,6 +52,7 @@ function CharacterList(props) {
           transform: "rotate(180deg)",
         }}
       />
+      
       <Corner
         cornerStyle={{
           width: "40px",
@@ -60,6 +62,7 @@ function CharacterList(props) {
           transform: "rotate(270deg)",
         }}
       />
+    
     </div>
   );
 }
