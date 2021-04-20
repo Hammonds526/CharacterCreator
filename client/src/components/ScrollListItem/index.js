@@ -25,7 +25,7 @@ function ScrollListItem({
   console.log("item ", item);
 
   return (
-    <div key={i} className="d-flex justify-content-between">
+    <div key={i} id="list" className="d-flex justify-content-between">
       <p
         className="text-bisque"
         onClick={() => {
