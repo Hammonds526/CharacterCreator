@@ -23,7 +23,7 @@ rogue
 const rogue = {
   name: "Rogue",
   desc:
-    "Rogues devote as much effort to mastering the use of a variety of skills as they do to perfecting their combat abilities, giving them a broad expertise that few other characters can match. Many rogues focus on stealth and deception, while others refine the skills that help them in a dungeon environment, such as climbing, finding and disarming traps, and opening locks. When it com es to combat, rogues prioritize cunning over brute strength. A rogue would rather make one precise strike, placing it exactly where the attack will hurt the target most, than wear an opponent down with a barrage of attacks. Rogues have an almost supernatural knack for avoiding danger, and a few learn magical tricks to supplement their other abilities.",
+    "Rogues devote as much effort to mastering the use of a variety of skills as they do to perfecting their combat abilities, giving them a broad expertise that few other characters can match. Many rogues focus on stealth and deception, while others refine the skills that help them in a dungeon environment, such as climbing, finding and disarming traps, and opening locks. When it comes to combat, rogues prioritize cunning over brute strength. A rogue would rather make one precise strike, placing it exactly where the attack will hurt the target most, than wear an opponent down with a barrage of attacks. Rogues have an almost supernatural knack for avoiding danger, and a few learn magical tricks to supplement their other abilities.",
 
   classFeatures: [
     {
@@ -66,13 +66,13 @@ const rogue = {
       name: "Sneak Attack",
       level: 1,
       desc:
-        "You know how to strike subtly and exploit a foe’s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with  an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon. You don’t need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn’t incapacitated, and you don’t have disadvantage on the attack roll. The amount of the extra damage increases as you gain levels in this class, as show n in the Sneak Attack column of the Rogue table.",
+        "You know how to strike subtly and exploit a foe’s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with  an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon. You don’t need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn’t incapacitated, and you don’t have disadvantage on the attack roll. The amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table.",
     },
     {
       name: "Thieves' Cant",
       level: 1,
       desc:
-        "During your rogue training you learned thieves’ cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seem ingly normal conversation. Only another creature that knows thieves’ cant understands such messages. It takes four tim es longer to convey such a message than it does to speak the same idea plainly. In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves’ guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.",
+        "During your rogue training you learned thieves’ cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves’ cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly. In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves’ guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.",
     },
     {
       name: "Cunning Action",
@@ -139,7 +139,7 @@ const rogue = {
           name: "Supreme Sneak",
           level: 9,
           desc:
-            "You have advantage on a Dexterity (Stealth) check if you move no m ore than half your speed on the same turn.",
+            "You have advantage on a Dexterity (Stealth) check if you move no more than half your speed on the same turn.",
         },
         {
           name: "Use Magic Device",
@@ -170,19 +170,19 @@ const rogue = {
           name: "Assassinate",
           level: 3,
           desc:
-            "You are at your deadliest when you get the drop on your enemies. You have advantage on attack rolls against any creature that hasn’t taken a turn in the com bat yet. In addition, any hit you score against a creature that is surprised is a critical hit.",
+            "You are at your deadliest when you get the drop on your enemies. You have advantage on attack rolls against any creature that hasn’t taken a turn in the combat yet. In addition, any hit you score against a creature that is surprised is a critical hit.",
         },
         {
           name: "Infiltration Expertise",
           level: 9,
           desc:
-            "You can unfailingly create false identities for yourself. You must spend seven days and 25gp to establish the history, profession, and affiliations for an identity. You can’t establish an identity that belongs to som eone else. For example, you might acquire appropriate clothing, letters of introduction, and officiallooking certification to establish yourself as a mem ber of a trading house from a remote city so you can insinuate yourself into the com pany of other wealthy merchants. Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to.",
+            "You can unfailingly create false identities for yourself. You must spend seven days and 25gp to establish the history, profession, and affiliations for an identity. You can’t establish an identity that belongs to someone else. For example, you might acquire appropriate clothing, letters of introduction, and officiallooking certification to establish yourself as a member of a trading house from a remote city so you can insinuate yourself into the company of other wealthy merchants. Thereafter, if you adopt the new identity as a disguise, other creatures believe you to be that person until given an obvious reason not to.",
         },
         {
           name: "Imposter",
           level: 13,
           desc:
-            "You gain the ability to unerringly mimic another person’s speech, writing, and behavior. You must spend at least three hours studying these three com ponents of the person’s behavior, listening to speech, exam ining handwriting, and observing mannerisms. Your ruse is indiscernible to the casual observer. If a wary creature suspects som ething is amiss, you have advantage on any Charisma (Deception) check you make to avoid detection.",
+            "You gain the ability to unerringly mimic another person’s speech, writing, and behavior. You must spend at least three hours studying these three components of the person’s behavior, listening to speech, examining handwriting, and observing mannerisms. Your ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma (Deception) check you make to avoid detection.",
         },
         {
           name: "Death Strike",
@@ -203,13 +203,13 @@ const rogue = {
           name: "Mage Hand Legerdemain",
           level: 3,
           desc:
-            "When you cast mage hand, you can make the spectral hand invisible, and you can perform the follow ing additional tasks with it: -You can stow one object the hand is holding in a container worn or carried by another creature. -You can retrieve an object in a container worn or carried by another creature. -You can use thieves’ tools to pick locks and disarm traps at range. *You can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity (Sleight of Hand) check contested by the creature’s Wisdom (Perception) check. In addition, you can use the bonus action granted by your Cunning Action to control the hand.",
+            "When you cast mage hand, you can make the spectral hand invisible, and you can perform the following additional tasks with it: -You can stow one object the hand is holding in a container worn or carried by another creature. -You can retrieve an object in a container worn or carried by another creature. -You can use thieves’ tools to pick locks and disarm traps at range. *You can perform one of these tasks without being noticed by a creature if you succeed on a Dexterity (Sleight of Hand) check contested by the creature’s Wisdom (Perception) check. In addition, you can use the bonus action granted by your Cunning Action to control the hand.",
         },
         {
           name: "Magical Ambush",
           level: 9,
           desc:
-            "If you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it m akes against the spell this turn.",
+            "If you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn.",
         },
         {
           name: "Versatile Trickster",
@@ -221,7 +221,7 @@ const rogue = {
           name: "Spell Thief",
           level: 17,
           desc:
-            "you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster. Immediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failed save, you negate the spell’s effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn’t need to be a w izard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can’t cast that spell until the 8 hours have passed. Once you use this feature, you can’t use it again until you finish a long rest.",
+            "you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster. Immediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failed save, you negate the spell’s effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn’t need to be a wizard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can’t cast that spell until the 8 hours have passed. Once you use this feature, you can’t use it again until you finish a long rest.",
         },
       ],
     },

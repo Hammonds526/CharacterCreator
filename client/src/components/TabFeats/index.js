@@ -34,6 +34,7 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, ...props}) {
       console.log(res.data.user.characters)
       // console.log(res.data);
       API.updateUser(process.env.REACT_APP_USER_ID, res.data).then(() => {
+        window.location.reload();
         console.log(res.data.user.characters);
       });
     });
