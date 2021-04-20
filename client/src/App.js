@@ -7,7 +7,7 @@ import "./App.css";
 
 // Components
 import Tavern from "./components/Tavern";
-import CharacterList from "./components/CharacterList";
+// import CharacterList from "./components/CharacterList";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
 import API from "./utils/API";

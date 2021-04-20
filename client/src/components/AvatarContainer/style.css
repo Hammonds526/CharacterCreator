@@ -32,7 +32,7 @@
   z-index: 2;
   height: 136px;
   margin-top: -118%;
-  animation: Avatarfloat 2s ease infinite;
+  animation: Avatarfloat 5s ease-in-out infinite;
 }
 
 /* Animations */
