@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./style.css";
-import ImageLeft from "../../images/selectiontab_left.png";
-import ImageCenter from "../../images/selectiontab_center.png";
-import ImageRight from "../../images/selectiontab_right.png";
+
+import ImageCenter from "../../images/selectiontab.png";
+
 
 function SelectionTab(props) {
   return (
@@ -27,19 +27,7 @@ function SelectionTab(props) {
       <p className="font-weight-bold position-absolute selection-tab-text">
         {props.charProperty}
       </p>
-      <img
-        src={ImageLeft}
-        alt="Selection tab"
-        className="position-absolute"
-        style={{ left: "-9px" }}
-      ></img>
       <img src={ImageCenter} alt="Selection tab"></img>
-      <img
-        src={ImageRight}
-        alt="Selection tab"
-        className="position-absolute"
-        style={{ right: "-13px" }}
-      ></img>
     </div>
   );
 }
