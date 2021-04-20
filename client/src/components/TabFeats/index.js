@@ -31,7 +31,7 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, ...props}) {
       // SOME DEBUGGING (CHANGING STRINGS TO NUMBERS/ASSIGNING ID'S) BUT WORKS
       // console.log(res.data.user.characters)
       res.data.user.characters.push(newCharacter);
-      // console.log(res.data.user.characters)
+      console.log(res.data.user.characters)
       // console.log(res.data);
       API.updateUser(process.env.REACT_APP_USER_ID, res.data).then(() => {
         console.log(res.data.user.characters);
