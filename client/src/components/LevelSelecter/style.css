@@ -1,9 +1,15 @@
 .select-button__text {
-  color: #2c2646;
+  color: #282242;
   text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
   font-size: 8pt;
 
   top: 7px;
   left: 24px;
   position: absolute;
+}
+#numberbox {
+  text-align: center;
+  padding: 2px;
+  background-color: bisque;
+  border: 2px dashed #998266;
 }

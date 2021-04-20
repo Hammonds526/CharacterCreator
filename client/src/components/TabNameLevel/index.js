@@ -22,9 +22,10 @@ function TabNameLevel(props) {
       <div className="row">
         <div className="col-10 col-lg-5 col-md-6">
           <input
-            className=" mb-3 ml-3 text-bisque form-control"
+            className=" mb-3 ml-3 background-darkgoldenrod form-control"
             type="text"
             name="name"
+            id="namecard"
             placeholder="Name here"
             onChange={handleInputChange}
             maxLength="20"

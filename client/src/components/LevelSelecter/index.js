@@ -15,6 +15,7 @@ function LevelSelecter(props) {
         }}
       /> */}
       <input
+      id="numberbox"
         className=" ml-3  form-control"
         type="number"
         name="level"
