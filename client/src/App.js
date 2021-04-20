@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-    API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
+    API.getUser("085189151981561189651985" || process.env.REACT_APP_USER_ID).then((res) => {
       console.log(res.data);
       setmyCharacters(res.data.user.characters);
       console.log(myCharacters);
