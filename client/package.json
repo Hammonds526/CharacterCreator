@@ -6,6 +6,10 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.6.0",
+    "mongoose": "^5.12.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-bootstrap-icons": "^1.4.0",
