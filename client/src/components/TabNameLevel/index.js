@@ -18,27 +18,30 @@ function TabNameLevel(props) {
 
   return (
     <div>
-      <h5 className="text-bisque ml-1">What is your character's name?</h5>
-      <div className="row">
-        <div className="col-10 col-lg-5 col-md-6">
-          <input
-            className=" mb-3 ml-3 text-bisque form-control"
-            type="text"
-            name="name"
-            placeholder="Name here"
-            onChange={handleInputChange}
-            maxLength="20"
-          />
+      <center>
+        <h5 className="text-bisque ml-1">What is your character's name?</h5>
+        <div className="col">
+          <div className="col-10 col-lg-5 col-md-6">
+            <input
+              className=" mb-3 ml-3 background-darkgoldenrod form-control"
+              type="text"
+              name="name"
+              id="namecard"
+              placeholder="Name here"
+              onChange={handleInputChange}
+              maxLength="20"
+            />
+          </div>
         </div>
-      </div>
 
-      <h5 className="text-bisque ml-1">What is your character's level?</h5>
-      <div className="d-flex justify-content-between">
-        <LevelSelector {...props} handleInputChange={handleInputChange} />
-        <Link to={"/character-creator/race"}>
-          <SelectButton utton text={"Select"} />
-        </Link>
-      </div>
+        <h5 className="text-bisque ml-1">What is your character's level?</h5>
+        <div className="d-flex justify-content-between">
+          <LevelSelector {...props} handleInputChange={handleInputChange} />
+          <Link to={"/character-creator/race"}>
+            <SelectButton utton text={"Select"} />
+          </Link>
+        </div>
+      </center>
     </div>
   );
 }

@@ -94,7 +94,6 @@ console.log("newCharacter from tabFeats ", newCharacter);
 
       
       <div className="d-flex justify-content-end">
-        
         <Link to={"/"}>
           <SelectButton
             text={"Finish"}
