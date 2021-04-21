@@ -14,10 +14,15 @@ function App() {
 
   useEffect(() => {
     // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-    API.getUser("085189151981561189651985" || process.env.REACT_APP_USER_ID).then((res) => {
-      console.log(res.data);
-      setmyCharacters(res.data.user.characters);
-      console.log(myCharacters);
+    API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
+      // console.log(res.data.user.characters);
+      console.log("res.data ", res.data);
+      if (!res.data === null) {
+        
+        setmyCharacters(res.data.user.characters);
+       
+      } 
+      // console.log(myCharacters);
     });
   }, []);
 
