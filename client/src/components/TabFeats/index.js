@@ -28,7 +28,7 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharact
   const selectButtonOnClick = () => {
     // console.log("Button Click");
     // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-    API.getUser("085189151981561189651985" || process.env.REACT_APP_USER_ID).then((res) => {
+    API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
       // SOME DEBUGGING (CHANGING STRINGS TO NUMBERS/ASSIGNING ID'S) BUT WORKS
       // console.log(res.data.user.characters)
       res.data.user.characters.push(newCharacter);
