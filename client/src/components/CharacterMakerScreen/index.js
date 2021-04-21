@@ -9,10 +9,10 @@ import AvatarContainer from "../AvatarContainer";
 function CharacterMakerScreen(props) {
   let { path } = useRouteMatch();
   const [newCharacter, setNewCharacter] = useState({
-    name: "",
-    level: 4,
+    name: "no-name-baggins",
+    level: 1,
     race: "dwarf",
-    class: "wizard",
+    class: "fighter",
     subclass: "champion",
     abilities: [],
     spells: [],
