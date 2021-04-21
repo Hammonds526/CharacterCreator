@@ -8,7 +8,8 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 require("dotenv").config();
 
-function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, ...props}) {
+
+function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharacters, ...props}) {
   const [activeFeat, setActiveFeat] = useState({
     name: "No feats available",
     description: {
@@ -34,7 +35,7 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, ...props}) {
       console.log(res.data.user.characters)
       // console.log(res.data);
       API.updateUser(process.env.REACT_APP_USER_ID, res.data).then(() => {
-        window.location.reload();
+        getMyCharacters();
         console.log(res.data.user.characters);
       });
     });
@@ -86,9 +87,10 @@ console.log("newCharacter from tabFeats ", newCharacter);
         <h3 className="text-bisque mt-3 text-align-left">
           {activeFeat.name}
         </h3>
-        <p className="tab_descriptions text-bisque mt-3">
+        <text className="tab_descriptions text-bisque mt-3">
+          {console.log("activeFeat.desc", activeFeat.desc)}
           {activeFeat.desc}
-        </p>
+        </text>
       </div>
     </div>
 

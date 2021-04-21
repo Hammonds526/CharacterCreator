@@ -125,7 +125,7 @@ const spells = [
     tag: ("sorcerer", "wizard"),
     description: {
       desc:
-        "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one. <br /><br />-Aquatic Adaptation. <br />You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed. <br /><br />-Change Appearance. <br /> You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also can't appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearance in this way again.<br /><br />-Natural Weapons.<br />You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the attack and damage rolls you make using it.",
+        "You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one. <br /><br />-Aquatic Adaptation.<br />You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed. <br /><br />-Change Appearance.<br /> You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You also can't appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance. At any time for the duration of the spell, you can use your action to change your appearance in this way again.<br /><br />-Natural Weapons.<br />You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes. Finally, the natural weapon is magic and you have a +1 bonus to the attack and damage rolls you make using it.",
 
       higherLevel: null,
       school: "Transmutation",
@@ -360,7 +360,7 @@ const spells = [
     tag: ("cleric", "wizard"),
     description: {
       desc:
-        "You create an invisible, magical eye within range that hovers in the air for the duration. <br />You mentally receive visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.<br /><br />As an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can't enter another plane of existence. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter.",
+        "You create an invisible, magical eye within range that hovers in the air for the duration.<br />You mentally receive visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.<br /><br />As an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can't enter another plane of existence. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter.",
       higherLevel: null,
       school: "divination",
       range: "30 feet",
@@ -1743,6 +1743,35 @@ const spells = [
     },
   },
   {
+    name: "Contingency",
+    level: 6,
+    type: "utility",
+    tag: "wizard",
+    description: {
+      desc:
+        "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell--called the contingent spell--as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid.<br /><br />The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to. and then contingency ends.<br /><br />The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "10 minutes",
+      duration: "10 days",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
     name: "Continual Flame",
     level: 2,
     type: "utility",
@@ -1860,6 +1889,35 @@ const spells = [
     },
   },
   {
+    name: "Create Food and Water",
+    level: 3,
+    type: "utility",
+    tag: ("cleric", "druid", "paladin"),
+    description: {
+      desc:
+      "You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn't go bad.",
+      higherLevel: null,
+      school: "Conjuration",
+      range: "30 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "instant",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
     name: "Create or Destroy Water",
     level: 1,
     type: "utility",
@@ -1887,16 +1945,16 @@ const spells = [
     },
   },
   {
-    name: "Contingency",
+    name: "Create Undead",
     level: 6,
     type: "utility",
-    tag: "cwizard",
+    tag: ("cleric", "warlock", "wizard"),
     description: {
       desc:
-        "Choose a spell of 5th level or lower that you can cast, that has a casting time of 1 action, and that can target you. You cast that spell--called the contingent spell--as part of casting contingency, expending spell slots for both, but the contingent spell doesn't come into effect. Instead, it takes effect when a certain circumstance occurs. You describe that circumstance when you cast the two spells. For example, a contingency cast with water breathing might stipulate that water breathing comes into effect when you are engulfed in water or a similar liquid.<br /><br />The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to. and then contingency ends.<br /><br />The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person.",
-      higherLevel: null,
-      school: "Evocation",
-      range: "Self",
+        "You can cast this spell only at night. Choose up to three corpses of Medium or Small humanoids within range. Each corpse becomes a ghoul under your control. (The DM has game statistics for these creatures.)<br />As a bonus action on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.<br /><br />The creature is under your control for 24 hours, after which it stops obeying any command you have given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell, rather than animating new ones.",
+      higherLevel: "When you cast this spell using a 7th-level spell slot, you can animate or reassert control over four ghouls. When you cast this spell using an 8th-level spell slot, you can animate or reassert control over five ghouls or two ghasts or wights. When you cast this spell using a 9th-level spell slot, you can animate or reassert control over six ghouls, three ghasts or wights, or two mummies.",
+      school: "Necromancy",
+      range: "10 feet",
       areaOfEffect: {
         type: null,
         size: null,
@@ -1905,8 +1963,8 @@ const spells = [
         type: null,
         onSuccess: null,
       },
-      castingTime: "10 minutes",
-      duration: "10 days",
+      castingTime: "1 minute",
+      duration: "instant",
       concentration: false,
       ritual: false,
     },
@@ -1915,6 +1973,279 @@ const spells = [
       attackType: null,
     },
   },
+  {
+    name: "Creation",
+    level: 5,
+    type: "utility",
+    tag: ("sorceror", "wizard"),
+    description: {
+      desc:
+        "You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before.<br /><br />The duration depends on the object's material. If the object is composed of multiple materials, use the shortest duration.<br />-Vegetable matter<br />1 day<br />-Stone or crystal<br />12 hours<br />-Precious metals<br />1 hour<br />-Gems<br />10 minutes<br />-Adamantine or mithral<br />1 minute<br /><br />Using any material created by this spell as another spell's material component causes that spell to fail.",
+      higherLevel: "When you cast this spell using a spell slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th.",
+      school: "Illusion",
+      range: "30 feet",
+      areaOfEffect: {
+        type: "cube",
+        size: 5,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 minute",
+      duration: "Special",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Cure Wounds",
+    level: 1,
+    type: "healing",
+    tag: ("cleric", "druid", "paladin", "bard", "ranger"),
+    description: {
+      desc:
+        "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.",
+      higherLevel: "When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.",
+      school: "Evocation",
+      range: "Touch",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "instant",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Dancing Lights",
+    level: 0,
+    type: "utility",
+    tag: ("bard", "sorcerer", "wizard"),
+    description: {
+      desc:
+        "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.<br />As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "120 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Darkness",
+    level: 2,
+    type: "utility",
+    tag: ("sorcerer", "warlock", "wizard"),
+    description: {
+      desc:
+        "Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.<br /><br />If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.<br /><br />If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "60 feet",
+      areaOfEffect: {
+        type: "sphere",
+        size: 15,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Up to 10 minutes",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Darkvision",
+    level: 2,
+    type: "utility",
+    tag: ("druid", "ranger", "sorcerer", "wizard"),
+    description: {
+      desc:
+        "You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet.",
+      higherLevel: null,
+      school: "Transmutation",
+      range: "Touch",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "8 hours",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Daylight",
+    level: 3,
+    type: "utility",
+    tag: ("cleric", "druid", "paladin", "ranger", "sorcerer"),
+    description: {
+      desc:
+        "A 60-foot-radius sphere of light spreads out from a point you choose within range. The sphere is bright light and sheds dim light for an additional 60 feet.<br /><br />If you chose a point on an object you are holding or one that isn't being worn or carried, the light shines from the object and moves with it. Completely covering the affected object with an opaque object, such as a bowl or a helm, blocks the light.<br /><br />If any of this spell's area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "60 feet",
+      areaOfEffect: {
+        type: "sphere",
+        size: 60,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "1 hour",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Death Ward",
+    level: 4,
+    type: "utility",
+    tag: ("cleric", "paladin"),
+    description: {
+      desc:
+        "You touch a creature and grant it a measure of protection from death.<br />The first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends.<br /><br />If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.",
+      higherLevel: null,
+      school: "Abjuration",
+      range: "Touch",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "8 hours",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Delayed Blast Fireball",
+    level: 7,
+    type: "damage",
+    tag: ("sorcerer", "wizard"),
+    description: {
+      desc:
+        "A beam of yellow light flashes from your pointing finger, then condenses to linger at a chosen point within range as a glowing bead for the duration. When the spell ends, either because your concentration is broken or because you decide to end it, the bead blossoms with a low roar into an explosion of flame that spreads around corners. Each creature in a 20-foot-radius sphere centered on that point must make a dexterity saving throw. A creature takes fire damage equal to the total accumulated damage on a failed save, or half as much damage on a successful one.<br /><br />The spell's base damage is 12d6. If at the end of your turn the bead has not yet detonated, the damage increases by 1d6.<br /><br />If the glowing bead is touched before the interval has expired, the creature touching it must make a dexterity saving throw. On a failed save, the spell ends immediately, causing the bead to erupt in flame. On a successful save, the creature can throw the bead up to 40 feet. When it strikes a creature or a solid object, the spell ends, and the bead explodes.<br /><br />The fire damages objects in the area and ignites flammable objects that aren't being worn or carried.",
+      higherLevel: "When you cast this spell using a spell slot of 8th level or higher, the base damage increases by 1d6 for each slot level above 7th.",
+      school: "Evocation",
+      range: "150 feet",
+      areaOfEffect: {
+        type: "sphere",
+        size: 20,
+      },
+      dc: {
+        type: "dex",
+        onSuccess: "half",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: "Fire",
+      attackType: null,
+    },
+  },
+  {
+    name: "Demiplane",
+    level: 8,
+    type: "movement",
+    tag: ("warlock", "wizard"),
+    description: {
+      desc:
+        "You create a shadowy door on a flat solid surface that you can see within range. The door is large enough to allow Medium creatures to pass through unhindered. When opened, the door leads to a demiplane that appears to be an empty room 30 feet in each dimension, made of wood or stone. When the spell ends, the door disappears, and any creatures or objects inside the demiplane remain trapped there, as the door also disappears from the other side.<br /><br />Each time you cast this spell, you can create a new demiplane, or have the shadowy door connect to a demiplane you created with a previous casting of this spell. Additionally, if you know the nature and contents of a demiplane created by a casting of this spell by another creature, you can have the shadowy door connect to its demiplane instead.",
+      higherLevel: null,
+      school: "Conjuration",
+      range: "60 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "1 hour",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  
+/* 
+
+
+
+
+*----- This is where top spell list leaves off -----*
+
+
+
+
+*/
   {
     name: "Resistance",
     level: 7,

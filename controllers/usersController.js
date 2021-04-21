@@ -1,37 +1,80 @@
-const db = require("../models");
+const passport = require("passport");
+
+const User = require("../models/user");
 
 // Defining methods for the usersController
 module.exports = {
-  findAll: function(req, res) {
-    db.User
-      .find(req.query)
+  findAll: function (req, res) {
+    User.find(req.query)
       .sort({ id: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
   },
-  findById: function(req, res) {
-    db.User
-      .findById(req.params.id)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+  findById: function (req, res) {
+    User.findById(req.params.id)
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
   },
-  create: function(req, res) {
-    db.User
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+  create: function (req, res) {
+    const { email, username, password } = req.body;
+    const newUser = new User({
+      email: email,
+      username: username,
+      characters: [],
+    });
+
+    User.register(newUser, password, function (err, dbModel) {
+      if (err) {
+        res.status(422).json(err);
+      } else {
+        res.json(dbModel);
+      }
+    });
   },
-  update: function(req, res) {
-    db.User
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+  update: function (req, res) {
+    User.findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
   },
-  remove: function(req, res) {
-    db.User
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  }
+  remove: function (req, res) {
+    User.findById({ _id: req.params.id })
+      .then((dbModel) => dbModel.remove())
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
+  },
+  characterList: function (req, res) {
+    User.findById({ _id: req.params.id })
+      .then((dbModel) => res.json(dbModel.user.characters))
+      .catch((err) => res.status(422).json(err));
+  },
+  login: function (req, res) {
+    const { username, password } = req.body;
+
+    if (!username) {
+      res.status(422).json({
+        message: "Username was not given.",
+      });
+    } else {
+      if (!password) {
+        res.status(422).json({
+          message: "Password was not given",
+        });
+      } else {
+        passport.authenticate("local", function (err, user, info) {
+          if (err) {
+            res.status(422).json(err);
+          } else {
+            if (!user) {
+              res.status(422).json({
+                message: "Username or password is incorrect.",
+              });
+            } else {
+              // Do session stuff here\
+              res.json(user);
+            }
+          }
+        })(req, res);
+      }
+    }
+  },
 };

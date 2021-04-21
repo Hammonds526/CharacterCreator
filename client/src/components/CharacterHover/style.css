@@ -1,0 +1,6 @@
+.character-hover__touch-target {
+  position: absolute;
+  opacity: 0;
+  background: wheat;
+  z-index: 10;
+}
