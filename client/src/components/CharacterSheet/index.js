@@ -1,8 +1,6 @@
 // Important React Imports.
-import axios from "axios";
-import { response } from "express";
-import React, { useState } from "react";
-import { Route, useRouteMatch } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
 // CSS
 import "./style.css";
@@ -12,9 +10,10 @@ mycharacters pull from index array
 
  user.characters[0]._id
 */
-function CharacterSheet(props) {
-    // let savedCharacter = 
 
+// F*k it. I'll just use the temp storage character.
+function CharacterSheet({newCharacter}) {
+    console.log("newCharacter from Sheet ", newCharacter);
     // The information that is going to be displayed in react.
     return (
         <div className="modal-content-box">
@@ -23,9 +22,10 @@ function CharacterSheet(props) {
             <h2>{newCharacter.name}</h2>
             <h2 id="lvlbox">{newCharacter.level}</h2>
             <h2>{newCharacter.class}</h2>
-            {/* <p>{item.abilities}</p> */}
+            <br />
+            <h2>{newCharacter.subclass}</h2>
             <p>{newCharacter.spells}</p>
-            <p>{newCharacter.abilities}</p>
+            <p>{newCharacter.feats}</p>
         </div>
     );
 }
