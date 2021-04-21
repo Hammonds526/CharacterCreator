@@ -13,9 +13,6 @@ import Wizard from "../../images/icons/wizard.png";
 import Ranger from "../../images/icons/ranger.png";
 import Rogue from "../../images/icons/rogue.png";
 
-
-// Components.
-
 // Character Sheet Function.
 ComponentDidMount = () => {
     this.GetCharacters();
@@ -24,7 +21,7 @@ ComponentDidMount = () => {
 GetCharacters = () => {
     axios.get('/api')
         .then((response) => {
-            let Generatedcharacter = response.data;
+            let Generatedcharacter = user.characters[0]._id
             this.setState()
             console.log('Character data has been recieved!')
         })
@@ -34,11 +31,14 @@ GetCharacters = () => {
 }
 
 function CharacterSheet(props) {
-// let savedCharacter = 
+    // let savedCharacter = 
 
     let { path } = useRouteMatch();
     const [savedCharacter, printCharacter] = useState({
 
+        // user.characters[0]._id
+        // store id on button
+        
         name: "Grimbo",
         level: 1,
         race: "half-orc",

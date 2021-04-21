@@ -1,13 +1,20 @@
+// Core imports
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import API from "./utils/API";
+require("dotenv").config();
+
+// Components
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
-import API from "./utils/API";
-require("dotenv").config();
+
+// EXPERIMENTAL!!! DO NOT UNCOMMENT OR YEET!
+// import CharacterSheet from "./components/CharacterSheet";
+
 
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
@@ -45,6 +52,7 @@ function App() {
           </div>
           <div className="col-12 col-lg-3 p-0">
             <MyCharacters myCharacters={myCharacters} />
+          {/* <CharacterSheet */}
           </div>
         </div>
       </div>
