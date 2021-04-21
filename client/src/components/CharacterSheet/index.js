@@ -8,27 +8,23 @@ import { Route, useRouteMatch } from "react-router-dom";
 // import "./style.css";
 
 // Icons
-import Fighter from "../../images/icons/fighter.png";
-import Wizard from "../../images/icons/wizard.png";
-import Ranger from "../../images/icons/ranger.png";
-import Rogue from "../../images/icons/rogue.png";
+// import Fighter from "../../images/icons/fighter.png";
+// import Wizard from "../../images/icons/wizard.png";
+// import Ranger from "../../images/icons/ranger.png";
+// import Rogue from "../../images/icons/rogue.png";
 
 // Character Sheet Function.
-ComponentDidMount = () => {
-    this.GetCharacters();
-};
-
-GetCharacters = () => {
-    axios.get('/api')
-        .then((response) => {
-            let Generatedcharacter = user.characters[0]._id
-            this.setState()
-            console.log('Character data has been recieved!')
-        })
-        .catch(() => {
-            console.log('Error retriving character data')
-        })
-}
+// GetCharacters = () => {
+//     axios.get('/api')
+//         .then((response) => {
+//             let Generatedcharacter = user.characters[0]._id
+//             this.setState()
+//             console.log('Character data has been recieved!')
+//         })
+//         .catch(() => {
+//             console.log('Error retriving character data')
+//         })
+// }
 
 function CharacterSheet(props) {
     // let savedCharacter = 
