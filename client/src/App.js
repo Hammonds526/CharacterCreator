@@ -13,7 +13,7 @@ function App() {
   const [myCharacters, setmyCharacters] = useState([]);
 
   const getMyCharacters = (res) => {
-    API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
+    API.getUser(process.env.REACT_APP_USER_ID|| "085189151981561189651985").then((res) => {
       console.log(res.data);
 
       setmyCharacters(res.data.user.characters);
