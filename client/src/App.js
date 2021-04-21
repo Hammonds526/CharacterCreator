@@ -52,7 +52,7 @@ function App() {
           </div>
           <div className="col-12 col-lg-3 p-0">
             <MyCharacters myCharacters={myCharacters} />
-          {/* <CharacterSheet */}
+          {/* <CharacterSheet /> */}
           </div>
         </div>
       </div>
