@@ -84,10 +84,10 @@ console.log("newCharacter from tabFeats ", newCharacter);
         />
       </div>
       <div className="col-8">
-        <h3 className="text-bisque mt-3 text-align-left">
+        <h3 id="title" className="text-bisque mt-3 text-align-left">
           {activeFeat.name}
         </h3>
-        <text className="tab_descriptions text-bisque mt-3">
+        <text id="desc" className="tab_descriptions text-bisque mt-3">
           {console.log("activeFeat.desc", activeFeat.desc)}
           {activeFeat.desc}
         </text>

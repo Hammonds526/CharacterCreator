@@ -14,29 +14,18 @@ mycharacters pull from index array
 */
 function CharacterSheet(props) {
     // let savedCharacter = 
-    let [newCharacter] = useState({
-        name: item.name,
-        level: item.level,
-        race: item.race,
-        class: item.class,
-        subclass: item.subclass,
-        abilities: [],
-        spells: [],
-        feats: [],
-        userId: 0,
-      });
 
     // The information that is going to be displayed in react.
     return (
         <div className="modal-content-box">
             <h1>Character Sheet</h1>
             <br />
-            <h2>{item.name}</h2>
-            <h2 id="lvlbox">{item.level}</h2>
-            <h2>{item.class}</h2>
+            <h2>{newCharacter.name}</h2>
+            <h2 id="lvlbox">{newCharacter.level}</h2>
+            <h2>{newCharacter.class}</h2>
             {/* <p>{item.abilities}</p> */}
-            <p>{item.spells}</p>
-            <p>{item.abilities}</p>
+            <p>{newCharacter.spells}</p>
+            <p>{newCharacter.abilities}</p>
         </div>
     );
 }
