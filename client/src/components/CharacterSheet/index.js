@@ -70,6 +70,9 @@ function CharacterSheet(props) {
             <h2>{item.name}</h2>
             <h2 id="lvlbox">{item.level}</h2>
             <h2>{item.class}</h2>
+            {/* <p>{item.abilities}</p> */}
+            <p>{item.spells}</p>
+            <p>{item.abilities}</p>
         </div>
     );
 }
