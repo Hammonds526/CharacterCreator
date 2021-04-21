@@ -22,7 +22,7 @@ function ScrollListItem({
     }
   });
 
-  console.log("item ", item);
+  // console.log("item ", item);
 
   return (
     <div key={i} id="list" className="d-flex justify-content-between">

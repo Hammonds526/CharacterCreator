@@ -10,7 +10,7 @@ function CharacterMakerScreen(props) {
   let { path } = useRouteMatch();
   const [newCharacter, setNewCharacter] = useState({
     name: "no-name-baggins",
-    level: 1,
+    level: "1",
     race: "dwarf",
     class: "fighter",
     subclass: "champion",
@@ -50,7 +50,7 @@ function CharacterMakerScreen(props) {
   };
 
   console.log("Current newCharacter:", newCharacter);
-  console.log("filteredSpells ", getFilteredSpells());
+  // console.log("filteredSpells ", getFilteredSpells());
 
   // console.log("class index main ", classIndex);
   // console.log("subClass index main ", getSubClassIndex());
