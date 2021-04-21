@@ -1,36 +1,29 @@
-// Core imports
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import API from "./utils/API";
-require("dotenv").config();
-
-// Components
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
 import character from "./data/character";
-
-// EXPERIMENTAL!!! DO NOT UNCOMMENT OR YEET!
-// import CharacterSheet from "./components/CharacterSheet";
-
+import API from "./utils/API";
+require("dotenv").config();
 
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
 
-  const getMyCharacters = (res) => {
-    API.getUser("085189151981561189651985" || process.env.REACT_APP_USER_ID).then((res) => {
-      console.log(res.data);
-
-      setmyCharacters(res.data.user.characters);
-      console.log(myCharacters);
-    })
-  }
-
   useEffect(() => {
     // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-      getMyCharacters()
+    API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
+      // console.log(res.data.user.characters);
+      console.log("res.data ", res.data);
+      if (!res.data === null) {
+        
+        setmyCharacters(res.data.user.characters);
+       
+      } 
+      // console.log(myCharacters);
+    });
   }, []);
 
   return (
@@ -39,7 +32,7 @@ function App() {
         <div className="col">
           <Switch>
             <Route path="/character-creator">
-              <CharacterMakerScreen getMyCharacters={getMyCharacters} character={{ ...character }} />
+              <CharacterMakerScreen character={{ ...character }} />
             </Route>
           </Switch>
 
@@ -52,7 +45,6 @@ function App() {
           </div>
           <div className="col-12 col-lg-3 p-0">
             <MyCharacters myCharacters={myCharacters} />
-          {/* <CharacterSheet /> */}
           </div>
         </div>
       </div>

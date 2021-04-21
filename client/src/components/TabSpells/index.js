@@ -67,10 +67,10 @@ function TabSpells({
           />
         </div>
         <div className="col-8">
-          <h3 className="text-bisque mt-3 text-align-left">
+          <h3 id="title" className="text-bisque mt-3 text-align-left">
             {activeSpell.name}
           </h3>
-          <p className="tab_descriptions text-bisque mt-3">
+          <p id="desc" className="tab_descriptions text-bisque mt-3">
             {console.log("activeSpell.description.desc:", activeSpell.description.desc), activeSpell.description.desc.split('<br />').map(str => <p>{str}</p>)}
           </p>
         </div>

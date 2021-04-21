@@ -1,3 +1,13 @@
-.character-progress-bar__container {
-  /* background-color: lightgrey; */
+/* .character-progress-bar__container {
+   background-color: lightgrey;
+} */
+
+#title {
+  font: bold;
+  font-size: 24px;
+  color: brown;
+}
+
+#desc {
+  font-size: 18px;
 }
