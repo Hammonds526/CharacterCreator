@@ -49,7 +49,7 @@ function CharacterMakerScreen(props) {
     return props.character.feats;
   };
 
-  console.log("newCharacter ", newCharacter);
+  console.log("Current newCharacter:", newCharacter);
   console.log("filteredSpells ", getFilteredSpells());
 
   // console.log("class index main ", classIndex);

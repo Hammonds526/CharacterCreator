@@ -16,7 +16,7 @@ function CharacterListItem(props) {
   return (
     <div className="character-list">
       {props.myCharacters.map((item) => (
-        <div id="charbox" className="list-group-item" key={item.name}>
+        <div id="charbox" className="list-group-item" key={item._id}>
           <p>{item.name}</p>
           {/* <p>{item.race}</p> */}
           <p>

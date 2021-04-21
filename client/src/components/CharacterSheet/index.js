@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 
 // CSS
-// import "./style.css";
+import "./style.css";
 
 // Icons
 // import Fighter from "../../images/icons/fighter.png";
@@ -25,27 +25,24 @@ import { Route, useRouteMatch } from "react-router-dom";
 //             console.log('Error retriving character data')
 //         })
 // }
+/*
+mycharacters pull from index array 
 
+ user.characters[0]._id
+*/
 function CharacterSheet(props) {
     // let savedCharacter = 
-
-    let { path } = useRouteMatch();
-    const [savedCharacter, printCharacter] = useState({
-
-        // user.characters[0]._id
-        // store id on button
-        
-        name: "Grimbo",
-        level: 1,
-        race: "half-orc",
-        class: "fighter",
-        subclass: "champion",
+    let [newCharacter] = useState({
+        name: item.name,
+        level: item.level,
+        race: item.race,
+        class: "",
+        subclass: "",
         abilities: [],
         spells: [],
         feats: [],
-        userId: null,
-
-    });
+        userId: 0,
+      });
 
     // Sets icon for sheet.
     // if (item.class = "fighter") {
