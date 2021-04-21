@@ -3,16 +3,11 @@
 } */
 
 #title {
-  background-image: linear-gradient(to right, #9b7d7d00, #692d1296,#9b7d7d00);
   font: bold;
-  font-size: 27px;
-  color: bisque;
+  font-size: 24px;
+  color: brown;
 }
 
 #desc {
-  text-shadow: 2px 1px 2px #2b1111;
   font-size: 18px;
-  max-height: 400px;
-  width: auto;
-  overflow-y: scroll;
 }

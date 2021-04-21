@@ -62,7 +62,7 @@ function TabSpells({
             newCharacter={newCharacter}
             setNewCharacter={setNewCharacter}
             {...props}
-            scrollListStyle={{ maxHeight: "450px" }}
+            scrollListStyle={{ maxHeight: "400px" }}
             itemType={"spell"}
           />
         </div>
