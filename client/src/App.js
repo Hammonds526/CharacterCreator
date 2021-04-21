@@ -12,13 +12,18 @@ require("dotenv").config();
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
 
-  useEffect(() => {
-    // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
+  const getMyCharacters = (res) => {
     API.getUser("085189151981561189651985" || process.env.REACT_APP_USER_ID).then((res) => {
       console.log(res.data);
+
       setmyCharacters(res.data.user.characters);
       console.log(myCharacters);
-    });
+    })
+  }
+
+  useEffect(() => {
+    // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
+      getMyCharacters()
   }, []);
 
   return (
@@ -27,7 +32,7 @@ function App() {
         <div className="col">
           <Switch>
             <Route path="/character-creator">
-              <CharacterMakerScreen character={{ ...character }} />
+              <CharacterMakerScreen getMyCharacters={getMyCharacters} character={{ ...character }} />
             </Route>
           </Switch>
 
