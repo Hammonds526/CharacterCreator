@@ -3,7 +3,7 @@ import React from "react";
 // Visuals
 import "./style.css";
 import Frame from "../../images/char_card_frame3.png";
-import Avatar from "../../images/costumes/base.png";
+import AvatarImage from "../AvatarImage";
 
 
 function AvatarContainer(props) {
@@ -17,11 +17,7 @@ function AvatarContainer(props) {
           alt="Character Avatar"
         ></img>
         <div>
-          <img
-            className="avatar"
-            src={Avatar}
-            alt="Character Avatar"
-          ></img>
+        < AvatarImage />
         </div>
         <div className="vortex"></div>
 
