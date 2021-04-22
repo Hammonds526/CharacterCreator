@@ -15,10 +15,9 @@ function LevelSelecter(props) {
         }}
       /> */}
       <center>
-
         <input
           id="numberbox"
-          className=" ml-3  form-control"
+          className=" ml-3 form-control"
           type="number"
           name="level"
           min="1"

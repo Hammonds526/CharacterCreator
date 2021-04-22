@@ -20,14 +20,15 @@ function CharacterListItem(props) {
 
     return (
       <div className="character-list">
-        {props.myCharacters.map((item) => (
-          <div id="charbox" className="list-group-item" key={item._id}>
+      {props.myCharacters.map((item) => (
+        <div id="charbox" className="list-group-item" key={item.name}>
             <p>{item.name}</p>
             {/* <p>{item.race}</p> */}
             <p>
               {item.race}
             </p>
-           <p id="class">{item.class}</p><p id="level">{item.level}</p>
+           <p id="class">{item.class}</p>
+           <p id="level">{item.level}</p>
             <hr className="my-4" />
             <br />
           </div>

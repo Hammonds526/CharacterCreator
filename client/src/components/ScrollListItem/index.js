@@ -22,8 +22,6 @@ function ScrollListItem({
     }
   });
 
-  // console.log("item ", item);
-
   return (
     <div key={i} id="list" className="d-flex justify-content-between">
       <text
@@ -34,7 +32,7 @@ function ScrollListItem({
         }}
       >
         {item.name}
-        </text>
+      </text>
       <CheckBox
         checkboxStyle={{ height: "30px", marginRight: "10px" }}
         spellName={item.name}

@@ -39,16 +39,13 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharact
       // SOME DEBUGGING (CHANGING STRINGS TO NUMBERS/ASSIGNING ID'S) BUT WORKS
       // console.log(res.data.user.characters)
       res.data.user.characters.push(newCharacter);
-      console.log(res.data.user.characters)
       // console.log(res.data);
       API.updateUser(process.env.REACT_APP_USER_ID, res.data).then(() => {
         getMyCharacters();
-        console.log(res.data.user.characters);
       });
     });
   };
 
-console.log("newCharacter from tabFeats ", newCharacter);
 
     // When a checkbox is clicked, if the corresponing feat is not in myCharacter, add it. If it is, remove it.
     const checkboxOnClick = (event) => {
@@ -95,7 +92,6 @@ console.log("newCharacter from tabFeats ", newCharacter);
           {activeFeat.name}
         </h3>
         <text id="desc" className="tab_descriptions text-bisque mt-3">
-          {console.log("activeFeat.desc", activeFeat.desc)}
           {activeFeat.desc}
         </text>
       </div>

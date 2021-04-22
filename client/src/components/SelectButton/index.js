@@ -14,7 +14,7 @@ function SelectButton(props) {
           zIndex: "1",
         }}
       />
-      <div className="position-relative button-image-background">
+      <div className="position-relative button-image-background button-image__size">
         <p className="font-weight-bold select-button__text">{props.text}</p>
       </div>
     </div>

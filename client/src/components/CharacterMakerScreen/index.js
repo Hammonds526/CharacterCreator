@@ -8,24 +8,14 @@ import AvatarContainer from "../AvatarContainer";
 
 function CharacterMakerScreen(props) {
   let { path } = useRouteMatch();
-  const [newCharacter, setNewCharacter] = useState({
-    name: "No-name Baggins",
-    level: "1",
-    race: "dwarf",
-    class: "fighter",
-    subclass: "",
-    spells: [],
-    feats: [],
-    userId: null,
-  });
 
   let classIndex = props.character.class.findIndex(
-    (element) => element.name.toLowerCase() === newCharacter.class
+    (element) => element.name.toLowerCase() === props.newCharacter.class
   );
 
   const getSubClassIndex = () => {
     const subClassIndex = props.character.class[classIndex].subClass.findIndex(
-      (element) => element.name.toLowerCase() === newCharacter.subclass
+      (element) => element.name.toLowerCase() === props.newCharacter.subclass
     );
     if (subClassIndex === -1) {
       return 0;
@@ -38,7 +28,8 @@ function CharacterMakerScreen(props) {
   const getFilteredSpells = () => {
     let filteredSpells = props.character.spells.filter(
       (spell) =>
-        spell.level <= newCharacter.level && spell.tag === newCharacter.class
+        spell.level <= props.newCharacter.level &&
+        spell.tag === props.newCharacter.class
     );
     return filteredSpells;
   };
@@ -47,14 +38,6 @@ function CharacterMakerScreen(props) {
   const getFilteredFeats = () => {
     return props.character.feats;
   };
-
-  console.log("Current newCharacter:", newCharacter);
-  // console.log("filteredSpells ", getFilteredSpells());
-
-  // console.log("class index main ", classIndex);
-  // console.log("subClass index main ", getSubClassIndex());
-
-  // console.log("character from main ", props.character);
 
   return (
     <div className="modal-content-box">
@@ -76,8 +59,6 @@ function CharacterMakerScreen(props) {
                 <div className="col">
                   <CharInfoBox
                     {...props}
-                    setNewCharacter={setNewCharacter}
-                    newCharacter={newCharacter}
                     classIndex={classIndex}
                     subClassIndex={getSubClassIndex}
                     getFilteredSpells={getFilteredSpells}

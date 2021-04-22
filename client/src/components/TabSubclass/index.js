@@ -11,14 +11,12 @@ function TabSubclass({
   setNewCharacter,
   character,
 }) {
-  const [subclassDescription, setSubclassDescription] = useState("");
+  const [activeSubclass, setActiveSubclass] = useState("");
 
   // On tab Load, Get the description of the first subClass and put it in state
 
   useEffect(() => {
-    setSubclassDescription(
-      character.class[classIndex].subClass[subClassIndex()].desc
-    );
+    setActiveSubclass(character.class[classIndex].subClass[subClassIndex()]);
 
     // Also on page load, get the name of the class, grab it's first subclass, and put it in the newCharacter State.
     setNewCharacter({
@@ -27,11 +25,6 @@ function TabSubclass({
     });
   }, []);
 
-  // console.log("subClassIndex ", subClassIndex());
-  // console.log("classIndex ", classIndex);
-  // console.log("character from subclass ", character);
-  // console.log("props.character.class[classIndex]", character.class[classIndex]);
-  // console.log("newCharacter", newCharacter);
   return (
     <div>
       <h4 className="ml-3 text-bisque">Choose a Subclass</h4>
@@ -41,7 +34,7 @@ function TabSubclass({
             className="col p-0 d-flex justify-content-center"
             key={item.name}
             onClick={() => {
-              setSubclassDescription(item.desc);
+              setActiveSubclass(item);
               setNewCharacter({
                 ...newCharacter,
                 subclass: item.name.toLowerCase(),
@@ -52,11 +45,14 @@ function TabSubclass({
           </div>
         ))}
       </div>
+      <h3 className="text-bisque mt-3 text-align-left">
+        {activeSubclass.name}
+      </h3>
 
-      <p className="tab_descriptions text-bisque mb-2">{subclassDescription}</p>
+      <p className="tab_descriptions text-bisque mb-2">{activeSubclass.desc}</p>
       <div className="d-flex justify-content-end">
         <Link to={"/character-creator/spells"}>
-          <SelectButton text={"Select"} />
+          <SelectButton text={"Continue"} />
         </Link>
       </div>
     </div>
