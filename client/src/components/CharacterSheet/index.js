@@ -13,16 +13,13 @@ mycharacters pull from index array
 
 // F*k it. I'll just use the temp storage character.
 function CharacterSheet({ newCharacter }) {
-    let Characterdesc = Legend;
-    let Legend = "";
-    if (newCharacter.class == "Commoner") {
-        
-        let Legend = "I sense great power in this one..."
-    
-    } else {
-        
-        let Legend = newCharacter.subclass;
-    };
+    // let Characterdesc = Legend;
+    // let Legend = "";
+    // if (newCharacter.class == "Commoner") {
+    //     let Legend = "I sense great power in this one..."
+    // } else {
+    //     let Legend = newCharacter.subclass;
+    // };
 
     console.log("newCharacter from Sheet ", newCharacter);
     // The information that is going to be displayed in react.

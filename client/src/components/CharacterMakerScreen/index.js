@@ -12,7 +12,7 @@ function CharacterMakerScreen(props) {
     name: "No-name Baggins",
     level: "1",
     race: "dwarf",
-    class: "Commoner",
+    class: "fighter",
     subclass: "",
     spells: [],
     feats: [],
