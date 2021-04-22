@@ -1,18 +1,12 @@
 import React from "react"
 
 // Avatar & outfits
-import NoCostume from "../../images/man2.png";
-import RangerCostume from "../../images/ranger.png"
+import NoCostume from "../../images/costumes/base.png";
+import RangerCostume from "../../images/costumes/ranger.png"
+import FighterCostume from "../../images/costumes/fighter.png"
 
 function AvatarImage({ newCharacter }) {
-    console.log("Avatar:", newCharacter)
-    let AvatarOutfit = NoCostume;
 
-    if (newCharacter.class === "ranger") {
-        AvatarOutfit = RangerCostume;
-    } else {
-        AvatarOutfit = NoCostume
-    }
     return (
         <div>
             <img

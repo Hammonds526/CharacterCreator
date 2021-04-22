@@ -31,7 +31,7 @@ function CharacterSheet({ newCharacter }) {
             <h2 id="lvlbox">{newCharacter.level}</h2>
             <h2>{newCharacter.class}</h2>
             <br />
-            <h2>{Legend}</h2>
+            {/* <h2>{Legend}</h2> */}
             <p>{newCharacter.spells}</p>
             <p>{newCharacter.feats}</p>
         </div>

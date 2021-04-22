@@ -3,7 +3,7 @@ import React from "react";
 // Visuals
 import "./style.css";
 import Frame from "../../images/char_card_frame3.png";
-import Avatar from "../../images/man2.png";
+import Avatar from "../../images/costumes/rogue.png";
 
 
 function AvatarContainer(props) {

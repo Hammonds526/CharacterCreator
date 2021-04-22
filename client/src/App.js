@@ -13,11 +13,11 @@ function App() {
   const [myCharacters, setmyCharacters] = useState([]);
 
   const [newCharacter, setNewCharacter] = useState({
-    name: "",
-    level: 4,
-    race: "dwarf",
-    class: "wizard",
-    subclass: "champion",
+    name: "No-Name Baggins",
+    level: 1,
+    race: "human",
+    class: "Commoner",
+    subclass: "",
     abilities: [],
     spells: [],
     feats: [],
