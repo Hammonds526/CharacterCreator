@@ -4,6 +4,7 @@ import React from "react"
 import NoCostume from "../../images/costumes/base.png";
 import RangerCostume from "../../images/costumes/ranger.png"
 import FighterCostume from "../../images/costumes/fighter.png"
+import RogueCostume from "../../images/costumes/fighter.png"
 
 function AvatarImage({ newCharacter }) {
 
