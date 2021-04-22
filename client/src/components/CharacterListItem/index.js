@@ -12,7 +12,6 @@ import "./style.css";
 
 // The main function
 function CharacterListItem(props) {
-  console.log("props saved charcters ", props);
   return (
     <div className="character-list">
       {props.myCharacters.map((item) => (

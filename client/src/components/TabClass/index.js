@@ -5,21 +5,21 @@ import SelectButton from "../SelectButton";
 import Button from "../Button";
 
 function TabClass(props) {
-  const [classDescription, setClassDescription] = useState("");
+  const [activeClass, setActiveClass] = useState("");
 
   // Get the description of the first class and put it in state
   useEffect(() => {
-    setClassDescription(props.character.class[0].desc);
-    // Also on page load, get the first class and put it in the newCharacter State. This will change as the user selects other classes.
-    // props.setNewCharacter({
-    //   ...props.newCharacter,
-    //   class: props.character.class[0].name.toLowerCase(),
-    // });
+    const currentClass = props.character.class.find((item) => {
+      if (item.name.toLowerCase() === props.newCharacter.class) {
+        return true;
+      }
+    });
+    setActiveClass(currentClass);
   }, []);
 
   return (
     <div>
-      <h4 className="text-bisque ml-3">Choose a Class</h4>
+      <h4 className="text-bisque ml-3">Wish to change Class?</h4>
       <div className="row mb-2">
         {props.character.class.map((item, i) => (
           <div
@@ -28,7 +28,7 @@ function TabClass(props) {
           >
             <div
               onClick={() => {
-                setClassDescription(item.desc);
+                setActiveClass(item);
                 props.setNewCharacter({
                   ...props.newCharacter,
                   class: item.name.toLowerCase(),
@@ -41,10 +41,11 @@ function TabClass(props) {
         ))}
       </div>
 
-      <p className="tab_descriptions text-bisque mb-2">{classDescription}</p>
+      <h3 className="text-bisque mt-3 text-align-left">{activeClass.name}</h3>
+      <p className="tab_descriptions text-bisque mb-2">{activeClass.desc}</p>
       <div className="d-flex justify-content-end">
         <Link to={"/character-creator/subclass"}>
-          <SelectButton text={"Select"} />
+          <SelectButton text={"Continue"} />
         </Link>
       </div>
     </div>

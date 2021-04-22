@@ -48,8 +48,6 @@ function TabSpells({
     }
   };
 
-  console.log("spell list ", getFilteredSpells());
-
   return (
     <div>
       <h2 className=" ml-3 text-bisque">Choose your Spells</h2>
@@ -71,14 +69,14 @@ function TabSpells({
             {activeSpell.name}
           </h3>
           <p className="tab_descriptions text-bisque mt-3">
-            {console.log("activeSpell.description.desc:", activeSpell.description.desc), activeSpell.description.desc.split('<br />').map(str => <p>{str}</p>)}
+            {/* {console.log("activeSpell.description.desc:", activeSpell.description.desc), activeSpell.description.desc.split('<br />').map(str => <p>{str}</p>)} */}
           </p>
         </div>
       </div>
 
       <div className="d-flex justify-content-end">
         <Link to={"/character-creator/feats"}>
-          <SelectButton utton text={"Select"} />
+          <SelectButton utton text={"Continue"} />
         </Link>
       </div>
     </div>

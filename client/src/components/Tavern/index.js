@@ -9,17 +9,52 @@ import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
 //Character Images
-import CharacterImage from "../CharacterImage";
+import CharacterHover from "../CharacterHover";
 
 const CharacterData = [
   {
+    text: "Create Wizard",
     name: "Wizard",
-
-    styles: { height: "32.5%", bottom: "19.6%", left: "43.5%", opacity: "0" },
+    styles: {
+      height: "32.4%",
+      width: "8.3%",
+      bottom: "19.6%",
+      left: "43.5%",
+    },
+  },
+  {
+    text: "Create Rogue",
+    name: "Rogue",
+    styles: {
+      height: "11.4%",
+      width: "9.3%",
+      bottom: "27.6%",
+      left: "71.5%",
+    },
+  },
+  {
+    text: "Create Ranger",
+    name: "Ranger",
+    styles: {
+      height: "15.4%",
+      width: "10.7%",
+      bottom: "42.2%",
+      left: "32%",
+    },
+  },
+  {
+    text: "Create Fighter",
+    name: "Fighter",
+    styles: {
+      height: "15.4%",
+      width: "7.3%",
+      bottom: "39.2%",
+      left: "65.7%",
+    },
   },
 ];
 
-function Tavern() {
+function Tavern(props) {
   return (
     <div className="tavern-background">
       <WoodBeamX beamStyle={{ top: "0px" }} />
@@ -46,17 +81,15 @@ function Tavern() {
       />
       {/*  - Nothing goes above this line. - */}
       <div className="position-relative">
-        {CharacterData.map((character, i) => (
-          <CharacterImage character={character} key={i} />
+        {CharacterData.map((data, i) => (
+          <CharacterHover data={data} key={i} {...props} />
         ))}
 
-        <Link to="/character-creator/name">
-          <img
-            className="desktop-tavern__image-main"
-            src={TavernImage}
-            alt="A tavern filled with 12 interesting looking characters representing the 12 classes in the game DND"
-          ></img>
-        </Link>
+        <img
+          className="desktop-tavern__image-main"
+          src={TavernImage}
+          alt="A tavern filled with 12 interesting looking characters representing the 12 classes in the game DND"
+        ></img>
       </div>
       {/* - Nothing goes below this line - */}
       <WoodBeamX beamStyle={{ bottom: "0px" }} />

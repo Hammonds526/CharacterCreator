@@ -4,7 +4,6 @@ import "./style.css";
 
 import ImageCenter from "../../images/selectiontab.png";
 
-
 function SelectionTab(props) {
   return (
     <div
@@ -16,18 +15,10 @@ function SelectionTab(props) {
         ...props.tabStyle,
       }}
     >
-      {/* <NavArrow
-        arrowStyle={{
-          width: "20px",
-          height: "auto",
-          left: "117px",
-          top: "13px",
-        }}
-      /> */}
       <p className="font-weight-bold position-absolute selection-tab-text">
         {props.charProperty}
       </p>
-      <img src={ImageCenter} alt="Selection tab"></img>
+      <img id="selection" src={ImageCenter} alt="Selection tab"></img>
     </div>
   );
 }
