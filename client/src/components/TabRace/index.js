@@ -5,11 +5,11 @@ import SelectButton from "../SelectButton";
 import Button from "../Button";
 
 function TabRace(props) {
-  const [raceDescription, setRaceDescription] = useState("");
+  const [activeRace, setActiveRace] = useState("");
 
   // On Page Load, Get the dwarf description and put it in state
   useEffect(() => {
-    setRaceDescription(props.character.race[0].description);
+    setActiveRace(props.character.race[0]);
     // Also on page load, get the name of the race and put it in the newCharacter State. This will change if the user selects a different race before they continue.
     // props.setNewCharacter({
     //   ...props.newCharacter,
@@ -28,7 +28,7 @@ function TabRace(props) {
           >
             <div
               onClick={() => {
-                setRaceDescription(item.description);
+                setActiveRace(item);
                 props.setNewCharacter({
                   ...props.newCharacter,
                   race: item.name.toLowerCase(),
@@ -41,10 +41,14 @@ function TabRace(props) {
         ))}
       </div>
 
-      <p className="tab_descriptions text-bisque mb-2">{raceDescription}</p>
+      <h3 className="text-bisque mt-3 text-align-left">{activeRace.name}</h3>
+
+      <p className="tab_descriptions text-bisque mb-2">
+        {activeRace.description}
+      </p>
       <div className="d-flex justify-content-end">
         <Link to={"/character-creator/class"}>
-          <SelectButton text={"Select"} />
+          <SelectButton text={"Continue"} />
         </Link>
       </div>
     </div>

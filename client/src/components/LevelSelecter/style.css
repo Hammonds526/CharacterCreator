@@ -12,6 +12,7 @@
   padding: 16px;
   width: auto;
 
-  background-color: bisque;
-  border: 2px dashed #998266;
+  background-image: linear-gradient(to right, #832424, #691818);
+  border: #3d0404 solid 2px;
+  color: bisque;
 }

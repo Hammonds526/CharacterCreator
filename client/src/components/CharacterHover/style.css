@@ -4,3 +4,42 @@
   background: wheat;
   z-index: 10;
 }
+
+.character-hover_text {
+  transition: opacity 0.5s;
+}
+
+.character-hover__arrow {
+  left: 50%;
+  margin-left: -10px;
+  position: absolute;
+  transition: opacity 0.5s;
+}
+
+.character-hover_button_container {
+  position: relative;
+  bottom: 78px;
+  left: 50%;
+  margin-left: -75px;
+  transition: opacity 0.5s;
+}
+
+.character-hover_arrow_container {
+  position: relative;
+  bottom: 70px;
+}
+.character-hover__floating {
+  animation: Hover 1.2s ease-in-out infinite;
+}
+
+@keyframes Hover {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

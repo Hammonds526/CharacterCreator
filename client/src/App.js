@@ -12,8 +12,22 @@ require("dotenv").config();
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
 
+  const [newCharacter, setNewCharacter] = useState({
+    name: "",
+    level: 4,
+    race: "dwarf",
+    class: "wizard",
+    subclass: "champion",
+    abilities: [],
+    spells: [],
+    feats: [],
+    userId: null,
+  });
+
+console.log("newCharacter ", newCharacter);
+
   const getMyCharacters = (res) => {
-    API.getUser("085189151981561189651985" || process.env.REACT_APP_USER_ID).then((res) => {
+    API.getUser(process.env.REACT_APP_USER_ID || "085189151981561189651985" ).then((res) => {
       if (!res.data === null) {
         
         setmyCharacters(res.data.user.characters);
@@ -33,7 +47,7 @@ function App() {
         <div className="col">
           <Switch>
             <Route path="/character-creator">
-              <CharacterMakerScreen getMyCharacters={getMyCharacters} character={{ ...character }} />
+              <CharacterMakerScreen newCharacter={newCharacter} setNewCharacter={setNewCharacter} character={{ ...character }} />
             </Route>
           </Switch>
 
@@ -42,7 +56,7 @@ function App() {
         <div className="row mt-4">
           <div className="col-12 col-lg-9 ">
             <div className="row"></div>
-            <Tavern />
+            <Tavern setNewCharacter={setNewCharacter} newCharacter={newCharacter}/>
           </div>
           <div className="col-12 col-lg-3 p-0">
             <MyCharacters myCharacters={myCharacters} />

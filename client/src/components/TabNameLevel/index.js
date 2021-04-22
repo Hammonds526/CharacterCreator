@@ -13,9 +13,6 @@ function TabNameLevel(props) {
     });
   };
 
-  // console.log("props ", props);
-  console.log("newCharacter ", props.newCharacter);
-
   return (
     <div>
       <center>
@@ -35,10 +32,12 @@ function TabNameLevel(props) {
         </div>
 
         <h5 className="text-bisque ml-1">What is your character's level?</h5>
-        <div className="d-flex justify-content-between">
+        <div className="d-flex justify-content-center">
           <LevelSelector {...props} handleInputChange={handleInputChange} />
+        </div>
+        <div className="d-flex justify-content-end">
           <Link to={"/character-creator/race"}>
-            <SelectButton utton text={"Select"} />
+            <SelectButton utton text={"Continue"} />
           </Link>
         </div>
       </center>
