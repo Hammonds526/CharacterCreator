@@ -10,21 +10,17 @@ function signUp() {
   const [confirmPassword, setConfirmPassword] = useState("");
   // const [signUp, setSignUp] = useState();
 
-
-
   function handleSubmit(e) {
     e.preventDefault();
-    if(password.trim() === confirmPassword.trim()){
+    if (password.trim() === confirmPassword.trim()) {
       API.saveUser({
         username: email.trim(),
         password: password.trim(),
-        characters: []
-      }
-      )
+        characters: [],
+      })
         .then()
         .catch();
     }
-    
   }
 
   //need event handler
