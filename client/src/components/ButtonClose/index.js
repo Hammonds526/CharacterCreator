@@ -3,8 +3,8 @@
 // // Btn image
 // import Xbtn from "../../images/xbtn.png";
 
-// // Our X-btn function, should close the main page when clicked.
-// function ButtonClose() {
+// Our X-btn function, should close the main page when clicked.
+// function ButtonClose(props) {
 
 //     return (
 //         <div className="position-relative" onClick={props.selectButtonOnClick}>
