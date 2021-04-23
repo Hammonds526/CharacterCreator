@@ -9,33 +9,38 @@ import FighterCostume from "../../images/costumes/fighter.png";
 import RogueCostume from "../../images/costumes/rogue.png";
 
 
-// Our main 
+// Our main component
 function AvatarImage({ newCharacter }) {
+    // console.log("Avatar image:", newCharacter);
 
-    console.log("Avatar image:", newCharacter);
-    // let AvatarCostume = FighterCostume;
-
-    // Function that changes class... Classy.
-    // let classpick = "rogue"
-    // let AvatarCostume;
     const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
 
     useEffect(() => {
 
         switch (newCharacter.class) {
+
+            // Fighter
             case "Fighter":
             case "fighter":
                 setAvatarCostume(FighterCostume)
                 break;
 
+            // Ranger
             case "Ranger":
             case "ranger":
                 setAvatarCostume(RangerCostume)
                 break;
 
+            // Rogue
             case "Rogue":
             case "rogue":
                 setAvatarCostume(RogueCostume)
+                break;
+
+            // Wizard
+            case "Wizard":
+            case "wizard":
+                setAvatarCostume(DefaultCostume)
                 break;
 
             default:

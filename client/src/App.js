@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import API from "./utils/API";
+import character from "./data/character";
+require("dotenv").config();
+
+// CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+
+// Components
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
-import character from "./data/character";
-import API from "./utils/API";
-require("dotenv").config();
 
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
