@@ -7,6 +7,7 @@ import Button from "../Button";
 import ScrollList from "../ScrollList";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
+import SelectButton from "../SelectButton";
 require("dotenv").config();
 
 function TabFeats({

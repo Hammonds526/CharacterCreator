@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import API from "./utils/API";
 import character from "./data/character";
 require("dotenv").config();
+import SignUp from "./components/SignUp";
+import Login from "./components/Login";
 
 // CSS
 import "bootstrap/dist/css/bootstrap.min.css";
