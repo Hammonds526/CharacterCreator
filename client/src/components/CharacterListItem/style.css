@@ -40,3 +40,9 @@
   /* height: 350px; */
   overflow-y: scroll;
 }
+
+#class {
+  font-size: 15px;
+  color: rgb(214, 194, 13);
+  margin: auto;
+}

@@ -7,14 +7,9 @@ import Button from "../Button";
 function TabRace(props) {
   const [activeRace, setActiveRace] = useState("");
 
-  // On Page Load, Get the dwarf description and put it in state
+  // On Page Load, Get the first race description and put it in state
   useEffect(() => {
     setActiveRace(props.character.race[0]);
-    // Also on page load, get the name of the race and put it in the newCharacter State. This will change if the user selects a different race before they continue.
-    // props.setNewCharacter({
-    //   ...props.newCharacter,
-    //   race: props.character.race[0].name.toLowerCase(),
-    // });
   }, []);
 
   return (
