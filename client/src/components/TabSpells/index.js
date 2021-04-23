@@ -70,7 +70,9 @@ function TabSpells({
             {activeSpell.name}
           </h3>
           <p className="tab_descriptions text-bisque mt-3">
-            {/* {console.log("activeSpell.description.desc:", activeSpell.description.desc), activeSpell.description.desc.split('<br />').map(str => <p>{str}</p>)} */}
+            {activeSpell.description.desc.split("<br />").map((str) => (
+              <p>{str}</p>
+            ))}
           </p>
         </div>
       </div>
