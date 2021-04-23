@@ -4,15 +4,14 @@ import React from "react";
 import "./style.css";
 
 // Pixel border stuff
-import Corner from "../Corner";
-import WoodBeamX from "../WoodBeamX";
-import WoodBeamY from "../WoodBeamY";
+// import Corner from "../Corner";
+// import WoodBeamX from "../WoodBeamX";
+// import WoodBeamY from "../WoodBeamY";
 
 // import WoodBeamX from "../WoodBeamX";
 
 // The main function
 function CharacterListItem(props) {
-  console.log("props saved charcters ", props);
   return (
     <div className="character-list">
       {props.myCharacters.map((item) => (

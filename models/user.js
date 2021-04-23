@@ -1,24 +1,35 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+// importing modules
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+var passportLocalMongoose = require("passport-local-mongoose");
 
-const UserSchema = new Schema({
-      username: { type: String },
-      password: { type: String },
-      characters:[ 
-        {
-          name: { type: String },
-          level: { type: Number },
-          race: { type: String },
-          class: { type: String },
-          subClass: { type: String },
-          abilities: [{}],
-          feats: [{ type: String}],
-          spells: [{type: String}],
-        },
-      ],
+const userSchema = new Schema({
+  email: { type: String, required: true, unique: true },
+  username: { type: String, unique: true, required: true },
+  // password: { type: String, required: true },
+  characters: [
+    {
+      name: { type: String },
+      level: { type: Number },
+      race: { type: String },
+      class: { type: String },
+      subClass: { type: String },
+      abilities: [{}],
+      feats: [{ type: String }],
+      spells: [{ type: String }],
+    },
+  ],
 });
 
+// var UserSchema = new Schema({
+//   email: {type: String, required:true, unique:true},
+//   username : {type: String, unique: true, required:true},
+// });
 
-const User = mongoose.model("User", UserSchema);
+// plugin for passport-local-mongoose
+userSchema.plugin(passportLocalMongoose);
 
-module.exports = User
+// export userschema
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;

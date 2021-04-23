@@ -11,12 +11,14 @@
   background-image: url("../../images/btn.png");
   background-repeat: no-repeat;
   background-position: center;
+}
+.button-image__size {
   background-size: 96px 30px;
   height: 30px;
-  width: 96px;
+  width: 150px;
 }
 
 .button-image-background:hover {
-opacity: 0.7;
-background-color: brown;
+  opacity: 0.7;
+  background-color: brown;
 }

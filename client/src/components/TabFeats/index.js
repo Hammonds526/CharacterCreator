@@ -8,7 +8,8 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 require("dotenv").config();
 
-function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, ...props}) {
+
+function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharacters, ...props}) {
   const [activeFeat, setActiveFeat] = useState({
     name: "No feats available",
     description: {
@@ -27,19 +28,17 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, ...props}) {
   const selectButtonOnClick = () => {
     // console.log("Button Click");
     // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-    API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
+    API.getUser("085189151981561189651985" || process.env.REACT_APP_USER_ID).then((res) => {
       // SOME DEBUGGING (CHANGING STRINGS TO NUMBERS/ASSIGNING ID'S) BUT WORKS
       // console.log(res.data.user.characters)
       res.data.user.characters.push(newCharacter);
-      console.log(res.data.user.characters)
       // console.log(res.data);
       API.updateUser(process.env.REACT_APP_USER_ID, res.data).then(() => {
-        console.log(res.data.user.characters);
+        getMyCharacters();
       });
     });
   };
 
-console.log("newCharacter from tabFeats ", newCharacter);
 
     // When a checkbox is clicked, if the corresponing feat is not in myCharacter, add it. If it is, remove it.
     const checkboxOnClick = (event) => {
@@ -85,15 +84,14 @@ console.log("newCharacter from tabFeats ", newCharacter);
         <h3 className="text-bisque mt-3 text-align-left">
           {activeFeat.name}
         </h3>
-        <p className="tab_descriptions text-bisque mt-3">
+        <text className="tab_descriptions text-bisque mt-3">
           {activeFeat.desc}
-        </p>
+        </text>
       </div>
     </div>
 
       
       <div className="d-flex justify-content-end">
-        
         <Link to={"/"}>
           <SelectButton
             text={"Finish"}
