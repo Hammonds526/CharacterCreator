@@ -53,7 +53,7 @@ function TabSpells({
     <div>
       <h2 className=" ml-3 text-bisque">Choose your Spells</h2>
       <div className="row mb-2">
-        <div className="col-4">
+        <div className="col-12 col-lg-4">
           <ScrollList
             list={getFilteredSpells}
             setActive={setActiveSpell}
@@ -65,7 +65,7 @@ function TabSpells({
             itemType={"spell"}
           />
         </div>
-        <div className="col-8">
+        <div className="col-12 col-lg-8">
           <h3 className="text-bisque mt-3 text-align-left">
             {activeSpell.name}
           </h3>

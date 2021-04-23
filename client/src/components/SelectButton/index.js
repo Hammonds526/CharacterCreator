@@ -9,7 +9,7 @@ function SelectButton(props) {
         arrowStyle={{
           width: "18px",
           height: "auto",
-          left: "98px",
+          left: "72px",
           top: "6px",
           zIndex: "1",
         }}
