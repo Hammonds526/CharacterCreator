@@ -12,14 +12,14 @@ require("dotenv").config();
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
 
-  useEffect(() => {
-    // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-    API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
-      // console.log(res.data.user.characters);
-      setmyCharacters(res.data.user.characters);
-      // console.log(myCharacters);
-    });
-  }, []);
+  // useEffect(() => {
+  //   // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
+  //   API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
+  //     // console.log(res.data.user.characters);
+  //     setmyCharacters(res.data.user.characters);
+  //     // console.log(myCharacters);
+  //   });
+  // }, []);
 
   return (
     <Router>
