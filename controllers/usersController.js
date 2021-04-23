@@ -32,7 +32,9 @@ module.exports = {
     });
   },
   update: function (req, res) {
-    User.findOneAndUpdate({ _id: req.params.id }, req.body)
+    User.findOneAndUpdate({ _id: req.params.id }, req.body, {
+      new: true
+    })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
@@ -49,7 +51,7 @@ module.exports = {
   },
   login: function (req, res) {
     const { username, password } = req.body;
-
+    // console.log(username, password);
     if (!username) {
       res.status(422).json({
         message: "Username was not given.",
@@ -61,6 +63,7 @@ module.exports = {
         });
       } else {
         passport.authenticate("local", function (err, user, info) {
+          console.log(user);
           if (err) {
             res.status(422).json(err);
           } else {

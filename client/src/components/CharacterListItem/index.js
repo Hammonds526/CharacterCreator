@@ -14,8 +14,8 @@ import "./style.css";
 function CharacterListItem(props) {
   return (
     <div className="character-list">
-      {props.myCharacters.map((item) => (
-        <div id="charbox" className="list-group-item" key={item.name}>
+      {props.myCharacters.map((item, index) => (
+        <div id="charbox" className="list-group-item" key={index}>
           <p>{item.name}</p>
           {/* <p>{item.race}</p> */}
           <p>
