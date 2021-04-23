@@ -27,7 +27,6 @@ function ScrollListItem({
       <text
         className="text-bisque"
         onClick={() => {
-          console.log("you clicked the name of a spell");
           setActive(item);
         }}
       >

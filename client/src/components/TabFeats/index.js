@@ -75,7 +75,7 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharact
     <div>
     <h2 className=" ml-3 text-bisque">Choose your Feats</h2>
     <div className="row mb-2">
-      <div className="col-4">
+      <div className="col-12 col-lg-4">
         <ScrollList
         list={getFilteredFeats}
           setActive={setActiveFeat}
@@ -87,7 +87,7 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharact
           scrollListStyle={{ maxHeight: "400px" }}
         />
       </div>
-      <div className="col-8">
+      <div className="col-12 col-lg-8">
         <h3 id="title" className="text-bisque mt-3 text-align-left">
           {activeFeat.name}
         </h3>
