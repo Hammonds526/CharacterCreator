@@ -16,6 +16,7 @@ function TabSpells({
       desc: "No spells available for this class/level combo.",
     },
   });
+  console.log("activeSpell ", activeSpell);
 
   //When the tab loads, make the page display the first spell in the list of filtered spells.
   useEffect(() => {
@@ -52,7 +53,7 @@ function TabSpells({
     <div>
       <h2 className=" ml-3 text-bisque">Choose your Spells</h2>
       <div className="row mb-2">
-        <div className="col-4">
+        <div className="col-12 col-lg-4">
           <ScrollList
             list={getFilteredSpells}
             setActive={setActiveSpell}
@@ -60,16 +61,18 @@ function TabSpells({
             newCharacter={newCharacter}
             setNewCharacter={setNewCharacter}
             {...props}
-            scrollListStyle={{ maxHeight: "400px" }}
+            scrollListStyle={{ maxHeight: "450px" }}
             itemType={"spell"}
           />
         </div>
-        <div className="col-8">
+        <div className="col-12 col-lg-8">
           <h3 className="text-bisque mt-3 text-align-left">
             {activeSpell.name}
           </h3>
           <p className="tab_descriptions text-bisque mt-3">
-            {/* {console.log("activeSpell.description.desc:", activeSpell.description.desc), activeSpell.description.desc.split('<br />').map(str => <p>{str}</p>)} */}
+            {activeSpell.description.desc.split("<br />").map((str) => (
+              <p>{str}</p>
+            ))}
           </p>
         </div>
       </div>

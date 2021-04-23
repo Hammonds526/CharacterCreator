@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
-import SelectButton from "../SelectButton";
+
+// Components
 import LevelSelector from "../LevelSelecter";
 import Button from "../Button";
 import ScrollList from "../ScrollList";
@@ -93,7 +94,7 @@ function TabFeats({
       </div>
 
       <div className="d-flex justify-content-end">
-        <Link to={"/"}>
+        <Link to={"/character-creator/character-sheet"}>
           <SelectButton
             text={"Finish"}
             selectButtonOnClick={selectButtonOnClick}

@@ -3,6 +3,11 @@
   opacity: 0;
   background: wheat;
   z-index: 10;
+  filter: brightness(120%);
+}
+
+.character-hover__touch-target:hover {
+  filter: brightness(140%);
 }
 
 .character-hover_text {
@@ -20,7 +25,7 @@
   position: relative;
   bottom: 78px;
   left: 50%;
-  margin-left: -75px;
+  margin-left: -49px;
   transition: opacity 0.5s;
 }
 

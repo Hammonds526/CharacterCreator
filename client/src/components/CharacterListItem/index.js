@@ -3,12 +3,12 @@ import React from "react";
 // CSS
 import "./style.css";
 
-// Pixel border stuff
-// import Corner from "../Corner";
-// import WoodBeamX from "../WoodBeamX";
-// import WoodBeamY from "../WoodBeamY";
-
-// import WoodBeamX from "../WoodBeamX";
+// Icons
+import Ranger from "../../images/icons/ranger.png";
+import Rogue from "../../images/icons/rogue.png";
+import Fighter from "../../images/icons/fighter.png";
+import Wizard from "../../images/icons/wizard.png";
+import EmptyFrame from "../../images/icons/empty_frame.png";
 
 // The main function
 function CharacterListItem(props) {

@@ -1,25 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import API from "./utils/API";
+import character from "./data/character";
+require("dotenv").config();
+
+// CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+
+// Components
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./components/CharacterMakerScreen";
-import character from "./data/character";
-import API from "./utils/API";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
-require("dotenv").config();
 
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
 
   const [newCharacter, setNewCharacter] = useState({
-    name: "",
-    level: 4,
-    race: "dwarf",
-    class: "wizard",
-    subclass: "champion",
+    name: "No-Name Baggins",
+    level: 1,
+    race: "human",
+    class: "fighter",
+    subclass: "",
     abilities: [],
     spells: [],
     feats: [],
