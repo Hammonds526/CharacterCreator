@@ -16,7 +16,7 @@ function App() {
     name: "No-Name Baggins",
     level: 1,
     race: "human",
-    class: "Commoner",
+    class: "fighter",
     subclass: "",
     abilities: [],
     spells: [],

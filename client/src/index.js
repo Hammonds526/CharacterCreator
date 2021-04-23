@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// Font shit
+// Font stuff
 import './fonts/romulus.ttf'
 import './fonts/alagard.ttf'
 

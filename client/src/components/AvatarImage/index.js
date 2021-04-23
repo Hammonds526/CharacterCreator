@@ -4,51 +4,47 @@ import { Link } from "react-router-dom";
 
 // Avatar & outfits
 import DefaultCostume from "../../images/costumes/base.png";
-import RangerCostume from "../../images/costumes/ranger.png"
-import FighterCostume from "../../images/costumes/fighter.png"
-import RogueCostume from "../../images/costumes/rogue.png"
+import RangerCostume from "../../images/costumes/ranger.png";
+import FighterCostume from "../../images/costumes/fighter.png";
+import RogueCostume from "../../images/costumes/rogue.png";
 
 
 // Our main 
 function AvatarImage({ newCharacter }) {
 
     console.log("Avatar image:", newCharacter);
+    // let AvatarCostume = FighterCostume;
 
     // Function that changes class... Classy.
-    
-    let classpick = "fighter"
+    // let classpick = "rogue"
+    // let AvatarCostume;
+    const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
 
-    let AvatarCostume;
+    useEffect(() => {
 
-    if (classpick = "fighter") {
+        switch (newCharacter.class) {
+            case "Fighter":
+            case "fighter":
+                setAvatarCostume(FighterCostume)
+                break;
 
-        AvatarCostume = FighterCostume;
+            case "Ranger":
+            case "ranger":
+                setAvatarCostume(RangerCostume)
+                break;
 
-    }
+            case "Rogue":
+            case "rogue":
+                setAvatarCostume(RogueCostume)
+                break;
 
-    else if (classpick = "rogue") {
+            default:
+                setAvatarCostume(DefaultCostume);
+                break;
+        }
 
-        AvatarCostume = RogueCostume;
+    }, [newCharacter.class]);
 
-    }
-
-    else if (classpick = "ranger") {
-
-        AvatarCostume = RangerCostume;
-
-    }
-
-    else if (classpick = "wizard") {
-
-        AvatarCostume = DefaultCostume;
-
-    }
-
-    else {
-
-        AvatarCostume = DefaultCostume;
-
-    }
 
     return (
 

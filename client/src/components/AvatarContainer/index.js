@@ -17,7 +17,7 @@ function AvatarContainer(props) {
           alt="Character Avatar"
         ></img>
         <div>
-        < AvatarImage />
+          < AvatarImage {...props} />
         </div>
         <div className="vortex"></div>
 

@@ -5,18 +5,17 @@ import { Link } from "react-router-dom";
 // CSS
 import "./style.css";
 
-/*
-mycharacters pull from index array 
 
- user.characters[0]._id
-*/
+// Main function. 
 
-// F*k it. I'll just use the temp storage character.
+ //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
 function CharacterSheet({ newCharacter }) {
+
     // let Characterdesc = Legend;
     // let Legend = "";
     // if (newCharacter.class == "Commoner") {
     //     let Legend = "I sense great power in this one..."
+    
     // } else {
     //     let Legend = newCharacter.subclass;
     // };
@@ -32,8 +31,10 @@ function CharacterSheet({ newCharacter }) {
             <h2>{newCharacter.class}</h2>
             <br />
             {/* <h2>{Legend}</h2> */}
+            <br />
             <p>{newCharacter.spells}</p>
             <p>{newCharacter.feats}</p>
+            <br />
         </div>
     );
 }
