@@ -5,13 +5,19 @@ import API from "../../utils/API";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-function Login() {
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
+function Login(props) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    API.login(username.trim(), password.trim()).then().catch();
+    API.login(username.trim(), password.trim())
+      .then((res) => {
+        props.setUser(res.data._id);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function validateForm() {
@@ -23,7 +29,7 @@ function Login() {
     <div className="Login">
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="username">
-          <Form.control
+          <Form.Control
             autoFocus
             type="username"
             value={username}
@@ -32,13 +38,13 @@ function Login() {
         </Form.Group>
         <Form.Group size="lg" controlId="password">
           <Form.Label>Password</Form.Label>
-          <Form.control
+          <Form.Control
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block size="lg" type="submit" disable={!validateForm()}>
+        <Button block size="lg" type="submit" disabled={!validateForm()}>
           Login
         </Button>
       </Form>
