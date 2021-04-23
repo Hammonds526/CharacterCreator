@@ -16,6 +16,7 @@ function TabSpells({
       desc: "No spells available for this class/level combo.",
     },
   });
+  console.log("activeSpell ", activeSpell);
 
   //When the tab loads, make the page display the first spell in the list of filtered spells.
   useEffect(() => {
