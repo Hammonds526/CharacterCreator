@@ -11,6 +11,7 @@ import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
 function MyCharacters(props) {
+
   return (
     <div id="container">
       <WoodBeamX beamStyle={{ top: "0px" }} />
@@ -35,8 +36,11 @@ function MyCharacters(props) {
           transform: "rotate(90deg)",
         }}
       />
+      {/* Nothing Above this line */}
+
       <h4 className="pt-4">My Characters</h4>
       <CharacterListItem {...props} />
+      
       {/* Nothing below here */}
       <WoodBeamX beamStyle={{ bottom: "-17px" }} />
       <Corner

@@ -1,14 +1,21 @@
+// Core dependencies
 import React, {useState, useEffect} from "react";
-import "./style.css";
-import SelectButton from "../SelectButton";
-import LevelSelector from "../LevelSelecter";
-import Button from "../Button";
-import ScrollList from "../ScrollList"
-import API from "../../utils/API";
 import { Link } from "react-router-dom";
 require("dotenv").config();
 
+// API
+import API from "../../utils/API";
 
+// CSS
+import "./style.css";
+
+// Components
+import LevelSelector from "../LevelSelecter";
+import Button from "../Button";
+import ScrollList from "../ScrollList"
+import SelectButton from "../SelectButton";
+
+// Main function
 function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharacters, ...props}) {
   const [activeFeat, setActiveFeat] = useState({
     name: "No feats available",
@@ -28,7 +35,7 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharact
   const selectButtonOnClick = () => {
     // console.log("Button Click");
     // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-    API.getUser("085189151981561189651985" || process.env.REACT_APP_USER_ID).then((res) => {
+    API.getUser(process.env.REACT_APP_USER_ID).then((res) => {
       // SOME DEBUGGING (CHANGING STRINGS TO NUMBERS/ASSIGNING ID'S) BUT WORKS
       // console.log(res.data.user.characters)
       res.data.user.characters.push(newCharacter);
@@ -81,10 +88,10 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharact
         />
       </div>
       <div className="col-8">
-        <h3 className="text-bisque mt-3 text-align-left">
+        <h3 id="title" className="text-bisque mt-3 text-align-left">
           {activeFeat.name}
         </h3>
-        <text className="tab_descriptions text-bisque mt-3">
+        <text id="desc" className="tab_descriptions text-bisque mt-3">
           {activeFeat.desc}
         </text>
       </div>
@@ -92,7 +99,7 @@ function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharact
 
       
       <div className="d-flex justify-content-end">
-        <Link to={"/"}>
+        <Link to={"/character-creator/character-sheet"}>
           <SelectButton
             text={"Finish"}
             selectButtonOnClick={selectButtonOnClick}

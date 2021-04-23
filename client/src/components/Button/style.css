@@ -20,5 +20,5 @@
 
 .button-image-background:hover {
   opacity: 0.7;
-  background-color: brown;
+  filter: brightness(89%);
 }
