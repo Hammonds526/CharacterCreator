@@ -5,6 +5,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 95px;
 }
 
 .button-image-background {
@@ -15,7 +16,8 @@
 .button-image__size {
   background-size: 96px 30px;
   height: 30px;
-  width: 150px;
+  width: 98px;
+  margin-bottom: 10px;
 }
 
 .button-image-background:hover {
