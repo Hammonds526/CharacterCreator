@@ -19,7 +19,7 @@ function CharacterSheet({ newCharacter }) {
     return (
         < div className="modal-content-box">
 
-            <div className="col">
+            <div id="divbox" className="col">
                 <WoodBeamX beamStyle={{ top: "-2px" }} />
 
                 <WoodBeamY beamStyle={{ right: "10px", top: "9px" }} />
