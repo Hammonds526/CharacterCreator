@@ -16,11 +16,11 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   create: function (req, res) {
-    const { email, username, password } = req.body;
+    const { email, username, password, characters } = req.body;
     const newUser = new User({
       email: email,
       username: username,
-      characters: [],
+      characters: characters ? characters : [],
     });
 
     User.register(newUser, password, function (err, dbModel) {
@@ -63,7 +63,7 @@ module.exports = {
         });
       } else {
         passport.authenticate("local", function (err, user, info) {
-          console.log(user);
+          // console.log(user);
           if (err) {
             res.status(422).json(err);
           } else {

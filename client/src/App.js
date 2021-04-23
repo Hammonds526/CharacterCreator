@@ -97,7 +97,11 @@ function App() {
               {signIn ? "Login" : "Sign Up"}
             </label>
           </div>
-          {signIn ? <Login setUser={setUser} /> : <SignUp />}
+          {signIn ? (
+            <Login setUser={setUser} />
+          ) : (
+            <SignUp setSignIn={setSignIn} />
+          )}
         </>
       )}
     </Router>
