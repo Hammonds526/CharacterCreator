@@ -1,3 +1,4 @@
+// Core Components
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -7,9 +8,14 @@ import RangerCostume from "../../images/costumes/ranger.png"
 import FighterCostume from "../../images/costumes/fighter.png"
 import RogueCostume from "../../images/costumes/rogue.png"
 
+
+// Our main 
 function AvatarImage({ newCharacter }) {
-console.log("Avatar image:", newCharacter);
-    //    Function that changes class... Classy.
+
+    console.log("Avatar image:", newCharacter);
+
+    // Function that changes class... Classy.
+    
     let classpick = "fighter"
 
     let AvatarCostume;
@@ -18,22 +24,26 @@ console.log("Avatar image:", newCharacter);
 
         AvatarCostume = FighterCostume;
 
-    } 
+    }
+
     else if (classpick = "rogue") {
 
         AvatarCostume = RogueCostume;
 
-    } 
+    }
+
     else if (classpick = "ranger") {
 
         AvatarCostume = RangerCostume;
 
-    } 
+    }
+
     else if (classpick = "wizard") {
 
         AvatarCostume = DefaultCostume;
 
-    } 
+    }
+
     else {
 
         AvatarCostume = DefaultCostume;
@@ -41,12 +51,19 @@ console.log("Avatar image:", newCharacter);
     }
 
     return (
+
         <div>
+
             <img
+
                 className="avatar"
+
                 src={AvatarCostume}
+
                 alt="Character Avatar"
+
             ></img>
+
         </div>
 
     );
