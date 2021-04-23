@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 require("dotenv").config();
 
 // API
+import LevelSelector from "../LevelSelecter";
+import Button from "../Button";
+import ScrollList from "../ScrollList"
+import SelectButton from "../SelectButton";
 import API from "../../utils/API";
 
 // CSS
 import "./style.css";
 
 // Components
-import LevelSelector from "../LevelSelecter";
-import Button from "../Button";
-import ScrollList from "../ScrollList"
-import SelectButton from "../SelectButton";
 
 // Main function
 function TabFeats({newCharacter, setNewCharacter, getFilteredFeats, getMyCharacters, ...props}) {
