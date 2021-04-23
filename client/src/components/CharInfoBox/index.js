@@ -2,6 +2,9 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
+// CSS
+import "./style.css";
+
 // Components
 import RacePage from "../TabRace";
 import ClassPage from "../TabClass";
@@ -10,9 +13,6 @@ import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
 import NameLevelPage from "../TabNameLevel";
 import CharacterSheetPage from "../CharacterSheet";
-
-// CSS
-import "./style.css";
 
 // Close btn
 import ButtonClose from "../ButtonClose";
