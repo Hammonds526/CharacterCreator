@@ -20,3 +20,8 @@ html {
 h4 {
   margin-bottom: 25px;
 }
+
+.desc {
+  font-size: 20px;
+  font-family: ui-serif;
+}

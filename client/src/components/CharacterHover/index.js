@@ -16,6 +16,20 @@ function CharacterHover({ setNewCharacter, newCharacter, ...props }) {
       setNumber(0);
     }
   };
+  const startCharacter = () => {
+    if (props.data.isActive) {
+      return "/character-creator/name"
+    }
+  }
+
+  const setClass = () => {
+    if (props.data.isActive === true) {
+      const thisNewCharacter = {...newCharacter,
+      class: props.data.name.toLowerCase(),
+    }
+    setNewCharacter(thisNewCharacter)
+    }
+  }
 
   return (
     <div>
@@ -38,19 +52,14 @@ function CharacterHover({ setNewCharacter, newCharacter, ...props }) {
           />
         </div>
       </div>
-      <Link to="/character-creator/name">
+      <Link to={startCharacter}>
         <div
           className="character-hover__touch-target"
           style={props.data.styles}
           name={props.data.name}
-          onMouseEnter={reveal}
-          onMouseLeave={reveal}
-          onClick={() => {
-            setNewCharacter({
-              ...newCharacter,
-              class: props.data.name.toLowerCase(),
-            });
-          }}
+          onMouseOver={reveal}
+          onMouseOut={reveal}
+          onClick={ setClass }
         ></div>
       </Link>
     </div>
