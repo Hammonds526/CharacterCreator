@@ -9,6 +9,7 @@ import "./style.css";
 import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
+import AvatarContainer from "../AvatarContainer";
 
 // Main function. 
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
@@ -46,17 +47,23 @@ function CharacterSheet({ newCharacter }) {
                 <br />
                 <h1>Character Sheet</h1>
                 <br />
-                <div>
-                    <h2>{newCharacter.name}</h2>
-                    <br />
-                    <h2 id="lvlbox">Level : {newCharacter.level}</h2>
-                    <h2>{newCharacter.class}</h2>
+                <h2 id="character-name">{newCharacter.name}</h2>
+                <br />
+                <div id="card" className="col-6">
+                    <div>
+                        <br />
+                        <h3 id="lvlbox">Level : {newCharacter.level}</h3>
+                        <h3>{newCharacter.class}</h3>
+                        <h4 id="subclass">{newCharacter.subclass}</h4>
+                    </div>
                 </div>
                 <br />
-                <div>
-                    <p>{newCharacter.spells}</p>
-                    <br />
-                    <p>{newCharacter.feats}</p>
+                <div className="col-6">
+                    <div>
+                        <p>{newCharacter.spells}</p>
+                        <br />
+                        <p>{newCharacter.feats}</p>
+                    </div>
                 </div>
                 <br />
                 {/* Nothing below here */}

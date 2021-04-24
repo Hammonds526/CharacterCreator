@@ -2,3 +2,20 @@
     background-image: url("../../images/stone_tile2.png");
     background-size: "64px";
 }
+#subclass {
+    color: #8d1e1e;
+    font-size: 28px;
+}
+
+#character-name {
+    font-size: 34px;
+    color: #8d1e1e;
+}
+
+#card {
+    background-color: rgba(244, 165, 96, 0.596);
+    border-radius: 2px;
+    border: #995739b7 2px solid;
+    width: auto;
+    margin-left: 25px;
+}
