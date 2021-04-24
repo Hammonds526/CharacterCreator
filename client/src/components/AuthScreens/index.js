@@ -2,9 +2,6 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
-// CSS
-import "./style.css";
-
 // Components
 import RacePage from "../TabRace";
 import ClassPage from "../TabClass";
@@ -13,6 +10,9 @@ import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
 import NameLevelPage from "../TabNameLevel";
 import CharacterSheetPage from "../../pages/CharacterSheet";
+
+// CSS
+import "./style.css";
 
 // Close btn
 import ButtonClose from "../ButtonClose";
@@ -24,7 +24,7 @@ import WoodBeamY from "../WoodBeamY";
 
 function CharInfoBox(props) {
   return (
-    <div className="char-info-box__container p-5 mt-2 text-white">
+    <div className="container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
 
       <WoodBeamY beamStyle={{ right: "13px", top: "9px" }} />

@@ -6,6 +6,7 @@ import LevelSelector from "../LevelSelecter";
 
 function TabNameLevel(props) {
   const handleInputChange = (event) => {
+    console.log(props.newCharacter.level);
     const { value, name } = event.target;
     props.setNewCharacter({
       ...props.newCharacter,
@@ -20,10 +21,9 @@ function TabNameLevel(props) {
         <div className="col">
           <div className="col-10 col-lg-5 col-md-6">
             <input
-              className=" mb-3 ml-3 background-darkgoldenrod form-control"
+              className=" mb-3 ml-3 form-control form"
               type="text"
               name="name"
-              id="namecard"
               placeholder="Name here"
               onChange={handleInputChange}
               maxLength="20"

@@ -7,10 +7,10 @@ import { Route, useRouteMatch } from "react-router-dom";
 import "./style.css";
 
 // Components
-import AvatarContainer from "../AvatarContainer";
-import CharInfoBox from "../CharInfoBox";
-import CharacterProgressBar from "../CharacterProgressBar";
-
+import CharacterProgressBar from "../../components/CharacterProgressBar";
+import CharInfoBox from "../../components/CharInfoBox";
+import AvatarContainer from "../../components/AvatarContainer";
+// import AbilityFeatSpell from "../AbilityFeatSpell";
 
 function CharacterMakerScreen(props) {
   let { path } = useRouteMatch();

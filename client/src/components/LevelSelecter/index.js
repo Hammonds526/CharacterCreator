@@ -16,13 +16,13 @@ function LevelSelecter(props) {
       /> */}
       <center>
         <input
-          id="numberbox"
-          className=" ml-3 form-control"
+          className=" ml-3 form-control form"
           type="number"
           name="level"
           min="1"
           max="20"
-          placeholder="1"
+          value={props.newCharacter.level}
+          placeholder={props.newCharacter.level}
           onChange={props.handleInputChange}
         />
       </center>

@@ -77,7 +77,7 @@ const wizard = {
   ],
   subClass: [
     {
-      name: "School of Abjuration",
+      name: "Abjuration",
       desc:
         "Emphasizes magic that blocks, banishes, or protects. Detractors of this school say that its tradition is about denial, negation rather than positive assertion. You understand, however, that ending harmful effects, protecting the weak, and banishing evil influences is anything but a philosophical void. It is a proud and respected vocation. Called abjurers, members of this school are sought when baleful spirits require exorcism, when important locations must be guarded against magical spying, and when portals to other planes of existence must be closed.",
       abilities: [
@@ -114,7 +114,7 @@ const wizard = {
       ],
     },
     {
-      name: "School of Conjuration",
+      name: "Conjuration",
       desc:
         "As a conjurer, you favor spells that produce objects and creatures out of thin air. You can conjure billowing clouds of killing fog or summon creatures from elsewhere to fight on your behalf. As your mastery grows, you learn spells of transportation and can teleport yourself across vast distances, even to other planes of existence, in an instant.",
       abilities: [
@@ -151,7 +151,7 @@ const wizard = {
       ],
     },
     {
-      name: "School of Divination",
+      name: "Divination",
       desc:
         "The counsel of a diviner is sought by royalty and commoners alike, for all seek a clearer understanding of the past, present, and future. As a diviner, you strive to part the veils of space, time, and consciousness so that you can see clearly. You work to master spells of discernment, remote viewing, supernatural knowledge, and foresight.",
       abilities: [
@@ -188,9 +188,9 @@ const wizard = {
       ],
     },
     {
-      name: "School of Enchantment",
+      name: "Enchantment",
       desc:
-        "As a member of the School of Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between.",
+        "As a member of the Enchantment, you have honed your ability to magically entrance and beguile other people and monsters. Some enchanters are peacemakers who bewitch the violent to lay down their arms and charm the cruel into showing mercy. Others are tyrants who magically bind the unwilling into their service. Most enchanters fall somewhere in between.",
       abilities: [
         {
           name: "Enchantment Savant",
@@ -226,7 +226,7 @@ const wizard = {
     },
 
     {
-      name: "School of Evocation",
+      name: "Evocation",
       desc:
         "You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.",
       abilities: [
@@ -263,7 +263,7 @@ const wizard = {
       ],
     },
     {
-      name: "School of Illusion",
+      name: "Illusion",
       desc:
         "You focus your studies on magic that dazzles the senses, befuddles the mind, and tricks even the wisest folk. Your magic is subtle, but the illusions crafted by your keen mind make the impossible seem real. Some illusionists—including many gnome wizards—are benign tricksters who use their spells to entertain. Others are more sinister masters of deception, using their illusions to frighten and fool others for their personal gain.",
       abilities: [
@@ -300,9 +300,9 @@ const wizard = {
       ],
     },
     {
-      name: "School of Necromancy",
+      name: "Necromancy",
       desc:
-        "The School of Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate. Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies.",
+        "The Necromancy explores the cosmic forces of life, death, and undeath. As you focus your studies in this tradition, you learn to manipulate the energy that animates all living things. As you progress, you learn to sap the life force from a creature as your magic destroys its body, transforming that vital energy into magical power you can manipulate. Most people see necromancers as menacing, or even villainous, due to the close association with death. Not all necromancers are evil, but the forces they manipulate are considered taboo by many societies.",
       abilities: [
         {
           name: "Necromancy Savant",
@@ -314,7 +314,7 @@ const wizard = {
           name: "Grim Harvest",
           level: 2,
           desc:
-            "You gain the ability to reap life energy from  creatures you kill with your spells. Once per turn when you kill one or more creatures with a spell of 1st level or higher, you regain hit points equal to twice the spell’s level, or three times its level if the spell belongs to the School of Necromancy. You don’t gain this benefit for killing constructs or undead.",
+            "You gain the ability to reap life energy from  creatures you kill with your spells. Once per turn when you kill one or more creatures with a spell of 1st level or higher, you regain hit points equal to twice the spell’s level, or three times its level if the spell belongs to the Necromancy. You don’t gain this benefit for killing constructs or undead.",
         },
         {
           name: "Undead Thralls",
@@ -337,7 +337,7 @@ const wizard = {
       ],
     },
     {
-      name: "School of Transmutation",
+      name: "Transmutation",
       desc:
         "You are a student of spells that modify energy and matter. To you, the world is not a fixed thing, but eminently mutable, and you delight in being an agent of change. You wield the raw stuff of creation and learn to alter both physical forms and mental qualities. Your magic gives you the tools to become a smith on reality’s forge. Some transmuters are tinkerers and pranksters, turning people into toads and transforming copper into silver for fun and occasional profit. Others pursue their magical studies with deadly seriousness, seeking the power of the gods to make and destroy worlds.",
       abilities: [

@@ -12,64 +12,23 @@ import WizardIcon from "../../images/icons/wizard.png"
 
 // The main function
 function CharacterListItem(props) {
-  console.log("props saved charcters ", props);
-
-  // const [ClassIcon, setClassIcon] = useState(NoIcon);
-
-  // useEffect(() => {
-
-  //     switch (newCharacter.class) {
-
-  //         // Fighter
-  //         case "Fighter":
-  //         case "fighter":
-  //             setClassIcon(FighterIcon)
-  //             break;
-
-  //         // Ranger
-  //         case "Ranger":
-  //         case "ranger":
-  //             setClassIcon(RangerIcon)
-  //             break;
-
-  //         // Rogue
-  //         case "Rogue":
-  //         case "rogue":
-  //             setClassIcon(RogueIcon)
-  //             break;
-
-  //         // Wizard
-  //         case "Wizard":
-  //         case "wizard":
-  //             setClassIcon(WizardIcon)
-  //             break;
-
-  //         default:
-  //             setClassIcon(NoIcon);
-  //             break;
-  //     }
-  // });
-
-
-    return (
-      <div className="character-list">
-      {props.myCharacters.map((item) => (
-        <div id="charbox" className="list-group-item" key={item.name}>
-            <p>{item.name}</p>
-            {/* <p>{item.race}</p> */}
-            <p>
-              {item.race}
-            </p>
-           <p id="class">{item.class}</p>
-           
-           {/* <img className="Class Icon" src={ClassIcon} alt="Character Icon"></img> */}
-           <p id="level">{item.level}</p>
-            <hr className="my-4" />
-            <br />
-          </div>
-        ))}
-      </div>
-    );
+  return (
+    <div className="character-list">
+      {props.myCharacters.map((item, index) => (
+        <div id="charbox" className="list-group-item" key={index}>
+          <h3>{item.name}</h3>
+          {/* <p>{item.race}</p> */}
+          <p>
+            {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
+            {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
+          </p>
+          <p id="level">{item.level}</p>
+          <hr className="my-4" />
+          <br />
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default CharacterListItem;
