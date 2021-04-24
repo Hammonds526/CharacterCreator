@@ -11,55 +11,10 @@ import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 // import AvatarContainer from "../AvatarContainer";
 
-// Icons
-import NoIcon from "../../images/icons/empty_frame.png"
-import FighterIcon from "../../images/icons/fighter.png"
-import RangerIcon from "../../images/icons/ranger.png"
-import RogueIcon from "../../images/icons/rogue.png"
-import WizardIcon from "../../images/icons/wizard.png"
-
 
 // Main function. 
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
 function CharacterSheet({ newCharacter }) {
-
-
-    const [ClassIcon, setClassIcon] = useState(NoIcon);
-
-    useEffect(() => {
-
-        switch (newCharacter.class) {
-
-            // Fighter
-            case "Fighter":
-            case "fighter":
-                setClassIcon(FighterIcon)
-                break;
-
-            // Ranger
-            case "Ranger":
-            case "ranger":
-                setClassIcon(RangerIcon)
-                break;
-
-            // Rogue
-            case "Rogue":
-            case "rogue":
-                setClassIcon(RogueIcon)
-                break;
-
-            // Wizard
-            case "Wizard":
-            case "wizard":
-                setClassIcon(WizardIcon)
-                break;
-
-            default:
-                setClassIcon(NoIcon);
-                break;
-        }
-    });
-
 
     // console.log("newCharacter from Sheet ", newCharacter, ClassIcon);
 
@@ -94,14 +49,6 @@ function CharacterSheet({ newCharacter }) {
                 <br />
                 <h1>Character Sheet</h1>
                 <br />
-
-                <img
-                    className="avatar"
-                    src={ClassIcon}
-                    alt="Character Avatar"
-                >
-                </img>
-
                 <h2 id="character-name">{newCharacter.name}</h2>
                 <br />
                 <div id="card" className="col-6">

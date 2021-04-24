@@ -4,19 +4,52 @@ import React from "react";
 import "./style.css";
 
 // Icons
-import Ranger from "../../images/icons/ranger.png"
-import Rogue from "../../images/icons/rogue.png"
-import Fighter from "../../images/icons/fighter.png"
-import Wizard from "../../images/icons/wizard.png"
-import EmptyFrame from "../../images/icons/empty_frame.png"
+import NoIcon from "../../images/icons/empty_frame.png"
+import FighterIcon from "../../images/icons/fighter.png"
+import RangerIcon from "../../images/icons/ranger.png"
+import RogueIcon from "../../images/icons/rogue.png"
+import WizardIcon from "../../images/icons/wizard.png"
 
 // The main function
 function CharacterListItem(props) {
   console.log("props saved charcters ", props);
 
-  // let CharFrame = null;
+  // const [ClassIcon, setClassIcon] = useState(NoIcon);
 
-  // if (item.class)
+  // useEffect(() => {
+
+  //     switch (newCharacter.class) {
+
+  //         // Fighter
+  //         case "Fighter":
+  //         case "fighter":
+  //             setClassIcon(FighterIcon)
+  //             break;
+
+  //         // Ranger
+  //         case "Ranger":
+  //         case "ranger":
+  //             setClassIcon(RangerIcon)
+  //             break;
+
+  //         // Rogue
+  //         case "Rogue":
+  //         case "rogue":
+  //             setClassIcon(RogueIcon)
+  //             break;
+
+  //         // Wizard
+  //         case "Wizard":
+  //         case "wizard":
+  //             setClassIcon(WizardIcon)
+  //             break;
+
+  //         default:
+  //             setClassIcon(NoIcon);
+  //             break;
+  //     }
+  // });
+
 
     return (
       <div className="character-list">
@@ -28,6 +61,8 @@ function CharacterListItem(props) {
               {item.race}
             </p>
            <p id="class">{item.class}</p>
+           
+           {/* <img className="Class Icon" src={ClassIcon} alt="Character Icon"></img> */}
            <p id="level">{item.level}</p>
             <hr className="my-4" />
             <br />
