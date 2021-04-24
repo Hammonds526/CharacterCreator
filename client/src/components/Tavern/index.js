@@ -150,7 +150,6 @@ const CharacterData = [
 function Tavern(props) {
   return (
     <div className="tavern-background">
-      <Logout></Logout>
       <WoodBeamX beamStyle={{ top: "0px" }} />
 
       <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
