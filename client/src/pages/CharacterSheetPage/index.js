@@ -1,11 +1,14 @@
 // CSS
 import "./style.css";
 
-
 // Pixel border stuff
+
+// Wood border
 import Corner from "../../components/Corner";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
+
+// Stone Border
 
 // Main function. 
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
@@ -47,6 +50,7 @@ function CharacterSheetPage({ newCharacter }) {
                         <div id="divbox">
                             <br />
                             <h1>My Character</h1>
+                            <br />
                             <div className="col-12">
                                 <div className="col-7">
                                 <h2 id="character-name">{newCharacter.name}</h2>

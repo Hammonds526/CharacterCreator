@@ -1,0 +1,7 @@
+.stone-beam__horizontal {
+    background-image: url("../../images/metstone_beam.png");
+    /* background-size: "64px"; */
+    height: 19px;
+    width: 100%;
+  }
+  
