@@ -12,6 +12,9 @@ import WizardIcon from "../../images/icons/wizard.png"
 
 // The main function
 function CharacterListItem(props) {
+
+
+  
   return (
     <div className="character-list">
       {props.myCharacters.map((item, index) => (
