@@ -4,8 +4,9 @@
   margin-right: 15px;
   margin-top: auto;
   margin-bottom: 5px;
-  height: 100%;
-  overflow-y: scroll;
+
+  min-height: 420px;
+  overflow-y: auto;
 }
 
 .list-group-item {
@@ -23,13 +24,17 @@
 
 #level {
   text-align: center;
-
+  display: inline-block;
+  width: 46px;
+  padding-left: 2px;
+  padding-bottom: 1px;
+  padding-top: 0;
+  line-height: 39px;
   justify-self: center;
   background-color: wheat;
   border: burlywood 2px solid;
-  width: auto;
-  height: auto;
-  border-radius: 24px;
+
+  border-radius: 4px;
   font-family: Romulus;
   color: brown;
   font-size: 32px;
@@ -38,7 +43,8 @@
 
 .character-list {
   /* height: 350px; */
-  overflow-y: scroll;
+  overflow-y: auto;
+  min-height: 420px;
 }
 
 #class {

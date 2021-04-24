@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 import "./style.css";
-import CharacterProgressBar from "../CharacterProgressBar";
-import CharInfoBox from "../CharInfoBox";
-import AvatarContainer from "../AvatarContainer";
+import CharacterProgressBar from "../../components/CharacterProgressBar";
+import CharInfoBox from "../../components/CharInfoBox";
+import AvatarContainer from "../../components/AvatarContainer";
 // import AbilityFeatSpell from "../AbilityFeatSpell";
 
 function CharacterMakerScreen(props) {
