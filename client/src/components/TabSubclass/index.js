@@ -49,7 +49,7 @@ function TabSubclass({
         {activeSubclass.name}
       </h3>
 
-      <p className="tab_descriptions text-bisque mb-2 desc">{activeSubclass.desc}</p>
+      <p className="tab_descriptions text-bisque mb-2">{activeSubclass.desc}</p>
       <div className="d-flex justify-content-end">
         <Link to={"/character-creator/spells"}>
           <SelectButton text={"Continue"} />

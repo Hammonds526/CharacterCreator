@@ -19,15 +19,11 @@ html {
 
 .text-bisque {
   color: bisque;
+  text-shadow: 3px 2px 3px #0a0808;
 }
 
 h4 {
   margin-bottom: 25px;
-}
-
-.desc {
-  font-size: 20px;
-  font-family: ui-serif;
 }
 
 .main-title__text {
