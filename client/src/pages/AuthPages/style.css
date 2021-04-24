@@ -1,0 +1,6 @@
+.auth-page__active {
+  color: burlywood;
+}
+.auth-page__inactive {
+  cursor: pointer;
+}

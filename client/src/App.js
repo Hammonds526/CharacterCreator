@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import API from "./utils/API";
 import character from "./data/character";
 require("dotenv").config();
-import SignUp from "./components/SignUp";
-import Login from "./components/Login";
+
 
 // CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,7 +12,11 @@ import "./App.css";
 // Components
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
-import CharacterMakerScreen from "./components/CharacterMakerScreen";
+import CharacterMakerScreen from "./pages/CharacterMakerScreen";
+import AuthPages from "./pages/AuthPages"
+
+
+
 
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
@@ -73,8 +76,11 @@ function App() {
               </Route>
             </Switch>
           </div>
+     
+          <h1 className="main-title__text color-burlywood">Character Tavern</h1>
+         
 
-          <div className="row mt-4">
+          <div className="row">
             <div className="col-12 col-lg-9 ">
               <div className="row"></div>
               <Tavern
@@ -88,25 +94,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <>
-          <div className="custom-control custom-switch">
-            <input
-              type="checkbox"
-              value={signIn}
-              className="custom-control-input"
-              id="signIn"
-              onChange={() => setSignIn(!signIn)}
-            />
-            <label className="custom-control-label" htmlFor="signIn">
-              {signIn ? "Login" : "Sign Up"}
-            </label>
-          </div>
-          {signIn ? (
-            <Login setUser={setUser} />
-          ) : (
-            <SignUp setSignIn={setSignIn} />
-          )}
-        </>
+       <AuthPages signIn={signIn} setSignIn={setSignIn} setUser={setUser} />
       )}
     </Router>
   );

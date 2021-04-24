@@ -16,10 +16,11 @@ function CharacterListItem(props) {
     <div className="character-list">
       {props.myCharacters.map((item, index) => (
         <div id="charbox" className="list-group-item" key={index}>
-          <p>{item.name}</p>
+          <h3>{item.name}</h3>
           {/* <p>{item.race}</p> */}
           <p>
-            {item.race} {item.class}
+            {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
+            {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
           </p>
           <p id="level">{item.level}</p>
           <hr className="my-4" />

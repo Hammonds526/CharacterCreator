@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import API from "../../utils/API";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import Button from "../../components/Button";
 
 function signUp(props) {
   const [username, setUsername] = useState("");
@@ -19,7 +19,7 @@ function signUp(props) {
         password: password.trim(),
       })
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           // Redirect to login
           props.setSignIn(true);
         })
@@ -30,14 +30,15 @@ function signUp(props) {
   //need event handler
   //need to create routes for login and signup
 
-  //going to created basic bootstrap
+  // Page
 
   return (
-    <div>
-      <Form>
+    <div className="signup-page__background">
+      <Form className="px-4">
         <Form.Group controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
           <Form.Control
+            className="form"
             type="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -49,6 +50,7 @@ function signUp(props) {
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
+            className="form"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -60,6 +62,7 @@ function signUp(props) {
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
+            className="form"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -70,16 +73,18 @@ function signUp(props) {
         <Form.Group controlId="formBasicConfirmPassword">
           <Form.Label>Confirm Password</Form.Label>
           <Form.Control
+            className="form"
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             placeholder="Confirm Password"
           />
         </Form.Group>
-
-        <Button variant="primary" type="submit" onClick={handleSubmit}>
-          Submit
-        </Button>
+        <div className="d-flex justify-content-center">
+          <div onClick={handleSubmit}>
+            <Button text={"Submit"} />
+          </div>
+        </div>
       </Form>
     </div>
   );
