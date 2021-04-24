@@ -1,6 +1,7 @@
 #divbox {
     background-image: url("../../images/stone_tile2.png");
     background-size: "64px";
+    color: burlywood;
 }
 #subclass {
     color: #8d1e1e;
@@ -8,9 +9,17 @@
 }
 
 #character-name {
-    font-size: 34px;
+    font-size: 32px;
     color: #d3c120;
 }
+
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 12px;
+}
+
 
 #card {
     background-color: rgba(244, 165, 96, 0.596);

@@ -12,7 +12,7 @@ import SubclassPage from "../TabSubclass";
 import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
 import NameLevelPage from "../TabNameLevel";
-import CharacterSheetPage from "../../pages/CharacterSheet";
+import CharacterSheetPage from "../../pages/CharacterSheetPage";
 
 // Close btn
 import ButtonClose from "../ButtonClose";
