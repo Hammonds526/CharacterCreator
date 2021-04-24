@@ -4,7 +4,6 @@ import API from "./utils/API";
 import character from "./data/character";
 require("dotenv").config();
 
-
 // CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -13,10 +12,8 @@ import "./App.css";
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./pages/CharacterMakerScreen";
-import AuthPages from "./pages/AuthPages"
-
-
-
+import AuthPages from "./pages/AuthPages";
+import Logout from "./components/Logout";
 
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
@@ -36,7 +33,7 @@ function App() {
   console.log("newCharacter ", newCharacter);
 
   const [signIn, setSignIn] = useState(false);
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState({});
 
   // const getMyCharacters = (res) => {
   //   API.getUser(
@@ -51,10 +48,20 @@ function App() {
   useEffect(() => {
     // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
     // getMyCharacters();
+    // sessionStorage.setItem("currentUser", user);
+    // console.log("this is it!!!", sessionStorage.getItem("currentUser"));
+
     if (user) {
-      API.getUser(user).then((res) => {
-        setmyCharacters(res.data !== null ? res.data.characters : []);
-      });
+      API.getUser(user)
+        .then((res) => {
+          console.log(res.data);
+          // setUser(res.data);
+          setmyCharacters(res.data !== null ? res.data.characters : []);
+        })
+        .catch(() => {
+          // sessionStorage.setItem("currentUser", "");
+          // window.location.reload();
+        });
     }
   }, [user]);
 
@@ -76,9 +83,13 @@ function App() {
               </Route>
             </Switch>
           </div>
-     
-          <h1 className="main-title__text color-burlywood">Character Tavern</h1>
-         
+
+          <h1 className="main-title__text color-burlywood">
+            Character Tavern{" "}
+            <span>
+              <Logout setUser={setUser} />
+            </span>
+          </h1>
 
           <div className="row">
             <div className="col-12 col-lg-9 ">
@@ -94,7 +105,7 @@ function App() {
           </div>
         </div>
       ) : (
-       <AuthPages signIn={signIn} setSignIn={setSignIn} setUser={setUser} />
+        <AuthPages signIn={signIn} setSignIn={setSignIn} setUser={setUser} />
       )}
     </Router>
   );

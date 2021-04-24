@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import TavernImage from "../../images/tavern/tavernx2.png";
-import CloseButton from "../CloseButton";
+// import Logout from "../../components/Logout";
 
 // Pixel border stuff
 import Corner from "../Corner";
@@ -195,7 +195,6 @@ function Tavern(props) {
           transform: "rotate(180deg)",
         }}
       />
-      <CloseButton />
       <Corner
         cornerStyle={{
           width: "40px",
