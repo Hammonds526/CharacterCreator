@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import TavernImage from "../../images/tavern/tavernx2.png";
+import Logout from "../../components/Logout";
 
 // Pixel border stuff
 import Corner from "../Corner";
@@ -57,6 +58,7 @@ const CharacterData = [
 function Tavern(props) {
   return (
     <div className="tavern-background">
+      <Logout></Logout>
       <WoodBeamX beamStyle={{ top: "0px" }} />
 
       <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />

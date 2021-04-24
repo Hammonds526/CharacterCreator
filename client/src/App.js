@@ -33,7 +33,7 @@ function App() {
   console.log("newCharacter ", newCharacter);
 
   const [signIn, setSignIn] = useState(false);
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(sessionStorage.getItem("currentUser"));
 
   // const getMyCharacters = (res) => {
   //   API.getUser(
@@ -48,6 +48,9 @@ function App() {
   useEffect(() => {
     // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
     // getMyCharacters();
+    sessionStorage.setItem("currentUser", user);
+    // console.log("this is it!!!", sessionStorage.getItem("currentUser"));
+
     if (user) {
       API.getUser(user).then((res) => {
         setmyCharacters(res.data !== null ? res.data.characters : []);
