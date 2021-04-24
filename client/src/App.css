@@ -5,8 +5,12 @@ html {
   font-size: 16px;
   text-align: center;
   background-color: #2a2c30;
-  color: blanchedalmond;
-  height: auto;
+  color: burlywood;
+
+  height: 100vh;
+  margin: 0;
+  background-image: url("./images/stone_tile2.png");
+  background-size: "64px";
 }
 .title {
   font-weight: normal;
@@ -24,4 +28,12 @@ h4 {
 .desc {
   font-size: 20px;
   font-family: ui-serif;
+}
+
+.main-title__text {
+  font-size: 35px;
+  font-size: 3.4vw;
+  padding-top: 7px;
+
+  text-shadow: 4px 4px 2px #000;
 }

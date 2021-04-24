@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import API from "../../utils/API";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import "./style.css";
 
 function signUp(props) {
   const [username, setUsername] = useState("");
@@ -30,10 +31,10 @@ function signUp(props) {
   //need event handler
   //need to create routes for login and signup
 
-  //going to created basic bootstrap
+  //Sign-up Page
 
   return (
-    <div>
+    <div className="container">
       <Form>
         <Form.Group controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>

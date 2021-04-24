@@ -13,7 +13,7 @@ import "./App.css";
 // Components
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
-import CharacterMakerScreen from "./components/CharacterMakerScreen";
+import CharacterMakerScreen from "./pages/CharacterMakerScreen";
 
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
@@ -73,8 +73,11 @@ function App() {
               </Route>
             </Switch>
           </div>
+     
+          <h1 className="main-title__text color-burlywood">Character Tavern</h1>
+         
 
-          <div className="row mt-4">
+          <div className="row">
             <div className="col-12 col-lg-9 ">
               <div className="row"></div>
               <Tavern

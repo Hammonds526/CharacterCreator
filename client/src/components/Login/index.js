@@ -34,6 +34,7 @@ function Login(props) {
             type="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            placeholder="Username"
           />
         </Form.Group>
         <Form.Group size="lg" controlId="password">
@@ -42,6 +43,7 @@ function Login(props) {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
           />
         </Form.Group>
         <Button block size="lg" type="submit" disabled={!validateForm()}>

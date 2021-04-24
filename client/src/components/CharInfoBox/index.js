@@ -9,7 +9,7 @@ import SubclassPage from "../TabSubclass";
 import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
 import NameLevelPage from "../TabNameLevel";
-import CharacterSheetPage from "../CharacterSheet";
+import CharacterSheetPage from "../../pages/CharacterSheet";
 
 // CSS
 import "./style.css";
@@ -47,15 +47,14 @@ function CharInfoBox(props) {
           transform: "rotate(90deg)",
         }}
       />
-{/* This this button below is supposed to close the creator */}
+      {/* This this button below is supposed to close the creator */}
 
-            {/* <Link to={"/"}>
+      {/* <Link to={"/"}>
           <ButtonClose
             text={"Finish"}
             selectButtonOnClick={selectButtonOnClick}
           />
         </Link> */}
-
 
       <Switch>
         <Route exact path={"/character-creator/name"}>
