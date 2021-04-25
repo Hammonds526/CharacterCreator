@@ -34,7 +34,7 @@ function App() {
   console.log("newCharacter ", newCharacter);
 
   const [signIn, setSignIn] = useState(true);
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState({});
 
   // const getMyCharacters = (res) => {
   //   API.getUser(
