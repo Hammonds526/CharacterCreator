@@ -1,3 +1,4 @@
+import AvatarContainer from "../../components/AvatarContainer"
 // CSS
 import "./style.css";
 
@@ -66,6 +67,7 @@ function CharacterSheetPage({ newCharacter }) {
                                         <h2>Level :</h2>
                                         <h2 id="lvlbox">{newCharacter.level}</h2>
                                     </div>
+                                    < AvatarContainer />
                                     <br />
                                 </div>
                                 <div className="col-5">
