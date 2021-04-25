@@ -95,7 +95,7 @@ function TabFeats({
       </div>
 
       <div className="d-flex justify-content-end">
-        <Link to={"/character-creator/character-sheet"}>
+        <Link to={"../character-sheet/" + (myCharacters.length + 1) }>
           <SelectButton
             text={"Finish"}
             selectButtonOnClick={selectButtonOnClick}

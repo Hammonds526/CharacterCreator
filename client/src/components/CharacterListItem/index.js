@@ -1,4 +1,5 @@
 import React from "react";
+import { link } from "react-router-dom";
 
 // CSS
 import "./style.css";
@@ -15,7 +16,7 @@ function CharacterListItem(props) {
   return (
     <div className="character-list">
       {props.myCharacters.map((item, index) => (
-        <div id="charbox" className="list-group-item" key={index}>
+        <div id="charbox" className="list-group-item mb-1" key={index}>
           <h3>{item.name}</h3>
           {/* <p>{item.race}</p> */}
           <p>

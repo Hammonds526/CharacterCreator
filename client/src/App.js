@@ -14,6 +14,8 @@ import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./pages/CharacterMakerScreen";
 import AuthPages from "./pages/AuthPages";
 import Logout from "./components/Logout";
+import CharacterSheetPage from "./pages/CharacterSheet";
+
 
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
@@ -78,6 +80,9 @@ function App() {
                   setmyCharacters={setmyCharacters}
                 />
               </Route>
+              <Route path={"/character-sheet/:id"}>
+          <CharacterSheetPage newCharacter={newCharacter} />
+        </Route>
             </Switch>
           </div>
 <div className="d-flex justify-content-center">
