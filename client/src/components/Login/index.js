@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import API from "../../utils/API";
 import Button from "../../components/Button";
 import Form from "react-bootstrap/Form";
+// import { redirect } from "react-router-dom";
 
 function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [incorrect, setIncorrect] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,7 +18,7 @@ function Login(props) {
         props.setUser(res.data._id);
       })
       .catch((err) => {
-        console.log(err.message);
+        setIncorrect(err.response.data.message);
       });
   }
 
@@ -50,6 +52,7 @@ function Login(props) {
             placeholder="Password"
           />
         </Form.Group>
+        <p>{incorrect}</p>
         <div className="d-flex justify-content-center">
           <div type="submit" disabled={!validateForm()} onClick={handleSubmit}>
             <Button text={"Login"} />
