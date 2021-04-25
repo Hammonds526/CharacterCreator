@@ -1,5 +1,5 @@
 import React from "react";
-import { link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // CSS
 import "./style.css";
@@ -16,17 +16,19 @@ function CharacterListItem(props) {
   return (
     <div className="character-list">
       {props.myCharacters.map((item, index) => (
-        <div id="charbox" className="list-group-item mb-1" key={index}>
-          <h3>{item.name}</h3>
-          {/* <p>{item.race}</p> */}
-          <p>
-            {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
-            {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
-          </p>
-          <p id="level">{item.level}</p>
-          <hr className="my-4" />
-          <br />
-        </div>
+        <Link to={`/character-sheet/${index}`}>
+          <div id="charbox" className="list-group-item mb-1" key={index}>
+            <h4 className="text-truncate mt-2">{item.name}</h4>
+            {/* <p>{item.race}</p> */}
+            <p>
+              {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
+              {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
+            </p>
+            <p id="level">{item.level}</p>
+            <hr className="my-4" />
+            <br />
+          </div>
+        </Link>
       ))}
     </div>
   );

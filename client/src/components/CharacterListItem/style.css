@@ -5,7 +5,6 @@
   margin-top: auto;
   margin-bottom: 5px;
 
-  min-height: 420px;
   overflow-y: auto;
 }
 
@@ -44,7 +43,8 @@
 .character-list {
   /* height: 350px; */
   overflow-y: auto;
-  min-height: 420px;
+  min-height: 400px;
+  max-height: 500px;
 }
 
 #class {
