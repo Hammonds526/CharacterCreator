@@ -1,16 +1,19 @@
-#list{
-padding-left: 5px;
-border-top-left-radius: 2%;
-border-bottom-left-radius: 2%;
+#list {
+  padding-left: 5px;
+  border-top-left-radius: 2%;
+  border-bottom-left-radius: 2%;
 }
 
 #list:hover {
-background-image: linear-gradient(to right, #832424b9 , transparent);
-transition: ease-in-out 0.45s;
-font-size: 18px;
+  background-image: linear-gradient(to right, #832424b9, transparent);
+  transition: ease-in-out 0.45s;
+  font-size: 18px;
 }
 
-/* #list:active {
-    background-image: linear-gradient(to right, #bb1c1cb9 , transparent);
-    transition: ease-in-out 0.45s;
-} */
+.scroll-list-item__text {
+  text-align: left;
+}
+
+.scroll-list-item__spell-level {
+  color: brown;
+}
