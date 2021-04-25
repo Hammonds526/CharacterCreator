@@ -33,36 +33,32 @@ function App() {
   console.log("newCharacter ", newCharacter);
 
   const [signIn, setSignIn] = useState(false);
-  const [user, setUser] = useState({});
-
-  // const getMyCharacters = (res) => {
-  //   API.getUser(
-  //     process.env.REACT_APP_USER_ID || "085189151981561189651985"
-  //   ).then((res) => {
-  //     if (!res.data === null) {
-  //       setmyCharacters(res.data.user.characters);
-  //     }
-  //   });
-  // };
+  //Check if user is already logged in
+  //Look for cookie/session information and data of user if exists
+  //Otherwise return empty user
+  const [user, setUser] = useState(
+    API.check()
+      .then((res) => res.data)
+      .catch(() => null)
+  );
 
   useEffect(() => {
-    // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-    // getMyCharacters();
-    // sessionStorage.setItem("currentUser", user);
-    // console.log("this is it!!!", sessionStorage.getItem("currentUser"));
-
-    if (user) {
-      API.getUser(user)
-        .then((res) => {
-          console.log(res.data);
-          // setUser(res.data);
-          setmyCharacters(res.data !== null ? res.data.characters : []);
-        })
-        .catch(() => {
-          // sessionStorage.setItem("currentUser", "");
-          // window.location.reload();
-        });
-    }
+    //Double check if user is already logged in
+    //If no session found no user
+    API.check()
+      .then((res) => {
+        setUser(res.data);
+        if (user) {
+          API.getUser(user)
+            .then((res) => {
+              console.log(res.data);
+              // setUser(res.data);
+              setmyCharacters(res.data !== null ? res.data.characters : []);
+            })
+            .catch(() => {});
+        }
+      })
+      .catch(() => console.log("no session found"));
   }, [user]);
 
   return (

@@ -16,7 +16,7 @@ function Login(props) {
         props.setUser(res.data._id);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.message);
       });
   }
 

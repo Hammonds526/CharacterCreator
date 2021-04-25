@@ -11,7 +11,7 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    console.log(req.user);
+    // console.log(req.user);
     if(req.user) 
     {
       return res.json({characters: req.user.characters});
@@ -26,6 +26,8 @@ module.exports = {
   },
   logout: function(req, res){
     req.session.destroy(function (err) {
+      // console.log("is it working?")
+      res.clearCookie('connect.sid');
       res.redirect('/'); //Inside a callback… bulletproof!
     });
   },
@@ -98,4 +100,7 @@ module.exports = {
       }
     }
   },
+  checkSession: (req, res) => {
+    (req.session && req.user) ? res.json(req.user._id) : res.json();
+  }
 };
