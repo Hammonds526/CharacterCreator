@@ -28,9 +28,7 @@ h4 {
 
 .main-title__text {
   font-size: 35px;
-  font-size: 3.4vw;
   padding-top: 7px;
-
   text-shadow: 4px 4px 2px #000;
 }
 
@@ -50,3 +48,15 @@ h4 {
 .form::placeholder {
   color: goldenrod;
 }
+
+@media (max-width: 576px) {
+  .main-title__text {
+    font-size: 26px;
+  }
+}
+@media (max-width: 400px) {
+  .main-title__text {
+    margin-top: 6px;
+    font-size: 18px;
+  }
+} ;
