@@ -5,18 +5,19 @@ import "./style.css";
 
 function Logout(props) {
   return (
-    <Button
+    <p
+      className=""
       id="logout"
-      type="button"
-      className="btn btn-danger"
       onClick={() => {
         // sessionStorage.removeItem("currentUser");
+        props.setSignIn(true);
         props.setUser();
+
         API.logout();
       }}
     >
-      Hero Wanted
-    </Button>
+      Log Out
+    </p>
   );
 }
 
