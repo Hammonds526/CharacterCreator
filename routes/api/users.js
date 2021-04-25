@@ -8,6 +8,7 @@ router.route("/")
 
 router.route("/login").post(usersController.login);
 router.route("/logout").get(usersController.logout);
+router.route("/check").get(usersController.checkSession);
 
 // Matches with "/api/user/:id"
 router
