@@ -21,8 +21,6 @@ import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
-const selectButtonOnClick = () => {};
-
 function CharInfoBox(props) {
   return (
     <div className="char-info-box__container p-5 mt-2 text-white">
@@ -50,7 +48,6 @@ function CharInfoBox(props) {
       />
       {/* This this button below is supposed to close the creator */}
       <Xbtn
-        selectButtonOnClick={selectButtonOnClick}
         xBtnStyle={{
           width: "30px",
           height: "auto",
