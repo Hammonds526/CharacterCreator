@@ -35,7 +35,7 @@ function App() {
 
   console.log("newCharacter ", newCharacter);
 
-  const [signIn, setSignIn] = useState(false);
+  const [signIn, setSignIn] = useState(true);
   //Check if user is already logged in
   //Look for cookie/session information and data of user if exists
   //Otherwise return empty user
@@ -64,6 +64,8 @@ function App() {
       .catch(() => console.log("no session found"));
   }, [user]);
 
+// console.log("myCharacters", myCharacters)
+
   return (
     <Router>
       {user ? (
@@ -81,7 +83,7 @@ function App() {
                 />
               </Route>
               <Route path={"/character-sheet/:id"}>
-          <CharacterSheetPage newCharacter={newCharacter} />
+          <CharacterSheetPage myCharacters={myCharacters} />
         </Route>
             </Switch>
           </div>
