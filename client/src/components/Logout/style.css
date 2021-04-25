@@ -1,10 +1,3 @@
-.btn-danger {
-    color: #fff;
-    background-color: #dc3546;
-    border-color: #dc3546;
-    position: absolute;
-    /* height: 17%;
-    width: 6%;
-    bottom: 50%;
-    left: 59.5%; */
+#logout {
+  cursor: pointer;
 }

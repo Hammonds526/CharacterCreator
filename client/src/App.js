@@ -80,13 +80,18 @@ function App() {
               </Route>
             </Switch>
           </div>
-
-          <h1 className="main-title__text color-burlywood">
+<div className="d-flex justify-content-center">
+  <div className="ml-auto">
+  <h1 className="main-title__text color-burlywood">
             Character Tavern{" "}
-            <span>
-              <Logout setUser={setUser} />
-            </span>
           </h1>
+  </div>
+  <div className="ml-auto mt-1">
+  <Logout setSignIn={setSignIn} setUser={setUser} />
+  </div>
+</div>
+          
+         
 
           <div className="row">
             <div className="col-12 col-lg-9 ">
