@@ -9,7 +9,6 @@ import SubclassPage from "../TabSubclass";
 import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
 import NameLevelPage from "../TabNameLevel";
-import CharacterSheetPage from "../../pages/CharacterSheet";
 
 // CSS
 import "./style.css";
@@ -74,9 +73,6 @@ function CharInfoBox(props) {
         </Route>
         <Route exact path={"/character-creator/feats"}>
           <FeatsPage {...props} />
-        </Route>
-        <Route exact path={"/character-creator/character-sheet"}>
-          <CharacterSheetPage {...props} />
         </Route>
       </Switch>
 

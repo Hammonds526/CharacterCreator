@@ -14,6 +14,8 @@ import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./pages/CharacterMakerScreen";
 import AuthPages from "./pages/AuthPages";
 import Logout from "./components/Logout";
+import CharacterSheetPage from "./pages/CharacterSheet";
+
 
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
@@ -33,7 +35,7 @@ function App() {
 
   console.log("newCharacter ", newCharacter);
 
-  const [signIn, setSignIn] = useState(false);
+  const [signIn, setSignIn] = useState(true);
   //Check if user is already logged in
   //Look for cookie/session information and data of user if exists
   //Otherwise return empty user
@@ -62,6 +64,8 @@ function App() {
       .catch(() => console.log("no session found"));
   }, [user]);
 
+// console.log("myCharacters", myCharacters)
+
   return (
     <Router>
       {user ? (
@@ -78,6 +82,9 @@ function App() {
                   setmyCharacters={setmyCharacters}
                 />
               </Route>
+              <Route path={"/character-sheet/:id"}>
+          <CharacterSheetPage myCharacters={myCharacters} />
+        </Route>
             </Switch>
           </div>
 <div className="d-flex justify-content-center">
