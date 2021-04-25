@@ -14,7 +14,7 @@ import NameLevelPage from "../TabNameLevel";
 import "./style.css";
 
 // Close btn
-import ButtonClose from "../ButtonClose";
+import Xbtn from "../ButtonClose";
 
 // Pixel border stuff
 import Corner from "../Corner";
@@ -47,13 +47,16 @@ function CharInfoBox(props) {
         }}
       />
       {/* This this button below is supposed to close the creator */}
-
-      {/* <Link to={"/"}>
-          <ButtonClose
-            text={"Finish"}
-            selectButtonOnClick={selectButtonOnClick}
-          />
-        </Link> */}
+      <Xbtn
+        xBtnStyle={{
+          width: "30px",
+          height: "auto",
+          right: "-45px",
+          top: "-46px",
+          zIndex: "2",
+        }}
+        xBtnUrl="/"
+      />
 
       <Switch>
         <Route exact path={"/character-creator/name"}>

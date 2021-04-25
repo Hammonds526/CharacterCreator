@@ -16,8 +16,8 @@ function CharacterListItem(props) {
   return (
     <div className="character-list">
       {props.myCharacters.map((item, index) => (
-        <Link to={`/character-sheet/${index}`}>
-          <div id="charbox" className="list-group-item mb-1" key={index}>
+        <Link to={`/character-sheet/${index}`} key={index}>
+          <div id="charbox" className="list-group-item mb-1">
             <h4 className="text-truncate mt-2">{item.name}</h4>
             {/* <p>{item.race}</p> */}
             <p>

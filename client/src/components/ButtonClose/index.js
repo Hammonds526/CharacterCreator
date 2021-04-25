@@ -1,27 +1,18 @@
-// import React from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-// // Btn image
-// import Xbtn from "../../images/xbtn.png";
+// Btn image
+import xBtn from "../../images/xbtn.png";
 
 // Our X-btn function, should close the main page when clicked.
-// function ButtonClose(props) {
+function Xbtn(props) {
+  return (
+    <div className="position-relative">
+      <Link to={props.xBtnUrl}>
+        <img src={xBtn} style={props.xBtnStyle} className="position-absolute" />
+      </Link>
+    </div>
+  );
+}
 
-//     return (
-//         <div className="position-relative" onClick={props.selectButtonOnClick}>
-//             <Xbtn
-//                 arrowStyle={{
-//                     width: "18px",
-//                     height: "auto",
-//                     left: "68px",
-//                     top: "6px",
-//                     zIndex: "1",
-//                 }}
-//             />
-//             <div className="position-relative button-image-background">
-//                 <p className="font-weight-bold select-button__text">{props.text}</p>
-//             </div>
-//         </div>
-//     )
-// };
-
-// export default ButtonClose;
+export default Xbtn;
