@@ -42,17 +42,17 @@ function AuthPages({ setUser, signIn, setSignIn, ...props }) {
 
         <h3>
           <span
-            onClick={() => setSignIn(false)}
-            className={!signIn ? " auth-page__active" : "auth-page__inactive"}
-          >
-            Sign Up
-          </span>{" "}
-          <span className="text-g">&nbsp;</span>
-          <span
             onClick={() => setSignIn(true)}
             className={signIn ? " auth-page__active" : "auth-page__inactive"}
           >
             Login
+          </span>
+          <span className="text-g">&nbsp;</span>
+          <span
+            onClick={() => setSignIn(false)}
+            className={!signIn ? " auth-page__active" : "auth-page__inactive"}
+          >
+            Sign Up
           </span>
         </h3>
 

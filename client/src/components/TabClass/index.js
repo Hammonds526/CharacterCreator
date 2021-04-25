@@ -29,10 +29,11 @@ function TabClass(props) {
             <div
               onClick={() => {
                 setActiveClass(item);
-                props.setNewCharacter({
-                  ...props.newCharacter,
-                  class: item.name.toLowerCase(),
-                });
+                const localNewCharacter = { ...props.newCharacter };
+                localNewCharacter.class = item.name.toLowerCase();
+                localNewCharacter.cantrips = [];
+                localNewCharacter.spells = [];
+                props.setNewCharacter(localNewCharacter);
               }}
             >
               <Button text={item.name} />

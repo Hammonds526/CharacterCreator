@@ -26,6 +26,7 @@ function App() {
     subclass: "",
     abilities: [],
     spells: [],
+    cantrips: [],
     feats: [],
     userId: null,
   });
