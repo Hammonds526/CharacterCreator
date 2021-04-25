@@ -13,7 +13,7 @@ require("dotenv").config();
 function TabFeats({
   newCharacter,
   setNewCharacter,
-  getFilteredFeats,
+  getFeats,
   // getMyCharacters,
   user,
   myCharacters,
@@ -32,7 +32,7 @@ function TabFeats({
     setActiveFeat(props.character.feats[0]);
   }, []);
 
-  const selectButtonOnClick = () => {
+  const finishButtonOnClick = () => {
     // Update characters list
     const charList = [...myCharacters, newCharacter];
     // Send updated list to server
@@ -40,14 +40,15 @@ function TabFeats({
       characters: charList,
     })
       .then((res) => {
+     
         setmyCharacters(charList);
+        window.location.href = (`/character-sheet/${myCharacters.length}`)
       })
       .catch((err) => console.log(err));
   };
 
   // When a checkbox is clicked, if the corresponing feat is not in myCharacter, add it. If it is, remove it.
   const checkboxOnClick = (event) => {
-    console.log("event.target.name feat name ", event.target.name);
     // Make a new copy of newCharacter state
     const localNewCharacter = { ...newCharacter };
     //Check if feat is in newCharacter already
@@ -74,7 +75,7 @@ function TabFeats({
       <div className="row mb-2">
         <div className="col-4">
           <ScrollList
-            list={getFilteredFeats}
+            list={getFeats}
             setActive={setActiveFeat}
             checkboxOnClick={checkboxOnClick}
             newCharacter={newCharacter}
@@ -95,12 +96,10 @@ function TabFeats({
       </div>
 
       <div className="d-flex justify-content-end">
-        <Link to={"/character-creator/character-sheet"}>
           <SelectButton
             text={"Finish"}
-            selectButtonOnClick={selectButtonOnClick}
+            selectButtonOnClick={finishButtonOnClick}
           />
-        </Link>
       </div>
     </div>
   );

@@ -3,6 +3,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+require('dotenv').config();
+
+const session = require("express-session");
 
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
@@ -13,6 +16,14 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(session({
+  secret: process.env.SECRET_KEY,
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }
+}))
+
+
 
 // Passport configuration
 app.use(passport.initialize());

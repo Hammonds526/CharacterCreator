@@ -14,9 +14,13 @@ function ScrollListItem({
   const checkBoxName = item.name;
 
   useEffect(() => {
-    // Check if spell is in character state. If so, pass isChecked to the checkbox.
+    // Check if spell is in newCharacter state. If so, pass isChecked to the checkbox.
     if (itemType === "spell") {
-      setIsChecked(newCharacter.spells.includes(item.name));
+      if (item.level >= 1) {
+        setIsChecked(newCharacter.spells.includes(item.name));
+      } else {
+        setIsChecked(newCharacter.cantrips.includes(item.name));
+      }
     } else {
       setIsChecked(newCharacter.feats.includes(item.name));
     }
@@ -24,21 +28,27 @@ function ScrollListItem({
 
   return (
     <div key={i} id="list" className="d-flex justify-content-between">
-      <text
-        className="text-bisque"
-        onClick={() => {
-          setActive(item);
-        }}
-      >
-        {item.name}
-      </text>
-      <CheckBox
-        checkboxStyle={{ height: "30px", marginRight: "10px" }}
-        spellName={item.name}
-        checked={isChecked}
-        {...props}
-        checkBoxName={checkBoxName}
-      />
+      <div>
+        <p
+          className="text-bisque scroll-list-item__text"
+          onClick={() => {
+            setActive(item);
+          }}
+        >
+          {item.name}
+        </p>
+      </div>
+      <div className="d-flex">
+        <p className="mr-1 scroll-list-item__spell-level">{item.level}</p>
+        <CheckBox
+          checkboxStyle={{ height: "30px", marginRight: "10px" }}
+          spellName={item.name}
+          checked={isChecked}
+          {...props}
+          checkBoxName={checkBoxName}
+          item={item}
+        />
+      </div>
     </div>
   );
 }

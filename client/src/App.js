@@ -4,7 +4,6 @@ import API from "./utils/API";
 import character from "./data/character";
 require("dotenv").config();
 
-
 // CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -13,9 +12,9 @@ import "./App.css";
 import Tavern from "./components/Tavern";
 import MyCharacters from "./components/MyCharacters";
 import CharacterMakerScreen from "./pages/CharacterMakerScreen";
-import AuthPages from "./pages/AuthPages"
-
-
+import AuthPages from "./pages/AuthPages";
+import Logout from "./components/Logout";
+import CharacterSheetPage from "./pages/CharacterSheet";
 
 
 function App() {
@@ -29,34 +28,43 @@ function App() {
     subclass: "",
     abilities: [],
     spells: [],
+    cantrips: [],
     feats: [],
     userId: null,
   });
 
   console.log("newCharacter ", newCharacter);
 
-  const [signIn, setSignIn] = useState(false);
-  const [user, setUser] = useState(false);
-
-  // const getMyCharacters = (res) => {
-  //   API.getUser(
-  //     process.env.REACT_APP_USER_ID || "085189151981561189651985"
-  //   ).then((res) => {
-  //     if (!res.data === null) {
-  //       setmyCharacters(res.data.user.characters);
-  //     }
-  //   });
-  // };
+  const [signIn, setSignIn] = useState(true);
+  //Check if user is already logged in
+  //Look for cookie/session information and data of user if exists
+  //Otherwise return empty user
+  const [user, setUser] = useState(
+    API.check()
+      .then((res) => res.data)
+      .catch(() => null)
+  );
 
   useEffect(() => {
-    // TO DO: REPLACE THIS HASH WITH AUTHENTICATED USER
-    // getMyCharacters();
-    if (user) {
-      API.getUser(user).then((res) => {
-        setmyCharacters(res.data !== null ? res.data.characters : []);
-      });
-    }
+    //Double check if user is already logged in
+    //If no session found no user
+    API.check()
+      .then((res) => {
+        setUser(res.data);
+        if (user) {
+          API.getUser(user)
+            .then((res) => {
+              console.log(res.data);
+              // setUser(res.data);
+              setmyCharacters(res.data !== null ? res.data.characters : []);
+            })
+            .catch(() => {});
+        }
+      })
+      .catch(() => console.log("no session found"));
   }, [user]);
+
+// console.log("myCharacters", myCharacters)
 
   return (
     <Router>
@@ -74,10 +82,22 @@ function App() {
                   setmyCharacters={setmyCharacters}
                 />
               </Route>
+              <Route path={"/character-sheet/:id"}>
+          <CharacterSheetPage myCharacters={myCharacters} />
+        </Route>
             </Switch>
           </div>
-     
-          <h1 className="main-title__text color-burlywood">Character Tavern</h1>
+<div className="d-flex justify-content-center">
+  <div className="ml-auto">
+  <h1 className="main-title__text color-burlywood">
+            Character Tavern{" "}
+          </h1>
+  </div>
+  <div className="ml-auto mt-1">
+  <Logout setSignIn={setSignIn} setUser={setUser} />
+  </div>
+</div>
+          
          
 
           <div className="row">
@@ -94,7 +114,7 @@ function App() {
           </div>
         </div>
       ) : (
-       <AuthPages signIn={signIn} setSignIn={setSignIn} setUser={setUser} />
+        <AuthPages signIn={signIn} setSignIn={setSignIn} setUser={setUser} />
       )}
     </Router>
   );

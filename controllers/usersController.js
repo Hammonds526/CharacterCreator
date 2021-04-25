@@ -11,9 +11,25 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    User.findById(req.params.id)
-      .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
+    // console.log(req.user);
+    if(req.user) 
+    {
+      return res.json({characters: req.user.characters});
+    }
+    else{
+      return res.json(
+        {characters: []})
+    }
+    // User.findById(req.params.id)
+    //   .then((dbModel) => res.json(dbModel))
+    //   .catch((err) => res.status(422).json(err));
+  },
+  logout: function(req, res){
+    req.session.destroy(function (err) {
+      // console.log("is it working?")
+      res.clearCookie('connect.sid');
+      res.redirect('/'); //Inside a callback… bulletproof!
+    });
   },
   create: function (req, res) {
     const { email, username, password, characters } = req.body;
@@ -73,11 +89,18 @@ module.exports = {
               });
             } else {
               // Do session stuff here\
-              res.json(user);
+              req.login(user, function(err) {
+                if (err) { return next(err); }
+                // return res.redirect('/users/' + req.user.username);
+                res.json(user);
+              });
             }
           }
         })(req, res);
       }
     }
   },
+  checkSession: (req, res) => {
+    (req.session && req.user) ? res.json(req.user._id) : res.json();
+  }
 };

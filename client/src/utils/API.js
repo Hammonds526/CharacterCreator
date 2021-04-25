@@ -5,11 +5,14 @@ export default {
     return axios.post("/api/users/login", { username, password });
   },
 
-  // export default {
-  //     signUp: function (username, email, password, confirmPassword) {
-  //         return axios.post("api/users/signUp", { username,email,password,confirmPassword });
-  //     },
-  // }
+  logout: function () {
+    return axios.get("/api/users/logout");
+  },
+
+  check: function () {
+    return axios.get("/api/users/check");
+  },
+
   // Gets all users
   getUsers: function () {
     return axios.get("/api/users");

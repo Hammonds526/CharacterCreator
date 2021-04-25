@@ -31,18 +31,19 @@ function CharacterMakerScreen(props) {
     }
   };
 
-  //Returns a filtered list of spells based on class and level
+  //Returns a filtered list of spells based on class and level.
+  //If there are any spells in newCharacter that aren't in the filtered list, they are removde from newCharacter
   const getFilteredSpells = () => {
     let filteredSpells = props.character.spells.filter(
       (spell) =>
         spell.level <= props.newCharacter.level &&
         spell.tag === props.newCharacter.class
     );
+
     return filteredSpells;
   };
 
-  // TODO make this actually filter feats, isntead of just returning all. Need to check with Garth on this.
-  const getFilteredFeats = () => {
+  const getFeats = () => {
     return props.character.feats;
   };
 
@@ -69,7 +70,7 @@ function CharacterMakerScreen(props) {
                     classIndex={classIndex}
                     subClassIndex={getSubClassIndex}
                     getFilteredSpells={getFilteredSpells}
-                    getFilteredFeats={getFilteredFeats}
+                    getFeats={getFeats}
                   />
                 </div>
               </Route>

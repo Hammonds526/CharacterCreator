@@ -12,10 +12,10 @@ import SubclassPage from "../TabSubclass";
 import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
 import NameLevelPage from "../TabNameLevel";
-import CharacterSheetPage from "../../pages/CharacterSheetPage";
+// import CharacterSheetPage from "../../pages/CharacterSheetPage";
 
 // Close btn
-import ButtonClose from "../ButtonClose";
+import Xbtn from "../ButtonClose";
 
 // Pixel border stuff
 import Corner from "../Corner";
@@ -27,8 +27,8 @@ function CharInfoBox(props) {
     <div className="char-info-box__container p-5 mt-2 text-white">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
 
-      <WoodBeamY beamStyle={{ right: "13px", top: "9px" }} />
-      <WoodBeamY beamStyle={{ left: "13px", top: "9px" }} />
+      <WoodBeamY beamStyle={{ right: "15px", top: "9px" }} />
+      <WoodBeamY beamStyle={{ left: "15px", top: "9px" }} />
 
       <Corner
         cornerStyle={{
@@ -48,13 +48,16 @@ function CharInfoBox(props) {
         }}
       />
       {/* This this button below is supposed to close the creator */}
-
-      {/* <Link to={"/"}>
-          <ButtonClose
-            text={"Finish"}
-            selectButtonOnClick={selectButtonOnClick}
-          />
-        </Link> */}
+      <Xbtn
+        xBtnStyle={{
+          width: "30px",
+          height: "auto",
+          right: "-45px",
+          top: "-46px",
+          zIndex: "2",
+        }}
+        xBtnUrl="/"
+      />
 
       <Switch>
         <Route exact path={"/character-creator/name"}>
@@ -74,9 +77,6 @@ function CharInfoBox(props) {
         </Route>
         <Route exact path={"/character-creator/feats"}>
           <FeatsPage {...props} />
-        </Route>
-        <Route exact path={"/character-creator/character-sheet"}>
-          <CharacterSheetPage {...props} />
         </Route>
       </Switch>
 
