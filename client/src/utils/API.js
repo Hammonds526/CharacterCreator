@@ -9,6 +9,10 @@ export default {
     return axios.get("/api/users/logout");
   },
 
+  check: function () {
+    return axios.get("/api/users/check");
+  },
+
   // Gets all users
   getUsers: function () {
     return axios.get("/api/users");
