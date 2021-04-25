@@ -6,12 +6,13 @@ import LevelSelector from "../LevelSelecter";
 
 function TabNameLevel(props) {
   const handleInputChange = (event) => {
-    console.log(props.newCharacter.level);
     const { value, name } = event.target;
-    props.setNewCharacter({
-      ...props.newCharacter,
-      [name]: value,
-    });
+    const localNewCharacter = { ...props.newCharacter };
+    localNewCharacter[name] = value;
+
+    localNewCharacter.cantrips = [];
+    localNewCharacter.spells = [];
+    props.setNewCharacter(localNewCharacter);
   };
 
   return (

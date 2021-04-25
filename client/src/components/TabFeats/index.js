@@ -13,7 +13,7 @@ require("dotenv").config();
 function TabFeats({
   newCharacter,
   setNewCharacter,
-  getFilteredFeats,
+  getFeats,
   // getMyCharacters,
   user,
   myCharacters,
@@ -74,7 +74,7 @@ function TabFeats({
       <div className="row mb-2">
         <div className="col-4">
           <ScrollList
-            list={getFilteredFeats}
+            list={getFeats}
             setActive={setActiveFeat}
             checkboxOnClick={checkboxOnClick}
             newCharacter={newCharacter}

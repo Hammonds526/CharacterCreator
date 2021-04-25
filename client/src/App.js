@@ -29,13 +29,14 @@ function App() {
     subclass: "",
     abilities: [],
     spells: [],
+    cantrips:[],
     feats: [],
     userId: null,
   });
 
   console.log("newCharacter ", newCharacter);
 
-  const [signIn, setSignIn] = useState(false);
+  const [signIn, setSignIn] = useState(true);
   const [user, setUser] = useState(false);
 
   // const getMyCharacters = (res) => {
