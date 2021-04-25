@@ -17,7 +17,9 @@ function CharacterSheet({ myCharacters }) {
       <h1>Character Sheet</h1>
       <br />
       <div>
-        <h2>{myCharacters[id].name}</h2>
+        <h2>
+          {myCharacters[id].name ? myCharacters[id].name : "No-Name Baggins"}
+        </h2>
         <br />
         <h2 id="lvlbox">Level : {myCharacters[id].level}</h2>
         <h2>{myCharacters[id].class}</h2>
