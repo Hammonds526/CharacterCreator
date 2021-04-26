@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {useHistory} from "react-router-dom"
 import "./style.css";
 
 // Components
@@ -29,6 +30,7 @@ function TabFeats({
     totalFeatsAvailable: 0,
     totalFeatsSelected: 0,
   });
+  const history = useHistory();
 
   //When the tab loads, make the page display the first feat in the list of filtered feats.
   useEffect(() => {
@@ -57,7 +59,8 @@ function TabFeats({
       .then((res) => {
      
         setmyCharacters(charList);
-        window.location.href = (`/character-sheet/${myCharacters.length}`)
+        
+        history.push(`/character-sheet/${myCharacters.length}`)
       })
       .catch((err) => console.log(err));
   };
