@@ -15,9 +15,8 @@ import Xbtn from "../../components/ButtonClose";
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
 function CharacterSheet({ myCharacters }) {
     let { id } = useParams();
-    //   console.log("newCharacter from Sheet ", newCharacter);
-    // The information that is going to be displayed in react.
 
+    // The information that is going to be displayed in react.
     return (
         <div className="modal-content-box">
             <div id="divbox" className="container">
@@ -71,10 +70,11 @@ function CharacterSheet({ myCharacters }) {
                                             <h1>{myCharacters[id].name ? myCharacters[id].name : "No-Name Baggins"}</h1>
                                         </div>
                                         <br />
+                                        <h2>Race: {myCharacters[id].race.charAt(0).toUpperCase() + myCharacters[id].race.slice(1)}{" "}</h2>
+                                        <br />
                                         <div>
-                                            <h2>Class: {myCharacters[id].class}</h2>
-                                            <br />
-                                            <h3>Subclass: {myCharacters[id].subclass}</h3>
+                                            <h2>Class: {myCharacters[id].class.charAt(0).toUpperCase() + myCharacters[id].class.slice(1)}</h2>
+                                            <h3>Subclass: {myCharacters[id].subclass ? myCharacters[id].subclass : "No Subclass"}</h3>
                                             <br />
                                             <div>
                                                 <h2 id="lvlbox">Level</h2>
