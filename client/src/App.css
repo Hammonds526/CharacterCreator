@@ -22,10 +22,6 @@ html {
   text-shadow: 3px 2px 3px #0a0808;
 }
 
-h4 {
-  margin-bottom: 25px;
-}
-
 .main-title__text {
   font-size: 35px;
   padding-top: 7px;
@@ -49,7 +45,7 @@ h4 {
   color: goldenrod;
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .main-title__text {
     font-size: 26px;
   }
@@ -59,4 +55,8 @@ h4 {
     margin-top: 6px;
     font-size: 18px;
   }
-} ;
+} ; */
+
+.text-warning {
+  color: crimson;
+}

@@ -23,7 +23,7 @@ import WoodBeamY from "../WoodBeamY";
 
 function CharInfoBox(props) {
   return (
-    <div className="char-info-box__container p-5 mt-2 text-white">
+    <div className="char-info-box__container p-5 mt-2">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
 
       <WoodBeamY beamStyle={{ right: "15px", top: "9px" }} />

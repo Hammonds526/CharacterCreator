@@ -43,7 +43,7 @@ function CharacterMakerScreen(props) {
   return (
     <div className="modal-content-box">
       <div className="character-maker-screen mx-auto bg-transparent container mt-5">
-        <div className="row text-white">
+        <div className="row">
           <div
             id="stonebg"
             className="col-10 col-lg-3 order-lg-2 mb-2 p-0 px-lg-2 d-flex justify-content-center"
