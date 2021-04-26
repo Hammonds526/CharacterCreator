@@ -17,34 +17,34 @@ function CharacterListItem(props) {
   let [ClassIcon, setClassIcon] = useState(NoIcon);
 
   useEffect(() => {
-    switch (myCharacters[].class) {
+    switch (props.myCharacters.class) {
 
       // Fighter
-      case "Fighter":
       case "fighter":
+        case "Fighter":
         setClassIcon(FighterIcon)
         break;
 
       // Ranger
-      case "Ranger":
       case "ranger":
+        case "Ranger":
         setClassIcon(RangerIcon)
         break;
 
       // Rogue
-      case "Rogue":
       case "rogue":
+        case "Rogue":
         setClassIcon(RogueIcon)
         break;
 
       // Wizard
-      case "Wizard":
       case "wizard":
+        case "Wizard":
         setClassIcon(WizardIcon)
         break;
 
       default:
-        setClassIcon(NoIcon);
+        setClassIcon(FighterIcon);
         break;
     }
 
@@ -56,7 +56,6 @@ function CharacterListItem(props) {
         <Link to={`/character-sheet/${index}`} key={index}>
           <div id="charbox" className="list-group-item mb-1">
             <h4 className="text-truncate mt-2">{item.name}</h4>
-            {/* <p>{item.race}</p> */}
             <p>
               {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
               {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
