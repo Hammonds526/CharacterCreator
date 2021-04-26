@@ -3,12 +3,13 @@ import React from "react"
 // CSS
 import "./style.css";
 
-// Pixel border stuff
-
 // Wood border
 import Corner from "../../components/Corner";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
+
+
+// Close btn
 import Xbtn from "../../components/ButtonClose";
 
 // Main function. 
