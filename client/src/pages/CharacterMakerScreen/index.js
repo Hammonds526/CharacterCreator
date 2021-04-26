@@ -32,7 +32,16 @@ function CharacterMakerScreen(props) {
         spell.level <= props.newCharacter.level &&
         spell.tag === props.newCharacter.class
     );
-
+    filteredSpells = filteredSpells.sort((a, b) => {
+      if (a.level < b.level) {
+        return -1;
+      }
+      if (a.level > b.level) {
+        return 1;
+      }
+      // a must be equal to b
+      return 0;
+    });
     return filteredSpells;
   };
 
