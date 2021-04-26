@@ -23,14 +23,14 @@ function CharacterSheet({ myCharacters }) {
             <div id="divbox" className="container">
                 <WoodBeamX beamStyle={{ top: "-2px" }} />
 
-                <WoodBeamY beamStyle={{ right: "29px", top: "9px" }} />
-                <WoodBeamY beamStyle={{ left: "29px", top: "9px" }} />
+                <WoodBeamY beamStyle={{ right: "64px", top: "9px" }} />
+                <WoodBeamY beamStyle={{ left: "64px", top: "9px" }} />
 
                 <Corner
                     cornerStyle={{
                         width: "80px",
                         height: "auto",
-                        left: "-5px",
+                        left: "-16px",
                         top: "-2px",
                     }}
                 />
@@ -38,7 +38,7 @@ function CharacterSheet({ myCharacters }) {
                     cornerStyle={{
                         width: "80px",
                         height: "auto",
-                        right: "-4px",
+                        right: "-16px",
                         top: "-2px",
                         transform: "rotate(90deg)",
                     }}
@@ -48,43 +48,56 @@ function CharacterSheet({ myCharacters }) {
                     xBtnStyle={{
                         width: "30px",
                         height: "auto",
-                        right: "2px",
+                        right: "-14px",
                         top: "2px",
                         zIndex: "2",
                     }}
                     xBtnUrl="/"
                 />
-                <div id="divbox">
-                    <br />
-                    <div className="d-flex justify-content-center">
-                        <h1>My Character</h1>
-                    </div>
-                    <br />
-                    <div className="row">
-                        <div className="col-7">
-                            <div>
-                                <h2>{myCharacters[id].name ? myCharacters[id].name : "No-Name Baggins"}</h2>
+                <div>
+                    <div id="divbox">
+                        <br />
+                        <div className="d-flex justify-content-center">
+                            <h2>My Character</h2>
+                        </div>
+                        <br />
+                        <div className="row">
+                            <br />
+                            <div className="col">
+                                <div className="col">
+                                    <div id="card" className="col-8">
+                                        <br />
+                                        <div>
+                                            <h2>{myCharacters[id].name ? myCharacters[id].name : "No-Name Baggins"}</h2>
+                                        </div>
+                                        <br />
+                                        <div>
+                                            <h2>{myCharacters[id].class}</h2>
+                                            <h2>{myCharacters[id].subclass}</h2>
+                                            <br />
+                                            <div>
+                                                <h2 id="lvlbox">Level</h2>
+                                                <p id="level">{myCharacters[id].level}</p>
+                                                <br />
+                                            </div>
+                                        </div>
+                                        <br />
+                                    </div>
+                                </div>
                             </div>
                             <br />
-                            <div>
-                                <h2>{myCharacters[id].class}</h2>
-                                <h2>{myCharacters[id].subclass}</h2>
-                                <br />
-                                <h2 id="lvlbox">Level : {myCharacters[id].level}</h2>
+                            <div id="darkback" className="col-4">
+                                <div id="listman">
+                                    <h2 id="listnames">Spells:</h2>
+                                    <p>{myCharacters[id].spells}</p>
+                                    <br />
+                                    <h2 id="listnames">Feats:</h2>
+                                    <p>{myCharacters[id].feats}</p>
+                                </div>
                             </div>
                         </div>
                         <br />
-                        <div id="darkback" className="col-5">
-                            <div id="listman">
-                                <h2 id="listnames">Spells:</h2>
-                                <p>{myCharacters[id].spells}</p>
-                                <br />
-                                <h2 id="listnames">Feats:</h2>
-                                <p>{myCharacters[id].feats}</p>
-                            </div>
-                        </div>
                     </div>
-                    <br />
                 </div>
                 {/* Nothing below here */}
                 <WoodBeamX beamStyle={{ bottom: "-3px" }} />
@@ -92,7 +105,7 @@ function CharacterSheet({ myCharacters }) {
                     cornerStyle={{
                         width: "80px",
                         height: "auto",
-                        right: "-4px",
+                        right: "-16px",
                         bottom: "-4px",
                         transform: "rotate(180deg)",
                     }}
@@ -101,7 +114,7 @@ function CharacterSheet({ myCharacters }) {
                     cornerStyle={{
                         width: "80px",
                         height: "auto",
-                        left: "-8px",
+                        left: "-16px",
                         bottom: "-4px",
                         transform: "rotate(270deg)",
                     }}

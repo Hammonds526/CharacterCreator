@@ -9,10 +9,24 @@
   font-size: 28px;
 }
 
-#lvlbox {
+#level {
+  text-align: center;
+  display: inline-block;
+  width: 46px;
+  padding-left: 2px;
+  padding-bottom: 1px;
+  padding-top: 0;
+  line-height: 39px;
+  justify-self: center;
+  background-color: wheat;
+  border: burlywood 2px solid;
 
+  border-radius: 4px;
+  font-family: Romulus;
+  color: brown;
+  font-size: 32px;
+  font-weight: bolder;
 }
-
 
 #listnames {
   color: #daa30f;
@@ -37,9 +51,7 @@ h3 {
 
 
 #card {
-  background-color: rgba(244, 165, 96, 0.596);
+  background-color: #46413b98;
   border-radius: 2px;
-  border: #995739b7 2px solid;
-  width: auto;
-  margin-left: 25px;
+  border: #6e6967b7 2px solid;
 }
