@@ -1,5 +1,5 @@
 // Important React Imports.
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 // CSS
@@ -10,10 +10,59 @@ import Corner from "../../components/Corner";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/ButtonClose";
+
+// Icons
+import NoIcon from "../../images/icons/empty_frame.png"
+import FighterIcon from "../../images/icons/fighter.png"
+import RangerIcon from "../../images/icons/ranger.png"
+import RogueIcon from "../../images/icons/rogue.png"
+import WizardIcon from "../../images/icons/wizard.png"
+
+
 // Main function.
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
 function CharacterSheet({ myCharacters }) {
     let { id } = useParams();
+
+
+
+    let [ClassIcon, setClassIcon] = useState(NoIcon);
+
+    useEffect(() => {
+        switch (myCharacters[id].class) {
+
+            // Fighter
+            case "fighter":
+            case "Fighter":
+                setClassIcon(FighterIcon)
+                break;
+
+            // Ranger
+            case "ranger":
+            case "Ranger":
+                setClassIcon(RangerIcon)
+                break;
+
+            // Rogue
+            case "rogue":
+            case "Rogue":
+                setClassIcon(RogueIcon)
+                break;
+
+            // Wizard
+            case "wizard":
+            case "Wizard":
+                setClassIcon(WizardIcon)
+                break;
+
+            default:
+                setClassIcon(NoIcon);
+                break;
+        }
+
+    }, [myCharacters[id].class]);
+
+
 
     // The information that is going to be displayed in react.
     return (
@@ -68,12 +117,17 @@ function CharacterSheet({ myCharacters }) {
                                         <div>
                                             <h1>{myCharacters[id].name ? myCharacters[id].name : "No-Name Baggins"}</h1>
                                         </div>
-                                        <br />
                                         <h2>Race: {myCharacters[id].race.charAt(0).toUpperCase() + myCharacters[id].race.slice(1)}{" "}</h2>
-                                        <br />
                                         <div>
+                                            <br />
                                             <h2>Class: {myCharacters[id].class.charAt(0).toUpperCase() + myCharacters[id].class.slice(1)}</h2>
                                             <h3>Subclass: {myCharacters[id].subclass ? myCharacters[id].subclass : "No Subclass"}</h3>
+                                            <br />
+                                            <img
+                                                className="icon"
+                                                src={ClassIcon}
+                                                alt="Character Avatar"
+                                            ></img>
                                             <br />
                                             <div>
                                                 <h2 id="lvlbox">Level</h2>
@@ -90,11 +144,16 @@ function CharacterSheet({ myCharacters }) {
                             <div className="col-4">
                                 <div id="card">
                                     <div id="listman">
-                                        <h2 id="listnames">Spells:</h2>
-                                        <p>{myCharacters[id].spells}</p>
+                                        <div >
+                                            <h2 id="listnames">Spells:</h2>
+                                            <p>{myCharacters[id].spells}</p>
+                                        </div>
                                         <br />
-                                        <h2 id="listnames">Feats:</h2>
-                                        <p>{myCharacters[id].feats}</p>
+                                        <div>
+                                            <h2 id="listnames">Feats:</h2>
+                                            <p>{myCharacters[id].feats}</p>
+                                        </div>
+                                        <br />
                                     </div>
                                 </div>
                             </div>
