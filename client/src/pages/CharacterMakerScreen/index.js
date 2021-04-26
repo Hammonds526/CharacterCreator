@@ -39,7 +39,16 @@ function CharacterMakerScreen(props) {
         spell.level <= props.newCharacter.level &&
         spell.tag === props.newCharacter.class
     );
-
+    filteredSpells = filteredSpells.sort((a, b) => {
+      if (a.level < b.level) {
+        return -1;
+      }
+      if (a.level > b.level) {
+        return 1;
+      }
+      // a must be equal to b
+      return 0;
+    });
     return filteredSpells;
   };
 
@@ -50,7 +59,7 @@ function CharacterMakerScreen(props) {
   return (
     <div className="modal-content-box">
       <div className="character-maker-screen mx-auto bg-transparent container mt-5">
-        <div className="row text-white">
+        <div className="row">
           <div
             id="stonebg"
             className="col-10 col-lg-3 order-lg-2 mb-2 p-0 px-lg-2 d-flex justify-content-center"

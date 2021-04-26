@@ -38,24 +38,28 @@ function MyCharacters(props) {
       <h4 className="my-characters__title pt-4">My Characters</h4>
       <CharacterListItem {...props} />
       {/* Nothing below here */}
-      <WoodBeamX beamStyle={{ bottom: "-17px" }} />
+
+      <WoodBeamX beamStyle={{ bottom: "0px" }} parentClass={"absolute"} />
+
       <Corner
         cornerStyle={{
           width: "40px",
           height: "auto",
           right: "0px",
-          bottom: "-17px",
+          bottom: "-1px",
           transform: "rotate(180deg)",
         }}
+        parentClass={"absolute"}
       />
       <Corner
         cornerStyle={{
           width: "40px",
           height: "auto",
           left: "0px",
-          bottom: "-17px",
+          bottom: "-1px",
           transform: "rotate(270deg)",
         }}
+        parentClass={"absolute"}
       />
     </div>
   );

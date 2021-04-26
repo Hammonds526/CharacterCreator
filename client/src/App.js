@@ -102,17 +102,25 @@ function App() {
 
           <div className="row">
             <div className="col-12 col-lg-9 ">
-              <div className="row"></div>
-              <Tavern
+              <div className="row">
+                <div className="col">
+   
+                <Tavern
                 setNewCharacter={setNewCharacter}
                 newCharacter={newCharacter}
               />
+                </div>
+              </div>
+           
             </div>
-            <div className="col-12 col-lg-3 p-0">
+            <div className="col-12 col-lg-3 p-0 ">
+           
               <MyCharacters myCharacters={myCharacters} />
+
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+         
       ) : (
         <AuthPages signIn={signIn} setSignIn={setSignIn} setUser={setUser} />
       )}

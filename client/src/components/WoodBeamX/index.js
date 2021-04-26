@@ -3,7 +3,9 @@ import "./style.css";
 
 function WoodBeam(props) {
   return (
-    <div className="position-relative">
+    <div
+      className={props.parentClass ? props.parentClass : "position-relative"}
+    >
       <div
         className="position-absolute wood-beam__horizontal"
         style={props.beamStyle}
