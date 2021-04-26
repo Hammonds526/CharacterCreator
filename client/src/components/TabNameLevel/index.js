@@ -12,6 +12,7 @@ function TabNameLevel(props) {
 
     localNewCharacter.cantrips = [];
     localNewCharacter.spells = [];
+    localNewCharacter.feats = [];
     props.setNewCharacter(localNewCharacter);
   };
 
