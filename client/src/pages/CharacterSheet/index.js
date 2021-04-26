@@ -68,12 +68,13 @@ function CharacterSheet({ myCharacters }) {
                                     <div id="card" className="col-8">
                                         <br />
                                         <div>
-                                            <h2>{myCharacters[id].name ? myCharacters[id].name : "No-Name Baggins"}</h2>
+                                            <h1>{myCharacters[id].name ? myCharacters[id].name : "No-Name Baggins"}</h1>
                                         </div>
                                         <br />
                                         <div>
-                                            <h2>{myCharacters[id].class}</h2>
-                                            <h2>{myCharacters[id].subclass}</h2>
+                                            <h2>Class: {myCharacters[id].class}</h2>
+                                            <br />
+                                            <h3>Subclass: {myCharacters[id].subclass}</h3>
                                             <br />
                                             <div>
                                                 <h2 id="lvlbox">Level</h2>
@@ -86,13 +87,15 @@ function CharacterSheet({ myCharacters }) {
                                 </div>
                             </div>
                             <br />
-                            <div id="darkback" className="col-4">
-                                <div id="listman">
-                                    <h2 id="listnames">Spells:</h2>
-                                    <p>{myCharacters[id].spells}</p>
-                                    <br />
-                                    <h2 id="listnames">Feats:</h2>
-                                    <p>{myCharacters[id].feats}</p>
+                            <div className="col-4">
+                                <div id="card">
+                                    <div id="listman">
+                                        <h2 id="listnames">Spells:</h2>
+                                        <p>{myCharacters[id].spells}</p>
+                                        <br />
+                                        <h2 id="listnames">Feats:</h2>
+                                        <p>{myCharacters[id].feats}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
