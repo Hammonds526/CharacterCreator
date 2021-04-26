@@ -57,13 +57,9 @@ function AvatarImage({ newCharacter }) {
         <div>
 
             <img
-
                 className="avatar"
-
                 src={AvatarCostume}
-
                 alt="Character Avatar"
-
             ></img>
 
         </div>
