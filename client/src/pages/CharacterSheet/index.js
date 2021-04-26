@@ -10,7 +10,6 @@ import Corner from "../../components/Corner";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/ButtonClose";
-
 // Main function.
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
 function CharacterSheet({ myCharacters }) {
@@ -87,6 +86,7 @@ function CharacterSheet({ myCharacters }) {
                                 </div>
                             </div>
                             <br />
+
                             <div className="col-4">
                                 <div id="card">
                                     <div id="listman">
