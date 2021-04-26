@@ -4,7 +4,9 @@ import Image from "../../images/corner.png";
 
 function Corner(props) {
   return (
-    <div className="position-relative">
+    <div
+      className={props.parentClass ? props.parentClass : "position-relative"}
+    >
       <img
         className="position-absolute"
         src={Image}
