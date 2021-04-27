@@ -12,11 +12,11 @@ import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/ButtonClose";
 
 // Icons
-import NoIcon from "../../images/icons/empty_frame.png"
-import FighterIcon from "../../images/icons/fighter.png"
-import RangerIcon from "../../images/icons/ranger.png"
-import RogueIcon from "../../images/icons/rogue.png"
-import WizardIcon from "../../images/icons/wizard.png"
+import NoIcon from "../../images/icons/empty_frame.png";
+import FighterIcon from "../../images/icons/fighter.png";
+import RangerIcon from "../../images/icons/ranger.png";
+import RogueIcon from "../../images/icons/rogue.png";
+import WizardIcon from "../../images/icons/wizard.png";
 
 // Avatar & outfits
 import DefaultCostume from "../../images/costumes/base.png";
@@ -31,223 +31,228 @@ import Frame from "../../images/char_card_frame3.png";
 // Main function.
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
 function CharacterSheet({ myCharacters }) {
-    let { id } = useParams();
+  let { id } = useParams();
 
-    const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
+  const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
 
-    useEffect(() => {
+  useEffect(() => {
+    switch (myCharacters[id].class) {
+      // Fighter
+      case "Fighter":
+      case "fighter":
+        setAvatarCostume(FighterCostume);
+        break;
 
-        switch (myCharacters[id].class) {
+      // Ranger
+      case "Ranger":
+      case "ranger":
+        setAvatarCostume(RangerCostume);
+        break;
 
-            // Fighter
-            case "Fighter":
-            case "fighter":
-                setAvatarCostume(FighterCostume)
-                break;
+      // Rogue
+      case "Rogue":
+      case "rogue":
+        setAvatarCostume(RogueCostume);
+        break;
 
-            // Ranger
-            case "Ranger":
-            case "ranger":
-                setAvatarCostume(RangerCostume)
-                break;
+      // Wizard
+      case "Wizard":
+      case "wizard":
+        setAvatarCostume(WizardCostume);
+        break;
 
-            // Rogue
-            case "Rogue":
-            case "rogue":
-                setAvatarCostume(RogueCostume)
-                break;
+      default:
+        setAvatarCostume(DefaultCostume);
+        break;
+    }
+  }, [myCharacters[id].class]);
 
-            // Wizard
-            case "Wizard":
-            case "wizard":
-                setAvatarCostume(WizardCostume)
-                break;
+  // Dynamic icon
+  let [ClassIcon, setClassIcon] = useState(NoIcon);
 
-            default:
-                setAvatarCostume(DefaultCostume);
-                break;
-        }
+  useEffect(() => {
+    switch (myCharacters[id].class) {
+      // Fighter
+      case "fighter":
+      case "Fighter":
+        setClassIcon(FighterIcon);
+        break;
 
-    }, [myCharacters[id].class]);
+      // Ranger
+      case "ranger":
+      case "Ranger":
+        setClassIcon(RangerIcon);
+        break;
 
+      // Rogue
+      case "rogue":
+      case "Rogue":
+        setClassIcon(RogueIcon);
+        break;
 
-    // Dynamic icon
-    let [ClassIcon, setClassIcon] = useState(NoIcon);
+      // Wizard
+      case "wizard":
+      case "Wizard":
+        setClassIcon(WizardIcon);
+        break;
 
-    useEffect(() => {
-        switch (myCharacters[id].class) {
+      default:
+        setClassIcon(NoIcon);
+        break;
+    }
+  }, [myCharacters[id].class]);
 
-            // Fighter
-            case "fighter":
-            case "Fighter":
-                setClassIcon(FighterIcon)
-                break;
+  // The information that is going to be displayed in react.
+  return (
+    <div className="modal-content-box justify-content-center pt-2">
+      <div id="divbox" className="container">
+        <WoodBeamX beamStyle={{ top: "-5px" }} />
 
-            // Ranger
-            case "ranger":
-            case "Ranger":
-                setClassIcon(RangerIcon)
-                break;
+        <WoodBeamY beamStyle={{ right: "-10px", top: "0px" }} />
+        <WoodBeamY beamStyle={{ left: "-10px", top: "0px" }} />
 
-            // Rogue
-            case "rogue":
-            case "Rogue":
-                setClassIcon(RogueIcon)
-                break;
-
-            // Wizard
-            case "wizard":
-            case "Wizard":
-                setClassIcon(WizardIcon)
-                break;
-
-            default:
-                setClassIcon(NoIcon);
-                break;
-        }
-
-    }, [myCharacters[id].class]);
-
-
-
-    // The information that is going to be displayed in react.
-    return (
-        <div className="modal-content-box justify-content-center">
-            <div id="divbox" className="container">
-                <WoodBeamX beamStyle={{ top: "-2px" }} />
-
-                <WoodBeamY beamStyle={{ right: "1px", top: "0px" }} />
-                <WoodBeamY beamStyle={{ left: "1px", top: "0px" }} />
-
-                <Corner
-                    cornerStyle={{
-                        width: "80px",
-                        height: "auto",
-                        left: "-16px",
-                        top: "-2px",
-                    }}
-                />
-                <Corner
-                    cornerStyle={{
-                        width: "80px",
-                        height: "auto",
-                        right: "-16px",
-                        top: "-2px",
-                        transform: "rotate(90deg)",
-                    }}
-                />
-                {/* This this button below is supposed to close the creator */}
-                <Xbtn
-                    xBtnStyle={{
-                        width: "30px",
-                        height: "auto",
-                        right: "-14px",
-                        top: "2px",
-                        zIndex: "2",
-                    }}
-                    xBtnUrl="/"
-                />
-                <div>
-                    <div id="divbox">
-                        <br />
-                        <div className="d-flex justify-content-center">
-                            <h2>My Character</h2>
-                        </div>
-                        <br />
-                        <div className="row">
-                            <br />
-                            <div className="col">
-                                <div className="col">
-                                    <div id="card" className="col-12">
-                                        <br />
-                                        <div>
-                                            <h1>{myCharacters[id].name ? myCharacters[id].name : "No-Name Baggins"}</h1>
-                                        </div>
-                                        <h2>Race: {myCharacters[id].race.charAt(0).toUpperCase() + myCharacters[id].race.slice(1)}{" "}</h2>
-                                        <div>
-                                            <br />
-                                            <h2>Class: {myCharacters[id].class.charAt(0).toUpperCase() + myCharacters[id].class.slice(1)}</h2>
-                                            <h3>Subclass: {myCharacters[id].subclass ? myCharacters[id].subclass : "No Subclass"}</h3>
-                                            <br />
-                                            <img
-                                                className="icon"
-                                                src={ClassIcon}
-                                                alt="Character Avatar"
-                                            ></img>
-                                            <br />
-                                        </div>
-                                        <br />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="avatar__container text-center">
-                                    <div>
-                                        <img
-                                            className="frame"
-                                            src={Frame}
-                                            alt="Character Avatar"
-                                        ></img>
-                                        <div>
-                                            <img
-                                                className="avatar"
-                                                src={AvatarCostume}
-                                                alt="Character Avatar"
-                                            ></img>
-                                        </div>
-                                        <div className="vortex"></div>
-                                    </div>
-                                    <div>
-                                        <h2 id="lvlbox">Level</h2>
-                                        <p id="level">{myCharacters[id].level}</p>
-                                        <br />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col">
-                                <div id="card">
-                                    <div id="listman">
-                                        <div >
-                                            <h2 id="listnames">Spells:</h2>
-                                            <p>{myCharacters[id].spells}</p>
-                                        </div>
-                                        <br />
-                                        <div>
-                                            <h2 id="listnames">Feats:</h2>
-                                            <p>{myCharacters[id].feats}</p>
-                                        </div>
-                                        <br />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                    </div>
-                </div>
-                {/* Nothing below here */}
-                <WoodBeamX beamStyle={{ bottom: "-3px" }} />
-                <Corner
-                    cornerStyle={{
-                        width: "80px",
-                        height: "auto",
-                        right: "-16px",
-                        bottom: "-4px",
-                        transform: "rotate(180deg)",
-                    }}
-                />
-                <Corner
-                    cornerStyle={{
-                        width: "80px",
-                        height: "auto",
-                        left: "-16px",
-                        bottom: "-4px",
-                        transform: "rotate(270deg)",
-                    }}
-                />
+        <Corner
+          cornerStyle={{
+            width: "80px",
+            height: "auto",
+            left: "-16px",
+            top: "-5px",
+          }}
+        />
+        <Corner
+          cornerStyle={{
+            width: "80px",
+            height: "auto",
+            right: "-16px",
+            top: "-5px",
+            transform: "rotate(90deg)",
+          }}
+        />
+        {/* This this button below is supposed to close the creator */}
+        <Xbtn
+          xBtnStyle={{
+            width: "30px",
+            height: "auto",
+            right: "-14px",
+            top: "-3px",
+            zIndex: "2",
+          }}
+          xBtnUrl="/"
+        />
+        <div>
+          <div id="divbox">
+            <br />
+            <div className="d-flex justify-content-center">
+              <h2>
+                {myCharacters[id].name
+                  ? myCharacters[id].name
+                  : "No-Name Baggins"}
+              </h2>
             </div>
+            <br />
+            <div className="row mb-4">
+              <br />
+              <div className="col px-4">
+                <div id="card" className="col-12">
+                  <h2 className="mt-2">
+                    Race:{" "}
+                    {myCharacters[id].race.charAt(0).toUpperCase() +
+                      myCharacters[id].race.slice(1)}{" "}
+                  </h2>
+                  <div>
+                    <br />
+                    <h2>
+                      Class:{" "}
+                      {myCharacters[id].class.charAt(0).toUpperCase() +
+                        myCharacters[id].class.slice(1)}
+                    </h2>
+                    <h3>
+                      Subclass:{" "}
+                      {myCharacters[id].subclass
+                        ? myCharacters[id].subclass
+                        : "No Subclass"}
+                    </h3>
+                    <br />
+                    <img
+                      className="icon"
+                      src={ClassIcon}
+                      alt="Character Avatar"
+                    ></img>
+                    <br />
+                  </div>
+                  <br />
+                </div>
+              </div>
+              <div className="col d-flex justify-content-center">
+                <div className="avatar__container text-center">
+                  <div>
+                    <img
+                      className="frame"
+                      src={Frame}
+                      alt="Character Avatar"
+                    ></img>
+                    <div>
+                      <img
+                        className="avatar"
+                        src={AvatarCostume}
+                        alt="Character Avatar"
+                      ></img>
+                    </div>
+                    <div className="vortex"></div>
+                  </div>
+                  <div>
+                    <h2 id="lvlbox">Level</h2>
+                    <p id="level">{myCharacters[id].level}</p>
+                    <br />
+                  </div>
+                </div>
+              </div>
+
+              <div className="col px-4">
+                <div id="card">
+                  <div id="listman">
+                    <div>
+                      <h2 className="mt-2" id="listnames">
+                        Spells:
+                      </h2>
+                      <p>{myCharacters[id].spells}</p>
+                    </div>
+                    <br />
+                    <div>
+                      <h2 id="listnames">Feats:</h2>
+                      <p>{myCharacters[id].feats}</p>
+                    </div>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+          </div>
         </div>
-    );
+        {/* Nothing below here */}
+        <WoodBeamX beamStyle={{ bottom: "-3px" }} />
+        <Corner
+          cornerStyle={{
+            width: "80px",
+            height: "auto",
+            right: "-16px",
+            bottom: "-4px",
+            transform: "rotate(180deg)",
+          }}
+        />
+        <Corner
+          cornerStyle={{
+            width: "80px",
+            height: "auto",
+            left: "-16px",
+            bottom: "-4px",
+            transform: "rotate(270deg)",
+          }}
+        />
+      </div>
+    </div>
+  );
 }
 
 // Good god, this makes me want to die.

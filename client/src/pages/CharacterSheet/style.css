@@ -31,7 +31,7 @@
 }
 
 #listnames {
-  color: #daa30f;
+  /* color: #daa30f; */
 }
 
 #listman {
@@ -50,7 +50,6 @@ h2 {
 h3 {
   font-size: 19px;
 }
-
 
 #card {
   background-color: #46413b98;
@@ -72,7 +71,6 @@ This is definitely now the best way to do this, but I am scrapped for time here.
   background-size: auto;
   height: 200px;
   width: 200px;
-
 }
 .frame {
   height: 200px;
@@ -105,23 +103,23 @@ This is definitely now the best way to do this, but I am scrapped for time here.
 /* Animations */
 @keyframes Spinny {
   from {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
     opacity: 0.55;
   }
   to {
-    transform:rotate(360deg);
+    transform: rotate(360deg);
     opacity: 0.6;
   }
 }
 
 @keyframes Avatarfloat {
-	0% {  
+  0% {
     margin-top: -110%;
-	}
+  }
   50% {
     margin-top: -130%;
-	}
-	100% {
+  }
+  100% {
     margin-top: -110%;
-	}
+  }
 }
