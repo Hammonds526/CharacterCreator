@@ -7,6 +7,7 @@ import DefaultCostume from "../../images/costumes/base.png";
 import RangerCostume from "../../images/costumes/ranger.png";
 import FighterCostume from "../../images/costumes/fighter.png";
 import RogueCostume from "../../images/costumes/rogue.png";
+import WizardCostume from "../../images/costumes/wizard.png";
 
 
 // Our main component
@@ -40,7 +41,7 @@ function AvatarImage({ newCharacter }) {
             // Wizard
             case "Wizard":
             case "wizard":
-                setAvatarCostume(DefaultCostume)
+                setAvatarCostume(WizardCostume)
                 break;
 
             default:
@@ -56,13 +57,9 @@ function AvatarImage({ newCharacter }) {
         <div>
 
             <img
-
                 className="avatar"
-
                 src={AvatarCostume}
-
                 alt="Character Avatar"
-
             ></img>
 
         </div>

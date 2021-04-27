@@ -1,6 +1,12 @@
+// Core imports
 import React, { useState } from "react";
 import { Route, useRouteMatch } from "react-router-dom";
+// import AbilityFeatSpell from "../AbilityFeatSpell";
+
+// CSS
 import "./style.css";
+
+// Components
 import CharacterProgressBar from "../../components/CharacterProgressBar";
 import CharInfoBox from "../../components/CharInfoBox";
 import AvatarContainer from "../../components/AvatarContainer";
@@ -8,6 +14,7 @@ import AvatarContainer from "../../components/AvatarContainer";
 
 function CharacterMakerScreen(props) {
   let { path } = useRouteMatch();
+
 
   let classIndex = props.character.class.findIndex(
     (element) => element.name.toLowerCase() === props.newCharacter.class
