@@ -10,6 +10,7 @@ import Corner from "../../components/Corner";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/ButtonClose";
+import Listings from "../../components/Listings";
 
 // Icons
 import NoIcon from "../../images/icons/empty_frame.png";
@@ -179,6 +180,11 @@ function CharacterSheet({ myCharacters }) {
                       alt="Character Avatar"
                     ></img>
                     <br />
+                    <div>
+                      <h2 id="lvlbox">Level</h2>
+                      <p id="level">{myCharacters[id].level}</p>
+                      <br />
+                    </div>
                   </div>
                   <br />
                 </div>
@@ -200,27 +206,20 @@ function CharacterSheet({ myCharacters }) {
                     </div>
                     <div className="vortex"></div>
                   </div>
-                  <div>
-                    <h2 id="lvlbox">Level</h2>
-                    <p id="level">{myCharacters[id].level}</p>
-                    <br />
-                  </div>
                 </div>
               </div>
 
-              <div className="col px-4">
+              <div className="col">
                 <div id="card">
                   <div id="listman">
                     <div>
-                      <h2 className="mt-2" id="listnames">
-                        Spells:
-                      </h2>
-                      <p>{myCharacters[id].spells}</p>
+                      <h2 id="listnames">Spells:</h2>
+                      <Listings items={myCharacters[id].spells} />
                     </div>
                     <br />
                     <div>
                       <h2 id="listnames">Feats:</h2>
-                      <p>{myCharacters[id].feats}</p>
+                      <Listings items={myCharacters[id].feats} />
                     </div>
                     <br />
                   </div>
