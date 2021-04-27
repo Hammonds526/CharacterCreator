@@ -44,11 +44,17 @@
   /* height: 350px; */
   overflow-y: auto;
   min-height: 400px;
-  max-height: 500px;
+  max-height: 700px;
 }
 
 #class {
   font-size: 15px;
   color: rgb(214, 194, 13);
   margin: auto;
+}
+
+.icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 6px;
 }

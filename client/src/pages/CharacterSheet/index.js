@@ -105,19 +105,32 @@ function CharacterSheet({ myCharacters }) {
 
   // The information that is going to be displayed in react.
   return (
+<<<<<<< HEAD
     <div className="modal-content-box justify-content-center">
       <div id="divbox" className="container">
         <WoodBeamX beamStyle={{ top: "-2px" }} />
 
         <WoodBeamY beamStyle={{ right: "1px", top: "0px" }} />
         <WoodBeamY beamStyle={{ left: "1px", top: "0px" }} />
+=======
+    <div className="modal-content-box justify-content-center pt-2">
+      <div id="divbox" className="container">
+        <WoodBeamX beamStyle={{ top: "-5px" }} />
+
+        <WoodBeamY beamStyle={{ right: "-10px", top: "0px" }} />
+        <WoodBeamY beamStyle={{ left: "-10px", top: "0px" }} />
+>>>>>>> 95c268c55d5133adb5079164a5b9d84d3258ba3d
 
         <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
             left: "-16px",
+<<<<<<< HEAD
             top: "-2px",
+=======
+            top: "-5px",
+>>>>>>> 95c268c55d5133adb5079164a5b9d84d3258ba3d
           }}
         />
         <Corner
@@ -125,7 +138,11 @@ function CharacterSheet({ myCharacters }) {
             width: "80px",
             height: "auto",
             right: "-16px",
+<<<<<<< HEAD
             top: "-2px",
+=======
+            top: "-5px",
+>>>>>>> 95c268c55d5133adb5079164a5b9d84d3258ba3d
             transform: "rotate(90deg)",
           }}
         />
@@ -135,7 +152,11 @@ function CharacterSheet({ myCharacters }) {
             width: "30px",
             height: "auto",
             right: "-14px",
+<<<<<<< HEAD
             top: "2px",
+=======
+            top: "-3px",
+>>>>>>> 95c268c55d5133adb5079164a5b9d84d3258ba3d
             zIndex: "2",
           }}
           xBtnUrl="/"
@@ -144,6 +165,7 @@ function CharacterSheet({ myCharacters }) {
           <div id="divbox">
             <br />
             <div className="d-flex justify-content-center">
+<<<<<<< HEAD
               <h2>My Character</h2>
             </div>
             <br />
@@ -191,6 +213,49 @@ function CharacterSheet({ myCharacters }) {
                 </div>
               </div>
               <div className="col">
+=======
+              <h2>
+                {myCharacters[id].name
+                  ? myCharacters[id].name
+                  : "No-Name Baggins"}
+              </h2>
+            </div>
+            <br />
+            <div className="row mb-4">
+              <br />
+              <div className="col px-4">
+                <div id="card" className="col-12">
+                  <h2 className="mt-2">
+                    Race:{" "}
+                    {myCharacters[id].race.charAt(0).toUpperCase() +
+                      myCharacters[id].race.slice(1)}{" "}
+                  </h2>
+                  <div>
+                    <br />
+                    <h2>
+                      Class:{" "}
+                      {myCharacters[id].class.charAt(0).toUpperCase() +
+                        myCharacters[id].class.slice(1)}
+                    </h2>
+                    <h3>
+                      Subclass:{" "}
+                      {myCharacters[id].subclass
+                        ? myCharacters[id].subclass
+                        : "No Subclass"}
+                    </h3>
+                    <br />
+                    <img
+                      className="icon"
+                      src={ClassIcon}
+                      alt="Character Avatar"
+                    ></img>
+                    <br />
+                  </div>
+                  <br />
+                </div>
+              </div>
+              <div className="col d-flex justify-content-center">
+>>>>>>> 95c268c55d5133adb5079164a5b9d84d3258ba3d
                 <div className="avatar__container text-center">
                   <div>
                     <img
@@ -215,17 +280,32 @@ function CharacterSheet({ myCharacters }) {
                 </div>
               </div>
 
+<<<<<<< HEAD
               <div className="col">
                 <div id="card">
                   <div id="listman">
                     <div>
                       <h2 id="listnames">Spells:</h2>
                       <Listings items={myCharacters[id].spells} />
+=======
+              <div className="col px-4">
+                <div id="card">
+                  <div id="listman">
+                    <div>
+                      <h2 className="mt-2" id="listnames">
+                        Spells:
+                      </h2>
+                      <p>{myCharacters[id].spells}</p>
+>>>>>>> 95c268c55d5133adb5079164a5b9d84d3258ba3d
                     </div>
                     <br />
                     <div>
                       <h2 id="listnames">Feats:</h2>
+<<<<<<< HEAD
                       <Listings items={myCharacters[id].feats} />
+=======
+                      <p>{myCharacters[id].feats}</p>
+>>>>>>> 95c268c55d5133adb5079164a5b9d84d3258ba3d
                     </div>
                     <br />
                   </div>
