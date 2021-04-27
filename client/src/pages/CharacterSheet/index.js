@@ -185,7 +185,7 @@ function CharacterSheet({ myCharacters }) {
                   <br />
                 </div>
               </div>
-              <div className="col">
+              <div className="col d-flex justify-content-center">
                 <div className="avatar__container text-center">
                   <div>
                     <img
