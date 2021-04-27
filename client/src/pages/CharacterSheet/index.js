@@ -150,13 +150,11 @@ function CharacterSheet({ myCharacters }) {
               </h2>
             </div>
             <br />
-            <div className="row">
+            <div className="row mb-4">
               <br />
               <div className="col px-4">
                 <div id="card" className="col-12">
-                  <br />
-
-                  <h2>
+                  <h2 className="mt-2">
                     Race:{" "}
                     {myCharacters[id].race.charAt(0).toUpperCase() +
                       myCharacters[id].race.slice(1)}{" "}
@@ -214,7 +212,9 @@ function CharacterSheet({ myCharacters }) {
                 <div id="card">
                   <div id="listman">
                     <div>
-                      <h2 id="listnames">Spells:</h2>
+                      <h2 className="mt-2" id="listnames">
+                        Spells:
+                      </h2>
                       <p>{myCharacters[id].spells}</p>
                     </div>
                     <br />
