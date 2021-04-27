@@ -52,3 +52,9 @@
   color: rgb(214, 194, 13);
   margin: auto;
 }
+
+.icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 6px;
+}
