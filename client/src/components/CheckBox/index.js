@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import CheckedBox from "../../images/checked_box.png";
-import UncheckedBox from "../../images/empty_box.png";
+import CheckedBox from "../../images/ui/checked_box.png";
+import UncheckedBox from "../../images/ui/empty_box.png";
 
 function CheckBox({
   item,

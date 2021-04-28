@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Btn image
-import xBtn from "../../images/xbtn.png";
+import xBtn from "../../images/ui/xbtn.png";
 
 // Our X-btn function, should close the main page when clicked.
 function Xbtn(props) {
