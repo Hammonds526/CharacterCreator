@@ -161,7 +161,11 @@ function CharacterSheet({ myCharacters }) {
                       myCharacters[id].race.slice(1)}{" "}
                   </h2>
                   <div>
-                    <br />
+                    <img
+                      className="icon"
+                      src={ClassIcon}
+                      alt="Character Avatar"
+                    ></img>
                     <h2>
                       Class:{" "}
                       {myCharacters[id].class.charAt(0).toUpperCase() +
@@ -174,15 +178,12 @@ function CharacterSheet({ myCharacters }) {
                         : "No Subclass"}
                     </h3>
                     <br />
-                    <img
-                      className="icon"
-                      src={ClassIcon}
-                      alt="Character Avatar"
-                    ></img>
                     <br />
                     <div>
                       <h2 id="lvlbox">Level</h2>
-                      <p id="level">{myCharacters[id].level}</p>
+                      <p id="level">
+                        {myCharacters[id].level}
+                      </p>
                       <br />
                     </div>
                   </div>
@@ -190,7 +191,7 @@ function CharacterSheet({ myCharacters }) {
                 </div>
               </div>
               <div className="col d-flex justify-content-center">
-                <div className="avatar__container text-center">
+                <div className="row avatar__container text-center">
                   <div>
                     <img
                       className="frame"
@@ -205,6 +206,69 @@ function CharacterSheet({ myCharacters }) {
                       ></img>
                     </div>
                     <div className="vortex"></div>
+                  </div>
+                  <div className="row">
+
+                    <div className="row">
+
+                      <div className="col">
+                        <p id="divbox">
+                          STR:{" "}
+                          {myCharacters[id].str
+                            ? myCharacters[id].str
+                            : "5"}
+                        </p>
+                      </div>
+
+                      <div className="col">
+                        <p id="divbox">
+                          DEX:{" "}
+                          {myCharacters[id].dex
+                            ? myCharacters[id].dex
+                            : "5"}
+                        </p>
+                      </div>
+
+                      <div className="col">
+                        <p id="divbox">
+                          CON:{" "}
+                          {myCharacters[id].con
+                            ? myCharacters[id].con
+                            : "5"}
+                        </p>
+                      </div>
+
+                    </div>
+                    <div className="row">
+
+                    <div className="col">
+                        <p id="divbox">
+                          WIS:{" "}
+                          {myCharacters[id].wis
+                            ? myCharacters[id].wis
+                            : "5"}
+                        </p>
+                      </div>
+
+                      <div className="col">
+                        <p id="divbox">
+                          INT:{" "}
+                          {myCharacters[id].int
+                            ? myCharacters[id].int
+                            : "5"}
+                        </p>
+                      </div>
+
+                      <div className="col">
+                        <p id="divbox">
+                          CHA:{" "}
+                          {myCharacters[id].cha
+                            ? myCharacters[id].cha
+                            : "5"}
+                        </p>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
               </div>

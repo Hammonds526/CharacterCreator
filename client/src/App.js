@@ -26,6 +26,7 @@ function App() {
     race: "human",
     class: "fighter",
     subclass: "",
+    // stats: [],
     abilities: [],
     spells: [],
     cantrips: [],

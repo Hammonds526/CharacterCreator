@@ -6,6 +6,15 @@
   color: burlywood;
   padding: 5px;
 }
+
+#character-stats {
+  height: auto;
+  float: left;
+  width: auto;
+  margin: 5px;
+  padding: 2px;
+}
+
 #subclass {
   color: #8d1e1e;
   font-size: 28px;
