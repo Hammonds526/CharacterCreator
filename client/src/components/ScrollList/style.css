@@ -15,12 +15,14 @@
 /* width */
 .scroll-list::-webkit-scrollbar {
   width: auto;
+  scroll-behavior: smooth;
 }
 
 /* Track */
 .scroll-list::-webkit-scrollbar-track {
   background-image: url("./metstone_beam_vert.png");
   width: 8px;
+  border-radius: 15px;
   background-repeat: round;
 }
 

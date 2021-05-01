@@ -10,10 +10,10 @@ html {
   margin: 0;
   background-image: url("./images/stone_tile2.png");
   background-size: "64px";
-
-
-    overflow: scroll;
-    overflow-x: hidden;
+  /* Scrolling an overflow */
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 
