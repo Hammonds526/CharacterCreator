@@ -91,8 +91,8 @@ function App() {
                 />
               </Route>
               <Route path={"/character-sheet/:id"}>
-                <CharacterSheetPage myCharacters={myCharacters} />
-              </Route>
+          <CharacterSheetPage myCharacters={myCharacters} character={character} />
+        </Route>
             </Switch>
           </div>
           <div className="d-flex justify-content-center">
