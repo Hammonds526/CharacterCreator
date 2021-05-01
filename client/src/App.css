@@ -6,16 +6,35 @@ html {
   text-align: center;
   background-color: #2a2c30;
   color: burlywood;
-
   height: 100vh;
   margin: 0;
   background-image: url("./images/stone_tile2.png");
   background-size: "64px";
+
+
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    
 }
 .title {
   font-weight: normal;
   text-align: center;
 }
+
+body, html::-webkit-scrollbar-track {
+  background-image: none;
+}
+
+
 
 .text-bisque {
   color: bisque;
@@ -56,22 +75,25 @@ html {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 3px;
+  width: auto;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: none;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-image: url("gold_vert_scroll");
+  background: none;
+  background-repeat: round;
+  width: 8;
+  height: 16px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  filter: brightness(179%);
 }
 
 

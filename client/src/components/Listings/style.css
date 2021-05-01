@@ -102,6 +102,7 @@ This is definitely now the best way to do this, but I am scrapped for time here.
   animation: Avatarfloat 5s ease-in-out infinite;
 }
 
+
 /* Animations */
 @keyframes Spinny {
   from {
