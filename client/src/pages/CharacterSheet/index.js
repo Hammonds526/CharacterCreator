@@ -31,10 +31,12 @@ import Frame from "../../images/char_card_frame3.png";
 
 // Main function.
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
-function CharacterSheet({ myCharacters }) {
+function CharacterSheet({ myCharacters, character }) {
   let { id } = useParams();
 
+  const [ClassIcon, setClassIcon] = useState(NoIcon);
   const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
+  const [abilities, setAbilities] = useState([]);
 
   useEffect(() => {
     switch (myCharacters[id].class) {
@@ -42,75 +44,59 @@ function CharacterSheet({ myCharacters }) {
       case "Fighter":
       case "fighter":
         setAvatarCostume(FighterCostume);
+        setClassIcon(FighterIcon);
+        setAbilities(
+          character.class[0].abilities.map((ability) => ability.name)
+        );
         break;
 
       // Ranger
       case "Ranger":
       case "ranger":
         setAvatarCostume(RangerCostume);
+        setClassIcon(RangerIcon);
+        setAbilities(
+          character.class[1].abilities.map((ability) => ability.name)
+        );
         break;
 
       // Rogue
       case "Rogue":
       case "rogue":
         setAvatarCostume(RogueCostume);
+        setClassIcon(RogueIcon);
+        setAbilities(
+          character.class[2].abilities.map((ability) => ability.name)
+        );
         break;
 
       // Wizard
       case "Wizard":
       case "wizard":
         setAvatarCostume(WizardCostume);
+        setClassIcon(WizardIcon);
+        setAbilities(
+          character.class[3].abilities.map((ability) => ability.name)
+        );
         break;
 
       default:
         setAvatarCostume(DefaultCostume);
-        break;
-    }
-  }, [myCharacters[id].class]);
-
-  // Dynamic icon
-  let [ClassIcon, setClassIcon] = useState(NoIcon);
-
-  useEffect(() => {
-    switch (myCharacters[id].class) {
-      // Fighter
-      case "fighter":
-      case "Fighter":
-        setClassIcon(FighterIcon);
-        break;
-
-      // Ranger
-      case "ranger":
-      case "Ranger":
-        setClassIcon(RangerIcon);
-        break;
-
-      // Rogue
-      case "rogue":
-      case "Rogue":
-        setClassIcon(RogueIcon);
-        break;
-
-      // Wizard
-      case "wizard":
-      case "Wizard":
-        setClassIcon(WizardIcon);
-        break;
-
-      default:
         setClassIcon(NoIcon);
         break;
     }
   }, [myCharacters[id].class]);
 
+  console.log("abilities ", abilities);
+
   // The information that is going to be displayed in react.
   return (
-    <div className="modal-content-box justify-content-center pt-2">
-      <div id="divbox" className="container">
+    <div className="modal-content-box justify-content-center pt-4 row">
+      <div id="divbox" className="col-12 col-md-10 offset-md-1">
         <WoodBeamX beamStyle={{ top: "-5px" }} />
 
-        <WoodBeamY beamStyle={{ right: "-10px", top: "0px" }} />
-        <WoodBeamY beamStyle={{ left: "-10px", top: "0px" }} />
+        <WoodBeamY beamStyle={{ right: "0px", top: "0px" }} />
+        <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
 
         <Corner
           cornerStyle={{
@@ -141,7 +127,7 @@ function CharacterSheet({ myCharacters }) {
           xBtnUrl="/"
         />
         <div>
-          <div id="divbox">
+          <div id="character-sheet__container">
             <br />
             <div className="d-flex justify-content-center">
               <h2>
@@ -153,6 +139,7 @@ function CharacterSheet({ myCharacters }) {
             <br />
             <div className="row mb-4">
               <br />
+              {/* Left Column */}
               <div className="col px-4">
                 <div id="card" className="col-12">
                   <h2 className="mt-2">
@@ -189,17 +176,18 @@ function CharacterSheet({ myCharacters }) {
                   <br />
                 </div>
               </div>
+              {/* Center Column */}
               <div className="col d-flex justify-content-center">
                 <div className="avatar__container text-center">
                   <div>
                     <img
-                      className="frame"
+                      className="frame position-relative"
                       src={Frame}
                       alt="Character Avatar"
                     ></img>
                     <div>
                       <img
-                        className="avatar"
+                        className="avatar position-relative"
                         src={AvatarCostume}
                         alt="Character Avatar"
                       ></img>
@@ -208,10 +196,14 @@ function CharacterSheet({ myCharacters }) {
                   </div>
                 </div>
               </div>
-
-              <div className="col">
+              {/* Right Column */}
+              <div className="col px-4">
                 <div id="card">
-                  <div id="listman">
+                  <div id="character-sheet__right-list">
+                    <div>
+                      <h2 id="listnames">Abilities:</h2>
+                      <Listings items={abilities} />
+                    </div>
                     <div>
                       <h2 id="listnames">Spells:</h2>
                       <Listings items={myCharacters[id].spells} />

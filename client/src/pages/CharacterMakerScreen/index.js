@@ -15,7 +15,6 @@ import AvatarContainer from "../../components/AvatarContainer";
 function CharacterMakerScreen(props) {
   let { path } = useRouteMatch();
 
-
   let classIndex = props.character.class.findIndex(
     (element) => element.name.toLowerCase() === props.newCharacter.class
   );

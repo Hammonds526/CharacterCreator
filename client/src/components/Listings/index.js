@@ -8,16 +8,13 @@ function Listings(props) {
   // const [firstItem, setFirstItem] = useState([]);
 
   return (
-    <Row>
-      <Col xs={10}>
-        <ul>
-          {props.items.map((listItem) => (
-            <ol key={listItem.toString()}>{listItem}</ol>
-          ))}
-        </ul>
-      </Col>
-      <Col></Col>
-    </Row>
+    <div>
+      {props.items.map((listItem) => (
+        <p className="mb-0" key={listItem.toString()}>
+          {listItem}
+        </p>
+      ))}
+    </div>
   );
 }
 
