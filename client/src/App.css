@@ -45,6 +45,39 @@ html {
   color: goldenrod;
 }
 
+/* 
+//////////////////////////
+
+ Custom Scroll bar Stuff.
+
+/////////////////////////
+*/
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: url("gold_vert_scroll");
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+/* DONT KNOW WHAT THIS IS, BUT I AIN'T TOUCHIN' IT. -Ty */
+
 /* @media (max-width: 576px) {
   .main-title__text {
     font-size: 26px;
