@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 // Components
-import Corner from "../../components/Corner";
+import Corner2 from "../../components/Corner2";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/ButtonClose";
@@ -112,7 +112,7 @@ function CharacterSheet({ myCharacters }) {
         <WoodBeamY beamStyle={{ right: "-10px", top: "0px" }} />
         <WoodBeamY beamStyle={{ left: "-10px", top: "0px" }} />
 
-        <Corner
+        <Corner2
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -120,7 +120,7 @@ function CharacterSheet({ myCharacters }) {
             top: "-5px",
           }}
         />
-        <Corner
+        <Corner2
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -214,27 +214,21 @@ function CharacterSheet({ myCharacters }) {
                       <div className="col">
                         <p id="divbox">
                           STR:{" "}
-                          {myCharacters[id].str
-                            ? myCharacters[id].str
-                            : "5"}
+                          {myCharacters[id].str}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           DEX:{" "}
-                          {myCharacters[id].dex
-                            ? myCharacters[id].dex
-                            : "5"}
+                          {myCharacters[id].dex}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           CON:{" "}
-                          {myCharacters[id].con
-                            ? myCharacters[id].con
-                            : "5"}
+                          {myCharacters[id].con}
                         </p>
                       </div>
 
@@ -244,27 +238,21 @@ function CharacterSheet({ myCharacters }) {
                     <div className="col">
                         <p id="divbox">
                           WIS:{" "}
-                          {myCharacters[id].wis
-                            ? myCharacters[id].wis
-                            : "5"}
+                          {myCharacters[id].wis}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           INT:{" "}
-                          {myCharacters[id].int
-                            ? myCharacters[id].int
-                            : "5"}
+                          {myCharacters[id].int}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           CHA:{" "}
-                          {myCharacters[id].cha
-                            ? myCharacters[id].cha
-                            : "5"}
+                          {myCharacters[id].cha}
                         </p>
                       </div>
 
@@ -295,7 +283,7 @@ function CharacterSheet({ myCharacters }) {
         </div>
         {/* Nothing below here */}
         <WoodBeamX beamStyle={{ bottom: "-3px" }} />
-        <Corner
+        <Corner2
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -304,7 +292,7 @@ function CharacterSheet({ myCharacters }) {
             transform: "rotate(180deg)",
           }}
         />
-        <Corner
+        <Corner2
           cornerStyle={{
             width: "80px",
             height: "auto",

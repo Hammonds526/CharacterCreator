@@ -5,7 +5,7 @@ function Stonebeam(props) {
   return (
     <div className="position-relative">
       <div
-        className="position-absolute stone-beam__vertical"
+        className="position-absolute stone-beam__verticle "
         style={props.beamStyle}
       ></div>
     </div>
