@@ -21,14 +21,16 @@
 .scroll-list::-webkit-scrollbar-track {
   background-image: url("./metstone_beam_vert.png");
   width: 8px;
+  background-repeat: round;
 }
 
 /* Handle */
 .scroll-list::-webkit-scrollbar-thumb {
-  background-image: url("./gold_vert_scroll_sm2.png");
+  background-image: url("./gold_vert_scroll.png");
   background-repeat: round;
-  width: 8;
-  height: 16px;
+  border-radius: 15px;
+  width: 16;
+  height: auto;
 }
 
 /* Handle on hover */

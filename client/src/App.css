@@ -16,23 +16,12 @@ html {
     overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
-}
 
-::-webkit-scrollbar-thumb {
-    background: transparent;
-    
-}
 .title {
   font-weight: normal;
   text-align: center;
 }
 
-body, html::-webkit-scrollbar-track {
-  background-image: none;
-}
 
 
 
@@ -67,7 +56,7 @@ body, html::-webkit-scrollbar-track {
 /* 
 //////////////////////////
 
- Custom Scroll bar Stuff.
+Custom Scroll bar Stuff.
 
 /////////////////////////
 */
@@ -97,6 +86,18 @@ body, html::-webkit-scrollbar-track {
 }
 
 
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    
+}
+::-webkit-scrollbar-track {
+  background-image: none;
+}
 
 /* DONT KNOW WHAT THIS IS, BUT I AIN'T TOUCHIN' IT. -Ty */
 
