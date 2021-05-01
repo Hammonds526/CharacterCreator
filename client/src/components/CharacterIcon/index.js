@@ -41,7 +41,6 @@ function CharacterIcon(item) {
         break;
     }
   }, []);
-  console.log("classIcon ", classIcon);
   return (
     <img className="icon mr-2" src={classIcon} alt="Character Avatar"></img>
   );
