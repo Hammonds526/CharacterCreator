@@ -11,7 +11,6 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    // console.log(req.user);
     if(req.user) 
     {
       return res.json({characters: req.user.characters});
@@ -20,13 +19,9 @@ module.exports = {
       return res.json(
         {characters: []})
     }
-    // User.findById(req.params.id)
-    //   .then((dbModel) => res.json(dbModel))
-    //   .catch((err) => res.status(422).json(err));
   },
   logout: function(req, res){
     req.session.destroy(function (err) {
-      // console.log("is it working?")
       res.clearCookie('connect.sid');
       res.redirect('/'); //Inside a callback… bulletproof!
     });
@@ -65,9 +60,9 @@ module.exports = {
       .then((dbModel) => res.json(dbModel.user.characters))
       .catch((err) => res.status(422).json(err));
   },
+  //Boiler plate trying to see if user exists...
   login: function (req, res) {
     const { username, password } = req.body;
-    // console.log(username, password);
     if (!username) {
       res.status(422).json({
         message: "Username was not given.",
@@ -91,7 +86,6 @@ module.exports = {
               // Do session stuff here\
               req.login(user, function(err) {
                 if (err) { return next(err); }
-                // return res.redirect('/users/' + req.user.username);
                 res.json(user);
               });
             }
@@ -102,5 +96,14 @@ module.exports = {
   },
   checkSession: (req, res) => {
     (req.session && req.user) ? res.json(req.user._id) : res.json();
-  }
+  },
+  //Find user based on Id. Pull character by id from list return new list
+  updateUserCharacters: function (req, res) {
+    User.findOneAndUpdate({_id: req.params.id},
+      {$pull:{"characters":{_id:req.params.characterId} } },
+      {new: true}
+    )
+    .then(dbModel => res.json(dbModel))
+    .catch((err) => res.status(422).json(err));
+  },
 };

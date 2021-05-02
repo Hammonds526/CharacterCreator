@@ -16,7 +16,6 @@ import AuthPages from "./pages/AuthPages";
 import Logout from "./components/Logout";
 import CharacterSheetPage from "./pages/CharacterSheet";
 
-
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
 
@@ -62,8 +61,7 @@ function App() {
         if (user) {
           API.getUser(user)
             .then((res) => {
-              console.log(res.data);
-              // setUser(res.data);
+              //set characters whether or not they exist from user
               setmyCharacters(res.data !== null ? res.data.characters : []);
             })
             .catch(() => { });
@@ -91,8 +89,11 @@ function App() {
                 />
               </Route>
               <Route path={"/character-sheet/:id"}>
-          <CharacterSheetPage myCharacters={myCharacters} character={character} />
-        </Route>
+                <CharacterSheetPage
+                  myCharacters={myCharacters}
+                  character={character}
+                />
+              </Route>
             </Switch>
           </div>
           <div className="d-flex justify-content-center">
@@ -106,29 +107,22 @@ function App() {
             </div>
           </div>
 
-
-
           <div className="row">
             <div className="col-12 col-lg-9 ">
               <div className="row">
                 <div className="col">
-
                   <Tavern
                     setNewCharacter={setNewCharacter}
                     newCharacter={newCharacter}
                   />
                 </div>
               </div>
-
             </div>
             <div className="col-12 col-lg-3 p-0 ">
-
-              <MyCharacters myCharacters={myCharacters} />
-
+              <MyCharacters myCharacters={myCharacters} user={user} />
             </div>
           </div>
         </div>
-
       ) : (
         <AuthPages signIn={signIn} setSignIn={setSignIn} setUser={setUser} />
       )}

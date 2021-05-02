@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 import "./style.css";
 
 // Components
 import ScrollList from "../ScrollList";
 import API from "../../utils/API";
 import SelectButton from "../SelectButton";
-import FeatLimiter from "../FeatLimiter"
+import FeatLimiter from "../FeatLimiter";
 import spells from "../../data/spells";
 require("dotenv").config();
 
@@ -38,17 +38,17 @@ function TabFeats({
   }, []);
 
   //Set total feats available their current level / 2
-  useEffect(() =>{
-    const localFeats = {...feats}
-   localFeats.totalFeatsAvailable = Math.floor(newCharacter.level / 2)
-   //Humans get an extra feat
-   if (newCharacter.race === "human") {
-     localFeats.totalFeatsAvailable++
-   }
-   localFeats.totalFeatsSelected = newCharacter.feats.length
-  setFeats(localFeats)
-  },[newCharacter])
-  
+  useEffect(() => {
+    const localFeats = { ...feats };
+    localFeats.totalFeatsAvailable = Math.floor(newCharacter.level / 2);
+    //Humans get an extra feat
+    if (newCharacter.race === "human") {
+      localFeats.totalFeatsAvailable++;
+    }
+    localFeats.totalFeatsSelected = newCharacter.feats.length;
+    setFeats(localFeats);
+  }, [newCharacter]);
+
   const finishButtonOnClick = () => {
     // Update characters list
     const charList = [...myCharacters, newCharacter];
@@ -57,10 +57,10 @@ function TabFeats({
       characters: charList,
     })
       .then((res) => {
-     
-        setmyCharacters(charList);
-        
-        history.push(`/character-sheet/${myCharacters.length}`)
+        //set characters based off database rather than state. Gives full list with current information.
+        setmyCharacters(res.data.characters);
+
+        history.push(`/character-sheet/${myCharacters.length}`);
       })
       .catch((err) => console.log(err));
   };
@@ -89,10 +89,12 @@ function TabFeats({
 
   return (
     <div>
-      <h2 className=" ml-3 text-bisque">Choose your Feat{(feats.totalFeatsAvailable > 1) ? "s": null}</h2>
+      <h2 className=" ml-3 text-bisque">
+        Choose your Feat{feats.totalFeatsAvailable > 1 ? "s" : null}
+      </h2>
       <div className="row mb-2">
         <div className="col-4">
-        <FeatLimiter
+          <FeatLimiter
             feats={feats}
             setFeats={setFeats}
             activeFeat={activeFeat}
@@ -103,28 +105,31 @@ function TabFeats({
             list={getFeats}
             setActive={setActiveFeat}
             checkboxOnClick={checkboxOnClick}
-            newCharacter={newCharacter}zs
+            newCharacter={newCharacter}
+            zs
             {...props}
             itemType={"feat"}
             scrollListStyle={{ maxHeight: "400px" }}
           />
         </div>
         <div className="col-8">
-          {(feats.totalFeatsAvailable === 0)? <p className="text-warning">No feats avaiable with this Level/Race combo</p>: null}
+          {feats.totalFeatsAvailable === 0 ? (
+            <p className="text-warning">
+              No feats avaiable with this Level/Race combo
+            </p>
+          ) : null}
           <h3 className="text-bisque mt-3 text-align-left">
             {activeFeat.name}
           </h3>
-          <p className="tab_descriptions text-bisque mt-3">
-            {activeFeat.desc}
-          </p>
+          <p className="tab_descriptions text-bisque mt-3">{activeFeat.desc}</p>
         </div>
       </div>
 
       <div className="d-flex justify-content-end">
-          <SelectButton
-            text={"Finish"}
-            selectButtonOnClick={finishButtonOnClick}
-          />
+        <SelectButton
+          text={"Finish"}
+          selectButtonOnClick={finishButtonOnClick}
+        />
       </div>
     </div>
   );

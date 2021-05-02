@@ -34,6 +34,7 @@ function MyCharacters(props) {
           transform: "rotate(90deg)",
         }}
       />
+
       {/* Nothing Above this line */}
       <h4 className="my-characters__title pt-4">My Characters</h4>
       <CharacterListItem {...props} />
