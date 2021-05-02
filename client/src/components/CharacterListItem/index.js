@@ -21,7 +21,6 @@ function CharacterListItem(props) {
               top: "7px",
               zIndex: "2",
             }}
-            xBtnUrl="/"
             item={item}
             user={props.user}
             setmyCharacters={props.setmyCharacters}
