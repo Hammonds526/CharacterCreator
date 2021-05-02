@@ -16,7 +16,6 @@ import AuthPages from "./pages/AuthPages";
 import Logout from "./components/Logout";
 import CharacterSheetPage from "./pages/CharacterSheet";
 
-
 function App() {
   const [myCharacters, setmyCharacters] = useState([]);
 
@@ -54,8 +53,7 @@ function App() {
         if (user) {
           API.getUser(user)
             .then((res) => {
-              console.log(res.data);
-              // setUser(res.data);
+              //set characters whether or not they exist from user
               setmyCharacters(res.data !== null ? res.data.characters : []);
             })
             .catch(() => {});
@@ -64,7 +62,7 @@ function App() {
       .catch(() => console.log("no session found"));
   }, [user]);
 
-// console.log("myCharacters", myCharacters)
+  // console.log("myCharacters", myCharacters)
 
   return (
     <Router>
@@ -83,44 +81,40 @@ function App() {
                 />
               </Route>
               <Route path={"/character-sheet/:id"}>
-          <CharacterSheetPage myCharacters={myCharacters} character={character} />
-        </Route>
+                <CharacterSheetPage
+                  myCharacters={myCharacters}
+                  character={character}
+                />
+              </Route>
             </Switch>
           </div>
-<div className="d-flex justify-content-center">
-  <div className="ml-auto">
-  <h1 className="main-title__text color-burlywood">
-            Character Tavern{" "}
-          </h1>
-  </div>
-  <div className="ml-auto mt-1">
-  <Logout setSignIn={setSignIn} setUser={setUser} />
-  </div>
-</div>
-          
-         
+          <div className="d-flex justify-content-center">
+            <div className="ml-auto">
+              <h1 className="main-title__text color-burlywood">
+                Character Tavern{" "}
+              </h1>
+            </div>
+            <div className="ml-auto mt-1">
+              <Logout setSignIn={setSignIn} setUser={setUser} />
+            </div>
+          </div>
 
           <div className="row">
             <div className="col-12 col-lg-9 ">
               <div className="row">
                 <div className="col">
-   
-                <Tavern
-                setNewCharacter={setNewCharacter}
-                newCharacter={newCharacter}
-              />
+                  <Tavern
+                    setNewCharacter={setNewCharacter}
+                    newCharacter={newCharacter}
+                  />
                 </div>
               </div>
-           
             </div>
             <div className="col-12 col-lg-3 p-0 ">
-           
-              <MyCharacters myCharacters={myCharacters} />
-
-                </div>
-              </div>
+              <MyCharacters myCharacters={myCharacters} user={user} />
             </div>
-         
+          </div>
+        </div>
       ) : (
         <AuthPages signIn={signIn} setSignIn={setSignIn} setUser={setUser} />
       )}

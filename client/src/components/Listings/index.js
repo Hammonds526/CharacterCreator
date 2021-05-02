@@ -5,8 +5,6 @@ import Col from "react-bootstrap/Col";
 
 function Listings(props) {
   // console.log(props.items);
-  // const [firstItem, setFirstItem] = useState([]);
-
   return (
     <div>
       {props.items.map((listItem) => (
