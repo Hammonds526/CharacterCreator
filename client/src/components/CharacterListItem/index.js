@@ -12,7 +12,6 @@ import cardThing from "../../images/cardthing.png";
 // The main function
 function CharacterListItem(props) {
   function DeleteCharacter(item) {
-    console.log("_id ", item._id);
     //call on finding current User
     API.check().then((res) => {
       //delete character based off id of user and character
