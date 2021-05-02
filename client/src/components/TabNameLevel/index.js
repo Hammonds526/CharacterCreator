@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// CSS
 import "./style.css";
+
+// COmponents
 import SelectButton from "../SelectButton";
 import LevelSelector from "../LevelSelecter";
 
+// Main function
 function TabNameLevel(props) {
   const handleInputChange = (event) => {
     const { value, name } = event.target;

@@ -13,7 +13,6 @@ import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
 import StatPage from "../TabStats";
 import NameLevelPage from "../TabNameLevel";
-// import CharacterSheetPage from "../../pages/CharacterSheetPage";
 
 // Close btn
 import Xbtn from "../ButtonClose";

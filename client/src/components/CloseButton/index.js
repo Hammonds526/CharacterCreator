@@ -1,5 +1,8 @@
 import React from "react";
+
+// CSS
 import "./style.css";
+
 // import {useHistory} from "react-router-dom";
 
 function CloseButton(props) {

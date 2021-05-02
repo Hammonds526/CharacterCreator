@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
+
+// Component import
 import CheckBox from "../CheckBox";
 
+// CSS
+import "./style.css";
+
+// Main function
 function ScrollListItem({
   item,
   i,

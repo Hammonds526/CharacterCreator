@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+// CSS
 import "./style.css";
+
+// Component imports
 import SelectButton from "../SelectButton";
 import Button from "../Button";
 

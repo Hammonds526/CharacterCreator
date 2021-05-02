@@ -1,6 +1,10 @@
 import React from "react";
-import "./style.css";
+
+// Nav arrow component
 import NavArrow from "../NavArrow";
+
+// CSS
+import "./style.css";
 
 function SelectButton(props) {
   return (
