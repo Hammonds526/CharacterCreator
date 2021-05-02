@@ -5,13 +5,28 @@ import "./style.css";
 
 //Components
 import CharacterIcon from "../CharacterIcon";
+import DeleteButton from "../DeleteButton";
 
 // The main function
 function CharacterListItem(props) {
+  // console.log(props);
   return (
     <div className="character-list">
       {props.myCharacters.map((item, index) => (
         <Link to={`/character-sheet/${index}`} key={index}>
+          {/* This this button below is supposed to close the creator */}
+          <DeleteButton
+            xBtnStyle={{
+              width: "30px",
+              height: "auto",
+              right: "110px",
+              top: "7px",
+              zIndex: "2",
+            }}
+            xBtnUrl="/"
+            item={item}
+            user={props.user}
+          />
           <div id="charbox" className="list-group-item mb-1">
             <h4 className="text-truncate mt-2">{item.name}</h4>
             <p>

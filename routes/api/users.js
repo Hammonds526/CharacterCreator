@@ -18,6 +18,9 @@ router
   .delete(usersController.remove);
 
 router.route("/:id/characters")
-  .get(usersController.characterList);
+  .get(usersController.characterList)
+  
+router.route("/:id/:characterId")
+  .put(usersController.updateUserCharacters);
 
 module.exports = router;

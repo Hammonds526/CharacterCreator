@@ -102,5 +102,12 @@ module.exports = {
   },
   checkSession: (req, res) => {
     (req.session && req.user) ? res.json(req.user._id) : res.json();
-  }
+  },
+
+  updateUserCharacters: function (req, res) {
+    User.findOneAndUpdate({_id: req.params.id},
+      {$pull:{"characters":{_id:req.params.characterId} } },
+      {new: true}
+    ).then(dbModel => res.json(dbModel));
+  },
 };

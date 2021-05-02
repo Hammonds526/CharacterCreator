@@ -33,4 +33,7 @@ export default {
   updateUser: function (id, userData) {
     return axios.put("/api/users/" + id, userData);
   },
+  deleteCharacter: function (id, characterId) {
+    return axios.put("/api/users/" + id + "/" + characterId);
+  },
 };
