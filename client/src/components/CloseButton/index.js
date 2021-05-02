@@ -1,26 +1,25 @@
 import React from "react";
 import "./style.css";
-// import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function CloseButton(props) {
-
-const routeChange = () =>{
+  const routeChange = () => {
     // path.dirname('/')
-    // const history = useHistory()
-    // history.push(('/'), [history]);
-    window.location.assign("/");
-}
+    const history = useHistory();
+    history.push("/", [history]);
+    // window.location.assign("/");
+  };
 
   return (
     <button
       className={
-        "position-relative" +
-        (props.buttonStyles === undefined ? "xbtn" : "")
+        "position-relative" + (props.buttonStyles === undefined ? "xbtn" : "")
       }
       style={props.buttonStyles ? props.buttonStyles : null}
-      onClick={routeChange} 
-    >
-    </button>
+      onClick={
+        props.closeButtonFunction ? props.closeButtonFunction : routeChange
+      }
+    ></button>
   );
 }
 

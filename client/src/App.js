@@ -111,7 +111,7 @@ function App() {
               </div>
             </div>
             <div className="col-12 col-lg-3 p-0 ">
-              <MyCharacters myCharacters={myCharacters} user={user} />
+              <MyCharacters myCharacters={myCharacters} setMyCharacters={setmyCharacters} user={user} />
             </div>
           </div>
         </div>
