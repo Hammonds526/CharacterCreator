@@ -57,6 +57,7 @@ function TabFeats({
       characters: charList,
     })
       .then((res) => {
+        //set characters based off database rather than state. Gives full list with current information.
         setmyCharacters(res.data.characters);
 
         history.push(`/character-sheet/${myCharacters.length}`);

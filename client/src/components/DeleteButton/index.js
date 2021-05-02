@@ -5,11 +5,12 @@ import { Route } from "react-router";
 import xBtn from "../../images/ui/xbtn.png";
 import API from "../../utils/API";
 
-// Our X-btn function, should close the main page when clicked.
+// Our X-btn function, should delete character when clicked.
 function DeleteButton(props) {
   function DeleteCharacter() {
+    //call on finding current User
     API.check().then((res) => {
-      // console.log(props);
+      //delete character based off id of user and character
       API.deleteCharacter(res.data, props.item._id);
     });
   }

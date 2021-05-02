@@ -9,7 +9,6 @@ import DeleteButton from "../DeleteButton";
 
 // The main function
 function CharacterListItem(props) {
-  // console.log(props);
   return (
     <div className="character-list">
       {props.myCharacters.map((item, index) => (

@@ -53,8 +53,7 @@ function App() {
         if (user) {
           API.getUser(user)
             .then((res) => {
-              // console.log(res.data);
-              // setUser(res.data);
+              //set characters whether or not they exist from user
               setmyCharacters(res.data !== null ? res.data.characters : []);
             })
             .catch(() => {});
