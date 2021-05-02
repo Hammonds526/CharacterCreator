@@ -11,4 +11,9 @@
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   transition: ease-in 2s;
   backdrop-filter: blur(2px);
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.modal-content-box::-webkit-scrollbar {
+  display: none;
 }

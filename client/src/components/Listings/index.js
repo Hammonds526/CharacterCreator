@@ -6,16 +6,13 @@ import Col from "react-bootstrap/Col";
 function Listings(props) {
   // console.log(props.items);
   return (
-    <Row>
-      <Col xs={10}>
-        <ul>
-          {props.items.map((listItem) => (
-            <ol key={listItem.toString()}>{listItem}</ol>
-          ))}
-        </ul>
-      </Col>
-      <Col></Col>
-    </Row>
+    <div>
+      {props.items.map((listItem) => (
+        <p className="mb-0" key={listItem.toString()}>
+          {listItem}
+        </p>
+      ))}
+    </div>
   );
 }
 

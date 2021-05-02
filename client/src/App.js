@@ -83,7 +83,7 @@ function App() {
                 />
               </Route>
               <Route path={"/character-sheet/:id"}>
-          <CharacterSheetPage myCharacters={myCharacters} />
+          <CharacterSheetPage myCharacters={myCharacters} character={character} />
         </Route>
             </Switch>
           </div>
