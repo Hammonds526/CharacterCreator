@@ -15,6 +15,13 @@ function DeleteButton(props) {
     });
   }
 
+  /*
+  DELETE BUTTON NEEDS WORK. 
+  CURRENTLY BUGGY DOES DELETE THOUGH
+  BUGS:
+  PULLS UP CHARACTER SHEET ON CLICK: NEED TO FIND WAY OF STOPPING EVENT PROPS/EVENT BUBBLING
+  DOESN'T DELETE DYNAMICALLY: NEEDS REFRESH TO SHOW NEW LIST, HOPE SOMEONE CAN HELP WITH THIS ONE
+  */
   return (
     <div className="position-relative">
       <div onClick={DeleteCharacter}>
