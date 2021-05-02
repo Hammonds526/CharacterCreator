@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+
+// CSS
 import "./style.css";
+
 // import getSpellAmount from "../../utils/getSpellAmount";
 
 function FeatLimiter({

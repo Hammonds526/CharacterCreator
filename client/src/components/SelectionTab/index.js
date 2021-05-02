@@ -1,9 +1,12 @@
 import React from "react";
 
+// CSS
 import "./style.css";
 
+// Image import
 import ImageCenter from "../../images/selectiontab.png";
 
+// Main function
 function SelectionTab(props) {
   return (
     <div id="selection"

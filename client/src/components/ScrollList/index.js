@@ -1,8 +1,12 @@
 import React from "react";
+
+// CSS
 import "./style.css";
 
+// Components
 import ScrollListItem from "../ScrollListItem";
 
+// Main function
 function ScrollList({ list, scrollListStyle, ...props }) {
   return (
     <div className="scroll-list" style={scrollListStyle}>

@@ -6,16 +6,24 @@ html {
   text-align: center;
   background-color: #2a2c30;
   color: burlywood;
-
   height: 100vh;
   margin: 0;
   background-image: url("./images/stone_tile2.png");
   background-size: "64px";
+  /* Scrolling an overflow */
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
 }
+
+
 .title {
   font-weight: normal;
   text-align: center;
 }
+
+
+
 
 .text-bisque {
   color: bisque;
@@ -44,6 +52,54 @@ html {
 .form::placeholder {
   color: goldenrod;
 }
+
+/* 
+//////////////////////////
+
+Custom Scroll bar Stuff.
+
+/////////////////////////
+*/
+
+
+/* width */
+::-webkit-scrollbar {
+  width: auto;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: none;
+  background-repeat: round;
+  width: 8;
+  height: 16px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(179%);
+}
+
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    
+}
+::-webkit-scrollbar-track {
+  background-image: none;
+}
+
+/* DONT KNOW WHAT THIS IS, BUT I AIN'T TOUCHIN' IT. -Ty */
 
 /* @media (max-width: 576px) {
   .main-title__text {

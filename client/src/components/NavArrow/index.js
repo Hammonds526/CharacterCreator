@@ -1,5 +1,6 @@
 import React from "react";
-import "./style.css";
+
+// Nav Arrow image import
 import NavArrow from "../../images/selection_arrow.png";
 
 function SelectionTabStart(props) {

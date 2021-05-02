@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+// CSS
 import "./style.css";
+
+// COmponents
 import SelectButton from "../SelectButton";
 import ScrollList from "../ScrollList";
 import SpellLimiter from "../SpellLimiter";
-import MyCharacters from "../MyCharacters";
 
 function TabSpells({
   getFilteredSpells,

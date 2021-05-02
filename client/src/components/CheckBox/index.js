@@ -1,8 +1,13 @@
 import React from "react";
-import "./style.css";
+
+// Components
 import CheckedBox from "../../images/ui/checked_box.png";
 import UncheckedBox from "../../images/ui/empty_box.png";
 
+// CSS
+import "./style.css";
+
+// Main function
 function CheckBox({
   item,
   checkboxStyle,
@@ -10,6 +15,7 @@ function CheckBox({
   checkboxOnClick,
   checkBoxName,
 }) {
+  
   return (
     <div className="">
       <img

@@ -1,5 +1,6 @@
 import React from "react";
-import "./style.css";
+
+// CSS and Image
 import Image from "../../images/corner.png";
 
 function Corner(props) {

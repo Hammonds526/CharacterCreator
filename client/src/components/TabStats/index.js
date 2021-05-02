@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-// CSS
 import "./style.css";
-
-// Component imports
 import SelectButton from "../SelectButton";
 import Button from "../Button";
 
@@ -22,33 +18,23 @@ function TabRace(props) {
 
   return (
     <div>
-      <h4 className=" ml-3 text-bisque">Choose a Race</h4>
+      <h4 className="ml-3 text-bisque">Set Your Stats</h4>
+      {/* <p className="ml-3 text-bisque">....................</p> */}
       <div className="row mb-2">
-        {props.character.race.map((item, i) => (
-          <div
-            className="col p-0 d-flex justify-content-center"
-            key={item.name}
-          >
-            <div
-              onClick={() => {
-                setActiveRace(item);
-                props.setNewCharacter({
-                  ...props.newCharacter,
-                  race: item.name.toLowerCase(),
-                });
-              }}
-            >
-              <Button text={item.name} />
-            </div>
-          </div>
-        ))}
+<h3>Strength (STR) :</h3>
+<br/>
+<h3>Constitution (CON) :</h3>
+<br/>
+<h3>Dexterity (DEX) :</h3>
+<br/>
+<h3>Wisdom (WIS) :</h3>
+<br/>
+<h3>Intelligence (INT) :</h3>
+<br/>
+<h3>Charisma (CHA) :</h3>
+<br/>
       </div>
 
-      <h3 className="text-bisque mt-3 text-align-left">{activeRace.name}</h3>
-
-      <p className="tab_descriptions text-bisque mb-2">
-        {activeRace.description}
-      </p>
       <div className="d-flex justify-content-end">
         <Link to={"/character-creator/class"}>
           <SelectButton text={"Continue"} />
