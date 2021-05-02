@@ -12,8 +12,7 @@ function CharacterListItem(props) {
   return (
     <div className="character-list">
       {props.myCharacters.map((item, index) => (
-        <Link to={`/character-sheet/${index}`} key={index}>
-          {/* This this button below is supposed to close the creator */}
+        <div key={index}>
           <DeleteButton
             xBtnStyle={{
               width: "30px",
@@ -25,26 +24,29 @@ function CharacterListItem(props) {
             xBtnUrl="/"
             item={item}
             user={props.user}
+            setmyCharacters={props.setmyCharacters}
           />
-          <div id="charbox" className="list-group-item mb-1">
+          <Link to={`/character-sheet/${index}`}>
+            {/* This this button below is supposed to close the creator */}
 
-            <h4 className="text-truncate mt-2">{item.name}</h4>
+            <div id="charbox" className="list-group-item mb-1">
+              <h4 className="text-truncate mt-2">{item.name}</h4>
 
-            <p>
-              {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
-              {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
-            </p>
+              <p>
+                {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
+                {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
+              </p>
 
-            <CharacterIcon item={item} />
+              <CharacterIcon item={item} />
 
-            <p id="level">{item.level}</p>
+              <p id="level">{item.level}</p>
 
-            <hr className="my-4" />
+              <hr className="my-4" />
 
-            <br />
-
-          </div>
-        </Link>
+              <br />
+            </div>
+          </Link>
+        </div>
       ))}
     </div>
   );

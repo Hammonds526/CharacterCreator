@@ -11,7 +11,9 @@ function DeleteButton(props) {
     //call on finding current User
     API.check().then((res) => {
       //delete character based off id of user and character
-      API.deleteCharacter(res.data, props.item._id);
+      API.deleteCharacter(res.data, props.item._id).then((res) => {
+        props.setmyCharacters(res.data.characters);
+      });
     });
   }
 
@@ -24,8 +26,14 @@ function DeleteButton(props) {
   */
   return (
     <div className="position-relative">
-      <div onClick={DeleteCharacter}>
-        <img src={xBtn} style={props.xBtnStyle} className="position-absolute" />
+      <div>
+        <img
+          id="x-btn"
+          src={xBtn}
+          style={props.xBtnStyle}
+          className="position-absolute"
+          onClick={DeleteCharacter}
+        />
       </div>
     </div>
   );
