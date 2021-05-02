@@ -88,35 +88,54 @@ function App() {
                   setmyCharacters={setmyCharacters}
                 />
               </Route>
+
               <Route path={"/character-sheet/:id"}>
+
                 <CharacterSheetPage
                   myCharacters={myCharacters}
                   character={character}
                 />
+
               </Route>
+
             </Switch>
+
           </div>
+
           <div className="d-flex justify-content-center">
+
             <div className="ml-auto">
+
               <h1 className="main-title__text color-burlywood">
                 Character Tavern{" "}
               </h1>
+
             </div>
+
             <div className="ml-auto mt-1">
+
               <Logout setSignIn={setSignIn} setUser={setUser} />
+
             </div>
           </div>
 
           <div className="row">
+
             <div className="col-12 col-lg-9 ">
+
               <div className="row">
+
                 <div className="col">
+
                   <Tavern
                     setNewCharacter={setNewCharacter}
                     newCharacter={newCharacter}
                   />
+
                 </div>
+
               </div>
+
             </div>
             <div className="col-12 col-lg-3 p-0 ">
               <MyCharacters myCharacters={myCharacters} user={user} />
