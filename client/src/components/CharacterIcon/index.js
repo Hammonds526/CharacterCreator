@@ -42,7 +42,7 @@ function CharacterIcon(item) {
     }
   }, []);
   return (
-    <img className="icon mr-2" src={classIcon} alt="Character Avatar"></img>
+    <img className="icon mr-2" src={classIcon} alt="Character Icon"></img>
   );
 }
 
