@@ -6,7 +6,6 @@ import "./style.css";
 //Components
 import CharacterIcon from "../CharacterIcon";
 import Xbtn from "../Xbtn";
-import DeleteButton from "../DeleteButton";
 //Images
 import cardThing from "../../images/cardthing.png";
 

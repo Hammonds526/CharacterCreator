@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// CSS
 import "./style.css";
+
+// Components
 import TavernImage from "../../images/tavern/tavernx2.png";
 // import Logout from "../../components/Logout";
 

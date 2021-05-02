@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
+
+// Bootstap components
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 

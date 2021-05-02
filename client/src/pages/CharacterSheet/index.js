@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 // Components
-import Corner from "../../components/Corner";
+import Corner2 from "../../components/Corner2";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/Xbtn";
@@ -102,7 +102,7 @@ function CharacterSheet({ myCharacters, character }) {
         <WoodBeamY beamStyle={{ right: "0px", top: "0px" }} />
         <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
 
-        <Corner
+        <Corner2
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -110,7 +110,7 @@ function CharacterSheet({ myCharacters, character }) {
             top: "-5px",
           }}
         />
-        <Corner
+        <Corner2
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -152,7 +152,11 @@ function CharacterSheet({ myCharacters, character }) {
                       myCharacters[id].race.slice(1)}{" "}
                   </h2>
                   <div>
-                    <br />
+                    <img
+                      className="icon"
+                      src={ClassIcon}
+                      alt="Character Avatar"
+                    ></img>
                     <h2>
                       Class:{" "}
                       {myCharacters[id].class.charAt(0).toUpperCase() +
@@ -165,15 +169,12 @@ function CharacterSheet({ myCharacters, character }) {
                         : "No Subclass"}
                     </h3>
                     <br />
-                    <img
-                      className="icon"
-                      src={ClassIcon}
-                      alt="Character Avatar"
-                    ></img>
                     <br />
                     <div>
                       <h2 id="lvlbox">Level</h2>
-                      <p id="level">{myCharacters[id].level}</p>
+                      <p id="level">
+                        {myCharacters[id].level}
+                      </p>
                       <br />
                     </div>
                   </div>
@@ -182,7 +183,7 @@ function CharacterSheet({ myCharacters, character }) {
               </div>
               {/* Center Column */}
               <div className="col d-flex justify-content-center">
-                <div className="avatar__container text-center">
+                <div className="row avatar__container text-center">
                   <div>
                     <img
                       className="frame position-relative"
@@ -197,6 +198,57 @@ function CharacterSheet({ myCharacters, character }) {
                       ></img>
                     </div>
                     <div className="vortex"></div>
+                  </div>
+                  <div className="row">
+
+                    <div className="row">
+
+                      <div className="col">
+                        <p id="divbox">
+                          STR:{" "}
+                          {myCharacters[id].str}
+                        </p>
+                      </div>
+
+                      <div className="col">
+                        <p id="divbox">
+                          DEX:{" "}
+                          {myCharacters[id].dex}
+                        </p>
+                      </div>
+
+                      <div className="col">
+                        <p id="divbox">
+                          CON:{" "}
+                          {myCharacters[id].con}
+                        </p>
+                      </div>
+
+                    </div>
+                    <div className="row">
+
+                    <div className="col">
+                        <p id="divbox">
+                          WIS:{" "}
+                          {myCharacters[id].wis}
+                        </p>
+                      </div>
+
+                      <div className="col">
+                        <p id="divbox">
+                          INT:{" "}
+                          {myCharacters[id].int}
+                        </p>
+                      </div>
+
+                      <div className="col">
+                        <p id="divbox">
+                          CHA:{" "}
+                          {myCharacters[id].cha}
+                        </p>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
               </div>
@@ -230,7 +282,7 @@ function CharacterSheet({ myCharacters, character }) {
         </div>
         {/* Nothing below here */}
         <WoodBeamX beamStyle={{ bottom: "-3px" }} />
-        <Corner
+        <Corner2
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -239,7 +291,7 @@ function CharacterSheet({ myCharacters, character }) {
             transform: "rotate(180deg)",
           }}
         />
-        <Corner
+        <Corner2
           cornerStyle={{
             width: "80px",
             height: "auto",
