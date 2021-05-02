@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Btn image
 import xBtn from "../../images/ui/xbtn.png";
 
-// css
+// CSS
 import "./style.css";
 
 // Our X-btn function, should close the main page when clicked.
