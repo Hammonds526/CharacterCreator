@@ -15,7 +15,7 @@ import StatPage from "../TabStats";
 import NameLevelPage from "../TabNameLevel";
 
 // Close btn
-import Xbtn from "../ButtonClose";
+import Xbtn from "../Xbtn";
 
 // Pixel border stuff
 import Corner from "../Corner";
