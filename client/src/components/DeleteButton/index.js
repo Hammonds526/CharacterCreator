@@ -9,6 +9,7 @@ import API from "../../utils/API";
 function DeleteButton(props) {
   function DeleteCharacter() {
     API.check().then((res) => {
+      // console.log(props);
       API.deleteCharacter(res.data, props.item._id);
     });
   }

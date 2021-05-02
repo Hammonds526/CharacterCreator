@@ -108,6 +108,8 @@ module.exports = {
     User.findOneAndUpdate({_id: req.params.id},
       {$pull:{"characters":{_id:req.params.characterId} } },
       {new: true}
-    ).then(dbModel => res.json(dbModel));
+    )
+    .then(dbModel => res.json(dbModel))
+    .catch((err) => res.status(422).json(err));
   },
 };
