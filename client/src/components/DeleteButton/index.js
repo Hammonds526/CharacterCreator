@@ -4,6 +4,7 @@ import { Route } from "react-router";
 // Btn image
 import xBtn from "../../images/ui/xbtn.png";
 import API from "../../utils/API";
+import "./style.css";
 
 // Our X-btn function, should delete character when clicked.
 function DeleteButton(props) {
