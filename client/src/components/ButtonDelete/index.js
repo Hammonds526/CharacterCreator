@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 // Btn image
 import Deletebtn from "../../images/ui/delete.png";
 
-
 // CSS
 import "./style.css";
 
