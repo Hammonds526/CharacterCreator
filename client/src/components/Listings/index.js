@@ -10,12 +10,12 @@ function Listings(props) {
     <div>
       {props.items.map((listItem, i) => (
         <p
-          name={listItem.name}
+          name={listItem.name ? listItem.name : listItem}
           className="mb-0"
           onClick={props.clickFunction}
           key={i}
         >
-          {listItem.name}
+          {listItem.name ? listItem.name : listItem}
         </p>
       ))}
     </div>
