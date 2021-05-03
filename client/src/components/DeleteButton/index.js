@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router";
 
 // Btn image
-import xBtn from "../../images/ui/xbtn.png";
+import xBtn from "../../images/ui/delete.png";
 import API from "../../utils/API";
 
 // Our X-btn function, should delete character when clicked.
