@@ -1,0 +1,109 @@
+#character-sheet__container {
+  background-image: url("../../images/stone_tile2.png");
+  background-size: "64px";
+  color: burlywood;
+  padding: 5px;
+}
+
+#character-stats {
+  height: auto;
+  float: left;
+  width: auto;
+  margin: 5px;
+  padding: 2px;
+}
+
+#subclass {
+  color: #8d1e1e;
+  font-size: 28px;
+}
+
+#level {
+  text-align: center;
+  display: inline-block;
+  width: 46px;
+  padding-left: 2px;
+  padding-bottom: 1px;
+  padding-top: 0;
+  line-height: 39px;
+  justify-self: center;
+  background-color: wheat;
+  border: burlywood 2px solid;
+
+  border-radius: 4px;
+  font-family: Romulus;
+  color: brown;
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+#listnames {
+  color: #daa30f;
+}
+
+#character-sheet__right-list {
+  justify-content: space-evenly;
+  text-align: center;
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 300px;
+}
+
+#character-name {
+  font-size: 32px;
+  color: #d3c120;
+}
+
+h2 {
+  font-size: 34px;
+}
+h3 {
+  font-size: 19px;
+}
+
+#card {
+  background-color: #46413b98;
+  border-radius: 2px;
+  border: #6e6967b7 2px solid;
+  height: 100%;
+}
+
+/* AVATAR CONTAINER STUFF */
+/* 
+
+This is definitely now the best way to do this, but I am scrapped for time here.
+*/
+
+.avatar__container {
+  /* background-image: url("../../images/stone_tile2.png"); */
+  background-color: transparent;
+  border-radius: 25px;
+  background-size: auto;
+  height: 200px;
+  width: 200px;
+}
+
+/* Animations */
+@keyframes Spinny {
+  from {
+    transform: rotate(0deg);
+    opacity: 0.55;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes Avatarfloat {
+  0% {
+    margin-top: -110%;
+  }
+  50% {
+    margin-top: -130%;
+  }
+  100% {
+    margin-top: -110%;
+  }
+}

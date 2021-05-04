@@ -1,3 +1,42 @@
 .scroll-list {
   overflow-y: scroll;
 }
+
+
+/* 
+//////////////////////////
+
+ Custom Scroll bar Stuff.
+
+/////////////////////////
+*/
+
+/* width */
+.scroll-list::-webkit-scrollbar {
+  width: auto;
+  scroll-behavior: smooth;
+}
+
+/* Track */
+.scroll-list::-webkit-scrollbar-track {
+  background-image: url("./metstone_beam_vert.png");
+  width: 8px;
+  border-radius: 15px;
+  background-repeat: round;
+}
+
+/* Handle */
+.scroll-list::-webkit-scrollbar-thumb {
+  background-image: url("./gold_vert_scroll.png");
+  background-repeat: round;
+  border-radius: 15px;
+  width: 16;
+  height: auto;
+}
+
+/* Handle on hover */
+.scroll-list::-webkit-scrollbar-thumb:hover {
+  filter: brightness(179%);
+}
+
+

@@ -1,16 +1,30 @@
 import React from "react";
-import "./style.css";
-import CheckedBox from "../../images/checked_box.png";
-import UncheckedBox from "../../images/empty_box.png";
 
-function CheckBox({ checkboxStyle, checked, checkboxOnClick, checkBoxName }) {
+// Components
+import CheckedBox from "../../images/ui/checked_box.png";
+import UncheckedBox from "../../images/ui/empty_box.png";
+
+// CSS
+import "./style.css";
+
+// Main function
+function CheckBox({
+  item,
+  checkboxStyle,
+  checked,
+  checkboxOnClick,
+  checkBoxName,
+}) {
+  
   return (
     <div className="">
       <img
         style={checkboxStyle}
         src={checked ? CheckedBox : UncheckedBox}
         alt="checkbox"
-        onClick={checkboxOnClick}
+        onClick={(e) => {
+          checkboxOnClick(e, item.level);
+        }}
         name={checkBoxName}
       />
     </div>

@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+
+// API
 import API from "../../utils/API";
+
+// Bootstrap & Components
 import Form from "react-bootstrap/Form";
 import Button from "../../components/Button";
 

@@ -1,24 +1,13 @@
+## [Live Site](https://character-creator-tavern.herokuapp.com/)
 
   <h1 align="center">Character Tavern</h1>
   <br />
 
-  Made by Garth, Curtis, C.T, Avelica
+  Made by Garth, Curtis, C.T, Avelica, Ty
 ##  Table of contents
 
-[Description / Features](#description)
-
-[Installation](#installation)
-
-[Usage](#usage)
-
-[Contributors](#contributors)
-
-[Tests](#test)
-
-[Contact information](#contact)
-
   # <a name="description"></a> Description / Features
-   Generates DnD characters for you to use in you games!
+   Generates DnD characters for you to use in your games!
 
   # <a name="installation"></a> Installation
    No installation necessary.
@@ -26,6 +15,33 @@
   # <a name="usage"></a> Usage
    Navigate to the website, log in, and click on a character to begin the build process.
   
+
+[Description / Features](#description)
+Allows users to create a character for dungeons and dragons!
+
+- A proper authentification page that allows user to log in
+
+- An interesting pixel art look
+
+- 4 fully functioning classes
+
+- nearly every race in the core handbook
+
+- Feats
+
+-Organized spells 
+
+- Character Storage
+
+- A simple, character sheet that is generated at the end.
+
+
+[Installation](#installation)
+No installation needed, simply go to the website.
+
+[Tests](#test)
+
+[Contact information](#contact)
   # License
   ![badge](https://img.shields.io/badge/license-MIT-red)
   <br />

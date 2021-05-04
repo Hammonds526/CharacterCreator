@@ -2,20 +2,20 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 
+// CSS
+import "./style.css";
+
 // Components
 import RacePage from "../TabRace";
 import ClassPage from "../TabClass";
 import SubclassPage from "../TabSubclass";
 import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
+import StatPage from "../TabStats";
 import NameLevelPage from "../TabNameLevel";
-import CharacterSheetPage from "../CharacterSheet";
-
-// CSS
-import "./style.css";
 
 // Close btn
-import ButtonClose from "../ButtonClose";
+import Xbtn from "../Xbtn";
 
 // Pixel border stuff
 import Corner from "../Corner";
@@ -24,11 +24,11 @@ import WoodBeamY from "../WoodBeamY";
 
 function CharInfoBox(props) {
   return (
-    <div className="char-info-box__container p-5 mt-2 text-white">
+    <div className="char-info-box__container p-5 mt-2">
       <WoodBeamX beamStyle={{ top: "-48px" }} />
 
-      <WoodBeamY beamStyle={{ right: "13px", top: "9px" }} />
-      <WoodBeamY beamStyle={{ left: "13px", top: "9px" }} />
+      <WoodBeamY beamStyle={{ right: "15px", top: "9px" }} />
+      <WoodBeamY beamStyle={{ left: "15px", top: "9px" }} />
 
       <Corner
         cornerStyle={{
@@ -47,15 +47,17 @@ function CharInfoBox(props) {
           transform: "rotate(90deg)",
         }}
       />
-{/* This this button below is supposed to close the creator */}
-
-            {/* <Link to={"/"}>
-          <ButtonClose
-            text={"Finish"}
-            selectButtonOnClick={selectButtonOnClick}
-          />
-        </Link> */}
-
+      {/* This this button below is supposed to close the creator */}
+      <Xbtn
+        xBtnStyle={{
+          width: "30px",
+          height: "auto",
+          right: "-45px",
+          top: "-46px",
+          zIndex: "2",
+        }}
+        xBtnUrl="/"
+      />
 
       <Switch>
         <Route exact path={"/character-creator/name"}>
@@ -76,8 +78,8 @@ function CharInfoBox(props) {
         <Route exact path={"/character-creator/feats"}>
           <FeatsPage {...props} />
         </Route>
-        <Route exact path={"/character-creator/character-sheet"}>
-          <CharacterSheetPage {...props} />
+        <Route exact path={"/character-creator/stats"}>
+          <StatPage {...props} />
         </Route>
       </Switch>
 

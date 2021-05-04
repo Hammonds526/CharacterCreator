@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+// CSS
 import "./style.css";
+
+// Component imports
 import SelectButton from "../SelectButton";
 import Button from "../Button";
 
@@ -42,7 +46,7 @@ function TabRace(props) {
 
       <h3 className="text-bisque mt-3 text-align-left">{activeRace.name}</h3>
 
-      <p className="tab_descriptions text-bisque mb-2 desc">
+      <p className="tab_descriptions text-bisque mb-2">
         {activeRace.description}
       </p>
       <div className="d-flex justify-content-end">

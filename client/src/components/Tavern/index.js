@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// CSS
 import "./style.css";
+
+// Components
 import TavernImage from "../../images/tavern/tavernx2.png";
+// import Logout from "../../components/Logout";
 
 // Pixel border stuff
 import Corner from "../Corner";
@@ -158,7 +163,7 @@ function Tavern(props) {
         cornerStyle={{
           width: "40px",
           height: "auto",
-          left: "-16px",
+          left: "-15px",
           top: "0px",
         }}
       />
@@ -166,7 +171,7 @@ function Tavern(props) {
         cornerStyle={{
           width: "40px",
           height: "auto",
-          right: "-16px",
+          right: "-15px",
           top: "0px",
           transform: "rotate(90deg)",
         }}
@@ -189,7 +194,7 @@ function Tavern(props) {
         cornerStyle={{
           width: "40px",
           height: "auto",
-          right: "-16px",
+          right: "-15px",
           bottom: "-1px",
           transform: "rotate(180deg)",
         }}
@@ -198,7 +203,7 @@ function Tavern(props) {
         cornerStyle={{
           width: "40px",
           height: "auto",
-          left: "-16px",
+          left: "-15px",
           bottom: "-1px",
           transform: "rotate(270deg)",
         }}

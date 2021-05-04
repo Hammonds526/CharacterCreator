@@ -1,0 +1,7 @@
+.stone-beam__verticle {
+    background-image: url("../../images/metstone_beam_vert.png");
+    /* background-size: "64px"; */
+    height: 100%;
+    width: 19px;
+  }
+  

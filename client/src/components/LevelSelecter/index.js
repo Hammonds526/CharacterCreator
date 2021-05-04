@@ -1,5 +1,8 @@
 import React from "react";
+
+// CSS
 import "./style.css";
+
 // import NavArrow from "../NavArrow";
 
 function LevelSelecter(props) {
@@ -16,8 +19,7 @@ function LevelSelecter(props) {
       /> */}
       <center>
         <input
-          id="numberbox"
-          className=" ml-3 form-control"
+          className=" ml-3 form-control form"
           type="number"
           name="level"
           min="1"

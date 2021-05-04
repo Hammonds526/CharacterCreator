@@ -2234,6 +2234,997 @@ const spells = [
       attackType: null,
     },
   },
+  {
+    name: "Detect Evil and Good",
+    level: 1,
+    type: "utility",
+    tag: ("cleric", "paladin"),
+    description: {
+      desc:
+        "For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.<br /><br />The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
+      higherLevel: null,
+      school: "Divination",
+      range: "Self",
+      areaOfEffect: {
+        type: "sphere",
+        size: 30,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Up to 10 minutes",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Detect Magic",
+    level: 1,
+    type: "utility",
+    tag: ("wizard", "druid", "cleric", "paladin", "ranger", "sorcerer", "bard"),
+    description: {
+      desc:
+        "For the duration, you sense the presence of magic within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.<br /><br />The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
+      higherLevel: null,
+      school: "Divination",
+      range: "Self",
+      areaOfEffect: {
+        type: "sphere",
+        size: 30,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Up to 10 minutes",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Detect Poison and Disease",
+    level: 1,
+    type: "utility",
+    tag: ("cleric", "druid", "paladin", "ranger"),
+    description: {
+      desc:
+        "For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case.<br /><br />The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.",
+      higherLevel: null,
+      school: "Divination",
+      range: "Self",
+      areaOfEffect: {
+        type: "sphere",
+        size: 30,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Up to 10 minutes",
+      concentration: true,
+      ritual: true,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Detect Thoughts",
+    level: 2,
+    type: "utility",
+    tag: ("bard", "wizard", "sorcerer"),
+    description: {
+      desc:
+        "For the duration of the spell, you can read the thoughts of some creatures. While casting the spell and at your action in each round until the spell, you may focus your mind on a creature you can see 30 feet of you. If the chosen creature has an Intelligence of 3 or less, or if she does not speak any language, the creature is not affected.<br /><br />You first read the surface thoughts of the creature, which occupies her mind at that moment. In an action, you can direct your attention to the thoughts of another creature or attempt to deepen your reading thoughts of the same creature. If you deepen your reading, the target must make a backup of Wisdom, otherwise you get access to his argument (if any), in his emotional state and thought that concerns his mind on a broader spectrum Such a concern, love or hate. If successful, the spell ends. In all cases, the target is aware that his mind is under your eyes. Unless you are directing your attention to the thoughts of another creature, the target can use his action turn to roll Intelligence opposite your roll Intelligence. If she has the upper hand, the spell ends.<br /><br />The questions verbally directed to the target guide the train of thought. This spell is especially effective during an interrogation.<br /><br />You can also use this spell to detect the presence of thinking creatures that are invisible to you. When you cast this spell, or in an action for the duration of the spell, you can find thoughts to 30 feet of you. The spell can override most obstacles but it is blocked by 2 feet stone 2 inches of precious metal, or a thin sheet of lead. You can not detect a creature with an Intelligence of 3 or less or speaking any language.<br /><br />After detecting the presence of a creature in this way, you can read his thoughts for the rest of the spell's duration as described above, even if you can not see it, but only if it remains in the range of the spell.",
+      higherLevel: null,
+      school: "Divination",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Dimension Door",
+    level: 4,
+    type: "movement",
+    tag: ("warlock", "wizard", "sorcerer", "bard"),
+    description: {
+      desc:
+        "You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as \"200 feet straight downward\" or \"upward to the northwest at a 45-degree angle, 300 feet.\"<br /><br />You can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.<br /><br />If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 force damage, and the spell fails to teleport you.",
+      higherLevel: null,
+      school: "Conjuration",
+      range: "500 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Instant",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: Force,
+      attackType: null,
+    },
+  },
+  {
+    name: "Disguise Self",
+    level: 1,
+    type: "movement",
+    tag: ("wizard", "bard", "sorcerer"),
+    description: {
+      desc:
+        "You make yourself--including your clothing, armor, weapons, and other belongings on your person--look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.<br /><br />The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.<br /><br />To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.",
+      higherLevel: null,
+      school: "Illusion",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "1 hour",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Disintegrate",
+    level: 6,
+    type: "damage",
+    tag: ("sorcerer", "wizard"),
+    description: {
+      desc:
+        "A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.<br /><br />A creature targeted by this spell must make a dexterity saving throw. On a failed save, the target takes 10d6 + 40 force damage. If this damage reduces the target to 0 hit points, it is disintegrated.<br /><br />A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a wish spell.<br /><br />This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell.",
+      higherLevel: "When you cast this spell using a spell slot of 7th level or higher, the damage increases by 3d6 for each slot level above 6th.",
+      school: "Transmutation",
+      range: "60 feet",
+      areaOfEffect: {
+        type: "cube",
+        size: 10,
+      },
+      dc: {
+        type: "dex",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Instant",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: "Force",
+      attackType: null,
+    },
+  },
+  {
+    name: "Dispel Evil and Good",
+    level: 5,
+    type: "utility",
+    tag: ("cleric", "paladin"),
+    description: {
+      desc:
+        "Shimmering energy surrounds and protects you from fey, undead, and creatures originating from beyond the Material Plane. For the duration, celestials, elementals, fey, fiends, and undead have disadvantage on attack rolls against you.<br /><br />You can end the spell early by using either of the following special functions.<br /><br />Break Enchantment<br />As your action, you touch a creature you can reach that is charmed, frightened, or possessed by a celestial, an elemental, a fey, a fiend, or an undead. The creature you touch is no longer charmed, frightened, or possessed by such creatures.<br /><br />Dismissal<br />As your action, make a melee spell attack against a celestial, an elemental, a fey, a fiend, or an undead you can reach. On a hit, you attempt to drive the creature back to its home plane. The creature must succeed on a charisma saving throw or be sent back to its home plane (if it isn't there already). If they aren't on their home plane, undead are sent to the Shadowfell, and fey are sent to the Feywild.",
+      higherLevel: null,
+      school: "Abjuration",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "cha",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Dispel Magic",
+    level: 3,
+    type: "utility",
+    tag: ("bard", "cleric", "druid", "paladin", "sorcerer", "warlock", "wizard"),
+    description: {
+      desc:
+        "Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a successful check, the spell ends.",
+      higherLevel: "When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used.",
+      school: "Abjuration",
+      range: "120 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Instant",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Divination",
+    level: 4,
+    type: "utility",
+    tag: ("druid"),
+    description: {
+      desc:
+        "Your magic and an offering put you in contact with a god or a god's servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen.<br /><br />The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.<br /><br />If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret.",
+      higherLevel: null,
+      school: "Divination",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Instant",
+      concentration: false,
+      ritual: true,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Divine Favor",
+    level: 1,
+    type: "buff",
+    tag: ("paladin"),
+    description: {
+      desc:
+        "our prayer empowers you with divine radiance. Until the spell ends, your weapon attacks deal an extra 1d4 radiant damage on a hit.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: Radiant,
+        onSuccess: null,
+      },
+      castingTime: "1 bonus action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Divine Word",
+    level: 7,
+    type: "utility",
+    tag: ("cleric"),
+    description: {
+      desc:
+        "You speak a word of God, full of the power that has shaped the world at the dawn of creation. Choose as many creatures as you want from those you see, in the range of the spell. Every creature that hears you must make a backup Charisma, or she undergoes an effect based on the current value of his life.<br />- pv or less 50: muted for 1 minute<br />- 40 hp or less: deafened and blinded for 10 minutes<br />- 30 hp or less: blinded, deafened and dazed for 1 hour<br />- 20 hp or less: killed instantly<br /><br />Regardless of its points of current life, a celestial, an elementary, a fairy or a fiend who fails his roll is returned to its original plan (if not already) and it can not go back on your plan for 24 hours, regardless of the means, with the exception of the wish spell.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "30 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "cha",
+        onSuccess: "none",
+      },
+      castingTime: "1 bonus action",
+      duration: "Instant",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Dominate Beast",
+    level: 4,
+    type: "utility",
+    tag: ("druid", "sorcerer"),
+    description: {
+      desc:
+        "You attempt to beguile a creature that you can see within range. It must succeed on a wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.<br /><br />While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.<br /><br />You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well. Each time the target takes damage, it makes a new wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.",
+      higherLevel: "When you cast this spell with a 9th level spell slot, the duration is concentration, up to 8 hours.",
+      school: "Enchantment",
+      range: "60 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Dominate Monster",
+    level: 8,
+    type: "utility",
+    tag: ("warlock", "wizard", "sorcerer", "bard"),
+    description: {
+      desc:
+        "You attempt to beguile a creature that you can see within range. It must succeed on a wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.<br /><br />While the creature is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.<br /><br />You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time, you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.<br /><br />Each time the target takes damage, it makes a new wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.",
+      higherLevel: "When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours.",
+      school: "Enchantment",
+      range: "60 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "wis",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 hour",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Dominate Person",
+    level: 5,
+    type: "utility",
+    tag: ("bard", "sorcerer", "wizard"),
+    description: {
+      desc:
+        "You attempt to beguile a humanoid that you can see within range. It must succeed on a wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.<br /><br />While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as \"Attack that creature,\" \"Run over there,\" or \"Fetch that object.\" If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.<br /><br />You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.<br /><br />Each time the target takes damage, it makes a new wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.",
+      higherLevel: "When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours.",
+      school: "Enchantment",
+      range: "60 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "wis",
+        onSuccess: "other",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Dream",
+    level: 5,
+    type: "utility",
+    tag: ("warlock", "wizard", "bard"),
+    description: {
+      desc:
+        "This spell shapes a creature's dreams. Choose a creature known to you as the target of this spell. The target must be on the same plane of existence as you. Creatures that don't sleep, such as elves, can't be contacted by this spell. You, or a willing creature you touch, enters a trance state, acting as a messenger.<br /><br />While in the trance, the messenger is aware of his or her surroundings, but can't take actions or move.<br /><br />If the target is asleep, the messenger appears in the target's dreams and can converse with the target as long as it remains asleep, through the duration of the spell. The messenger can also shape the environment of the dream, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the effect of the spell early. The target recalls the dream perfectly upon waking. If the target is awake when you cast the spell, the messenger knows it, and can either end the trance (and the spell) or wait for the target to fall asleep, at which point the messenger appears in the target's dreams.<br /><br />You can make the messenger appear monstrous and terrifying to the target. If you do, the messenger can deliver a message of no more than ten words and then the target must make a wisdom saving throw. On a failed save, echoes of the phantasmal monstrosity spawn a nightmare that lasts the duration of the target's sleep and prevents the target from gaining any benefit from that rest. In addition, when the target wakes up, it takes 3d6 psychic damage.<br /><br />If you have a body part, lock of hair, clipping from a nail, or similar portion of the target's body, the target makes its saving throw with disadvantage.",
+      higherLevel: null,
+      school: "Conjuration",
+      range: "Special",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "wis",
+        onSuccess: "none",
+      },
+      castingTime: "1 minute",
+      duration: "8 hours",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: "Psychic",
+      attackType: null,
+    },
+  },
+  {
+    name: "Druidcraft",
+    level: 0,
+    type: "utility",
+    tag: ("druid"),
+    description: {
+      desc:
+        "Whispering to the spirits of nature, you create one of the following effects within 'range':<br />- You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round.<br />- You instantly make a flower bloom, a seed pod open, or a leaf bud bloom.<br />- You create an instantaneous, harmless sensory effect, such as falling leaves, a puff of wind, the sound of a small animal, or the faint order of skunk. The effect must fit in a 5-foot cube.<br />- You instantly light or snuff out a candle, a torch, or a small campfire.",
+      higherLevel: null,
+      school: "Transmutation",
+      range: "30 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Instant",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Earthquake",
+    level: 8,
+    type: "damage",
+    tag: ("cleric", "druid", "sorcerer"),
+    description: {
+      desc:
+        "You create a seismic disturbance at a point on the ground that you can see within range. For the duration, an intense tremor rips through the ground in a 100-foot-radius circle centered on that point and shakes creatures and structures in contact with the ground in that area.<br /><br />The ground in the area becomes difficult terrain. Each creature on the ground that is concentrating must make a constitution saving throw. On a failed save, the creature's concentration is broken.<br /><br />When you cast this spell and at the end of each turn you spend concentrating on it, each creature on the ground in the area must make a dexterity saving throw. On a failed save, the creature is knocked prone.<br /><br />This spell can have additional effects depending on the terrain in the area, as determined by the DM.<br /><br />Fissures. Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of 1d6 such fissures open in locations chosen by the DM. Each is 1d10 x 10 feet deep, 10 feet wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.<br />- A fissure that opens beneath a structure causes it to automatically collapse (see below).<br /><br />Structures. The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a dexterity saving throw. On a failed save, the creature takes 5d6 bludgeoning damage, is knocked prone, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall prone or become buried.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "500 feet",
+      areaOfEffect: {
+        type: "sphere",
+        size: 100,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Eldritch Blast",
+    level: 0,
+    type: "damage",
+    tag: "warlock",
+    description: {
+      desc:
+        "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage. The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "120 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Instant",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: "Force",
+      attackType: "ranged",
+    },
+  },
+  {
+    name: "Enhance Ability",
+    level: 2,
+    type: "buff",
+    tag: ("bard", "cleric", "druid", "sorcerer"),
+    description: {
+      desc:
+        "You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends.<br />-Bear's Endurance<br />The target has advantage on constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends.<br /><br />-Bull's Strength<br />The target has advantage on strength checks, and his or her carrying capacity doubles.<br /><br />-Cat's Grace<br />The target has advantage on dexterity checks. It also doesn't take damage from falling 20 feet or less if it isn't incapacitated.<br /><br />-Eagle's Splendor<br />The target has advantage on Charisma checks.<br /><br />-Fox's Cunning<br />The target has advantage on intelligence checks.<br /><br />-Owl's Wisdom<br />The target has advantage on wisdom checks.",
+      higherLevel: "When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.",
+      school: "Transmutation",
+      range: "Touch",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 hour",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Enlarge/Reduce",
+    level: 2,
+    type: "utility",
+    tag: ("sorcerer", "wizard"),
+    description: {
+      desc:
+        "You cause a creature or an object you can see within range to grow larger or smaller for the duration. Choose either a creature or an object that is neither worn nor carried. If the target is unwilling, it can make a Constitution saving throw. On a success, the spell has no effect.<br /><br />If the target is a creature, everything it is wearing and carrying changes size with it. Any item dropped by an affected creature returns to normal size at once.<br /><br />-Enlarge<br />The target's size doubles in all dimensions, and its weight is multiplied by eight. This growth increases its size by one category—from Medium to Large, for example. If there isn't enough room for the target to double its size, the creature or object attains the maximum possible size in the space available. Until the spell ends, the target also has advantage on Strength checks and Strength saving throws. The target's weapons also grow to match its new size. While these weapons are enlarged, the target's attacks with them deal 1d4 extra damage.<br /><br />-Reduce<br />The target's size is halved in all dimensions, and its weight is reduced to one-eighth of normal. This reduction decreases its size by one category—from Medium to Small, for example. Until the spell ends, the target also has disadvantage on Strength checks and Strength saving throws. The target's weapons also shrink to match its new size. While these weapons are reduced, the target's attacks with them deal 1d4 less damage (this can't reduce the damage below 1).",
+      higherLevel: null,
+      school: "Transmutation",
+      range: "30 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "con",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Entangle",
+    level: 1,
+    type: "utility",
+    tag: ("druid"),
+    description: {
+      desc:
+        "Grasping weeds and vines sprout from the ground in a 20-foot square starting form a point within range. For the duration, these plants turn the ground in the area into difficult terrain.<br /><br />A creature in the area when you cast the spell must succeed on a strength saving throw or be restrained by the entangling plants until the spell ends. A creature restrained by the plants can use its action to make a Strength check against your spell save DC. On a success, it frees itself.<br /><br />When the spell ends, the conjured plants wilt away.",
+      higherLevel: null,
+      school: "Conjuration",
+      range: "90 feet",
+      areaOfEffect: {
+        type: "cube",
+        size: 20,
+      },
+      dc: {
+        type: "str",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Enthrall",
+    level: 2,
+    type: "utility",
+    tag: ("bard", "warlock"),
+    description: {
+      desc:
+        "You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a wisdom saving throw. Any creature that can't be charmed succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are incapacitated or can no longer speak.",
+      higherLevel: null,
+      school: "Enchantment",
+      range: "60 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "wis",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "1 minute",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Etherealness",
+    level: 7,
+    type: "movement",
+    tag: ("bard", "cleric", "sorcerer", "warlock", "wizard"),
+    description: {
+      desc:
+        "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane. You remain in the Border Ethereal for the duration or until you use your action to dismiss the spell. During this time, you can move in any direction. If you move up or down, every foot of movement costs an extra foot. You can see and hear the plane you originated from, but everything there looks gray, and you can't see anything more than 60 feet away.<br /><br />While on the Ethereal Plane, you can only affect and be affected by other creatures on that plane. Creatures that aren't on the Ethereal Plane can't perceive you and can't interact with you, unless a special ability or magic has given them the ability to do so.<br /><br />You ignore all objects and effects that aren't on the Ethereal Plane, allowing you to move through objects you perceive on the plane you originated from.<br /><br />When the spell ends, you immediately return to the plane you originated from in the spot you currently occupy. If you occupy the same spot as a solid object or creature when this happens, you are immediately shunted to the nearest unoccupied space that you can occupy and take force damage equal to twice the number of feet you are moved.<br /><br />This spell has no effect if you cast it while you are on the Ethereal Plane or a plane that doesn't border it, such as one of the Outer Planes.",
+      higherLevel: "When you cast this spell using a spell slot of 8th level or higher, you can target up to three willing creatures (including you) for each slot level above 7th. The creatures must be within 10 feet of you when you cast the spell.",
+      school: "Transmutation",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "8 hours",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Expeditious Retreat",
+    level: 1,
+    type: "movement",
+    tag: ("sorcerer", "warlock", "wizard"),
+    description: {
+      desc:
+        "This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action.",
+      higherLevel: null,
+      school: "Transmutation",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 bonus action",
+      duration: "Up to 10 minutes",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Eyebite",
+    level: 6,
+    type: "utility",
+    tag: ("bard", "sorcerer", "warlock", "wizard"),
+    description: {
+      desc:
+        "For the spell's duration, your eyes become an inky void imbued with dread power. One creature of your choice within 60 feet of you that you can see must succeed on a wisdom saving throw or be affected by one of the following effects of your choice for the duration. On each of your turns until the spell ends, you can use your action to target another creature but can't target a creature again if it has succeeded on a saving throw against this casting of eyebite.<br /><br />-Asleep<br />The target falls unconscious. It wakes up if it takes any damage or if another creature uses its action to shake the sleeper awake.<br /><br />-Panicked<br />The target is frightened of you. On each of its turns, the frightened creature must take the Dash action and move away from you by the safest and shortest available route, unless there is nowhere to move. If the target moves to a place at least 60 feet away from you where it can no longer see you, this effect ends.<br /><br />-Sickened<br />The target has disadvantage on attack rolls and ability checks. At the end of each of its turns, it can make another wisdom saving throw. If it succeeds, the effect ends.",
+      higherLevel: null,
+      school: "Necromancy",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "wis",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Fabricate",
+    level: 4,
+    type: "utility",
+    tag: ("wizard"),
+    description: {
+      desc:"You convert raw materials into products of the same material. For example, you can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, and clothes from flax or wool.<br /><br />Choose raw materials that you can see within range. You can fabricate a Large or smaller object (contained within a 10-foot cube, or eight connected 5-foot cubes), given a sufficient quantity of raw material. If you are working with metal, stone, or another mineral substance, however, the fabricated object can be no larger than Medium (contained within a single 5-foot cube). The quality of objects made by the spell is commensurate with the quality of the raw materials.<br /><br />Creatures or magic items can't be created or transmuted by this spell. You also can't use it to create items that ordinarily require a high degree of craftsmanship, such as jewelry, weapons, glass, or armor, unless you have proficiency with the type of artisan's tools used to craft such objects."
+      
+        ,
+      higherLevel: null,
+      school: "Transmutation",
+      range: "120 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "10 minutes",
+      duration: "Instantaneous",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Faerie Fire",
+    level: 1,
+    type: "utility",
+    tag: ("Druid"),
+    description: {
+      desc:
+        "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a dexterity saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.<br /><br />Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "60 feet",
+      areaOfEffect: {
+        type: "cube",
+        size: 20,
+      },
+      dc: {
+        type: "DEX",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Faithful Hound",
+    level: 4,
+    type: "utility",
+    tag: ("Wizard"),
+    description: {
+      desc:
+      "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.<br /><br />The hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions.<br /><br />At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals 4d8 piercing damage.",
+      higherLevel: null,
+      school: "Conjuration",
+      range: "30 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "8 hours",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: "Piercing",
+      attackType: null,
+    },
+  },
+  {
+    name: "False Life",
+    level: 1,
+    type: "damage",
+    tag: ("Sorcerer", "Wizard"),
+    description: {
+      desc:
+        "Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration.",
+      higherLevel: "When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st.",
+      school: "Necromancy",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "1 hour",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Fear",
+    level: 3,
+    type: "movement",
+    tag: ("Bard", "Sorcerer", "Warlock", "Wizard"),
+    description: {
+      desc:
+        "You project a phantasmal image of a creature's worst fears. Each creature in a 30-foot cone must succeed on a wisdom saving throw or drop whatever it is holding and become frightened for the duration.<br /><br />While frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a wisdom saving throw. On a successful save, the spell ends for that creature.",
+      higherLevel: null,
+      school: "Illusion",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "WIS",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Feather Fall",
+    level: 1,
+    type: "utility",
+    tag: ("Sorcerer", "Wizard"),
+    description: {
+      desc:
+        "Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.",
+      higherLevel: null,
+      school: "Transmutation",
+      range: "60 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 reaction",
+      duration: "1 minute",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Feeblemind",
+    level: 8,
+    type: "utility",
+    tag: ("Bard", "Druid", "Warlock", "Wizard"),
+    description: {
+      desc:
+        "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must make an intelligence saving throw.<br /><br />On a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.<br /><br />At the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.<br /><br />The spell can also be ended by greater restoration, heal, or wish.",
+      higherLevel: null,
+      school: "Enchantment",
+      range: "150 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "INT",
+        onSuccess: "other",
+      },
+      castingTime: "1 action",
+      duration: "Instantaneous",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Find Familiar",
+    level: 1,
+    type: "utility",
+    tag: ("Wizard"),
+    description: {
+      desc:
+        "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.<br /><br />Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.<br /><br />When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.<br /><br />While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.<br /><br />As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.<br /><br />You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.<br /><br />Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your action modifier for the roll.",
+        
+      higherLevel: null,
+      school: "Conjuration",
+      range: "10 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 hour",
+      duration: "Instantaneous",
+      concentration: false,
+      ritual: true,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  
+
+  
   
 /* 
 

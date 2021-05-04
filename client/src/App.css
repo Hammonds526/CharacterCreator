@@ -5,23 +5,110 @@ html {
   font-size: 16px;
   text-align: center;
   background-color: #2a2c30;
-  color: blanchedalmond;
-  height: auto;
+  color: burlywood;
+  height: 100vh;
+  margin: 0;
+  background-image: url("./images/stone_tile2.png");
+  background-size: "64px";
+  /* Scrolling an overflow */
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
 }
+
+
 .title {
   font-weight: normal;
   text-align: center;
 }
 
+
+
+
 .text-bisque {
   color: bisque;
+  text-shadow: 3px 2px 3px #0a0808;
 }
 
-h4 {
-  margin-bottom: 25px;
+.main-title__text {
+  font-size: 35px;
+  padding-top: 7px;
+  text-shadow: 4px 4px 2px #000;
 }
 
-.desc {
-  font-size: 20px;
-  font-family: ui-serif;
+.form {
+  background-image: linear-gradient(to right, wheat, rgb(243, 198, 142));
+  border: #691818 solid 2px;
+  color: brown;
 }
+
+.form:focus {
+  background-color: wheat;
+  border-color: burlywood;
+  color: brown;
+  box-shadow: 0px 0px 5px 3px rgba(104, 16, 16, 0.561);
+}
+
+.form::placeholder {
+  color: goldenrod;
+}
+
+/* 
+//////////////////////////
+
+Custom Scroll bar Stuff.
+
+/////////////////////////
+*/
+
+
+/* width */
+::-webkit-scrollbar {
+  width: auto;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: none;
+  background-repeat: round;
+  width: 8;
+  height: 16px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(179%);
+}
+
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    
+}
+::-webkit-scrollbar-track {
+  background-image: none;
+}
+
+/* DONT KNOW WHAT THIS IS, BUT I AIN'T TOUCHIN' IT. -Ty */
+
+/* @media (max-width: 576px) {
+  .main-title__text {
+    font-size: 26px;
+  }
+}
+@media (max-width: 400px) {
+  .main-title__text {
+    margin-top: 6px;
+    font-size: 18px;
+  }
+} ; */

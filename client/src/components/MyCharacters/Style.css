@@ -1,15 +1,15 @@
-h4 {
-    font-weight: lighter;
-    font-size: large;
-    padding-bottom: 5px;
-    margin: auto;
-    color: blanchedalmond;
-    /* background-color: rgba(247, 190, 115, 0.212); */
-}
-
-#container {
+/* #container {
     font-family: alagard;
     font-weight: lighter;
     font-size: 18px;
     background-image: url("../../images/stone_tile.png");
+} */
+
+.my-characters__title {
+  text-shadow: 4px 4px 2px #000;
+  font-weight: lighter;
+  font-size: large;
+  padding-bottom: 5px;
+  margin: auto;
+  color: burlywood;
 }
