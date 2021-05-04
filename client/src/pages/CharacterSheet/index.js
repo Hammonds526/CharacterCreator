@@ -200,7 +200,7 @@ function CharacterSheet({ myCharacters, character }) {
                     <div className="vortex"></div>
                   </div>
                   <div className="row">
-
+                    <br />
                     <div className="row">
 
                       <div className="col">
@@ -227,7 +227,7 @@ function CharacterSheet({ myCharacters, character }) {
                     </div>
                     <div className="row">
 
-                    <div className="col">
+                      <div className="col">
                         <p id="divbox">
                           WIS:{" "}
                           {myCharacters[id].wis}
