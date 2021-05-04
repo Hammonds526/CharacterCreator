@@ -2,6 +2,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+// racebase
+// import Human from "../../images/costumes/human";
+// import Elf from "../../images/costumes/elf";
+// import HalfElf from "../../images/costumes/half-elf";
+// import HalfOrc from "../../images/costumes/half-orc";
+// import Halfling from "../../images/costumes/halfling";
+// import Dwarf from "../../images/costumes/dwarf";
+
+
 // Avatar & outfits
 import DefaultCostume from "../../images/costumes/base.png";
 import RangerCostume from "../../images/costumes/ranger.png";
@@ -13,8 +22,9 @@ import WizardCostume from "../../images/costumes/wizard.png";
 // Our main component
 function AvatarImage({ newCharacter }) {
     // console.log("Avatar image:", newCharacter);
-
     const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
+    const [AvatarRace, setAvatarRace] = useState(DefaultRace);
+
 
     useEffect(() => {
 
