@@ -7,7 +7,7 @@
 ##  Table of contents
 
   # <a name="description"></a> Description / Features
-   Generates DnD characters for you to use in your games!
+   Generate DnD 5e characters with relative ease, with our easy to use character creator similar to that of a video game.
 
   # <a name="installation"></a> Installation
    No installation necessary.
@@ -21,13 +21,15 @@ Allows users to create a character for dungeons and dragons!
 
 - A proper authentification page that allows user to log in
 
-- An interesting pixel art look
+- An unique, pixel art ui that is clean, and easy to use for all users.
 
-- 4 fully functioning classes
+- 4 fully functioning classes with every aspect tied to them included.
 
-- nearly every race in the core handbook
+- Multiple player races, and soon to be more!
 
-- Feats
+- Feats!
+
+- Race, and class abilities, that are listed in the character sheet
 
 -Organized spells 
 
@@ -35,6 +37,7 @@ Allows users to create a character for dungeons and dragons!
 
 - A simple, character sheet that is generated at the end.
 
+- Deletion of essessive characters
 
 [Installation](#installation)
 No installation needed, simply go to the website.
