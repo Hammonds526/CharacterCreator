@@ -2375,7 +2375,7 @@ const spells = [
       ritual: false,
     },
     damage: {
-      type: Force,
+      type: "force",
       attackType: null,
     },
   },
@@ -2540,7 +2540,7 @@ const spells = [
         size: null,
       },
       dc: {
-        type: Radiant,
+        type: "Radiant",
         onSuccess: null,
       },
       castingTime: "1 bonus action",
