@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-// racebase
+// Racebase
 // import Human from "../../images/costumes/human";
 // import Elf from "../../images/costumes/elf";
 // import HalfElf from "../../images/costumes/half-elf";
