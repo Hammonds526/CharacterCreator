@@ -5,7 +5,7 @@ import "./style.css";
 
 //Components
 import CharacterIcon from "../CharacterIcon";
-import Xbtn from "../Xbtn";
+import Deletebtn from "../Deletebtn";
 //Images
 import cardThing from "../../images/cardthing.png";
 
@@ -27,8 +27,8 @@ function CharacterListItem(props) {
         <div key={index}>
           <div className="d-inline-block">
             <img src={cardThing} alt="card thing" id="cardThing" />
-            <Xbtn
-              xBtnStyle={{
+            <Deletebtn
+              DeletebtnStyle={{
                 width: "24px",
                 height: "auto",
                 right: "-122px",
@@ -36,7 +36,7 @@ function CharacterListItem(props) {
                 zIndex: "1",
               }}
               item={item}
-              xBtnFunc={() => {
+              DeletebtnFunc={() => {
                 DeleteCharacter(item);
               }}
             />
