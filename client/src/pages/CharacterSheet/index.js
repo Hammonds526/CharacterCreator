@@ -206,21 +206,24 @@ function CharacterSheet({ myCharacters, character }) {
                       <div className="col">
                         <p id="divbox">
                           STR:{" "}
-                          {myCharacters[id].str}
+                          {myCharacters[id].str ? myCharacters[id].str
+                            : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           DEX:{" "}
-                          {myCharacters[id].dex}
+                          {myCharacters[id].dex ? myCharacters[id].dex
+                            : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           CON:{" "}
-                          {myCharacters[id].con}
+                          {myCharacters[id].con ? myCharacters[id].con
+                            : "5"}
                         </p>
                       </div>
 
@@ -230,21 +233,24 @@ function CharacterSheet({ myCharacters, character }) {
                       <div className="col">
                         <p id="divbox">
                           WIS:{" "}
-                          {myCharacters[id].wis}
+                          {myCharacters[id].wis ? myCharacters[id].wis
+                            : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           INT:{" "}
-                          {myCharacters[id].int}
+                          {myCharacters[id].int ? myCharacters[id].int
+                            : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           CHA:{" "}
-                          {myCharacters[id].cha}
+                          {myCharacters[id].cha ? myCharacters[id].cha
+                            : "5"}
                         </p>
                       </div>
 
