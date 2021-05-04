@@ -1,12 +1,15 @@
+// Core Dependencies
 import React from "react";
-
 import { Switch, Route, Link } from "react-router-dom";
+
+// Components
 import RacePage from "../TabRace";
 import ClassPage from "../TabClass";
 import SubclassPage from "../TabSubclass";
 import SpellsPage from "../TabSpells";
 import FeatsPage from "../TabFeats";
 import NameLevelPage from "../TabNameLevel";
+import CharacterSheetPage from "../CharacterSheet";
 
 // CSS
 import "./style.css";
@@ -72,6 +75,9 @@ function CharInfoBox(props) {
         </Route>
         <Route exact path={"/character-creator/feats"}>
           <FeatsPage {...props} />
+        </Route>
+        <Route exact path={"/character-creator/character-sheet"}>
+          <CharacterSheetPage {...props} />
         </Route>
       </Switch>
 

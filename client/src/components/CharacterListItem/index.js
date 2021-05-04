@@ -3,19 +3,19 @@ import React from "react";
 // CSS
 import "./style.css";
 
-// Pixel border stuff
-// import Corner from "../Corner";
-// import WoodBeamX from "../WoodBeamX";
-// import WoodBeamY from "../WoodBeamY";
-
-// import WoodBeamX from "../WoodBeamX";
+// Icons
+import Ranger from "../../images/icons/ranger.png";
+import Rogue from "../../images/icons/rogue.png";
+import Fighter from "../../images/icons/fighter.png";
+import Wizard from "../../images/icons/wizard.png";
+import EmptyFrame from "../../images/icons/empty_frame.png";
 
 // The main function
 function CharacterListItem(props) {
   return (
     <div className="character-list">
-      {props.myCharacters.map((item) => (
-        <div id="charbox" className="list-group-item" key={item.name}>
+      {props.myCharacters.map((item, index) => (
+        <div id="charbox" className="list-group-item" key={index}>
           <p>{item.name}</p>
           {/* <p>{item.race}</p> */}
           <p>

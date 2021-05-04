@@ -22,7 +22,8 @@ function LevelSelecter(props) {
           name="level"
           min="1"
           max="20"
-          placeholder="1"
+          value={props.newCharacter.level}
+          placeholder={props.newCharacter.level}
           onChange={props.handleInputChange}
         />
       </center>

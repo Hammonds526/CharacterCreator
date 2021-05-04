@@ -48,7 +48,7 @@ function CharacterMakerScreen(props) {
             className="col-10 col-lg-3 order-lg-2 mb-2 p-0 px-lg-2 d-flex justify-content-center"
           >
             {/* Swirly avatar portrait, be careful with this. */}
-            <AvatarContainer />
+            <AvatarContainer {...props} />
 
             {/* Left side bar below */}
           </div>
