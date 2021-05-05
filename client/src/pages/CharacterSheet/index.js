@@ -9,7 +9,7 @@ import "./style.css";
 import Corner2 from "../../components/Corner2";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
-import Xbtn from "../../components/ButtonClose";
+import Xbtn from "../../components/Xbtn";
 import Listings from "../../components/Listings";
 
 // Icons
@@ -36,7 +36,13 @@ function CharacterSheet({ myCharacters, character }) {
 
   const [ClassIcon, setClassIcon] = useState(NoIcon);
   const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
-  const [abilities, setAbilities] = useState([]);
+  const [abilities, setAbilities] = useState([
+    {
+      name: "This Character has no abilities",
+      desc: "This abiltiy has no description",
+      level: 0,
+    },
+  ]);
 
   useEffect(() => {
     switch (myCharacters[id].class) {
@@ -45,9 +51,7 @@ function CharacterSheet({ myCharacters, character }) {
       case "fighter":
         setAvatarCostume(FighterCostume);
         setClassIcon(FighterIcon);
-        setAbilities(
-          character.class[0].abilities.map((ability) => ability.name)
-        );
+        setAbilities(character.class[0].abilities);
         break;
 
       // Ranger
@@ -55,9 +59,8 @@ function CharacterSheet({ myCharacters, character }) {
       case "ranger":
         setAvatarCostume(RangerCostume);
         setClassIcon(RangerIcon);
-        setAbilities(
-          character.class[1].abilities.map((ability) => ability.name)
-        );
+        setAbilities(character.class[1].abilities);
+
         break;
 
       // Rogue
@@ -65,9 +68,8 @@ function CharacterSheet({ myCharacters, character }) {
       case "rogue":
         setAvatarCostume(RogueCostume);
         setClassIcon(RogueIcon);
-        setAbilities(
-          character.class[2].abilities.map((ability) => ability.name)
-        );
+        setAbilities(character.class[2].abilities);
+
         break;
 
       // Wizard
@@ -75,9 +77,8 @@ function CharacterSheet({ myCharacters, character }) {
       case "wizard":
         setAvatarCostume(WizardCostume);
         setClassIcon(WizardIcon);
-        setAbilities(
-          character.class[3].abilities.map((ability) => ability.name)
-        );
+        setAbilities(character.class[3].abilities);
+
         break;
 
       default:
@@ -87,7 +88,10 @@ function CharacterSheet({ myCharacters, character }) {
     }
   }, [myCharacters[id].class]);
 
-  console.log("abilities ", abilities);
+  const handleClickEvents = (event) => {
+    // alert("click handled " + event.target.getAttribute("name"));
+    console.log("event ", event);
+  };
 
   // The information that is going to be displayed in react.
   return (
@@ -196,51 +200,57 @@ function CharacterSheet({ myCharacters, character }) {
                     <div className="vortex"></div>
                   </div>
                   <div className="row">
-
+                    <br />
                     <div className="row">
 
                       <div className="col">
                         <p id="divbox">
                           STR:{" "}
-                          {myCharacters[id].str}
+                          {myCharacters[id].str ? myCharacters[id].str
+                            : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           DEX:{" "}
-                          {myCharacters[id].dex}
+                          {myCharacters[id].dex ? myCharacters[id].dex
+                            : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           CON:{" "}
-                          {myCharacters[id].con}
+                          {myCharacters[id].con ? myCharacters[id].con
+                            : "5"}
                         </p>
                       </div>
 
                     </div>
                     <div className="row">
 
-                    <div className="col">
+                      <div className="col">
                         <p id="divbox">
                           WIS:{" "}
-                          {myCharacters[id].wis}
+                          {myCharacters[id].wis ? myCharacters[id].wis
+                            : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           INT:{" "}
-                          {myCharacters[id].int}
+                          {myCharacters[id].int ? myCharacters[id].int
+                            : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           CHA:{" "}
-                          {myCharacters[id].cha}
+                          {myCharacters[id].cha ? myCharacters[id].cha
+                            : "5"}
                         </p>
                       </div>
 
@@ -254,7 +264,10 @@ function CharacterSheet({ myCharacters, character }) {
                   <div id="character-sheet__right-list">
                     <div>
                       <h2 id="listnames">Abilities:</h2>
-                      <Listings items={abilities} />
+                      <Listings
+                        items={abilities}
+                        clickFunction={handleClickEvents}
+                      />
                     </div>
                     <div>
                       <h2 id="listnames">Spells:</h2>

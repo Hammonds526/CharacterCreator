@@ -8,9 +8,14 @@ function Listings(props) {
   // console.log(props.items);
   return (
     <div>
-      {props.items.map((listItem) => (
-        <p className="mb-0" key={listItem.toString()}>
-          {listItem}
+      {props.items.map((listItem, i) => (
+        <p
+          name={listItem.name ? listItem.name : listItem}
+          className="mb-0"
+          onClick={props.clickFunction}
+          key={i}
+        >
+          {listItem.name ? listItem.name : listItem}
         </p>
       ))}
     </div>

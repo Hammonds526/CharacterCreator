@@ -40,7 +40,7 @@ function CharacterIcon(item) {
         setClassIcon(FighterIcon);
         break;
     }
-  }, []);
+  }, [item.myCharacters]);
   return (
     <img className="icon mr-2" src={classIcon} alt="Character Icon"></img>
   );
