@@ -93,6 +93,8 @@ function CharacterSheet({ myCharacters, character }) {
     console.log("event ", event);
   };
 
+  console.log("myCharacters[id] ", myCharacters[id]);
+
   // The information that is going to be displayed in react.
   return (
     <div className="modal-content-box justify-content-center pt-4 row">
@@ -164,17 +166,13 @@ function CharacterSheet({ myCharacters, character }) {
                     </h2>
                     <h3>
                       Subclass:{" "}
-                      {myCharacters[id].subclass
-                        ? myCharacters[id].subclass
-                        : "No Subclass"}
+                      {myCharacters ? myCharacters[id].subClass : "No Subclass"}
                     </h3>
                     <br />
                     <br />
                     <div>
                       <h2 id="lvlbox">Level</h2>
-                      <p id="level">
-                        {myCharacters[id].level}
-                      </p>
+                      <p id="level">{myCharacters[id].level}</p>
                       <br />
                     </div>
                   </div>
@@ -200,8 +198,7 @@ function CharacterSheet({ myCharacters, character }) {
                     <div className="vortex"></div>
                   </div>
                   <div className="row">
-
-                    <div className="row">
+                    {/* <div className="row">
 
                       <div className="col">
                         <p id="divbox">
@@ -224,30 +221,19 @@ function CharacterSheet({ myCharacters, character }) {
                         </p>
                       </div>
 
-                    </div>
+                    </div> */}
                     <div className="row">
-
-                    <div className="col">
-                        <p id="divbox">
-                          WIS:{" "}
-                          {myCharacters[id].wis}
-                        </p>
+                      <div className="col">
+                        <p id="divbox">WIS: {myCharacters[id].wis}</p>
                       </div>
 
                       <div className="col">
-                        <p id="divbox">
-                          INT:{" "}
-                          {myCharacters[id].int}
-                        </p>
+                        <p id="divbox">INT: {myCharacters[id].int}</p>
                       </div>
 
                       <div className="col">
-                        <p id="divbox">
-                          CHA:{" "}
-                          {myCharacters[id].cha}
-                        </p>
+                        <p id="divbox">CHA: {myCharacters[id].cha}</p>
                       </div>
-
                     </div>
                   </div>
                 </div>

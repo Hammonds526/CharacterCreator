@@ -32,6 +32,7 @@ function App() {
     wis: "",
     int: "",
     cha: "",
+    
     // ///////// //
     abilities: [],
     spells: [],

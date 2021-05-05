@@ -41,7 +41,7 @@ function TabSubclass({
               setActiveSubclass(item);
               setNewCharacter({
                 ...newCharacter,
-                subclass: item.name.toLowerCase(),
+                subClass: item.name.toLowerCase(),
               });
             }}
           >
