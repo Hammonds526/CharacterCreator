@@ -26,13 +26,13 @@ function App() {
     class: "fighter",
     subclass: "",
     // WE GOT STATS... BOIIIIZZZZ
-    str: "",
-    dex: "",
-    con: "",
-    wis: "",
-    int: "",
-    cha: "",
-    
+    str: 5,
+    dex: 5,
+    con: 5,
+    wis: 5,
+    int: 5,
+    cha: 5,
+
     // ///////// //
     abilities: [],
     spells: [],
