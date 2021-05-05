@@ -19,6 +19,11 @@
     "web-vitals": "^1.1.1"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "axios": "^0.18.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.16.3",
+=======
     "axios": "^0.21.1",
     "concurrently": "^4.1.2",
     "nodemon": "^1.19.4",
@@ -26,6 +31,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+>>>>>>> main
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.5",

@@ -2375,7 +2375,7 @@ const spells = [
       ritual: false,
     },
     damage: {
-      type: Force,
+      type: "force",
       attackType: null,
     },
   },
@@ -2540,7 +2540,7 @@ const spells = [
         size: null,
       },
       dc: {
-        type: Radiant,
+        type: "Radiant",
         onSuccess: null,
       },
       castingTime: "1 bonus action",
@@ -2988,6 +2988,242 @@ const spells = [
       attackType: null,
     },
   },
+  {
+    name: "Fabricate",
+    level: 4,
+    type: "utility",
+    tag: ("wizard"),
+    description: {
+      desc:"You convert raw materials into products of the same material. For example, you can fabricate a wooden bridge from a clump of trees, a rope from a patch of hemp, and clothes from flax or wool.<br /><br />Choose raw materials that you can see within range. You can fabricate a Large or smaller object (contained within a 10-foot cube, or eight connected 5-foot cubes), given a sufficient quantity of raw material. If you are working with metal, stone, or another mineral substance, however, the fabricated object can be no larger than Medium (contained within a single 5-foot cube). The quality of objects made by the spell is commensurate with the quality of the raw materials.<br /><br />Creatures or magic items can't be created or transmuted by this spell. You also can't use it to create items that ordinarily require a high degree of craftsmanship, such as jewelry, weapons, glass, or armor, unless you have proficiency with the type of artisan's tools used to craft such objects."
+      
+        ,
+      higherLevel: null,
+      school: "Transmutation",
+      range: "120 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "10 minutes",
+      duration: "Instantaneous",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Faerie Fire",
+    level: 1,
+    type: "utility",
+    tag: ("Druid"),
+    description: {
+      desc:
+        "Each object in a 20-foot cube within range is outlined in blue, green, or violet light (your choice). Any creature in the area when the spell is cast is also outlined in light if it fails a dexterity saving throw. For the duration, objects and affected creatures shed dim light in a 10-foot radius.<br /><br />Any attack roll against an affected creature or object has advantage if the attacker can see it, and the affected creature or object can't benefit from being invisible.",
+      higherLevel: null,
+      school: "Evocation",
+      range: "60 feet",
+      areaOfEffect: {
+        type: "cube",
+        size: 20,
+      },
+      dc: {
+        type: "DEX",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Faithful Hound",
+    level: 4,
+    type: "utility",
+    tag: ("Wizard"),
+    description: {
+      desc:
+      "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.<br /><br />The hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions.<br /><br />At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals 4d8 piercing damage.",
+      higherLevel: null,
+      school: "Conjuration",
+      range: "30 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "8 hours",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: "Piercing",
+      attackType: null,
+    },
+  },
+  {
+    name: "False Life",
+    level: 1,
+    type: "damage",
+    tag: ("Sorcerer", "Wizard"),
+    description: {
+      desc:
+        "Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration.",
+      higherLevel: "When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st.",
+      school: "Necromancy",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 action",
+      duration: "1 hour",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Fear",
+    level: 3,
+    type: "movement",
+    tag: ("Bard", "Sorcerer", "Warlock", "Wizard"),
+    description: {
+      desc:
+        "You project a phantasmal image of a creature's worst fears. Each creature in a 30-foot cone must succeed on a wisdom saving throw or drop whatever it is holding and become frightened for the duration.<br /><br />While frightened by this spell, a creature must take the Dash action and move away from you by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to you, the creature can make a wisdom saving throw. On a successful save, the spell ends for that creature.",
+      higherLevel: null,
+      school: "Illusion",
+      range: "Self",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "WIS",
+        onSuccess: "none",
+      },
+      castingTime: "1 action",
+      duration: "Up to 1 minute",
+      concentration: true,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Feather Fall",
+    level: 1,
+    type: "utility",
+    tag: ("Sorcerer", "Wizard"),
+    description: {
+      desc:
+        "Choose up to five falling creatures within range. A falling creature's rate of descent slows to 60 feet per round until the spell ends. If the creature lands before the spell ends, it takes no falling damage and can land on its feet, and the spell ends for that creature.",
+      higherLevel: null,
+      school: "Transmutation",
+      range: "60 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 reaction",
+      duration: "1 minute",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Feeblemind",
+    level: 8,
+    type: "utility",
+    tag: ("Bard", "Druid", "Warlock", "Wizard"),
+    description: {
+      desc:
+        "You blast the mind of a creature that you can see within range, attempting to shatter its intellect and personality. The target takes 4d6 psychic damage and must make an intelligence saving throw.<br /><br />On a failed save, the creature's Intelligence and Charisma scores become 1. The creature can't cast spells, activate magic items, understand language, or communicate in any intelligible way. The creature can, however, identify its friends, follow them, and even protect them.<br /><br />At the end of every 30 days, the creature can repeat its saving throw against this spell. If it succeeds on its saving throw, the spell ends.<br /><br />The spell can also be ended by greater restoration, heal, or wish.",
+      higherLevel: null,
+      school: "Enchantment",
+      range: "150 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: "INT",
+        onSuccess: "other",
+      },
+      castingTime: "1 action",
+      duration: "Instantaneous",
+      concentration: false,
+      ritual: false,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  {
+    name: "Find Familiar",
+    level: 1,
+    type: "utility",
+    tag: ("Wizard"),
+    description: {
+      desc:
+        "You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), hawk, lizard, octopus, owl, poisonous snake, fish (quipper), rat, raven, sea horse, spider, or weasel. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.<br /><br />Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.<br /><br />When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.<br /><br />While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.<br /><br />As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.<br /><br />You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.<br /><br />Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your action modifier for the roll.",
+        
+      higherLevel: null,
+      school: "Conjuration",
+      range: "10 feet",
+      areaOfEffect: {
+        type: null,
+        size: null,
+      },
+      dc: {
+        type: null,
+        onSuccess: null,
+      },
+      castingTime: "1 hour",
+      duration: "Instantaneous",
+      concentration: false,
+      ritual: true,
+    },
+    damage: {
+      type: null,
+      attackType: null,
+    },
+  },
+  
+
   
   
 /* 

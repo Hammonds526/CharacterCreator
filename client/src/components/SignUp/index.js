@@ -7,7 +7,6 @@ import API from "../../utils/API";
 import Form from "react-bootstrap/Form";
 import Button from "../../components/Button";
 
-
 function signUp(props) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
