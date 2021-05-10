@@ -38,7 +38,7 @@ function TabSpells({
     });
 
     const localSpells = { ...spells };
-    // If this class has spells or cantrips, add put the max available at this level in state
+    // If this class has spells or cantrips, put the max available at this level in state
     if (activeClass.spellsKnown) {
       localSpells.totalSpellsAvailable = activeClass.spellsKnown[levelIndex];
     }
