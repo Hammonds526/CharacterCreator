@@ -1,7 +1,7 @@
 .scroll-list {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
-
 
 /* 
 //////////////////////////
@@ -38,5 +38,3 @@
 .scroll-list::-webkit-scrollbar-thumb:hover {
   filter: brightness(179%);
 }
-
-
