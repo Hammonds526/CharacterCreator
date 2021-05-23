@@ -108,7 +108,7 @@ function TabSpells({
     <div>
       <h2 className="  text-bisque">Choose your Spells</h2>
       <div className="row mb-2">
-        <div className="col-12 col-lg-4">
+        <div className="col-12 col-lg-5">
           <SpellLimiter
             spells={spells}
             setSpells={setSpells}
@@ -127,7 +127,7 @@ function TabSpells({
             itemType={"spell"}
           />
         </div>
-        <div className="col-12 col-lg-8">
+        <div className="col-12 col-lg-7">
           <h3 className="text-bisque mt-3 text-align-left">
             {activeSpell.name}
           </h3>

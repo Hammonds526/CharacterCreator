@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 // Components
-import Corner2 from "../../components/Corner2";
+import Corner from "../../components/Corner";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/Xbtn";
@@ -34,6 +34,11 @@ import Frame from "../../images/char_card_frame3.png";
 function CharacterSheet({ myCharacters, character }) {
   let { id } = useParams();
 
+  const [modalData, setModalData] = useState({
+    title: "There is no title",
+    desc: "There is no description",
+  });
+  const [modalIsActive, setModalIsActive] = useState(false);
   const [ClassIcon, setClassIcon] = useState(NoIcon);
   const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
   const [abilities, setAbilities] = useState([
@@ -86,14 +91,26 @@ function CharacterSheet({ myCharacters, character }) {
         setClassIcon(NoIcon);
         break;
     }
-  }, [myCharacters[id].class]);
+  }, [myCharacters]);
 
   const handleClickEvents = (event) => {
+    console.log("abilities ", abilities);
+    const name = event.target.name;
+    console.log("name ", name);
+
+    if (event.target.dataset.type === "ability") {
+      let currentAbility = abilities.find((item) => {
+        if (item.name === name) return true;
+      });
+      console.log("event.target.dataset.index ", event.target.dataset.index);
+      // alert(`${abilities[event.target.dataset.index].name}`);
+    }
+
     // alert("click handled " + event.target.getAttribute("name"));
-    console.log("event ", event);
+    // console.log("event.target.dataset.type ", event.target.dataset.type);
   };
 
-  console.log("myCharacters[id] ", myCharacters[id]);
+  // console.log("myCharacters[id] ", myCharacters[id]);
 
   // The information that is going to be displayed in react.
   return (
@@ -104,7 +121,7 @@ function CharacterSheet({ myCharacters, character }) {
         <WoodBeamY beamStyle={{ right: "0px", top: "0px" }} />
         <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
 
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -112,7 +129,7 @@ function CharacterSheet({ myCharacters, character }) {
             top: "-5px",
           }}
         />
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -199,55 +216,46 @@ function CharacterSheet({ myCharacters, character }) {
                   </div>
                   <div className="row">
                     <div className="row">
-
                       <div className="col">
                         <p id="divbox">
                           STR:{" "}
-                          {myCharacters[id].str ? myCharacters[id].str
-                            : "5"}
+                          {myCharacters[id].str ? myCharacters[id].str : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           DEX:{" "}
-                          {myCharacters[id].dex ? myCharacters[id].dex
-                            : "5"}
+                          {myCharacters[id].dex ? myCharacters[id].dex : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           CON:{" "}
-                          {myCharacters[id].con ? myCharacters[id].con
-                            : "5"}
+                          {myCharacters[id].con ? myCharacters[id].con : "5"}
                         </p>
                       </div>
-
                     </div>
                     <div className="row">
-
                       <div className="col">
                         <p id="divbox">
                           WIS:{" "}
-                          {myCharacters[id].wis ? myCharacters[id].wis
-                            : "5"}
+                          {myCharacters[id].wis ? myCharacters[id].wis : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           INT:{" "}
-                          {myCharacters[id].int ? myCharacters[id].int
-                            : "5"}
+                          {myCharacters[id].int ? myCharacters[id].int : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           CHA:{" "}
-                          {myCharacters[id].cha ? myCharacters[id].cha
-                            : "5"}
+                          {myCharacters[id].cha ? myCharacters[id].cha : "5"}
                         </p>
                       </div>
                     </div>
@@ -263,16 +271,20 @@ function CharacterSheet({ myCharacters, character }) {
                       <Listings
                         items={abilities}
                         clickFunction={handleClickEvents}
+                        type={"ability"}
                       />
                     </div>
                     <div>
                       <h2 id="listnames">Spells:</h2>
-                      <Listings items={myCharacters[id].spells} />
+                      <Listings
+                        items={myCharacters[id].spells}
+                        type={"spell"}
+                      />
                     </div>
                     <br />
                     <div>
                       <h2 id="listnames">Feats:</h2>
-                      <Listings items={myCharacters[id].feats} />
+                      <Listings items={myCharacters[id].feats} type={"feats"} />
                     </div>
                     <br />
                   </div>
@@ -284,7 +296,7 @@ function CharacterSheet({ myCharacters, character }) {
         </div>
         {/* Nothing below here */}
         <WoodBeamX beamStyle={{ bottom: "-3px" }} />
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -293,7 +305,7 @@ function CharacterSheet({ myCharacters, character }) {
             transform: "rotate(180deg)",
           }}
         />
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
