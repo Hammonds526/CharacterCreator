@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 // Components
-import Corner2 from "../../components/Corner2";
+import Corner from "../../components/Corner";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/Xbtn";
@@ -121,7 +121,7 @@ function CharacterSheet({ myCharacters, character }) {
         <WoodBeamY beamStyle={{ right: "0px", top: "0px" }} />
         <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
 
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -129,7 +129,7 @@ function CharacterSheet({ myCharacters, character }) {
             top: "-5px",
           }}
         />
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -296,7 +296,7 @@ function CharacterSheet({ myCharacters, character }) {
         </div>
         {/* Nothing below here */}
         <WoodBeamX beamStyle={{ bottom: "-3px" }} />
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -305,7 +305,7 @@ function CharacterSheet({ myCharacters, character }) {
             transform: "rotate(180deg)",
           }}
         />
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
