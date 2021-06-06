@@ -1,8 +1,0 @@
-#x-btn {
-    position: relative;
-}
-
-#x-btn:hover {
-    opacity: 0.9;
-    filter: brightness(59%);
-}

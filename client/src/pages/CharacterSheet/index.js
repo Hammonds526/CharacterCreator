@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 // Components
-import Corner2 from "../../components/Corner2";
+import Corner from "../../components/Corner";
 import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/Xbtn";
@@ -89,15 +89,19 @@ function CharacterSheet({ myCharacters, character }) {
         setClassIcon(NoIcon);
         break;
     }
-  }, [myCharacters[id].class]);
+  }, [myCharacters]);
 
   const handleClickEvents = (event) => {
     // Search for the ability in state
-    const localTextBoxData = abilities.filter((obj) => {
-      return obj.name === event.target.getAttribute("name");
-    });
+    if (event.target.dataset.type === "ability") {
+      const localTextBoxData = abilities.find((obj) => {
+        return obj.name === event.target.getAttribute("name");
+      });
+      
+    }
+    
     // set the text box data state to that ability
-    setTextBoxData(localTextBoxData[0]);
+    setTextBoxData(localTextBoxData);
     setTextBoxVisibility("visible");
     // alert("click handled " + event.target.getAttribute("name"));
     // console.log("event ", event);
@@ -120,7 +124,7 @@ function CharacterSheet({ myCharacters, character }) {
         <WoodBeamY beamStyle={{ right: "0px", top: "0px" }} />
         <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
 
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -128,7 +132,7 @@ function CharacterSheet({ myCharacters, character }) {
             top: "-5px",
           }}
         />
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -219,36 +223,45 @@ function CharacterSheet({ myCharacters, character }) {
                       <div className="col">
                         <p id="divbox">
                           STR:{" "}
-                          {myCharacters[id].str}
+                          {myCharacters[id].str ? myCharacters[id].str : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           DEX:{" "}
-                          {myCharacters[id].dex}
+                          {myCharacters[id].dex ? myCharacters[id].dex : "5"}
                         </p>
                       </div>
 
                       <div className="col">
                         <p id="divbox">
                           CON:{" "}
-                          {myCharacters[id].con}
+                          {myCharacters[id].con ? myCharacters[id].con : "5"}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col">
+                        <p id="divbox">
+                          WIS:{" "}
+                          {myCharacters[id].wis ? myCharacters[id].wis : "5"}
                         </p>
                       </div>
 
-                    </div> */}
+                      <div className="col">
+                        <p id="divbox">
+                          INT:{" "}
+                          {myCharacters[id].int ? myCharacters[id].int : "5"}
+                        </p>
+                      </div>
 
-                    <div className="col-4">
-                      <p id="divbox">WIS: {myCharacters[id].wis}</p>
-                    </div>
-
-                    <div className="col-4">
-                      <p id="divbox">INT: {myCharacters[id].int}</p>
-                    </div>
-
-                    <div className="col-4">
-                      <p id="divbox">CHA: {myCharacters[id].cha}</p>
+                      <div className="col">
+                        <p id="divbox">
+                          CHA:{" "}
+                          {myCharacters[id].cha ? myCharacters[id].cha : "5"}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -262,16 +275,20 @@ function CharacterSheet({ myCharacters, character }) {
                       <Listings
                         items={abilities}
                         clickFunction={handleClickEvents}
+                        type={"ability"}
                       />
                     </div>
                     <div>
                       <h2 id="listnames">Spells:</h2>
-                      <Listings items={myCharacters[id].spells} />
+                      <Listings
+                        items={myCharacters[id].spells}
+                        type={"spell"}
+                      />
                     </div>
                     <br />
                     <div>
                       <h2 id="listnames">Feats:</h2>
-                      <Listings items={myCharacters[id].feats} />
+                      <Listings items={myCharacters[id].feats} type={"feats"} />
                     </div>
                     <br />
                   </div>
@@ -283,7 +300,7 @@ function CharacterSheet({ myCharacters, character }) {
         </div>
         {/* Nothing below here */}
         <WoodBeamX beamStyle={{ bottom: "-3px" }} />
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
@@ -292,7 +309,7 @@ function CharacterSheet({ myCharacters, character }) {
             transform: "rotate(180deg)",
           }}
         />
-        <Corner2
+        <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
