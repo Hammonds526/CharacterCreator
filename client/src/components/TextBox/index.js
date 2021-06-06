@@ -63,7 +63,9 @@ function TextBox({ data, TextBoxVisibility, setTextBoxVisibility }) {
         {/*Put content below this line */}
         <div id="character-sheet__container">
           <h2 className="pt-4 px-4">{data.name}</h2>
-          <p className="py-3 px-4">{data.desc}</p>
+          <p className="py-3 px-4 preserve-line-breaks">
+            {data.desc ? data.desc : data.description.desc}
+          </p>
         </div>
         {/* Nothing below here */}
         <WoodBeamX beamStyle={{ bottom: "-3px" }} />

@@ -45,7 +45,10 @@ function CharacterSheet({ myCharacters, character }) {
       level: 0,
     },
   ]);
-  const [TextBoxData, setTextBoxData] = useState({});
+  const [TextBoxData, setTextBoxData] = useState({
+    name: "No name",
+    desc: "No description",
+  });
 
   useEffect(() => {
     switch (myCharacters[id].class) {
@@ -101,7 +104,13 @@ function CharacterSheet({ myCharacters, character }) {
           return obj.name === event.target.getAttribute("name");
         });
         break;
-
+      case "spell":
+        localTextBoxData = character.spells.find((obj) => {
+          return obj.name === event.target.getAttribute("name");
+        });
+        break;
+      case "feat":
+        break;
       default:
         break;
     }
@@ -287,13 +296,18 @@ function CharacterSheet({ myCharacters, character }) {
                       <h2 id="listnames">Spells:</h2>
                       <Listings
                         items={myCharacters[id].spells}
+                        clickFunction={handleClickEvents}
                         type={"spell"}
                       />
                     </div>
                     <br />
                     <div>
                       <h2 id="listnames">Feats:</h2>
-                      <Listings items={myCharacters[id].feats} type={"feats"} />
+                      <Listings
+                        items={myCharacters[id].feats}
+                        clickFunction={handleClickEvents}
+                        type={"feat"}
+                      />
                     </div>
                     <br />
                   </div>
