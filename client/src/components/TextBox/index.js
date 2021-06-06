@@ -62,7 +62,7 @@ function TextBox({ data, TextBoxVisibility, setTextBoxVisibility }) {
         />
         {/*Put content below this line */}
         <div id="character-sheet__container">
-          <h2 className="pt-4">{data.name}</h2>
+          <h2 className="pt-4 px-4">{data.name}</h2>
           <p className="py-3 px-4">{data.desc}</p>
         </div>
         {/* Nothing below here */}
