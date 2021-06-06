@@ -93,13 +93,19 @@ function CharacterSheet({ myCharacters, character }) {
 
   const handleClickEvents = (event) => {
     // Search for the ability in state
-    if (event.target.dataset.type === "ability") {
-      const localTextBoxData = abilities.find((obj) => {
-        return obj.name === event.target.getAttribute("name");
-      });
-      
+    console.log("event.target.dataset.type", event.target.dataset.type);
+    let localTextBoxData;
+    switch (event.target.dataset.type) {
+      case "ability":
+        localTextBoxData = abilities.find((obj) => {
+          return obj.name === event.target.getAttribute("name");
+        });
+        break;
+
+      default:
+        break;
     }
-    
+
     // set the text box data state to that ability
     setTextBoxData(localTextBoxData);
     setTextBoxVisibility("visible");
@@ -218,8 +224,7 @@ function CharacterSheet({ myCharacters, character }) {
                     <div className="vortex"></div>
                   </div>
                   <div className="row mt-3">
-                    {/* <div className="row">
-
+                    <div className="row">
                       <div className="col">
                         <p id="divbox">
                           STR:{" "}
