@@ -110,6 +110,9 @@ function CharacterSheet({ myCharacters, character }) {
         });
         break;
       case "feat":
+        localTextBoxData = character.feats.find((obj) => {
+          return obj.name === event.target.getAttribute("name");
+        });
         break;
       default:
         break;
