@@ -11,6 +11,7 @@ import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/Xbtn";
 import Listings from "../../components/Listings";
+import TextBox from "../../components/TextBox";
 
 // Icons
 import NoIcon from "../../images/icons/empty_frame.png";
@@ -34,6 +35,7 @@ import Frame from "../../images/char_card_frame3.png";
 function CharacterSheet({ myCharacters, character }) {
   let { id } = useParams();
 
+  const [TextBoxVisibility, setTextBoxVisibility] = useState("hidden");
   const [ClassIcon, setClassIcon] = useState(NoIcon);
   const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
   const [abilities, setAbilities] = useState([
@@ -43,6 +45,7 @@ function CharacterSheet({ myCharacters, character }) {
       level: 0,
     },
   ]);
+  const [TextBoxData, setTextBoxData] = useState({});
 
   useEffect(() => {
     switch (myCharacters[id].class) {
@@ -89,15 +92,28 @@ function CharacterSheet({ myCharacters, character }) {
   }, [myCharacters[id].class]);
 
   const handleClickEvents = (event) => {
+    // Search for the ability in state
+    const localTextBoxData = abilities.filter((obj) => {
+      return obj.name === event.target.getAttribute("name");
+    });
+    // set the text box data state to that ability
+    setTextBoxData(localTextBoxData[0]);
+    setTextBoxVisibility("visible");
     // alert("click handled " + event.target.getAttribute("name"));
-    console.log("event ", event);
+    // console.log("event ", event);
+    // console.log("localTextBoxData ", localTextBoxData);
   };
 
-  console.log("myCharacters[id] ", myCharacters[id]);
+  // console.log("myCharacters[id] ", myCharacters[id]);
 
   // The information that is going to be displayed in react.
   return (
     <div className="modal-content-box justify-content-center pt-4 row">
+      <TextBox
+        TextBoxVisibility={TextBoxVisibility}
+        setTextBoxVisibility={setTextBoxVisibility}
+        data={TextBoxData}
+      />
       <div id="divbox" className="col-12 col-md-10 offset-md-1">
         <WoodBeamX beamStyle={{ top: "-5px" }} />
 
@@ -128,7 +144,7 @@ function CharacterSheet({ myCharacters, character }) {
             height: "auto",
             right: "-14px",
             top: "-3px",
-            zIndex: "2",
+            zIndex: "1",
           }}
           xBtnUrl="/"
         />
@@ -180,7 +196,7 @@ function CharacterSheet({ myCharacters, character }) {
                 </div>
               </div>
               {/* Center Column */}
-              <div className="col d-flex justify-content-center">
+              <div className="col-4 d-flex justify-content-center">
                 <div className="row avatar__container text-center">
                   <div>
                     <img
@@ -197,7 +213,7 @@ function CharacterSheet({ myCharacters, character }) {
                     </div>
                     <div className="vortex"></div>
                   </div>
-                  <div className="row">
+                  <div className="row mt-3">
                     {/* <div className="row">
 
                       <div className="col">
@@ -222,18 +238,17 @@ function CharacterSheet({ myCharacters, character }) {
                       </div>
 
                     </div> */}
-                    <div className="row">
-                      <div className="col">
-                        <p id="divbox">WIS: {myCharacters[id].wis}</p>
-                      </div>
 
-                      <div className="col">
-                        <p id="divbox">INT: {myCharacters[id].int}</p>
-                      </div>
+                    <div className="col-4">
+                      <p id="divbox">WIS: {myCharacters[id].wis}</p>
+                    </div>
 
-                      <div className="col">
-                        <p id="divbox">CHA: {myCharacters[id].cha}</p>
-                      </div>
+                    <div className="col-4">
+                      <p id="divbox">INT: {myCharacters[id].int}</p>
+                    </div>
+
+                    <div className="col-4">
+                      <p id="divbox">CHA: {myCharacters[id].cha}</p>
                     </div>
                   </div>
                 </div>

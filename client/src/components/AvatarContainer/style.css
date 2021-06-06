@@ -30,7 +30,7 @@
 }
 .avatar {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   height: 136px;
   margin-top: -118%;
   animation: Avatarfloat 5s ease-in-out infinite;
