@@ -23,7 +23,7 @@ function TextBox({ data, TextBoxVisibility, setTextBoxVisibility }) {
       style={{
         visibility: TextBoxVisibility,
       }}
-      className="modal-content-box text-box__padding-top justify-content-center row"
+      className="modal__blury-backround text-box__padding-top justify-content-center"
     >
       <div id="divbox" className="col-12 col-md-6 offset-md-3">
         <WoodBeamX beamStyle={{ top: "-5px" }} />

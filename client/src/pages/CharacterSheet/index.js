@@ -130,7 +130,7 @@ function CharacterSheet({ myCharacters, character }) {
 
   // The information that is going to be displayed in react.
   return (
-    <div className="modal-content-box justify-content-center pt-4 row">
+    <div className="modal__blury-backround justify-content-center pt-4">
       <TextBox
         TextBoxVisibility={TextBoxVisibility}
         setTextBoxVisibility={setTextBoxVisibility}
