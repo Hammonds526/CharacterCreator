@@ -131,9 +131,8 @@ function TabSpells({
           <h3 className="text-bisque mt-3 text-align-left">
             {activeSpell.name}
           </h3>
-          <p className="tab_descriptions text-bisque mt-3">
-            {activeSpell.description.desc.split("<br />").map((str, i) => (
-              <span key={i}>{str}</span>
+          <p className="tab_descriptions text-bisque mt-3 preserve-line-breaks">
+            {activeSpell.description.desc}
             ))}
           </p>
         </div>

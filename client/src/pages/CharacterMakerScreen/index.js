@@ -56,7 +56,7 @@ function CharacterMakerScreen(props) {
   };
 
   return (
-    <div className="modal-content-box">
+    <div className="modal__blury-backround">
       <div className="character-maker-screen mx-auto bg-transparent container mt-5">
         <div className="row">
           <div

@@ -41,7 +41,7 @@ function App() {
     userId: null,
   });
 
-  console.log("newCharacter ", newCharacter);
+  // console.log("newCharacter ", newCharacter);
 
   const [signIn, setSignIn] = useState(true);
   //Check if user is already logged in

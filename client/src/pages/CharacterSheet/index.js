@@ -11,6 +11,7 @@ import WoodBeamX from "../../components/WoodBeamX";
 import WoodBeamY from "../../components/WoodBeamY";
 import Xbtn from "../../components/Xbtn";
 import Listings from "../../components/Listings";
+import TextBox from "../../components/TextBox";
 
 // Icons
 import NoIcon from "../../images/icons/empty_frame.png";
@@ -34,11 +35,7 @@ import Frame from "../../images/char_card_frame3.png";
 function CharacterSheet({ myCharacters, character }) {
   let { id } = useParams();
 
-  const [modalData, setModalData] = useState({
-    title: "There is no title",
-    desc: "There is no description",
-  });
-  const [modalIsActive, setModalIsActive] = useState(false);
+  const [TextBoxVisibility, setTextBoxVisibility] = useState("hidden");
   const [ClassIcon, setClassIcon] = useState(NoIcon);
   const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
   const [abilities, setAbilities] = useState([
@@ -48,6 +45,10 @@ function CharacterSheet({ myCharacters, character }) {
       level: 0,
     },
   ]);
+  const [TextBoxData, setTextBoxData] = useState({
+    name: "No name",
+    desc: "No description",
+  });
 
   useEffect(() => {
     switch (myCharacters[id].class) {
@@ -94,27 +95,47 @@ function CharacterSheet({ myCharacters, character }) {
   }, [myCharacters]);
 
   const handleClickEvents = (event) => {
-    console.log("abilities ", abilities);
-    const name = event.target.name;
-    console.log("name ", name);
-
-    if (event.target.dataset.type === "ability") {
-      let currentAbility = abilities.find((item) => {
-        if (item.name === name) return true;
-      });
-      console.log("event.target.dataset.index ", event.target.dataset.index);
-      // alert(`${abilities[event.target.dataset.index].name}`);
+    // Search for the ability in state
+    console.log("event.target.dataset.type", event.target.dataset.type);
+    let localTextBoxData;
+    switch (event.target.dataset.type) {
+      case "ability":
+        localTextBoxData = abilities.find((obj) => {
+          return obj.name === event.target.getAttribute("name");
+        });
+        break;
+      case "spell":
+        localTextBoxData = character.spells.find((obj) => {
+          return obj.name === event.target.getAttribute("name");
+        });
+        break;
+      case "feat":
+        localTextBoxData = character.feats.find((obj) => {
+          return obj.name === event.target.getAttribute("name");
+        });
+        break;
+      default:
+        break;
     }
 
+    // set the text box data state to that ability
+    setTextBoxData(localTextBoxData);
+    setTextBoxVisibility("visible");
     // alert("click handled " + event.target.getAttribute("name"));
-    // console.log("event.target.dataset.type ", event.target.dataset.type);
+    // console.log("event ", event);
+    // console.log("localTextBoxData ", localTextBoxData);
   };
 
   // console.log("myCharacters[id] ", myCharacters[id]);
 
   // The information that is going to be displayed in react.
   return (
-    <div className="modal-content-box justify-content-center pt-4 row">
+    <div className="modal__blury-backround justify-content-center pt-4">
+      <TextBox
+        TextBoxVisibility={TextBoxVisibility}
+        setTextBoxVisibility={setTextBoxVisibility}
+        data={TextBoxData}
+      />
       <div id="divbox" className="col-12 col-md-10 offset-md-1">
         <WoodBeamX beamStyle={{ top: "-5px" }} />
 
@@ -145,7 +166,7 @@ function CharacterSheet({ myCharacters, character }) {
             height: "auto",
             right: "-14px",
             top: "-3px",
-            zIndex: "2",
+            zIndex: "1",
           }}
           xBtnUrl="/"
         />
@@ -197,7 +218,7 @@ function CharacterSheet({ myCharacters, character }) {
                 </div>
               </div>
               {/* Center Column */}
-              <div className="col d-flex justify-content-center">
+              <div className="col-4 d-flex justify-content-center">
                 <div className="row avatar__container text-center">
                   <div>
                     <img
@@ -214,7 +235,7 @@ function CharacterSheet({ myCharacters, character }) {
                     </div>
                     <div className="vortex"></div>
                   </div>
-                  <div className="row">
+                  <div className="row mt-3">
                     <div className="row">
                       <div className="col">
                         <p id="divbox">
@@ -278,13 +299,18 @@ function CharacterSheet({ myCharacters, character }) {
                       <h2 id="listnames">Spells:</h2>
                       <Listings
                         items={myCharacters[id].spells}
+                        clickFunction={handleClickEvents}
                         type={"spell"}
                       />
                     </div>
                     <br />
                     <div>
                       <h2 id="listnames">Feats:</h2>
-                      <Listings items={myCharacters[id].feats} type={"feats"} />
+                      <Listings
+                        items={myCharacters[id].feats}
+                        clickFunction={handleClickEvents}
+                        type={"feat"}
+                      />
                     </div>
                     <br />
                   </div>
