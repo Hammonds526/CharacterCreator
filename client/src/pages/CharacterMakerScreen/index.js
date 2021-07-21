@@ -8,7 +8,7 @@ import "./style.css";
 
 // Components
 import CharacterProgressBar from "../../components/CharacterProgressBar";
-import CharInfoBox from "../../components/CharInfoBox";
+import CharInfoBox from "../../components/CharMakerContainer";
 import AvatarContainer from "../../components/AvatarContainer";
 // import AbilityFeatSpell from "../AbilityFeatSpell";
 
