@@ -12,7 +12,7 @@ import CharInfoBox from "../../components/CharMakerContainer";
 import AvatarContainer from "../../components/AvatarContainer";
 // import AbilityFeatSpell from "../AbilityFeatSpell";
 
-function CharacterMakerScreen(props) {
+const CharacterMakerScreen = (props) => {
   let { path } = useRouteMatch();
 
   let classIndex = props.character.class.findIndex(
@@ -88,6 +88,6 @@ function CharacterMakerScreen(props) {
       </div>
     </div>
   );
-}
+};
 
 export default CharacterMakerScreen;
