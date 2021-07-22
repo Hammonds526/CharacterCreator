@@ -46,6 +46,7 @@ const WoodBeamCard = (props) => {
               top: "-46px",
               zIndex: "2",
             }}
+            xBtnFunc={props.xBtnFunc ? props.xBtnFunc : null}
             xBtnUrl="/"
           />
         ) : null}
