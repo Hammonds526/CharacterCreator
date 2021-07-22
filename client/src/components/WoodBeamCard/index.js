@@ -13,7 +13,7 @@ import "./style.css";
 
 const WoodBeamCard = (props) => {
   return (
-    <div className="position-relative">
+    <div className={`position-relative ${props.WoodBeamCardStyleClass}`}>
       <div className="wood-beam-card_container p-5">
         <WoodBeamX beamStyle={{ top: "-48px" }} />
 

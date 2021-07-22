@@ -17,7 +17,7 @@ import WoodBeamCard from "../WoodBeamCard";
 
 const CharMakerContainer = (props) => {
   return (
-    <WoodBeamCard xbtn={true}>
+    <WoodBeamCard WoodBeamCardStyleClass={"mt-3"} xbtn={true}>
       <Switch>
         <Route exact path={"/character-creator/name"}>
           <NameLevelPage {...props} />
