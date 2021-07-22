@@ -8,7 +8,7 @@ import "./style.css";
 
 // Components
 import CharacterProgressBar from "../../components/CharacterProgressBar";
-import CharInfoBox from "../../components/CharMakerContainer";
+import CharMakerContainer from "../../components/CharMakerContainer";
 import AvatarContainer from "../../components/AvatarContainer";
 // import AbilityFeatSpell from "../AbilityFeatSpell";
 
@@ -73,7 +73,7 @@ const CharacterMakerScreen = (props) => {
             <div className="row">
               <Route path={`${path}/:tabId`}>
                 <div className="col">
-                  <CharInfoBox
+                  <CharMakerContainer
                     {...props}
                     classIndex={classIndex}
                     subClassIndex={getSubClassIndex}

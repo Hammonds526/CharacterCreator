@@ -8,63 +8,70 @@ import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
+// CSS
+import "./style.css";
+
 const WoodBeamCard = (props) => {
   return (
-    <div className="char-info-box__container p-5 mt-2">
-      <WoodBeamX beamStyle={{ top: "-48px" }} />
+    <div className="position-relative">
+      <div className="wood-beam-card_container p-5">
+        <WoodBeamX beamStyle={{ top: "-48px" }} />
 
-      <WoodBeamY beamStyle={{ right: "15px", top: "9px" }} />
-      <WoodBeamY beamStyle={{ left: "15px", top: "9px" }} />
+        <WoodBeamY beamStyle={{ right: "0px", top: "0px" }} />
+        <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
 
-      <Corner
-        cornerStyle={{
-          width: "80px",
-          height: "auto",
-          left: "-48px",
-          top: "-48px",
-        }}
-      />
-      <Corner
-        cornerStyle={{
-          width: "80px",
-          height: "auto",
-          right: "-48px",
-          top: "-48px",
-          transform: "rotate(90deg)",
-        }}
-      />
-      <Xbtn
-        xBtnStyle={{
-          width: "30px",
-          height: "auto",
-          right: "-45px",
-          top: "-46px",
-          zIndex: "2",
-        }}
-        xBtnUrl="/"
-      />
+        <Corner
+          cornerStyle={{
+            width: "80px",
+            height: "auto",
+            left: "-48px",
+            top: "-48px",
+          }}
+        />
+        <Corner
+          cornerStyle={{
+            width: "80px",
+            height: "auto",
+            right: "-48px",
+            top: "-48px",
+            transform: "rotate(90deg)",
+          }}
+        />
+        {props.xbtn ? (
+          <Xbtn
+            xBtnStyle={{
+              width: "30px",
+              height: "auto",
+              right: "-45px",
+              top: "-46px",
+              zIndex: "2",
+            }}
+            xBtnUrl="/"
+          />
+        ) : null}
 
-      {props.children}
+        {props.children}
 
-      <WoodBeamX beamStyle={{ bottom: "-57px" }} />
-      <Corner
-        cornerStyle={{
-          width: "80px",
-          height: "auto",
-          right: "-48px",
-          bottom: "-57px",
-          transform: "rotate(180deg)",
-        }}
-      />
-      <Corner
-        cornerStyle={{
-          width: "80px",
-          height: "auto",
-          left: "-48px",
-          bottom: "-57px",
-          transform: "rotate(270deg)",
-        }}
-      />
+        <WoodBeamX beamStyle={{ bottom: "-48px" }} />
+        <Corner
+          cornerStyle={{
+            width: "80px",
+            height: "auto",
+            right: "-48px",
+            bottom: "-48px",
+            transform: "rotate(180deg)",
+          }}
+        />
+        <Corner
+          cornerStyle={{
+            width: "80px",
+            height: "auto",
+            left: "-48px",
+            bottom: "-48px",
+            transform: "rotate(270deg)",
+          }}
+        />
+      </div>
     </div>
   );
 };
