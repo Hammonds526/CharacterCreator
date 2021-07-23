@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import API from "../../utils/API";
 import Button from "../../components/Button";
 import Form from "react-bootstrap/Form";
-// import { redirect } from "react-router-dom";
 
 function Login(props) {
   const [username, setUsername] = useState("");

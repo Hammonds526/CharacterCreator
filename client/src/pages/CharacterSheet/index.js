@@ -6,10 +6,7 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 // Components
-import Corner from "../../components/Corner";
-import WoodBeamX from "../../components/WoodBeamX";
-import WoodBeamY from "../../components/WoodBeamY";
-import Xbtn from "../../components/Xbtn";
+import WoodBeamCard from "../../components/WoodBeamCard";
 import Listings from "../../components/Listings";
 import TextBox from "../../components/TextBox";
 
@@ -126,9 +123,6 @@ function CharacterSheet({ myCharacters, character }) {
     // console.log("localTextBoxData ", localTextBoxData);
   };
 
-  // console.log("myCharacters[id] ", myCharacters[id]);
-
-  // The information that is going to be displayed in react.
   return (
     <div className="modal__blury-backround justify-content-center pt-4">
       <TextBox
@@ -137,209 +131,160 @@ function CharacterSheet({ myCharacters, character }) {
         data={TextBoxData}
       />
       <div id="divbox" className="col-12 col-md-10 offset-md-1">
-        <WoodBeamX beamStyle={{ top: "-5px" }} />
-
-        <WoodBeamY beamStyle={{ right: "0px", top: "0px" }} />
-        <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
-
-        <Corner
-          cornerStyle={{
-            width: "80px",
-            height: "auto",
-            left: "-16px",
-            top: "-5px",
-          }}
-        />
-        <Corner
-          cornerStyle={{
-            width: "80px",
-            height: "auto",
-            right: "-16px",
-            top: "-5px",
-            transform: "rotate(90deg)",
-          }}
-        />
-        {/* This this button below is supposed to close the creator */}
-        <Xbtn
-          xBtnStyle={{
-            width: "30px",
-            height: "auto",
-            right: "-14px",
-            top: "-3px",
-            zIndex: "1",
-          }}
-          xBtnUrl="/"
-        />
-        <div>
-          <div id="character-sheet__container">
-            <br />
-            <div className="d-flex justify-content-center">
-              <h2>
-                {myCharacters[id].name
-                  ? myCharacters[id].name
-                  : "No-Name Baggins"}
-              </h2>
-            </div>
-            <br />
-            <div className="row mb-4">
+        <WoodBeamCard WoodBeamCardStyleClass="mb-4" xbtn={true}>
+          <div>
+            <div id="character-sheet__container">
               <br />
-              {/* Left Column */}
-              <div className="col px-4">
-                <div id="card" className="col-12">
-                  <h2 className="mt-2">
-                    Race:{" "}
-                    {myCharacters[id].race.charAt(0).toUpperCase() +
-                      myCharacters[id].race.slice(1)}{" "}
-                  </h2>
-                  <div>
-                    <img
-                      className="icon"
-                      src={ClassIcon}
-                      alt="Character Avatar"
-                    ></img>
-                    <h2>
-                      Class:{" "}
-                      {myCharacters[id].class.charAt(0).toUpperCase() +
-                        myCharacters[id].class.slice(1)}
+              <div className="d-flex justify-content-center">
+                <h2>
+                  {myCharacters[id].name
+                    ? myCharacters[id].name
+                    : "No-Name Baggins"}
+                </h2>
+              </div>
+              <br />
+              <div className="row mb-4">
+                <br />
+                {/* Left Column */}
+                <div className="col px-4">
+                  <div id="card" className="col-12">
+                    <h2 className="mt-2">
+                      Race:{" "}
+                      {myCharacters[id].race.charAt(0).toUpperCase() +
+                        myCharacters[id].race.slice(1)}{" "}
                     </h2>
-                    <h3>
-                      Subclass:{" "}
-                      {myCharacters ? myCharacters[id].subClass : "No Subclass"}
-                    </h3>
-                    <br />
-                    <br />
                     <div>
-                      <h2 id="lvlbox">Level</h2>
-                      <p id="level">{myCharacters[id].level}</p>
+                      <img
+                        className="icon"
+                        src={ClassIcon}
+                        alt="Character Avatar"
+                      ></img>
+                      <h2>
+                        Class:{" "}
+                        {myCharacters[id].class.charAt(0).toUpperCase() +
+                          myCharacters[id].class.slice(1)}
+                      </h2>
+                      <h3>
+                        Subclass:{" "}
+                        {myCharacters
+                          ? myCharacters[id].subClass
+                          : "No Subclass"}
+                      </h3>
+                      <br />
+                      <br />
+                      <div>
+                        <h2 id="lvlbox">Level</h2>
+                        <p id="level">{myCharacters[id].level}</p>
+                        <br />
+                      </div>
+                    </div>
+                    <br />
+                  </div>
+                </div>
+                {/* Center Column */}
+                <div className="col-4 d-flex justify-content-center">
+                  <div className="row avatar__container text-center">
+                    <div>
+                      <img
+                        className="frame position-relative"
+                        src={Frame}
+                        alt="Character Avatar"
+                      ></img>
+                      <div>
+                        <img
+                          className="avatar position-relative"
+                          src={AvatarCostume}
+                          alt="Character Avatar"
+                        ></img>
+                      </div>
+                      <div className="vortex"></div>
+                    </div>
+                    <div className="row mt-3">
+                      <div className="row">
+                        <div className="col">
+                          <p id="divbox">
+                            STR:{" "}
+                            {myCharacters[id].str ? myCharacters[id].str : "5"}
+                          </p>
+                        </div>
+
+                        <div className="col">
+                          <p id="divbox">
+                            DEX:{" "}
+                            {myCharacters[id].dex ? myCharacters[id].dex : "5"}
+                          </p>
+                        </div>
+
+                        <div className="col">
+                          <p id="divbox">
+                            CON:{" "}
+                            {myCharacters[id].con ? myCharacters[id].con : "5"}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col">
+                          <p id="divbox">
+                            WIS:{" "}
+                            {myCharacters[id].wis ? myCharacters[id].wis : "5"}
+                          </p>
+                        </div>
+
+                        <div className="col">
+                          <p id="divbox">
+                            INT:{" "}
+                            {myCharacters[id].int ? myCharacters[id].int : "5"}
+                          </p>
+                        </div>
+
+                        <div className="col">
+                          <p id="divbox">
+                            CHA:{" "}
+                            {myCharacters[id].cha ? myCharacters[id].cha : "5"}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Right Column */}
+                <div className="col px-4">
+                  <div id="card">
+                    <div id="character-sheet__right-list">
+                      <div>
+                        <h2 id="listnames">Abilities:</h2>
+                        <Listings
+                          items={abilities}
+                          clickFunction={handleClickEvents}
+                          type={"ability"}
+                        />
+                      </div>
+                      <div>
+                        <h2 id="listnames">Spells:</h2>
+                        <Listings
+                          items={myCharacters[id].spells}
+                          clickFunction={handleClickEvents}
+                          type={"spell"}
+                        />
+                      </div>
+                      <br />
+                      <div>
+                        <h2 id="listnames">Feats:</h2>
+                        <Listings
+                          items={myCharacters[id].feats}
+                          clickFunction={handleClickEvents}
+                          type={"feat"}
+                        />
+                      </div>
                       <br />
                     </div>
                   </div>
-                  <br />
                 </div>
               </div>
-              {/* Center Column */}
-              <div className="col-4 d-flex justify-content-center">
-                <div className="row avatar__container text-center">
-                  <div>
-                    <img
-                      className="frame position-relative"
-                      src={Frame}
-                      alt="Character Avatar"
-                    ></img>
-                    <div>
-                      <img
-                        className="avatar position-relative"
-                        src={AvatarCostume}
-                        alt="Character Avatar"
-                      ></img>
-                    </div>
-                    <div className="vortex"></div>
-                  </div>
-                  <div className="row mt-3">
-                    <div className="row">
-                      <div className="col">
-                        <p id="divbox">
-                          STR:{" "}
-                          {myCharacters[id].str ? myCharacters[id].str : "5"}
-                        </p>
-                      </div>
-
-                      <div className="col">
-                        <p id="divbox">
-                          DEX:{" "}
-                          {myCharacters[id].dex ? myCharacters[id].dex : "5"}
-                        </p>
-                      </div>
-
-                      <div className="col">
-                        <p id="divbox">
-                          CON:{" "}
-                          {myCharacters[id].con ? myCharacters[id].con : "5"}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p id="divbox">
-                          WIS:{" "}
-                          {myCharacters[id].wis ? myCharacters[id].wis : "5"}
-                        </p>
-                      </div>
-
-                      <div className="col">
-                        <p id="divbox">
-                          INT:{" "}
-                          {myCharacters[id].int ? myCharacters[id].int : "5"}
-                        </p>
-                      </div>
-
-                      <div className="col">
-                        <p id="divbox">
-                          CHA:{" "}
-                          {myCharacters[id].cha ? myCharacters[id].cha : "5"}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Right Column */}
-              <div className="col px-4">
-                <div id="card">
-                  <div id="character-sheet__right-list">
-                    <div>
-                      <h2 id="listnames">Abilities:</h2>
-                      <Listings
-                        items={abilities}
-                        clickFunction={handleClickEvents}
-                        type={"ability"}
-                      />
-                    </div>
-                    <div>
-                      <h2 id="listnames">Spells:</h2>
-                      <Listings
-                        items={myCharacters[id].spells}
-                        clickFunction={handleClickEvents}
-                        type={"spell"}
-                      />
-                    </div>
-                    <br />
-                    <div>
-                      <h2 id="listnames">Feats:</h2>
-                      <Listings
-                        items={myCharacters[id].feats}
-                        clickFunction={handleClickEvents}
-                        type={"feat"}
-                      />
-                    </div>
-                    <br />
-                  </div>
-                </div>
-              </div>
+              <br />
             </div>
-            <br />
           </div>
-        </div>
-        {/* Nothing below here */}
-        <WoodBeamX beamStyle={{ bottom: "-3px" }} />
-        <Corner
-          cornerStyle={{
-            width: "80px",
-            height: "auto",
-            right: "-16px",
-            bottom: "-4px",
-            transform: "rotate(180deg)",
-          }}
-        />
-        <Corner
-          cornerStyle={{
-            width: "80px",
-            height: "auto",
-            left: "-16px",
-            bottom: "-4px",
-            transform: "rotate(270deg)",
-          }}
-        />
+        </WoodBeamCard>
       </div>
     </div>
   );
