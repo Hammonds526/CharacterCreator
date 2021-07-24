@@ -1,6 +1,6 @@
 //eslint-ignore
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import Button from "../../components/Button";
 import Form from "react-bootstrap/Form";
@@ -21,11 +21,16 @@ function Login(props) {
       });
   }
 
+  const handleKeyPress = (e) => {
+    if (e.code === "Enter" || e.code === "NumpadEnter") {
+      handleSubmit(e);
+    }
+  };
+
   function validateForm() {
     return username.length > 0 && password.length > 0;
   }
 
-  //going to created basic bootstrap
   return (
     <div className="Login">
       <Form className="px-4" onSubmit={handleSubmit}>
@@ -39,6 +44,7 @@ function Login(props) {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Username"
+            onKeyPress={handleKeyPress}
           />
         </Form.Group>
         <Form.Group size="lg" controlId="password">
@@ -49,12 +55,13 @@ function Login(props) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
+            onKeyPress={handleKeyPress}
           />
         </Form.Group>
         <p>{incorrect}</p>
         <div className="d-flex justify-content-center">
           <div type="submit" disabled={!validateForm()} onClick={handleSubmit}>
-            <Button text={"Login"} />
+            <Button type="submit" text={"Login"} />
           </div>
         </div>
       </Form>
