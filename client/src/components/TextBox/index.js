@@ -14,7 +14,6 @@ function TextBox({ data, TextBoxVisibility, setTextBoxVisibility }) {
     setTextBoxVisibility("hidden");
   };
 
-  // The information that is going to be displayed in react.
   return (
     <div
       style={{
@@ -36,6 +35,4 @@ function TextBox({ data, TextBoxVisibility, setTextBoxVisibility }) {
     </div>
   );
 }
-
-// Good god, this makes me want to die.
 export default TextBox;
