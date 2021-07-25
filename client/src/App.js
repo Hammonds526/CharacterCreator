@@ -15,10 +15,11 @@ import CharacterMakerScreen from "./pages/CharacterMakerScreen";
 import AuthPages from "./pages/AuthPages";
 import Logout from "./components/Logout";
 import CharacterSheetPage from "./pages/CharacterSheet";
+import Button from "./components/Button";
 
 function App() {
+  const [isTouch, setIsTouch] = useState(false);
   const [myCharacters, setmyCharacters] = useState([]);
-
   const [newCharacter, setNewCharacter] = useState({
     name: "No-Name Baggins",
     level: 1,
@@ -41,8 +42,6 @@ function App() {
     userId: null,
   });
 
-  // console.log("newCharacter ", newCharacter);
-
   const [signIn, setSignIn] = useState(true);
   //Check if user is already logged in
   //Look for cookie/session information and data of user if exists
@@ -54,6 +53,10 @@ function App() {
   );
 
   useEffect(() => {
+    setIsTouch(window.matchMedia("(hover: none)").matches);
+  }, []);
+
+  useEffect(() => {
     //Double check if user is already logged in
     //If no session found no user
     API.check()
@@ -62,7 +65,7 @@ function App() {
         if (user) {
           API.getUser(user)
             .then((res) => {
-              //set characters whether or not they exist from user
+              //set characters if they exist
               setmyCharacters(res.data !== null ? res.data.characters : []);
             })
             .catch(() => {});
@@ -71,7 +74,7 @@ function App() {
       .catch(() => console.log("no session found"));
   }, [user]);
 
-  // console.log("myCharacters", myCharacters)
+  console.log("isTouch ", isTouch);
 
   return (
     <Router>
@@ -113,6 +116,7 @@ function App() {
 
           <div className="row">
             <div className="col-12 col-lg-9 ">
+              {isTouch ? <p>To begin, select a class from the tavern</p> : null}
               <div className="row">
                 <div className="col">
                   <Tavern
@@ -120,6 +124,12 @@ function App() {
                     newCharacter={newCharacter}
                   />
                 </div>
+              </div>
+              <div className="row d-flex justify-content-center">
+                <Button
+                  text="Create Warlock"
+                  buttonStyles={{ marginTop: "10px" }}
+                />
               </div>
             </div>
             <div className="col-12 col-lg-3 p-0 ">
