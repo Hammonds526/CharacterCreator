@@ -3,9 +3,6 @@ import React, { useState } from "react";
 // API
 import API from "../../utils/API";
 
-// Bootstrap Button Component
-import Button from "react-bootstrap/Button";
-
 // CSS
 import "./style.css";
 

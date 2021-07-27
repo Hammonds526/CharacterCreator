@@ -5,7 +5,7 @@ import rogue from "./rogue";
 import wizard from "./wizard";
 import race from "./race";
 import spells from "./spells";
-import feats from "./feats";
+import feats from "./feats2";
 
 const character = {
   race,

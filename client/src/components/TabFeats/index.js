@@ -93,7 +93,7 @@ function TabFeats({
         Choose your Feat{feats.totalFeatsAvailable > 1 ? "s" : null}
       </h2>
       <div className="row mb-2">
-        <div className="col-4">
+        <div className="col-5">
           <FeatLimiter
             feats={feats}
             setFeats={setFeats}
@@ -112,7 +112,7 @@ function TabFeats({
             scrollListStyle={{ maxHeight: "400px" }}
           />
         </div>
-        <div className="col-8">
+        <div className="col-7">
           {feats.totalFeatsAvailable === 0 ? (
             <p className="text-warning">
               No feats avaiable with this Level/Race combo
@@ -121,7 +121,9 @@ function TabFeats({
           <h3 className="text-bisque mt-3 text-align-left">
             {activeFeat.name}
           </h3>
-          <p className="tab_descriptions text-bisque mt-3">{activeFeat.desc}</p>
+          <p className="tab_descriptions text-bisque mt-3 preserve-line-breaks">
+            {activeFeat.desc}
+          </p>
         </div>
       </div>
 

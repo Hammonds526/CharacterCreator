@@ -8,11 +8,11 @@ import "./style.css";
 
 // Components
 import CharacterProgressBar from "../../components/CharacterProgressBar";
-import CharInfoBox from "../../components/CharInfoBox";
+import CharMakerContainer from "../../components/CharMakerContainer";
 import AvatarContainer from "../../components/AvatarContainer";
 // import AbilityFeatSpell from "../AbilityFeatSpell";
 
-function CharacterMakerScreen(props) {
+const CharacterMakerScreen = (props) => {
   let { path } = useRouteMatch();
 
   let classIndex = props.character.class.findIndex(
@@ -56,7 +56,7 @@ function CharacterMakerScreen(props) {
   };
 
   return (
-    <div className="modal-content-box">
+    <div className="modal__blury-backround">
       <div className="character-maker-screen mx-auto bg-transparent container mt-5">
         <div className="row">
           <div
@@ -73,7 +73,7 @@ function CharacterMakerScreen(props) {
             <div className="row">
               <Route path={`${path}/:tabId`}>
                 <div className="col">
-                  <CharInfoBox
+                  <CharMakerContainer
                     {...props}
                     classIndex={classIndex}
                     subClassIndex={getSubClassIndex}
@@ -88,6 +88,6 @@ function CharacterMakerScreen(props) {
       </div>
     </div>
   );
-}
+};
 
 export default CharacterMakerScreen;

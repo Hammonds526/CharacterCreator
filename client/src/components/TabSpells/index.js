@@ -38,7 +38,7 @@ function TabSpells({
     });
 
     const localSpells = { ...spells };
-    // If this class has spells or cantrips, add put the max available at this level in state
+    // If this class has spells or cantrips, put the max available at this level in state
     if (activeClass.spellsKnown) {
       localSpells.totalSpellsAvailable = activeClass.spellsKnown[levelIndex];
     }
@@ -108,7 +108,7 @@ function TabSpells({
     <div>
       <h2 className="  text-bisque">Choose your Spells</h2>
       <div className="row mb-2">
-        <div className="col-12 col-lg-4">
+        <div className="col-12 col-lg-5">
           <SpellLimiter
             spells={spells}
             setSpells={setSpells}
@@ -127,13 +127,12 @@ function TabSpells({
             itemType={"spell"}
           />
         </div>
-        <div className="col-12 col-lg-8">
+        <div className="col-12 col-lg-7">
           <h3 className="text-bisque mt-3 text-align-left">
             {activeSpell.name}
           </h3>
-          <p className="tab_descriptions text-bisque mt-3">
-            {activeSpell.description.desc.split("<br />").map((str, i) => (
-              <span key={i}>{str}</span>
+          <p className="tab_descriptions text-bisque mt-3 preserve-line-breaks">
+            {activeSpell.description.desc}
             ))}
           </p>
         </div>

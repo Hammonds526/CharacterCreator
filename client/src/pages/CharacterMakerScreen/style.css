@@ -1,4 +1,4 @@
-.modal-content-box {
+.modal__blury-backround {
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 2; /* Sit on top */
@@ -9,11 +9,11 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  transition: ease-in 2s;
-  backdrop-filter: blur(2px);
+
+  backdrop-filter: blur(2px); /*Make backround blurry*/
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-.modal-content-box::-webkit-scrollbar {
+.modal__blury-backround::-webkit-scrollbar {
   display: none;
 }
