@@ -95,7 +95,7 @@ const CharacterData = [
     },
   },
   {
-    text: "Paladin Coming Soon",
+    text: "Create Paladin",
     name: "paladin",
     isActive: false,
     styles: {
