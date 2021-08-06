@@ -14,8 +14,8 @@ import "./style.css";
 const WoodBeamCard = (props) => {
   return (
     <div className={`position-relative ${props.WoodBeamCardStyleClass}`}>
-      <div className="wood-beam-card_container p-5">
-        <WoodBeamX beamStyle={{ top: "-48px" }} />
+      <div className="wood-beam-card_container">
+        <WoodBeamX beamStyle={{ top: "0px" }} />
 
         <WoodBeamY beamStyle={{ right: "0px", top: "0px" }} />
         <WoodBeamY beamStyle={{ left: "0px", top: "0px" }} />
@@ -24,16 +24,16 @@ const WoodBeamCard = (props) => {
           cornerStyle={{
             width: "80px",
             height: "auto",
-            left: "-48px",
-            top: "-48px",
+            left: "0px",
+            top: "0px",
           }}
         />
         <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
-            right: "-48px",
-            top: "-48px",
+            right: "0px",
+            top: "0px",
             transform: "rotate(90deg)",
           }}
         />
@@ -42,8 +42,8 @@ const WoodBeamCard = (props) => {
             xBtnStyle={{
               width: "30px",
               height: "auto",
-              right: "-45px",
-              top: "-46px",
+              right: "5px",
+              top: "5px",
               zIndex: "2",
             }}
             xBtnFunc={props.xBtnFunc ? props.xBtnFunc : null}
@@ -53,13 +53,13 @@ const WoodBeamCard = (props) => {
 
         {props.children}
 
-        <WoodBeamX beamStyle={{ bottom: "-48px" }} />
+        <WoodBeamX beamStyle={{ bottom: "0px" }} />
         <Corner
           cornerStyle={{
             width: "80px",
             height: "auto",
-            right: "-48px",
-            bottom: "-48px",
+            right: "0px",
+            bottom: "0px",
             transform: "rotate(180deg)",
           }}
         />
@@ -67,8 +67,8 @@ const WoodBeamCard = (props) => {
           cornerStyle={{
             width: "80px",
             height: "auto",
-            left: "-48px",
-            bottom: "-48px",
+            left: "0px",
+            bottom: "0px",
             transform: "rotate(270deg)",
           }}
         />

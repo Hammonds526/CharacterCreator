@@ -18,29 +18,31 @@ import WoodBeamCard from "../WoodBeamCard";
 const CharMakerContainer = (props) => {
   return (
     <WoodBeamCard WoodBeamCardStyleClass={"mt-3"} xbtn={true}>
-      <Switch>
-        <Route exact path={"/character-creator/name"}>
-          <NameLevelPage {...props} />
-        </Route>
-        <Route exact path={"/character-creator/race"}>
-          <RacePage {...props} />
-        </Route>
-        <Route exact path={"/character-creator/class"}>
-          <ClassPage {...props} />
-        </Route>
-        <Route exact path={"/character-creator/subclass"}>
-          <SubclassPage {...props} />
-        </Route>
-        <Route exact path={"/character-creator/spells"}>
-          <SpellsPage {...props} />
-        </Route>
-        <Route exact path={"/character-creator/feats"}>
-          <FeatsPage {...props} />
-        </Route>
-        <Route exact path={"/character-creator/stats"}>
-          <StatPage {...props} />
-        </Route>
-      </Switch>
+      <div className="p-5">
+        <Switch>
+          <Route exact path={"/character-creator/name"}>
+            <NameLevelPage {...props} />
+          </Route>
+          <Route exact path={"/character-creator/race"}>
+            <RacePage {...props} />
+          </Route>
+          <Route exact path={"/character-creator/class"}>
+            <ClassPage {...props} />
+          </Route>
+          <Route exact path={"/character-creator/subclass"}>
+            <SubclassPage {...props} />
+          </Route>
+          <Route exact path={"/character-creator/spells"}>
+            <SpellsPage {...props} />
+          </Route>
+          <Route exact path={"/character-creator/feats"}>
+            <FeatsPage {...props} />
+          </Route>
+          <Route exact path={"/character-creator/stats"}>
+            <StatPage {...props} />
+          </Route>
+        </Switch>
+      </div>
     </WoodBeamCard>
   );
 };

@@ -47,50 +47,6 @@ function CharacterSheet({ myCharacters, character }) {
     desc: "No description",
   });
 
-  useEffect(() => {
-    switch (myCharacters[id].class) {
-      // Fighter
-      case "Fighter":
-      case "fighter":
-        setAvatarCostume(FighterCostume);
-        setClassIcon(FighterIcon);
-        setAbilities(character.class[0].abilities);
-        break;
-
-      // Ranger
-      case "Ranger":
-      case "ranger":
-        setAvatarCostume(RangerCostume);
-        setClassIcon(RangerIcon);
-        setAbilities(character.class[1].abilities);
-
-        break;
-
-      // Rogue
-      case "Rogue":
-      case "rogue":
-        setAvatarCostume(RogueCostume);
-        setClassIcon(RogueIcon);
-        setAbilities(character.class[2].abilities);
-
-        break;
-
-      // Wizard
-      case "Wizard":
-      case "wizard":
-        setAvatarCostume(WizardCostume);
-        setClassIcon(WizardIcon);
-        setAbilities(character.class[3].abilities);
-
-        break;
-
-      default:
-        setAvatarCostume(DefaultCostume);
-        setClassIcon(NoIcon);
-        break;
-    }
-  }, [myCharacters]);
-
   const handleClickEvents = (event) => {
     // Search for the ability in state
     console.log("event.target.dataset.type", event.target.dataset.type);
@@ -118,9 +74,6 @@ function CharacterSheet({ myCharacters, character }) {
     // set the text box data state to that ability
     setTextBoxData(localTextBoxData);
     setTextBoxVisibility("visible");
-    // alert("click handled " + event.target.getAttribute("name"));
-    // console.log("event ", event);
-    // console.log("localTextBoxData ", localTextBoxData);
   };
 
   return (
@@ -134,20 +87,17 @@ function CharacterSheet({ myCharacters, character }) {
         <WoodBeamCard WoodBeamCardStyleClass="mb-4" xbtn={true}>
           <div>
             <div id="character-sheet__container">
-              <br />
               <div className="d-flex justify-content-center">
-                <h2>
-                  {myCharacters[id].name
-                    ? myCharacters[id].name
-                    : "No-Name Baggins"}
-                </h2>
+                {/* Header */}
+                <div className="card mt-3">
+                  <h2>{myCharacters[id].name}</h2>
+                </div>
               </div>
-              <br />
+
               <div className="row mb-4">
-                <br />
                 {/* Left Column */}
                 <div className="col px-4">
-                  <div id="card" className="col-12">
+                  <div className="card" className="col-12">
                     <h2 className="mt-2">
                       Race:{" "}
                       {myCharacters[id].race.charAt(0).toUpperCase() +
@@ -182,74 +132,10 @@ function CharacterSheet({ myCharacters, character }) {
                   </div>
                 </div>
                 {/* Center Column */}
-                <div className="col-4 d-flex justify-content-center">
-                  <div className="row avatar__container text-center">
-                    <div>
-                      <img
-                        className="frame position-relative"
-                        src={Frame}
-                        alt="Character Avatar"
-                      ></img>
-                      <div>
-                        <img
-                          className="avatar position-relative"
-                          src={AvatarCostume}
-                          alt="Character Avatar"
-                        ></img>
-                      </div>
-                      <div className="vortex"></div>
-                    </div>
-                    <div className="row mt-3">
-                      <div className="row">
-                        <div className="col">
-                          <p id="divbox">
-                            STR:{" "}
-                            {myCharacters[id].str ? myCharacters[id].str : "5"}
-                          </p>
-                        </div>
-
-                        <div className="col">
-                          <p id="divbox">
-                            DEX:{" "}
-                            {myCharacters[id].dex ? myCharacters[id].dex : "5"}
-                          </p>
-                        </div>
-
-                        <div className="col">
-                          <p id="divbox">
-                            CON:{" "}
-                            {myCharacters[id].con ? myCharacters[id].con : "5"}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col">
-                          <p id="divbox">
-                            WIS:{" "}
-                            {myCharacters[id].wis ? myCharacters[id].wis : "5"}
-                          </p>
-                        </div>
-
-                        <div className="col">
-                          <p id="divbox">
-                            INT:{" "}
-                            {myCharacters[id].int ? myCharacters[id].int : "5"}
-                          </p>
-                        </div>
-
-                        <div className="col">
-                          <p id="divbox">
-                            CHA:{" "}
-                            {myCharacters[id].cha ? myCharacters[id].cha : "5"}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div className="col-4 d-flex justify-content-center"></div>
                 {/* Right Column */}
                 <div className="col px-4">
-                  <div id="card">
+                  <div className="card">
                     <div id="character-sheet__right-list">
                       <div>
                         <h2 id="listnames">Abilities:</h2>

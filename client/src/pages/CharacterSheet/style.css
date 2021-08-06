@@ -62,9 +62,9 @@ h3 {
   font-size: 19px;
 }
 
-#card {
+.card {
   background-color: #46413b98;
-  border-radius: 2px;
+  border-radius: 5px;
   border: #6e6967b7 2px solid;
   height: 100%;
 }

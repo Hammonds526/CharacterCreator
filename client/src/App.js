@@ -74,7 +74,11 @@ function App() {
       .catch(() => console.log("no session found"));
   }, [user]);
 
-  console.log("isTouch ", isTouch);
+  const touchCreateCharButton = isTouch ? (
+    <div className="row d-flex justify-content-center">
+      <Button text="Create Warlock" buttonStyles={{ marginTop: "10px" }} />
+    </div>
+  ) : null;
 
   return (
     <Router>
@@ -125,12 +129,7 @@ function App() {
                   />
                 </div>
               </div>
-              <div className="row d-flex justify-content-center">
-                <Button
-                  text="Create Warlock"
-                  buttonStyles={{ marginTop: "10px" }}
-                />
-              </div>
+              {touchCreateCharButton}
             </div>
             <div className="col-12 col-lg-3 p-0 ">
               <MyCharacters
