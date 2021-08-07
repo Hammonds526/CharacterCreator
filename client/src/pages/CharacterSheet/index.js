@@ -27,6 +27,10 @@ import WizardCostume from "../../images/costumes/wizard.png";
 // Frame
 import Frame from "../../images/char_card_frame3.png";
 
+String.prototype.capitalize = function () {
+  return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
 // Main function.
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
 function CharacterSheet({ myCharacters, character }) {
@@ -87,54 +91,64 @@ function CharacterSheet({ myCharacters, character }) {
         <WoodBeamCard WoodBeamCardStyleClass="mb-4" xbtn={true}>
           <div>
             <div id="character-sheet__container">
-              <div className="d-flex justify-content-center">
-                {/* Header */}
-                <div className="card mt-3">
-                  <h2>{myCharacters[id].name}</h2>
+              {/* Header */}
+              <div className="card mt-4 mx-5 mb-2 text-left d-flex flex-row justify-content-between character-sheet__header-container ">
+                <div className="d-flex align-items-center justify-content-center w-100">
+                  <h2 className="mb-0 pl-3 character-sheet__character-title">
+                    {myCharacters[id].name}
+                  </h2>
+                </div>
+                <div className="d-flex flex-row">
+                  {/* Class  */}
+                  <div className=" ml-2">
+                    <p className="mb-0 character-sheet__header-superscript">
+                      Class
+                    </p>
+                    <p className="character-sheet__header-class text-nowrap px-2 mb-0">
+                      {myCharacters[id].class.capitalize()}
+                    </p>
+                  </div>
+                  {/* SubClass  */}
+
+                  <div className="ml-2">
+                    <p className="mb-0 character-sheet__header-superscript">
+                      Sub-Class
+                    </p>
+                    <p className="character-sheet__header-class text-nowrap px-2 mb-0">
+                      {myCharacters
+                        ? myCharacters[id].subClass.capitalize()
+                        : "No Subclass"}
+                    </p>
+                  </div>
+                  {/* Race  */}
+
+                  <div className=" ml-2">
+                    <p className="mb-0 character-sheet__header-superscript">
+                      Race
+                    </p>
+                    <p className="character-sheet__header-class text-nowrap px-2 mb-0">
+                      {myCharacters[id].race.capitalize()}
+                    </p>
+                  </div>
+                  {/* Level  */}
+                  <div className="d-flex align-items-center ml-2">
+                    <p className="mb-0">Level</p>
+                  </div>
+                  <div className="d-flex align-items-center mx-2">
+                    <p className="character-sheet__header-level mb-0">
+                      {myCharacters[id].level}
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <div className="row mb-4">
                 {/* Left Column */}
-                <div className="col px-4">
-                  <div className="card" className="col-12">
-                    <h2 className="mt-2">
-                      Race:{" "}
-                      {myCharacters[id].race.charAt(0).toUpperCase() +
-                        myCharacters[id].race.slice(1)}{" "}
-                    </h2>
-                    <div>
-                      <img
-                        className="icon"
-                        src={ClassIcon}
-                        alt="Character Avatar"
-                      ></img>
-                      <h2>
-                        Class:{" "}
-                        {myCharacters[id].class.charAt(0).toUpperCase() +
-                          myCharacters[id].class.slice(1)}
-                      </h2>
-                      <h3>
-                        Subclass:{" "}
-                        {myCharacters
-                          ? myCharacters[id].subClass
-                          : "No Subclass"}
-                      </h3>
-                      <br />
-                      <br />
-                      <div>
-                        <h2 id="lvlbox">Level</h2>
-                        <p id="level">{myCharacters[id].level}</p>
-                        <br />
-                      </div>
-                    </div>
-                    <br />
-                  </div>
-                </div>
+                <div className="col px-4"></div>
                 {/* Center Column */}
                 <div className="col-4 d-flex justify-content-center"></div>
                 {/* Right Column */}
-                <div className="col px-4">
+                <div className="col px-4 mr-3">
                   <div className="card">
                     <div id="character-sheet__right-list">
                       <div>

@@ -7,6 +7,7 @@ require("dotenv").config();
 // CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import "./constants/constants.css";
 
 // Components
 import Tavern from "./components/Tavern";

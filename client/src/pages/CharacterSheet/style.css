@@ -18,14 +18,11 @@
   font-size: 28px;
 }
 
-#level {
+.character-sheet__header-class {
   text-align: center;
   display: inline-block;
-  width: 46px;
-  padding-left: 2px;
-  padding-bottom: 1px;
   padding-top: 0;
-  line-height: 39px;
+  line-height: 22px;
   justify-self: center;
   background-color: wheat;
   border: burlywood 2px solid;
@@ -33,8 +30,38 @@
   border-radius: 4px;
   font-family: Romulus;
   color: brown;
-  font-size: 32px;
+  font-size: 24px;
+}
+.character-sheet__header-level {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  padding-left: 2px;
+  padding-top: 0;
+  line-height: 30px;
+  justify-self: center;
+  background-color: wheat;
+  border: burlywood 2px solid;
+
+  border-radius: 4px;
+  font-family: Romulus;
+  color: brown;
+  font-size: 30px;
   font-weight: bolder;
+}
+
+.character-sheet__character-title {
+  color: var(--title-text-color);
+}
+
+.character-sheet__header-superscript {
+  position: relative;
+  bottom: -5px;
+  left: 2px;
+}
+.character-sheet__header-superscript--level {
+  position: relative;
 }
 
 #listnames {
@@ -69,41 +96,6 @@ h3 {
   height: 100%;
 }
 
-/* AVATAR CONTAINER STUFF */
-/* 
-
-This is definitely now the best way to do this, but I am scrapped for time here.
-*/
-
-.avatar__container {
-  /* background-image: url("../../images/stone_tile2.png"); */
-  background-color: transparent;
-  border-radius: 25px;
-  background-size: auto;
-  height: 200px;
-  width: 200px;
-}
-
-/* Animations */
-@keyframes Spinny {
-  from {
-    transform: rotate(0deg);
-    opacity: 0.55;
-  }
-  to {
-    transform: rotate(360deg);
-    opacity: 0.6;
-  }
-}
-
-@keyframes Avatarfloat {
-  0% {
-    margin-top: -110%;
-  }
-  50% {
-    margin-top: -130%;
-  }
-  100% {
-    margin-top: -110%;
-  }
+.character-sheet__header-container {
+  height: 66px;
 }
