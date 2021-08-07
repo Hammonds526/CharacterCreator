@@ -1,7 +1,5 @@
 import React from "react";
-// import "./style.css";
-import CharacterListItem from "../CharacterListItem";
-
+import { Link } from "react-router-dom";
 // CSS
 import "./Style.css";
 
@@ -10,7 +8,22 @@ import Corner from "../Corner";
 import WoodBeamX from "../WoodBeamX";
 import WoodBeamY from "../WoodBeamY";
 
+import CharacterIcon from "../CharacterIcon";
+import Deletebtn from "../Deletebtn";
+//Images
+import cardThing from "../../images/cardthing.png";
+
 function MyCharacters(props) {
+  function DeleteCharacter(item) {
+    //call on finding current User
+    API.check().then((res) => {
+      //delete character based off id of user and character
+      API.deleteCharacter(res.data, item._id).then((res) => {
+        props.setMyCharacters(res.data.characters);
+      });
+    });
+  }
+
   return (
     <div>
       <WoodBeamX beamStyle={{ top: "0px" }} />
@@ -37,7 +50,44 @@ function MyCharacters(props) {
 
       {/* Nothing Above this line */}
       <h4 className="my-characters__title pt-4">My Characters</h4>
-      <CharacterListItem {...props} />
+      <div className="character-list">
+        {props.myCharacters.map((item, index) => (
+          <div key={index}>
+            <div className="d-inline-block">
+              <img src={cardThing} alt="card thing" id="cardThing" />
+              <Deletebtn
+                DeletebtnStyle={{
+                  width: "24px",
+                  height: "auto",
+                  right: "-122px",
+                  top: "11px",
+                  zIndex: "1",
+                }}
+                item={item}
+                DeletebtnFunc={() => {
+                  DeleteCharacter(item);
+                }}
+              />
+            </div>
+
+            <Link to={`/character-sheet/${index}`}>
+              {/* This button deletes the character */}
+
+              <div id="charbox" className="list-group-item mb-1">
+                <h4 className="text-truncate mt-2">{item.name}</h4>
+                <p>
+                  {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
+                  {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
+                </p>
+                <CharacterIcon item={item} myCharacters={props.myCharacters} />
+                <p id="level">{item.level}</p>
+                <hr className="my-4" />
+                <br />
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
       {/* Nothing below here */}
 
       <WoodBeamX beamStyle={{ bottom: "0px" }} parentClass={"absolute"} />
