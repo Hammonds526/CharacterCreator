@@ -133,7 +133,6 @@ function TabSpells({
           </h3>
           <p className="tab_descriptions text-bisque mt-3 preserve-line-breaks">
             {activeSpell.description.desc}
-            ))}
           </p>
         </div>
       </div>
