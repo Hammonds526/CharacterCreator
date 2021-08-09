@@ -9,23 +9,7 @@ import "./style.css";
 import WoodBeamCard from "../../components/WoodBeamCard";
 import Listings from "../../components/Listings";
 import TextBox from "../../components/TextBox";
-
-// Icons
-import NoIcon from "../../images/icons/empty_frame.png";
-import FighterIcon from "../../images/icons/fighter.png";
-import RangerIcon from "../../images/icons/ranger.png";
-import RogueIcon from "../../images/icons/rogue.png";
-import WizardIcon from "../../images/icons/wizard.png";
-
-// Avatar & outfits
-import DefaultCostume from "../../images/costumes/base.png";
-import RangerCostume from "../../images/costumes/ranger.png";
-import FighterCostume from "../../images/costumes/fighter.png";
-import RogueCostume from "../../images/costumes/rogue.png";
-import WizardCostume from "../../images/costumes/wizard.png";
-
-// Frame
-import Frame from "../../images/char_card_frame3.png";
+import CharacterIcon from "../../components/CharacterIcon";
 
 String.prototype.capitalize = function () {
   return this.charAt(0).toUpperCase() + this.slice(1);
@@ -37,8 +21,6 @@ function CharacterSheet({ myCharacters, character }) {
   let { id } = useParams();
 
   const [TextBoxVisibility, setTextBoxVisibility] = useState("hidden");
-  const [ClassIcon, setClassIcon] = useState(NoIcon);
-  const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
   const [abilities, setAbilities] = useState([
     {
       name: "This Character has no abilities",
@@ -100,6 +82,9 @@ function CharacterSheet({ myCharacters, character }) {
                 </div>
                 <div className="d-flex flex-row">
                   {/* Class  */}
+                  <div className="d-flex flex-row justify-content-center align-items-center">
+                    <CharacterIcon size={40} class={myCharacters[id].class} />
+                  </div>
                   <div className=" ml-2">
                     <p className="mb-0 character-sheet__header-superscript">
                       Class
@@ -109,7 +94,6 @@ function CharacterSheet({ myCharacters, character }) {
                     </p>
                   </div>
                   {/* SubClass  */}
-
                   <div className="ml-2">
                     <p className="mb-0 character-sheet__header-superscript">
                       Sub-Class
