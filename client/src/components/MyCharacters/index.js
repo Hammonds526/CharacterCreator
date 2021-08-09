@@ -79,10 +79,19 @@ function MyCharacters(props) {
                   {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
                   {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
                 </p>
-                <CharacterIcon item={item} myCharacters={props.myCharacters} />
-                <p id="level">{item.level}</p>
-                <hr className="my-4" />
-                <br />
+                <div className="d-flex flex-row justify-content-center align-items-center">
+                  <div style={{ marginBottom: "17px" }}>
+                    <CharacterIcon
+                      class={item.class}
+                      size={50}
+                      myCharacters={props.myCharacters}
+                    />
+                  </div>
+
+                  <p className="ml-2" id="level">
+                    {item.level}
+                  </p>
+                </div>
               </div>
             </Link>
           </div>

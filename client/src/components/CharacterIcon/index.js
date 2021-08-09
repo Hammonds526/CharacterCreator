@@ -8,10 +8,10 @@ import RangerIcon from "../../images/icons/ranger.png";
 import RogueIcon from "../../images/icons/rogue.png";
 import WizardIcon from "../../images/icons/wizard.png";
 
-function CharacterIcon(item) {
+function CharacterIcon(props) {
   let [classIcon, setClassIcon] = useState(NoIcon);
   useEffect(() => {
-    switch (item.item.class) {
+    switch (props.class) {
       // Fighter
       case "fighter":
       case "Fighter":
@@ -40,9 +40,13 @@ function CharacterIcon(item) {
         setClassIcon(FighterIcon);
         break;
     }
-  }, [item.myCharacters]);
+  }, [props.class]);
   return (
-    <img className="icon mr-2" src={classIcon} alt="Character Icon"></img>
+    <img
+      style={{ height: props.size + "px", width: props.size + "px" }}
+      src={classIcon}
+      alt="Character Icon"
+    ></img>
   );
 }
 

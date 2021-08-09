@@ -69,12 +69,6 @@
   margin: auto;
 }
 
-.icon {
-  width: 50px;
-  height: auto;
-  margin-bottom: 6px;
-}
-
 #cardThing {
   height: auto;
   object-fit: scale-down;
