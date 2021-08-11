@@ -17,7 +17,7 @@ function TabSubclass({
 }) {
   const [activeSubclass, setActiveSubclass] = useState("");
 
-  // On tab Load, Get the description of the first subClass and put it in state
+  // On tab Load, get the first subClass and put it in state
 
   useEffect(() => {
     setActiveSubclass(character.class[classIndex].subClass[subClassIndex()]);
@@ -25,9 +25,11 @@ function TabSubclass({
     // Also on page load, get the name of the class, grab it's first subclass, and put it in the newCharacter State.
     setNewCharacter({
       ...newCharacter,
-      subclass: character.class[classIndex].subClass[0].name.toLowerCase(),
+      subClass: character.class[classIndex].subClass[0].name.toLowerCase(),
     });
   }, []);
+
+  console.log("activesubclass from tabsubclass ", activeSubclass);
 
   return (
     <div>
