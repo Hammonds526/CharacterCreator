@@ -25,7 +25,7 @@ function TabSubclass({
     // Also on page load, get the name of the class, grab it's first subclass, and put it in the newCharacter State.
     setNewCharacter({
       ...newCharacter,
-      subclass: character.class[classIndex].subClass[0].name.toLowerCase(),
+      subClass: character.class[classIndex].subClass[0].name.toLowerCase(),
     });
   }, []);
 
