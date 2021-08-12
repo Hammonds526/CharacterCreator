@@ -1,16 +1,14 @@
 // Core imports
 import React, { useState } from "react";
 import { Route, useRouteMatch } from "react-router-dom";
-// import AbilityFeatSpell from "../AbilityFeatSpell";
 
 // CSS
 import "./style.css";
 
 // Components
-import CharacterProgressBar from "../../components/CharacterProgressBar";
-import CharMakerContainer from "../../components/CharMakerContainer";
-import AvatarContainer from "../../components/AvatarContainer";
-// import AbilityFeatSpell from "../AbilityFeatSpell";
+import CharacterProgressBar from "../../components/CharMaker/CharacterProgressBar";
+import CharMakerContainer from "../../components/CharMaker/CharMakerContainer";
+import AvatarContainer from "../../components/Avatar/AvatarContainer";
 
 const CharacterMakerScreen = (props) => {
   let { path } = useRouteMatch();

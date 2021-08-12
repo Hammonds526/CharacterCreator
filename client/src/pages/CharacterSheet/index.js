@@ -6,10 +6,10 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 // Components
-import WoodBeamCard from "../../components/UIElements/WoodBeamCard";
-import Listings from "../../components/Listings";
-import TextBox from "../../components/TextBox";
-import CharacterIcon from "../../components/ClassIcon";
+import WoodBeamCard from "../../components/UI/WoodBeamCard";
+import Listings from "../../components/CharacterSheet/Listings";
+import TextBox from "../../components/CharacterSheet/TextBox";
+import CharacterIcon from "../../components/Avatar/ClassIcon";
 
 String.prototype.capitalize = function () {
   return this.charAt(0).toUpperCase() + this.slice(1);

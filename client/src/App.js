@@ -10,13 +10,13 @@ import "./App.css";
 import "./constants/constants.css";
 
 // Components
-import Tavern from "./components/Tavern";
-import MyCharacters from "./components/MyCharacters";
+import Tavern from "./components/Tavern/TavernBackground";
+import MyCharacters from "./components//Home/MyCharacters";
 import CharacterMakerScreen from "./pages/CharacterMakerScreen";
 import AuthPages from "./pages/AuthPages";
-import Logout from "./components/Logout";
+import Logout from "./components/Home/Logout";
 import CharacterSheetPage from "./pages/CharacterSheet";
-import Button from "./components/Button";
+import Button from "./components/UI/Button";
 
 function App() {
   const [isTouch, setIsTouch] = useState(false);

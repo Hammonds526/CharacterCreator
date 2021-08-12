@@ -1,0 +1,5 @@
+.wood-beam-card_container {
+  background-image: url("../../../images/stone_tile2.png");
+  background-size: "64px";
+  overflow: hidden;
+}

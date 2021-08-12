@@ -1,12 +1,12 @@
 // Core Dependencies
 import React from "react";
-import SignUp from "../../components/SignUp";
-import Login from "../../components/Login";
+import SignUp from "../../components/Authentication/SignUp";
+import Login from "../../components/Authentication/Login";
 
 // CSS
 import "./style.css";
 
-import WoodBeamCard from "../../components/WoodBeamCard";
+import WoodBeamCard from "../../components/UI/WoodBeamCard";
 
 const AuthPages = ({ setUser, signIn, setSignIn }) => {
   return (
