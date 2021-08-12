@@ -38,9 +38,6 @@ const CharMakerContainer = (props) => {
           <Route exact path={"/character-creator/feats"}>
             <FeatsPage {...props} />
           </Route>
-          <Route exact path={"/character-creator/stats"}>
-            <StatPage {...props} />
-          </Route>
         </Switch>
       </div>
     </WoodBeamCard>
