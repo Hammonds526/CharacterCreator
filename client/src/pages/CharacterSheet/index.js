@@ -6,10 +6,10 @@ import { useParams } from "react-router-dom";
 import "./style.css";
 
 // Components
-import WoodBeamCard from "../../components/WoodBeamCard";
+import WoodBeamCard from "../../components/UIElements/WoodBeamCard";
 import Listings from "../../components/Listings";
 import TextBox from "../../components/TextBox";
-import CharacterIcon from "../../components/CharacterIcon";
+import CharacterIcon from "../../components/ClassIcon";
 
 String.prototype.capitalize = function () {
   return this.charAt(0).toUpperCase() + this.slice(1);
@@ -32,6 +32,17 @@ function CharacterSheet({ myCharacters, character }) {
     name: "No name",
     desc: "No description",
   });
+
+  // Get abilities
+  useEffect(() => {
+    const currentClassIndex = character.class.findIndex(
+      (charClass) => charClass.name.toLowerCase() === myCharacters[id].class
+    );
+
+    console.log("currenetClassIndex ", currentClassIndex);
+
+    setAbilities(character.class[currentClassIndex].abilities);
+  }, [myCharacters]);
 
   const handleClickEvents = (event) => {
     // Search for the ability in state
@@ -99,9 +110,9 @@ function CharacterSheet({ myCharacters, character }) {
                       Sub-Class
                     </p>
                     <p className="character-sheet__header-class text-nowrap px-2 mb-0">
-                      {myCharacters
+                      {myCharacters[id].subClass
                         ? myCharacters[id].subClass.capitalize()
-                        : "No Subclass"}
+                        : "No subclass chosen"}
                     </p>
                   </div>
                   {/* Race  */}
