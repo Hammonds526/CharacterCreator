@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import API from "./utils/API";
 import character from "./data/character";
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 // CSS
 import "bootstrap/dist/css/bootstrap.min.css";
