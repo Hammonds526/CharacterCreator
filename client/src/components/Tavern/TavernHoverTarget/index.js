@@ -7,7 +7,7 @@ import Button from "../../UI/Button";
 function TavernHoverTarget({ setNewCharacter, newCharacter, ...props }) {
   const [number, setNumber] = useState(0);
 
-  const reveal = (event) => {
+  const reveal = () => {
     // console.log("I'm invisible");
     // console.log("event.target ", event.target);
     if (number === 0) {

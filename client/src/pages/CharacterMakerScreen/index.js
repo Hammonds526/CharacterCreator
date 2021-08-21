@@ -1,5 +1,5 @@
 // Core imports
-import React, { useState } from "react";
+import React from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 
 // CSS

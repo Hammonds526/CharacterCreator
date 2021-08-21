@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // CSS
 import "./style.css";
 
 // import getSpellAmount from "../../utils/getSpellAmount";
 
-function FeatLimiter({
-  feats,
-  setFeats,
-  activeFeat,
-  newCharacter,
-  character,
-  ...props
-}) {
+function FeatLimiter({ feats }) {
   return (
     <div className="row">
       <div className="col p-0">

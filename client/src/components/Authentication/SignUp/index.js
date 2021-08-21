@@ -22,7 +22,7 @@ function signUp(props) {
         username: username.trim(),
         password: password.trim(),
       })
-        .then((res) => {
+        .then(() => {
           // console.log(res.data);
           // Redirect to login
           props.setSignIn(true);

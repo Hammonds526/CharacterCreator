@@ -24,7 +24,7 @@ function TabNameLevel(props) {
   return (
     <div>
       <center>
-        <h5 className="text-bisque ml-1">What is your character's name?</h5>
+        <h5 className="text-bisque ml-1">What is your character&aposs name?</h5>
         <div className="col">
           <div className="col-10 col-lg-5 col-md-6">
             <input
@@ -38,7 +38,9 @@ function TabNameLevel(props) {
           </div>
         </div>
 
-        <h5 className="text-bisque ml-1">What is your character's level?</h5>
+        <h5 className="text-bisque ml-1">
+          What is your character&aposs level?
+        </h5>
         <div className="d-flex justify-content-center">
           <LevelSelector {...props} handleInputChange={handleInputChange} />
         </div>

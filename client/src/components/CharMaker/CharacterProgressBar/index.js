@@ -19,7 +19,7 @@ const tabTitles = [
 ];
 
 // Important main function
-function CharacterProgressBar(props) {
+function CharacterProgressBar() {
   // This is what set up the actual url links. Fancy.
   let { url } = useRouteMatch();
 

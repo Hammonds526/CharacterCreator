@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // API
 import API from "../../../utils/API";

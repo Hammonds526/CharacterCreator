@@ -1,6 +1,6 @@
 //eslint-ignore
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import API from "../../../utils/API";
 import Button from "../../UI/Button";
 import Form from "react-bootstrap/Form";

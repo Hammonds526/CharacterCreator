@@ -21,7 +21,7 @@ function TabClass(props) {
     <div>
       <h4 className="text-bisque ml-3">Wish to change Class?</h4>
       <div className="row mb-2">
-        {props.character.class.map((item, i) => (
+        {props.character.class.map((item) => (
           <div
             className="col p-0 d-flex justify-content-center"
             key={item.name}

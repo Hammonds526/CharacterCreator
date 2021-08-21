@@ -24,7 +24,7 @@ function TabRace(props) {
     <div>
       <h4 className=" ml-3 text-bisque">Choose a Race</h4>
       <div className="row mb-2">
-        {props.character.race.map((item, i) => (
+        {props.character.race.map((item) => (
           <div
             className="col p-0 d-flex justify-content-center"
             key={item.name}

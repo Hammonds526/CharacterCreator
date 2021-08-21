@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./style.css";
 // import getSpellAmount from "../../utils/getSpellAmount";
 
-function SpellLimiter({
-  spells,
-  setSpells,
-  activeSpell,
-  newCharacter,
-  character,
-  ...props
-}) {
+function SpellLimiter({ spells }) {
   return (
     <div className="">
       {/* <NavArrow
