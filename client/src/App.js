@@ -29,12 +29,14 @@ function App() {
     class: "fighter",
     subclass: "",
     // WE GOT STATS... BOIIIIZZZZ
-    str: 5,
-    dex: 5,
-    con: 5,
-    wis: 5,
-    int: 5,
-    cha: 5,
+    stats: [
+      { name: "Strength", number: 0 },
+      { name: "Dexterity", number: 0 },
+      { name: "Constitution", number: 0 },
+      { name: "Wisdom", number: 0 },
+      { name: "Intelligence", number: 0 },
+      { name: "Charisma", number: 0 },
+    ],
 
     // ///////// //
     abilities: [],

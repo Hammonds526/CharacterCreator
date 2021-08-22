@@ -10,14 +10,63 @@ import WoodBeamCard from "../../components/UI/WoodBeamCard";
 import Listings from "../../components/CharacterSheet/Listings";
 import TextBox from "../../components/CharacterSheet/TextBox";
 import CharacterIcon from "../../components/Avatar/ClassIcon";
+import NavArrow from "../../components/UI/NavArrow";
 
 String.prototype.capitalize = function () {
   return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
-// Main function.
-//  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
-function CharacterSheet({ myCharacters, character }) {
+const StatBox = ({ stat }) => {
+  const [number, setNumber] = useState(0);
+
+  const reveal = () => {
+    if (number === 0) {
+      setNumber(1);
+    } else {
+      setNumber(0);
+    }
+  };
+
+  return (
+    <div
+      className="card character-sheet__statbox-card p-2"
+      onMouseOver={reveal}
+      onMouseOut={reveal}
+    >
+      <p className="mb-0 character-sheet__statbox-title">{stat.name}</p>
+      <div className="row d-flex justify-content-around">
+        <div style={{ opacity: number, transition: "opacity 0.3s" }}>
+          <NavArrow
+            arrowStyle={{
+              width: "20px",
+              height: "auto",
+              left: "0px",
+              top: "16px",
+              zIndex: "1",
+              transform: "rotate(180deg)",
+            }}
+          />
+        </div>
+        <h2 className="mb-0 character-sheet__statbox-number mt-1">
+          {stat.number}
+        </h2>
+        <div style={{ opacity: number, transition: "opacity 0.3s" }}>
+          <NavArrow
+            arrowStyle={{
+              width: "20px",
+              height: "auto",
+              left: "-19px",
+              top: "16px",
+              zIndex: "1",
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CharacterSheet = ({ myCharacters, character }) => {
   let { id } = useParams();
 
   const [TextBoxVisibility, setTextBoxVisibility] = useState("hidden");
@@ -136,6 +185,16 @@ function CharacterSheet({ myCharacters, character }) {
                   </div>
                 </div>
               </div>
+              {/* End of Header */}
+
+              {/* StatBoxes */}
+              <div className="row mx-5 mb-2 justify-content-around">
+                {myCharacters[id].stats
+                  ? myCharacters[id].stats.map((stat) => (
+                      <StatBox stat={stat} key={stat.name} />
+                    ))
+                  : null}
+              </div>
 
               <div className="row mb-4">
                 {/* Left Column */}
@@ -183,7 +242,7 @@ function CharacterSheet({ myCharacters, character }) {
       </div>
     </div>
   );
-}
+};
 
 // Good god, this makes me want to die.
 export default CharacterSheet;

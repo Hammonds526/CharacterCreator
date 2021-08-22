@@ -17,6 +17,7 @@ const userSchema = new Schema({
       abilities: [{}],
       feats: [{ type: String }],
       spells: [{ type: String }],
+      stats: [{ name: String, number: Number }],
     },
   ],
 });

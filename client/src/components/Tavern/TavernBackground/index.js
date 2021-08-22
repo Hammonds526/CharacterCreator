@@ -12,7 +12,7 @@ import WoodBeamX from "../../UI/WoodBeamX";
 import WoodBeamY from "../../UI/WoodBeamY";
 
 //Character Images
-import TavernHoverTarget from "../TavernHoverTarget";
+import TavernHoverButton from "../TavernHoverButton";
 
 const CharacterData = [
   {
@@ -177,7 +177,7 @@ function Tavern(props) {
       {/*  - Nothing goes above this line. - */}
       <div className="position-relative">
         {CharacterData.map((data, i) => (
-          <TavernHoverTarget data={data} key={i} {...props} />
+          <TavernHoverButton data={data} key={i} {...props} />
         ))}
 
         <img

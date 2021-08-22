@@ -33,22 +33,20 @@
   font-size: 24px;
 }
 .character-sheet__header-level {
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  width: 34px;
-  padding-left: 2px;
-  padding-top: 0;
-  line-height: 30px;
-  justify-self: center;
-  background-color: wheat;
-  border: burlywood 2px solid;
-
-  border-radius: 4px;
   font-family: Romulus;
   color: brown;
   font-size: 30px;
   font-weight: bolder;
+  justify-self: center;
+  text-align: center;
+  display: inline-block;
+  padding-left: 2px;
+  padding-top: 0;
+  width: 34px;
+  line-height: 30px;
+  background-color: wheat;
+  border: burlywood 2px solid;
+  border-radius: 4px;
 }
 
 .character-sheet__character-title {
@@ -99,4 +97,21 @@ h3 {
 
 .character-sheet__header-container {
   height: 66px;
+}
+
+.character-sheet__statbox-title {
+  color: var(--title-text-color);
+}
+.character-sheet__statbox-number {
+  color: var(--red-text-color);
+  width: 43px;
+  line-height: 35px;
+  background-color: wheat;
+  border: burlywood 2px solid;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-left: 2px;
+}
+.character-sheet__statbox-card {
+  width: 110px;
 }
