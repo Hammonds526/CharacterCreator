@@ -16,14 +16,10 @@ html {
   overflow-x: hidden;
 }
 
-
 .title {
   font-weight: normal;
   text-align: center;
 }
-
-
-
 
 .text-bisque {
   color: bisque;
@@ -53,6 +49,10 @@ html {
   color: goldenrod;
 }
 
+.preserve-line-breaks {
+  white-space: pre-line;
+}
+
 /* 
 //////////////////////////
 
@@ -60,7 +60,6 @@ Custom Scroll bar Stuff.
 
 /////////////////////////
 */
-
 
 /* width */
 ::-webkit-scrollbar {
@@ -85,15 +84,13 @@ Custom Scroll bar Stuff.
   filter: brightness(179%);
 }
 
-
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: transparent;
-    
+  background: transparent;
 }
 ::-webkit-scrollbar-track {
   background-image: none;

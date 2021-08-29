@@ -32,6 +32,7 @@ function App() {
     wis: 5,
     int: 5,
     cha: 5,
+
     // ///////// //
     abilities: [],
     spells: [],
@@ -40,7 +41,7 @@ function App() {
     userId: null,
   });
 
-  console.log("newCharacter ", newCharacter);
+  // console.log("newCharacter ", newCharacter);
 
   const [signIn, setSignIn] = useState(true);
   //Check if user is already logged in
@@ -124,8 +125,8 @@ function App() {
             <div className="col-12 col-lg-3 p-0 ">
               <MyCharacters
                 myCharacters={myCharacters}
+                setMyCharacters={setmyCharacters}
                 user={user}
-                setmyCharacters={setmyCharacters}
               />
             </div>
           </div>

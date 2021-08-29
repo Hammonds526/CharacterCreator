@@ -18,18 +18,22 @@ function CharacterHover({ setNewCharacter, newCharacter, ...props }) {
   };
   const startCharacter = () => {
     if (props.data.isActive) {
-      return "/character-creator/name"
+      return "/character-creator/name";
     }
-  }
+  };
 
   const setClass = () => {
     if (props.data.isActive === true) {
-      const thisNewCharacter = {...newCharacter,
-      class: props.data.name.toLowerCase(),
+      const thisNewCharacter = {
+        ...newCharacter,
+        class: props.data.name.toLowerCase(),
+        spells: "",
+        feats: "",
+        level: 1,
+      };
+      setNewCharacter(thisNewCharacter);
     }
-    setNewCharacter(thisNewCharacter)
-    }
-  }
+  };
 
   return (
     <div>
@@ -59,7 +63,7 @@ function CharacterHover({ setNewCharacter, newCharacter, ...props }) {
           name={props.data.name}
           onMouseOver={reveal}
           onMouseOut={reveal}
-          onClick={ setClass }
+          onClick={setClass}
         ></div>
       </Link>
     </div>
