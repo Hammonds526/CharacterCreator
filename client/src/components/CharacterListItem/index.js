@@ -25,37 +25,6 @@ function CharacterListItem(props) {
     <div className="character-list">
       {props.myCharacters.map((item, index) => (
         <div key={index}>
-<<<<<<< HEAD
-          <DeleteButton
-            xBtnStyle={{
-              width: "30px",
-              height: "auto",
-              right: "110px",
-              top: "7px",
-              zIndex: "2",
-            }}
-            item={item}
-            user={props.user}
-            setmyCharacters={props.setmyCharacters}
-          />
-          <Link to={`/character-sheet/${index}`}>
-            {/* This this button below is supposed to close the creator */}
-
-            <div id="charbox" className="list-group-item mb-1">
-              <h4 className="text-truncate mt-2">{item.name}</h4>
-
-              <p>
-                {item.race.charAt(0).toUpperCase() + item.race.slice(1)}{" "}
-                {item.class.charAt(0).toUpperCase() + item.class.slice(1)}
-              </p>
-
-              <CharacterIcon item={item} />
-
-              <p id="level">{item.level}</p>
-
-              <hr className="my-4" />
-
-=======
           <div className="d-inline-block">
             <img src={cardThing} alt="card thing" id="cardThing" />
             <Deletebtn
@@ -85,7 +54,6 @@ function CharacterListItem(props) {
               <CharacterIcon item={item} myCharacters={props.myCharacters} />
               <p id="level">{item.level}</p>
               <hr className="my-4" />
->>>>>>> f54bfe1be2f0f2a3128bb569d6ea6d52c32acc7d
               <br />
             </div>
           </Link>
