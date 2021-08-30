@@ -31,7 +31,19 @@ import Frame from "../../images/char_card_frame3.png";
 //  Using the temporarily created character stored in the newcharacter array, and not the ones in the DB. Helps with offline
 function CharacterSheet({ myCharacters, character }) {
   let { id } = useParams();
+  let myUserCharacters = [];
 
+  if (myCharacters != 0) {
+    window.sessionStorage.setItem("myCharacters", JSON.stringify(myCharacters));
+    myUserCharacters = JSON.parse(
+      window.sessionStorage.getItem("myCharacters")
+    );
+  } else {
+    myUserCharacters = JSON.parse(
+      window.sessionStorage.getItem("myCharacters")
+    );
+  }
+  console.log(myUserCharacters);
   const [TextBoxVisibility, setTextBoxVisibility] = useState("hidden");
   const [ClassIcon, setClassIcon] = useState(NoIcon);
   const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
@@ -48,7 +60,7 @@ function CharacterSheet({ myCharacters, character }) {
   });
 
   useEffect(() => {
-    switch (myCharacters[id].class) {
+    switch (myUserCharacters[id].class) {
       // Fighter
       case "Fighter":
       case "fighter":
@@ -89,7 +101,7 @@ function CharacterSheet({ myCharacters, character }) {
         setClassIcon(NoIcon);
         break;
     }
-  }, [myCharacters]);
+  }, [myUserCharacters]);
 
   const handleClickEvents = (event) => {
     // Search for the ability in state
@@ -137,8 +149,8 @@ function CharacterSheet({ myCharacters, character }) {
               <br />
               <div className="d-flex justify-content-center">
                 <h2>
-                  {myCharacters[id].name
-                    ? myCharacters[id].name
+                  {myUserCharacters[id].name
+                    ? myUserCharacters[id].name
                     : "No-Name Baggins"}
                 </h2>
               </div>
@@ -150,8 +162,8 @@ function CharacterSheet({ myCharacters, character }) {
                   <div id="card" className="col-12">
                     <h2 className="mt-2">
                       Race:{" "}
-                      {myCharacters[id].race.charAt(0).toUpperCase() +
-                        myCharacters[id].race.slice(1)}{" "}
+                      {myUserCharacters[id].race.charAt(0).toUpperCase() +
+                        myUserCharacters[id].race.slice(1)}{" "}
                     </h2>
                     <div>
                       <img
@@ -161,20 +173,20 @@ function CharacterSheet({ myCharacters, character }) {
                       ></img>
                       <h2>
                         Class:{" "}
-                        {myCharacters[id].class.charAt(0).toUpperCase() +
-                          myCharacters[id].class.slice(1)}
+                        {myUserCharacters[id].class.charAt(0).toUpperCase() +
+                          myUserCharacters[id].class.slice(1)}
                       </h2>
                       <h3>
                         Subclass:{" "}
-                        {myCharacters
-                          ? myCharacters[id].subClass
+                        {myUserCharacters
+                          ? myUserCharacters[id].subClass
                           : "No Subclass"}
                       </h3>
                       <br />
                       <br />
                       <div>
                         <h2 id="lvlbox">Level</h2>
-                        <p id="level">{myCharacters[id].level}</p>
+                        <p id="level">{myUserCharacters[id].level}</p>
                         <br />
                       </div>
                     </div>
@@ -204,21 +216,27 @@ function CharacterSheet({ myCharacters, character }) {
                         <div className="col">
                           <p id="divbox">
                             STR:{" "}
-                            {myCharacters[id].str ? myCharacters[id].str : "5"}
+                            {myUserCharacters[id].str
+                              ? myUserCharacters[id].str
+                              : "5"}
                           </p>
                         </div>
 
                         <div className="col">
                           <p id="divbox">
                             DEX:{" "}
-                            {myCharacters[id].dex ? myCharacters[id].dex : "5"}
+                            {myUserCharacters[id].dex
+                              ? myUserCharacters[id].dex
+                              : "5"}
                           </p>
                         </div>
 
                         <div className="col">
                           <p id="divbox">
                             CON:{" "}
-                            {myCharacters[id].con ? myCharacters[id].con : "5"}
+                            {myUserCharacters[id].con
+                              ? myUserCharacters[id].con
+                              : "5"}
                           </p>
                         </div>
                       </div>
@@ -226,21 +244,27 @@ function CharacterSheet({ myCharacters, character }) {
                         <div className="col">
                           <p id="divbox">
                             WIS:{" "}
-                            {myCharacters[id].wis ? myCharacters[id].wis : "5"}
+                            {myUserCharacters[id].wis
+                              ? myUserCharacters[id].wis
+                              : "5"}
                           </p>
                         </div>
 
                         <div className="col">
                           <p id="divbox">
                             INT:{" "}
-                            {myCharacters[id].int ? myCharacters[id].int : "5"}
+                            {myUserCharacters[id].int
+                              ? myUserCharacters[id].int
+                              : "5"}
                           </p>
                         </div>
 
                         <div className="col">
                           <p id="divbox">
                             CHA:{" "}
-                            {myCharacters[id].cha ? myCharacters[id].cha : "5"}
+                            {myUserCharacters[id].cha
+                              ? myUserCharacters[id].cha
+                              : "5"}
                           </p>
                         </div>
                       </div>
@@ -262,7 +286,7 @@ function CharacterSheet({ myCharacters, character }) {
                       <div>
                         <h2 id="listnames">Spells:</h2>
                         <Listings
-                          items={myCharacters[id].spells}
+                          items={myUserCharacters[id].spells}
                           clickFunction={handleClickEvents}
                           type={"spell"}
                         />
@@ -271,7 +295,7 @@ function CharacterSheet({ myCharacters, character }) {
                       <div>
                         <h2 id="listnames">Feats:</h2>
                         <Listings
-                          items={myCharacters[id].feats}
+                          items={myUserCharacters[id].feats}
                           clickFunction={handleClickEvents}
                           type={"feat"}
                         />
