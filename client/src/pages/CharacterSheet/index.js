@@ -68,7 +68,19 @@ const StatBox = ({ stat }) => {
 
 const CharacterSheet = ({ myCharacters, character }) => {
   let { id } = useParams();
+  let myUserCharacters = [];
 
+  if (myCharacters != 0) {
+    window.sessionStorage.setItem("myCharacters", JSON.stringify(myCharacters));
+    myUserCharacters = JSON.parse(
+      window.sessionStorage.getItem("myCharacters")
+    );
+  } else {
+    myUserCharacters = JSON.parse(
+      window.sessionStorage.getItem("myCharacters")
+    );
+  }
+  console.log(myUserCharacters);
   const [TextBoxVisibility, setTextBoxVisibility] = useState("hidden");
   const [abilities, setAbilities] = useState([
     {
@@ -216,7 +228,7 @@ const CharacterSheet = ({ myCharacters, character }) => {
                       <div>
                         <h2 id="listnames">Spells:</h2>
                         <Listings
-                          items={myCharacters[id].spells}
+                          items={myUserCharacters[id].spells}
                           clickFunction={handleClickEvents}
                           type={"spell"}
                         />
@@ -225,7 +237,7 @@ const CharacterSheet = ({ myCharacters, character }) => {
                       <div>
                         <h2 id="listnames">Feats:</h2>
                         <Listings
-                          items={myCharacters[id].feats}
+                          items={myUserCharacters[id].feats}
                           clickFunction={handleClickEvents}
                           type={"feat"}
                         />
