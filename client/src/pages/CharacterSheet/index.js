@@ -19,6 +19,7 @@ import FighterIcon from "../../images/icons/fighter.png";
 import RangerIcon from "../../images/icons/ranger.png";
 import RogueIcon from "../../images/icons/rogue.png";
 import WizardIcon from "../../images/icons/wizard.png";
+import PaladinIcon from "../../images/icons/paladin.png";
 
 // Avatar & outfits
 import DefaultCostume from "../../images/costumes/base.png";
@@ -26,6 +27,7 @@ import RangerCostume from "../../images/costumes/ranger.png";
 import FighterCostume from "../../images/costumes/fighter.png";
 import RogueCostume from "../../images/costumes/rogue.png";
 import WizardCostume from "../../images/costumes/wizard.png";
+import PaladinCostume from "../../images/costumes/paladin.png";
 
 // Frame
 import Frame from "../../images/char_card_frame3.png";
@@ -40,7 +42,7 @@ function CharacterSheet({ myCharacters, character }) {
   const [AvatarCostume, setAvatarCostume] = useState(DefaultCostume);
   const [abilities, setAbilities] = useState([
     {
-      name: "This Character has no abilities",
+      name: "This character has no abilities",
       desc: "This abiltiy has no description",
       level: 0,
     },
@@ -86,7 +88,17 @@ function CharacterSheet({ myCharacters, character }) {
         setAbilities(character.class[3].abilities);
 
         break;
+     
+        // Paladin
+//  Commented out as potential future proofing. Assumed that paladin will be class number 4.
+        /*     case "Paladin":
+      case "paladin":
+        setAvatarCostume(PaladinCostume);
+        setClassIcon(PaladinIcon);
+        setAbilities(character.class[4].abilities);
 
+        break;
+*/
       default:
         setAvatarCostume(DefaultCostume);
         setClassIcon(NoIcon);
