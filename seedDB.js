@@ -1,33 +1,34 @@
 const mongoose = require("mongoose");
-const db = require("../models");
-const User = require("../controllers/usersController");
-
+const db = require("./models");
+const User = require("./controllers/usersController");
+require('dotenv').config();
 // This file empties the Users collection and inserts the users below
+
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/users",  {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-  }
-);
+  "mongodb://localhost/users", {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useCreateIndex: true,
+}
+).then(() => console.log('MongoDB Connected...'));
 
 const userSeed = [{
-      username: "curtisH",
-      email: "sitruc@gmail.com",
-      password: "qwertyuiop",
-      characters: [
-        {
-          name: "klepto",
-          level: 1,
-          race: "elf",
-          class: "rogue",
-          subClass: null,
-          abilities: [{}],
-          feats: [],
-          spells: [],
-        }]
+  username: "curtisH",
+  email: "sitruc@gmail.com",
+  password: "qwertyuiop",
+  characters: [
+    {
+      name: "klepto",
+      level: 1,
+      race: "elf",
+      class: "rogue",
+      subClass: null,
+      abilities: [{}],
+      feats: [],
+      spells: [],
+    }]
 }, {
   username: "curtisHH",
   email: "curtisH@email.com",

@@ -11,16 +11,15 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    if(req.user) 
-    {
-      return res.json({characters: req.user.characters});
+    if (req.user) {
+      return res.json({ characters: req.user.characters });
     }
-    else{
+    else {
       return res.json(
-        {characters: []})
+        { characters: [] })
     }
   },
-  logout: function(req, res){
+  logout: function (req, res) {
     req.session.destroy(function (err) {
       res.clearCookie('connect.sid');
       res.redirect('/'); //Inside a callback… bulletproof!
@@ -84,7 +83,7 @@ module.exports = {
               });
             } else {
               // Do session stuff here\
-              req.login(user, function(err) {
+              req.login(user, function (err) {
                 if (err) { return next(err); }
                 res.json(user);
               });
@@ -99,11 +98,11 @@ module.exports = {
   },
   //Find user based on Id. Pull character by id from list return new list
   updateUserCharacters: function (req, res) {
-    User.findOneAndUpdate({_id: req.params.id},
-      {$pull:{"characters":{_id:req.params.characterId} } },
-      {new: true}
+    User.findOneAndUpdate({ _id: req.params.id },
+      { $pull: { "characters": { _id: req.params.characterId } } },
+      { new: true }
     )
-    .then(dbModel => res.json(dbModel))
-    .catch((err) => res.status(422).json(err));
+      .then(dbModel => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
   },
 };
