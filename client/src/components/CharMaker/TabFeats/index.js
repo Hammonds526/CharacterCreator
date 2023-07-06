@@ -115,7 +115,7 @@ function TabFeats({
         <div className="col-7">
           {feats.totalFeatsAvailable === 0 ? (
             <p className="text-warning">
-              No feats avaiable with this Level/Race combo
+              No feats available with this Level/Race combo
             </p>
           ) : null}
           <h3 className="text-bisque mt-3 text-align-left">
