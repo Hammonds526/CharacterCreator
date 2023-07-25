@@ -7,12 +7,12 @@ import API from "../../utils/API";
 import Form from "react-bootstrap/Form";
 import Button from "../../components/Button";
 
-function signUp(props) {
+function signUp({ setUser, setMyCharacters }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  // const [signUp, setSignUp] = useState();
+  const [formError, setFormError] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -23,11 +23,13 @@ function signUp(props) {
         password: password.trim(),
       })
         .then((res) => {
-          // console.log(res.data);
           // Redirect to login
-          props.setSignIn(true);
+          setMyCharacters([]);
+          setUser(res.data._id);
         })
         .catch((err) => console.log(err));
+    } else {
+      setFormError("Passwords do not match");
     }
   }
 
@@ -84,8 +86,9 @@ function signUp(props) {
             placeholder="Confirm Password"
           />
         </Form.Group>
-        <div className="d-flex justify-content-center">
-          <div onClick={handleSubmit}>
+        <div className="d-flex justify-content-center flex-column">
+          {formError && <p className="text-danger">{formError}</p>}
+          <div className="d-flex justify-content-center" onClick={handleSubmit}>
             <Button text={"Submit"} />
           </div>
         </div>

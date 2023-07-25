@@ -5,7 +5,7 @@ import API from "../../utils/API";
 import Button from "../../components/Button";
 import Form from "react-bootstrap/Form";
 
-function Login(props) {
+function Login({ setUser, setMyCharacters }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [incorrect, setIncorrect] = useState("");
@@ -14,7 +14,8 @@ function Login(props) {
     e.preventDefault();
     API.login(username.trim(), password.trim())
       .then((res) => {
-        props.setUser(res.data._id);
+        setUser(res.data._id);
+        setMyCharacters([]);
       })
       .catch((err) => {
         setIncorrect(err.response.data.message);

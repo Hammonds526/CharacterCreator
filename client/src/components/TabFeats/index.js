@@ -17,7 +17,7 @@ function TabFeats({
   // getMyCharacters,
   user,
   myCharacters,
-  setmyCharacters,
+  setMyCharacters,
   ...props
 }) {
   const [activeFeat, setActiveFeat] = useState({
@@ -58,7 +58,7 @@ function TabFeats({
     })
       .then((res) => {
         //set characters based off database rather than state. Gives full list with current information.
-        setmyCharacters(res.data.characters);
+        setMyCharacters(res.data.characters);
 
         history.push(`/character-sheet/${myCharacters.length}`);
       })

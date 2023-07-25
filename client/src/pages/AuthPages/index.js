@@ -8,7 +8,7 @@ import "./style.css";
 
 import WoodBeamCard from "../../components/WoodBeamCard";
 
-const AuthPages = ({ setUser, signIn, setSignIn }) => {
+const AuthPages = ({ setMyCharacters, setUser, signIn, setSignIn }) => {
   return (
     <div className="row m-0">
       <div className="col-12 col-sm-8 offset-sm-2  col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-bisque vh-100 d-flex align-items-center">
@@ -30,9 +30,13 @@ const AuthPages = ({ setUser, signIn, setSignIn }) => {
           </h3>
 
           {signIn ? (
-            <Login setUser={setUser} />
+            <Login setUser={setUser} setMyCharacters={setMyCharacters} />
           ) : (
-            <SignUp setSignIn={setSignIn} />
+            <SignUp
+              setSignIn={setSignIn}
+              setUser={setUser}
+              setMyCharacters={setMyCharacters}
+            />
           )}
         </WoodBeamCard>
       </div>
