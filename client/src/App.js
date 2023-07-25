@@ -17,7 +17,7 @@ import Logout from "./components/Logout";
 import CharacterSheetPage from "./pages/CharacterSheet";
 
 function App() {
-  const [myCharacters, setmyCharacters] = useState([]);
+  const [myCharacters, setMyCharacters] = useState([]);
 
   const [newCharacter, setNewCharacter] = useState({
     name: "No-Name Baggins",
@@ -63,15 +63,13 @@ function App() {
           API.getUser(user)
             .then((res) => {
               //set characters whether or not they exist from user
-              setmyCharacters(res.data !== null ? res.data.characters : []);
+              setMyCharacters(res.data !== null ? res.data.characters : []);
             })
             .catch(() => {});
         }
       })
       .catch(() => console.log("no session found"));
   }, [user]);
-
-  // console.log("myCharacters", myCharacters)
 
   return (
     <Router>
@@ -86,7 +84,7 @@ function App() {
                   character={{ ...character }}
                   user={user}
                   myCharacters={myCharacters}
-                  setmyCharacters={setmyCharacters}
+                  setMyCharacters={setMyCharacters}
                 />
               </Route>
 
@@ -125,14 +123,19 @@ function App() {
             <div className="col-12 col-lg-3 p-0 ">
               <MyCharacters
                 myCharacters={myCharacters}
-                setMyCharacters={setmyCharacters}
+                setMyCharacters={setMyCharacters}
                 user={user}
               />
             </div>
           </div>
         </div>
       ) : (
-        <AuthPages signIn={signIn} setSignIn={setSignIn} setUser={setUser} />
+        <AuthPages
+          setMyCharacters={setMyCharacters}
+          signIn={signIn}
+          setSignIn={setSignIn}
+          setUser={setUser}
+        />
       )}
     </Router>
   );

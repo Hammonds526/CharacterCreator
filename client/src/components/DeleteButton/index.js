@@ -13,7 +13,7 @@ function DeleteButton(props) {
     API.check().then((res) => {
       //delete character based off id of user and character
       API.deleteCharacter(res.data, props.item._id).then((res) => {
-        props.setmyCharacters(res.data.characters);
+        props.setMyCharacters(res.data.characters);
       });
     });
   }

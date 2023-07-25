@@ -2,6 +2,29 @@ const passport = require("passport");
 
 const User = require("../models/user");
 
+const authenticate = (req, res) => {
+  passport.authenticate("local", function (err, user, info) {
+    // console.log(user);
+    if (err) {
+      res.status(421).json(err);
+    } else {
+      if (!user) {
+        res.status(421).json({
+          message: "Username or password is incorrect.",
+        });
+      } else {
+        // Do session stuff here\
+        req.login(user, function (err) {
+          if (err) {
+            return next(err);
+          }
+          res.json(user);
+        });
+      }
+    }
+  })(req, res);
+};
+
 // Defining methods for the usersController
 module.exports = {
   findAll: function (req, res) {
@@ -13,16 +36,14 @@ module.exports = {
   findById: function (req, res) {
     if (req.user) {
       return res.json({ characters: req.user.characters });
-    }
-    else {
-      return res.json(
-        { characters: [] })
+    } else {
+      return res.json({ characters: [] });
     }
   },
   logout: function (req, res) {
     req.session.destroy(function (err) {
-      res.clearCookie('connect.sid');
-      res.redirect('/'); //Inside a callback… bulletproof!
+      res.clearCookie("connect.sid");
+      res.redirect("/"); //Inside a callback… bulletproof!
     });
   },
   create: function (req, res) {
@@ -38,12 +59,13 @@ module.exports = {
         res.status(422).json(err);
       } else {
         res.json(dbModel);
+        authenticate(req, res);
       }
     });
   },
   update: function (req, res) {
     User.findOneAndUpdate({ _id: req.params.id }, req.body, {
-      new: true
+      new: true,
     })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
@@ -59,6 +81,7 @@ module.exports = {
       .then((dbModel) => res.json(dbModel.user.characters))
       .catch((err) => res.status(422).json(err));
   },
+
   //Boiler plate trying to see if user exists...
   login: function (req, res) {
     const { username, password } = req.body;
@@ -72,37 +95,21 @@ module.exports = {
           message: "Password was not given",
         });
       } else {
-        passport.authenticate("local", function (err, user, info) {
-          // console.log(user);
-          if (err) {
-            res.status(422).json(err);
-          } else {
-            if (!user) {
-              res.status(422).json({
-                message: "Username or password is incorrect.",
-              });
-            } else {
-              // Do session stuff here\
-              req.login(user, function (err) {
-                if (err) { return next(err); }
-                res.json(user);
-              });
-            }
-          }
-        })(req, res);
+        authenticate(req, res);
       }
     }
   },
   checkSession: (req, res) => {
-    (req.session && req.user) ? res.json(req.user._id) : res.json();
+    req.session && req.user ? res.json(req.user._id) : res.json();
   },
   //Find user based on Id. Pull character by id from list return new list
   updateUserCharacters: function (req, res) {
-    User.findOneAndUpdate({ _id: req.params.id },
-      { $pull: { "characters": { _id: req.params.characterId } } },
+    User.findOneAndUpdate(
+      { _id: req.params.id },
+      { $pull: { characters: { _id: req.params.characterId } } },
       { new: true }
     )
-      .then(dbModel => res.json(dbModel))
+      .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
 };
